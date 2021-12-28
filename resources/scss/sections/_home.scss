@@ -1,0 +1,41 @@
+#banner-home {
+    background-image: linear-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.0)),
+        url('/images/web/home/home_banner_main.png'
+    );
+}
+
+#home-main-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    .content {
+        position: absolute;
+        width: 95%;
+        bottom: 1.25rem;
+        background-color: var(--primary-color-alfa-85);
+        padding: 1.5rem;
+        border-radius: 1rem;
+        font-size: 1.75rem;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 2.125rem;
+        color: var(--white-color);
+        p {
+            margin: 0;
+            padding-left: 10px;
+            &::after {
+                content: "";
+                position: absolute;
+                width: 0.25rem;
+                height: 2.375rem;
+                display: block;
+                top: 50%;
+                transform: translateY(-50%);
+                border-radius: 0.187rem;
+                background-color: var(--primary-color-dark-2);
+                margin-left: -15px;
+            }
+        }
+    }
+}
