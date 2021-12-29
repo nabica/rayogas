@@ -7,26 +7,19 @@
 // Sizes
 @import './sizes';
 
+// Common
+@import './common';
+
 // Components
 @import './components/menu';
 @import './components/banner';
 @import './components/titles';
 @import './components/tabs';
 @import './components/map';
+@import './components/request-service';
 
 // Sections
-body {
-    color: var(--body-color);
-}
-.section {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
-}
-.section-bottom-separator {
-    border-bottom: 0.062rem solid var(--separator-color-2);
-}
-.bg-section {
-    background-color: var(--background-color-2);
-}
+
+
 
 @import './sections/home';

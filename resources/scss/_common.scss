@@ -1,0 +1,53 @@
+body {
+    color: var(--body-color);
+}
+.section {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+.section-bottom-separator {
+    border-bottom: 0.062rem solid var(--separator-color-2);
+}
+.bg-section {
+    background-color: var(--background-color-2);
+}
+
+select {
+    width: 100%;
+    height: 38px;
+    padding: 0 35px 0 10px;
+    border: 2px solid #C9D3DD;
+    border-radius: 13px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    outline: none;
+
+    color: var(--body-color);
+    font-size: 0.875rem;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 2.25rem;
+
+    background: url(/img/common/flecha-abajo-select.svg) 98% no-repeat white;
+    &:hover {
+        background: url(/img/common/flecha-abajo-select.svg) 98% no-repeat white;
+    }
+    option {
+        background: white;
+    }
+}
+
+/* CAUTION: IE hackery ahead */
+select::-ms-expand {
+    display: none; /* remove default arrow in IE 10 and 11 */
+}
+
+/* target Internet Explorer 9 to undo the custom arrow */
+@media screen and (min-width: 0\0) {
+    select {
+        background: none\9;
+        padding: 5px\9;
+    }
+}

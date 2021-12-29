@@ -11292,6 +11292,7 @@ html[data-theme=light] {
   --background-color: #FAFAFA;
   --wap-color: #00BB2D;
   --white-color: #FFFFFF;
+  /*Variables que manuel aún no le ha puesto nombre*/
   --separator-color-alpha-25: rgba(151, 151, 151, 0.25);
   --separator-color-alpha-8: rgba(201, 211, 221, 0.8);
   --separator-color-2: #ECECEF;
@@ -11312,6 +11313,61 @@ html[data-size=large] {
   font-size: 20px;
 }
 
+body {
+  color: var(--body-color);
+}
+
+.section {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.section-bottom-separator {
+  border-bottom: 0.062rem solid var(--separator-color-2);
+}
+
+.bg-section {
+  background-color: var(--background-color-2);
+}
+
+select {
+  width: 100%;
+  height: 38px;
+  padding: 0 35px 0 10px;
+  border: 2px solid #C9D3DD;
+  border-radius: 13px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+  color: var(--body-color);
+  font-size: 0.875rem;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 2.25rem;
+  background: url(/img/common/flecha-abajo-select.svg) 98% no-repeat white;
+}
+select:hover {
+  background: url(/img/common/flecha-abajo-select.svg) 98% no-repeat white;
+}
+select option {
+  background: white;
+}
+
+/* CAUTION: IE hackery ahead */
+select::-ms-expand {
+  display: none;
+  /* remove default arrow in IE 10 and 11 */
+}
+
+/* target Internet Explorer 9 to undo the custom arrow */
+@media screen and (min-width: 0\0 ) {
+  select {
+    background: none\9 ;
+    padding: 5px\9 ;
+  }
+}
 #navbar-menu {
   position: -webkit-sticky;
   position: sticky;
@@ -11640,21 +11696,108 @@ html[data-size=large] {
 .map .map-controls .locations .locations-item a {
   color: var(--primary-color-dark);
 }
-body {
-  color: var(--body-color);
+.request-service {
+  border-radius: 24px;
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.14);
+  padding-right: 30px;
 }
-
-.section {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+.request-service .image {
+  position: relative;
+  left: -350px;
 }
-
-.section-bottom-separator {
-  border-bottom: 0.062rem solid var(--separator-color-2);
+.request-service .image img {
+  /*max-width: 70%;*/
 }
-
-.bg-section {
-  background-color: var(--background-color-2);
+.request-service .content {
+  padding: 30px 0;
+}
+.request-service .content .title {
+  margin-bottom: 30px;
+}
+.request-service .content .title::before {
+  content: "";
+  position: absolute;
+  width: 0.312rem;
+  height: 2.062rem;
+  display: block;
+  border-radius: 0.187rem;
+  background-color: var(--primary-color);
+  margin-left: -15px;
+  margin-top: 7px;
+}
+.request-service .content .title h4, .request-service .content .title .h4 {
+  color: #003B7F;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 34px;
+  margin: 0;
+}
+.request-service .content .title h5, .request-service .content .title .h5 {
+  color: #8393A8;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 30px;
+  margin: 0;
+}
+.request-service .content form label {
+  color: #003B7F;
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 18px;
+  margin-bottom: 10px;
+}
+.request-service .content form .row {
+  margin-bottom: 10px;
+}
+.request-service .content form input {
+  height: 49px;
+  border: 2px solid #C9D3DD;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  outline: none;
+}
+.request-service .content form select {
+  height: 49px;
+}
+.request-service .content form .buttons {
+  margin-top: 40px;
+}
+.request-service .content form .buttons button {
+  height: 52px;
+  border-radius: 20px;
+  background-color: #009EE3;
+  padding: 0 70px;
+  color: var(--white-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 0;
+  text-align: center;
+}
+.request-service .content form .buttons a {
+  padding: 5px 30px;
+  border-radius: 20px;
+  background-color: #009EE3;
+  color: var(--white-color);
+  font-size: 1.125rem;
+  font-weight: bold;
+  letter-spacing: 0;
+  /*line-height: 0;*/
+}
+.request-service .content form .buttons a div {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-top: -10px;
+}
+.request-service .content form .buttons .btn-green {
+  background-color: #00C85A;
+}
+.request-service .content form .buttons .btn-blue {
+  background-color: #009EE3;
 }
 
 #banner-home {

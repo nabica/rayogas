@@ -161,5 +161,80 @@
     </div>
 </section>
 <!-- End Coverage -->
+
+<!-- Request Service -->
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-8">
+                <div class="request-service">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="image">
+                                <img src="{{ asset('images/web/common/img_formulario_solicitar_servicio.png') }}" class="img-flui" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="content">
+                                <div class="title">
+                                    <h4>Solicitar servicio</h4>
+                                    <h5>Cilindro o granel</h5>
+                                </div>
+
+                                <form action="">
+                                    <div class="row">
+                                        <div class="col">
+                                            <label for="">Nombre</label>
+                                            <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre">
+                                        </div>
+                                        <div class="col">
+                                            <label for="">Número de contacto</label>
+                                            <input type="text" class="form-control" placeholder="Número de contacto" aria-label="Número de contacto">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <label for="">Nombre</label>
+                                            <select name="" id="">
+                                                <option value="">Tipo de persona</option>
+                                            </select>
+                                        </div>
+                                        <div class="col">
+                                            <label for="">Número de contacto</label>
+                                            <input type="text" class="form-control" placeholder="Razón social" aria-label="Razón social">
+                                        </div>
+                                    </div>
+                                    <div class="row buttons">
+                                        <div class="col-md-3">
+                                            puntos
+                                        </div>
+                                        <div class="col-md-9">
+                                            {{-- <button class="btn btn-primary">
+                                                >
+                                            </button> --}}
+                                            <a href="" class="btn btn-green">
+                                                Solicitar
+                                                <div>Pago en efectivo</div>
+                                            </a>
+                                            <a href="" class="btn">
+                                                Solicitar
+                                                <div>Pago en línea</div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Request Service -->
 @endsection
 
