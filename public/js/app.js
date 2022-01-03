@@ -2068,6 +2068,8 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 __webpack_require__(/*! ./components/navbar */ "./resources/js/components/navbar.js");
 
+__webpack_require__(/*! ./components/footer */ "./resources/js/components/footer.js");
+
 
 
 /***/ }),
@@ -2100,6 +2102,22 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/components/footer.js":
+/*!*******************************************!*\
+  !*** ./resources/js/components/footer.js ***!
+  \*******************************************/
+/***/ (() => {
+
+var footerButton = document.getElementById("footer__button");
+footerButton.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
 
 /***/ }),
 

@@ -1,6 +1,5 @@
 <footer class="footer">
     <div class="container">
-
         <div class="row">
             <div class="col-12 col-md-3">
                 <img src="{{ asset('images/web/common/img_logo_azul_footer.png') }}" alt="rayo gas" class="img-fluid">
@@ -88,6 +87,8 @@
                 </div>
             </div>
         </div>
+        <button class="footer__button" id="footer__button"> Subir <img
+                src="{{ asset('images/web/common/icn_boton_up_footer.png') }}" alt="facebook"></button>
     </div>
     <div class="footer__legal">
         <p>© RayoGas E.S.P. Todos los derechos reservados.</p>

@@ -1,8 +1,20 @@
 .footer {
-    padding-top: rem(50px);
     background-color: var(--background-color-2);
     & .container {
-        padding: 0 rem(21px);
+        position: relative;
+        padding: rem(50px) rem(21px) 0 rem(21px);
+    }
+    &__button {
+        top: rem(-22px);
+        left: calc(50% - rem(104px));
+        height: 44px;
+        width: 208px;
+        border: 1px solid var(--primary-color-dark);
+        border-radius: 22px;
+        background-color: var(--primary-color);
+        box-shadow: 0 2px 5px 0 rgba(131, 147, 168, 0.5);
+        color: var(--white-color);
+        position: absolute;
     }
     & h3 {
         color: var(--primary-color);
@@ -93,10 +105,10 @@
 }
 @media only screen and (min-width: 992px) {
     .footer {
-        padding-top: rem(77px);
         & .container {
             position: relative;
             padding: 0;
+            padding-top: rem(77px);
             padding-bottom: rem(80px);
         }
         & h3 {
