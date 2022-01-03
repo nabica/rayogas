@@ -1,25 +1,26 @@
-@import 'bootstrap';
+@import "bootstrap";
 
 // Themes
-@import './themes/light';
-@import './themes/dark';
+@import "./themes/light";
+@import "./themes/dark";
 
 // Sizes
-@import './sizes';
+@import "./sizes";
 
 // Common
-@import './common';
+@import "./common";
 
 // Components
-@import './components/menu';
-@import './components/banner';
-@import './components/titles';
-@import './components/tabs';
-@import './components/map';
-@import './components/request-service';
+@import "./components/menu";
+@import "./components/banner";
+@import "./components/titles";
+@import "./components/tabs";
+@import "./components/map";
+@import "./components/request-service";
+@import "./components/default-banner";
+@import "./components/footer";
 
 // Sections
 
-
-
-@import './sections/home';
+@import "./sections/home";
+@import "./sections/glp";
