@@ -2,7 +2,7 @@
 @section('content')
 @include('rayogas.components.banner-general', ['title' => "Ponte al día sobre todo lo relacionado al GLP", 'text' =>
 "Descubre datos interesantes sobre el GLP (Gas Licuado de Petróleo), noticas, casos de éxito, avances, entre otros temas
-que sabemos te interesan.", 'image'=> 'images/web/blog/blog_banner_main.png'])
+que sabemos te interesan.", 'image'=> '/images/web/blog/blog_banner_main.png'])
 <section class="blog-list">
     <div class="container">
         <div class="row">

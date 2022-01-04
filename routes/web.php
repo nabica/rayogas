@@ -19,6 +19,9 @@ Route::get('/', function () {
 Route::get('/glp', function () {
     return view('glp');
 });
-Route::get('/blog-list', function () {
+Route::get('/blog/list', function () {
     return view('blog-list');
+});
+Route::get('/blog/intern', function () {
+    return view('blog');
 });
