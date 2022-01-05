@@ -1,6 +1,6 @@
 <!-- Navbar menu -->
 <nav class="navbar navbar-expand-lg navbar-light ">
-    <div class="container-fluid d-lg-none mobile-container" id='mobile-buttons'>
+    <div class="container d-lg-none mobile-container" id='mobile-buttons'>
         <div class="navbar-buttons">
             <a href="" id="btn-accessibility">
                 AA
@@ -12,7 +12,7 @@
             </a>
         </div>
     </div>
-    <div class="container-fluid">
+    <div class="container">
         <a class="navbar-brand" href="#"> <img src="{{ asset('images/web/common/img_logo_azul_header.png') }}"
                 alt="Logo {{ config('app.name') }}"></a>
         <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"

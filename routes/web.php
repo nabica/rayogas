@@ -25,3 +25,6 @@ Route::get('/blog/list', function () {
 Route::get('/blog/intern', function () {
     return view('blog');
 });
+Route::get('/pqrs', function () {
+    return view('pqrs');
+});

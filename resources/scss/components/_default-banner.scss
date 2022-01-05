@@ -4,7 +4,6 @@
     overflow: hidden;
     height: rem(454px);
     &__content {
-        position: absolute;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -12,14 +11,13 @@
         height: 100%;
         top: 0;
         left: 0;
-        padding-left: rem(120px);
-        padding-right: rem(80px);
+        margin: 0 auto;
 
         &-text {
             max-width: rem(654px);
             max-height: rem(306px);
             padding: rem(51px) rem(56px) rem(56px) rem(23px);
-            background-color: var(--primary-color);
+            background-color: var(--primary-color-alfa-85);
             border-radius: rem(25px);
             & > h1 {
                 color: var(--white-color);

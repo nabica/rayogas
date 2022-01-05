@@ -1,6 +1,7 @@
 .navbar {
     padding-top: 0;
     position: relative;
+    box-shadow: 0 rem(2px) rem(4px) 0 rgba(0, 0, 0, 0.5);
     & .mobile-container {
         background-color: var(--background-color-2);
         height: 0;
@@ -133,14 +134,15 @@
     .navbar {
         display: flex;
         justify-content: space-between;
-        padding: rem(22px) rem(120px);
+        padding: rem(22px) 0;
+        box-shadow: 0 rem(-3px) rem(6px) 0 rgba(0, 0, 0, 0.2);
         &-collapse {
             position: relative;
             padding: 0 rem(20px);
 
             & .navbar-nav {
                 max-width: rem(600px);
-                width: 100%;
+                width: 90%;
                 justify-content: space-between;
                 align-items: center;
                 & li {

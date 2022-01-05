@@ -2070,6 +2070,8 @@ __webpack_require__(/*! ./components/navbar */ "./resources/js/components/navbar
 
 __webpack_require__(/*! ./components/footer */ "./resources/js/components/footer.js");
 
+__webpack_require__(/*! ./components/form-validation */ "./resources/js/components/form-validation.js");
+
 
 
 /***/ }),
@@ -2117,6 +2119,26 @@ footerButton.addEventListener("click", function () {
     top: 0,
     behavior: "smooth"
   });
+});
+
+/***/ }),
+
+/***/ "./resources/js/components/form-validation.js":
+/*!****************************************************!*\
+  !*** ./resources/js/components/form-validation.js ***!
+  \****************************************************/
+/***/ (() => {
+
+var forms = document.querySelectorAll(".needs-validation");
+Array.prototype.slice.call(forms).forEach(function (form) {
+  form.addEventListener("submit", function (event) {
+    if (!form.checkValidity()) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+
+    form.classList.add("was-validated");
+  }, false);
 });
 
 /***/ }),
