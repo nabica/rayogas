@@ -1,21 +1,28 @@
 .request-service {
-    border-radius: 24px;
+    border-radius: 1.5rem;
     background-color: #FFFFFF;
     box-shadow: 0 2px 8px 0 rgba(0,0,0,0.14);
-    padding-right: 30px;
-    .image {
+    padding-right: 1.875rem;
+
+    .relative-container {
         position: relative;
-        left: -350px;
-        img {
-            /*max-width: 70%;*/
+        .image {
+            position: absolute;
+            left: -21.875rem;
+            img {
+                /*max-width: 70%;*/
+            }
         }
     }
 
+
     .content {
-        padding: 30px 0;
+        padding: 1.875rem 0;
 
         .title {
-            margin-bottom: 30px;
+            margin-bottom: 1.875rem;
+            margin-left: 1rem;
+
             &::before {
                 content: "";
                 position: absolute;
@@ -24,25 +31,34 @@
                 display: block;
                 border-radius: 0.187rem;
                 background-color: var(--primary-color);
-                margin-left: -15px;
-                margin-top: 7px;
+                margin-left: -1rem;
+                margin-top: 0.5rem;
             }
 
             h4 {
                 color: #003B7F;
-                font-size: 28px;
+                font-size: 1.75rem;
                 font-weight: bold;
                 letter-spacing: 0;
-                line-height: 34px;
+                line-height: 2.125rem;
                 margin: 0;
             }
             h5 {
                 color: #8393A8;
-                font-size: 20px;
+                font-size: 1.25rem;
                 font-weight: 300;
                 letter-spacing: 0;
-                line-height: 30px;
+                line-height: 1.875rem;
                 margin: 0;
+            }
+        }
+
+        .steps {
+            .step {
+                display: none;
+            }
+            .active {
+                display: block;
             }
         }
 
@@ -52,65 +68,110 @@
                 font-size: 1rem;
                 font-weight: 900;
                 letter-spacing: 0;
-                line-height: 18px;
-                margin-bottom: 10px;
+                line-height: 1.125rem;
+                margin-bottom: 0.625rem;
             }
             .row {
-                margin-bottom: 10px;
+                margin-bottom: 0.625rem;
             }
             input {
-                height: 49px;
-                border: 2px solid #C9D3DD;
-                border-radius: 4px;
+                height: 3.062rem;
+                border: 0.125rem solid #C9D3DD;
+                border-radius: 0.25rem;
                 background-color: #FFFFFF;
                 outline: none;
             }
 
             select {
-                height: 49px;
+                height: 3.062rem;
             }
 
-            .buttons {
-                margin-top: 40px;
-                button {
-                    height: 52px;
-                    border-radius: 20px;
-                    background-color: #009EE3;
-                    padding: 0 70px;
+            .controls {
+                margin-top: 2.5rem;
 
-                    color: var(--white-color);
-                    font-size: 1.5rem;
-                    font-weight: bold;
-                    letter-spacing: 0;
-                    line-height: 0;
-                    text-align: center;
-                }
+                .buttons {
+                    text-align: right;
 
-                a {
-                    padding: 5px 30px;
-                    border-radius: 20px;
-                    background-color: #009EE3;
-                    color: var(--white-color);
-                    font-size: 1.125rem;
-                    font-weight: bold;
-                    letter-spacing: 0;
-                    /*line-height: 0;*/
-                    div {
-                        font-size: 0.875rem;
-                        font-weight: 500;
-                        margin-top: -10px;
+                    button {
+                        height: 3.25rem;
+                        border-radius: 1.25rem;
+                        background-color: #009EE3;
+                        padding: 0 4.375rem;
+
+                        color: var(--white-color);
+                        font-size: 1.5rem;
+                        font-weight: bold;
+                        letter-spacing: 0;
+                        line-height: 0;
+                        text-align: center;
+                    }
+
+                    a {
+                        padding: 0.312rem 1.875rem;
+                        border-radius: 1.25rem;
+                        background-color: #009EE3;
+                        color: var(--white-color);
+                        font-size: 1.125rem;
+                        font-weight: bold;
+                        letter-spacing: 0;
+                        /*line-height: 0;*/
+                        div {
+                            font-size: 0.875rem;
+                            font-weight: 500;
+                            margin-top: -0.425rem;
+                        }
+                        &:first-child {
+                            margin-right: 1.25rem;
+                        }
+                    }
+
+                    .btn-green {
+                        background-color: #00C85A;
+                    }
+
+                    .btn-blue {
+                        background-color: #009EE3;
                     }
                 }
-
-                .btn-green {
-                    background-color: #00C85A;
-                }
-
-                .btn-blue {
-                    background-color: #009EE3;
-                }
             }
 
+            .indicators {
+                position: relative;
+                top: -1.562rem;
+
+                .dots {
+                    height: 100%;
+                    display: flex;
+                    align-items: end;
+
+                    .dots-item {
+                        display: inline-block;
+                        width: 0.625rem;
+                        height: 0.625rem;
+                        border-radius: 50%;
+                        background-color: #009EE3;
+                        opacity: 0.2;
+                        box-shadow: 0 0.125rem 0.25rem 0 rgba(0,0,0,0.2);
+                        &:first-child {
+                            margin-right: 0.625rem;
+                        }
+                    }
+                    .active {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+html[data-size="small"] {
+    .request-service {
+        .relative-container {
+            .image {
+                left: -27.875rem;
+            }
         }
     }
 }
