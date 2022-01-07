@@ -1,6 +1,6 @@
 <!-- Navbar menu -->
 <nav class="navbar navbar-expand-lg navbar-light ">
-    <div class="container d-lg-none mobile-container" id='mobile-buttons'>
+    <div class="container-fluid d-lg-none mobile-container" id='mobile-buttons'>
         <div class="navbar-buttons">
             <a href="" id="btn-accessibility">
                 AA
