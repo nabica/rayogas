@@ -7,25 +7,26 @@
             <div class="col-12 col-md-3">
                 <ul class="footer__sitemap">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="#"><i class="icon-cheveron-right"></i>
+                            Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Nosotros</a>
+                        <a class="nav-link" href="#"><i class="icon-cheveron-right"></i> Nosotros</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Productos y Servicios</a>
+                        <a class="nav-link" href="#"><i class="icon-cheveron-right"></i> Productos y Servicios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">GLP</a>
+                        <a class="nav-link" href="#"><i class="icon-cheveron-right"></i> GLP</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Blog</a>
+                        <a class="nav-link" href="#"><i class="icon-cheveron-right"></i> Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">PQRS</a>
+                        <a class="nav-link" href="#"><i class="icon-cheveron-right"></i> PQRS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Autogestión</a>
+                        <a class="nav-link" href="#"><i class="icon-cheveron-right"></i> Autogestión</a>
                     </li>
                 </ul>
             </div>

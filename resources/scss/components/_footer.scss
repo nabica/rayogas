@@ -56,6 +56,14 @@
                 font-size: rem(14px);
                 color: var(--primary-color);
                 font-weight: bold;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                & i {
+                    width: rem(6px);
+                    margin-right: 5px;
+                    color: var(--primary-color-dark);
+                }
             }
             &:last-child {
                 margin-bottom: 0;

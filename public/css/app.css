@@ -11281,6 +11281,41 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+@font-face {
+  font-family: "icomoon";
+  src: url("/fonts/fontawesome/icomoon.eot?8juo2d");
+  src: url("/fonts/fontawesome/icomoon.eot?8juo2d#iefix") format("embedded-opentype"), url("/fonts/fontawesome/icomoon.ttf?8juo2d") format("truetype"), url("/fonts/fontawesome/icomoon.woff?8juo2d") format("woff"), url("/fonts/fontawesome/icomoon.svg?8juo2d#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=icon-],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-chevron-down:before {
+  content: "\e901";
+}
+
+.icon-cheveron-right:before {
+  content: "\e900";
+}
+
+.icon-circle-right:before {
+  content: "\ea42";
+}
+
 html[data-theme=light] {
   --primary-color: #009EE3;
   --primary-color-dark: #003B7F;
@@ -12203,53 +12238,13 @@ html[data-size=small] .request-service .relative-container .image {
   letter-spacing: 0;
   line-height: 1.75rem;
 }
-.default-banner__contact-bar {
-  border: 1px solid var(--primary-color);
-  opacity: 0.8;
-  border-radius: 1.25rem;
-  background-color: var(--primary-color-dark);
-  box-shadow: 0 0 2px 1px rgba(0, 158, 227, 0.5);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  width: 4.875rem;
+.default-banner .contact-bar {
   height: 80%;
-  padding: 1.5rem 0.3125rem;
   max-height: 22.25rem;
-}
-.default-banner__contact-bar-button {
-  display: flex;
-  align-items: center;
-  padding: 0;
-  flex-direction: column;
-  border: none;
-  background-color: transparent;
-  outline: none;
-}
-.default-banner__contact-bar-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 2.25rem;
-  width: 2.25rem;
-  border: 1px solid var(--primary-color);
-  background-color: var(--white-color);
-  box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.15);
-  border-radius: 50%;
-  padding: 0.5625rem;
-}
-.default-banner__contact-bar-text {
-  color: var(--white-color);
-  font-size: 0.75rem;
-  font-weight: bold;
-  letter-spacing: 0;
-  line-height: 1rem;
-  text-align: center;
 }
 
 @media only screen and (max-width: 1200px) {
-  .default-banner__contact-bar {
+  .default-banner .contact-bar {
     height: 95%;
   }
 }
@@ -12277,7 +12272,7 @@ html[data-size=small] .request-service .relative-container .image {
     font-size: 0.75rem;
     line-height: 1rem;
   }
-  .default-banner__contact-bar {
+  .default-banner .contact-bar {
     height: 100%;
     padding: 0;
     background-color: transparent;
@@ -12285,7 +12280,7 @@ html[data-size=small] .request-service .relative-container .image {
     padding: 1.5rem 0.3125rem;
     border: none;
   }
-  .default-banner__contact-bar-text {
+  .default-banner .contact-bar__text {
     display: none;
   }
 }
@@ -12350,6 +12345,14 @@ html[data-size=small] .request-service .relative-container .image {
   font-size: 0.875rem;
   color: var(--primary-color);
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.footer__sitemap .nav-item .nav-link i {
+  width: 0.375rem;
+  margin-right: 5px;
+  color: var(--primary-color-dark);
 }
 .footer__sitemap .nav-item:last-child {
   margin-bottom: 0;
@@ -12455,6 +12458,51 @@ html[data-size=small] .request-service .relative-container .image {
   }
   .footer__legal {
     padding: 1.5rem;
+  }
+}
+.contact-bar {
+  border: 1px solid var(--primary-color);
+  opacity: 0.8;
+  border-radius: 0.5625rem;
+  background-color: var(--primary-color-dark);
+  box-shadow: 0 0 2px 1px rgba(0, 158, 227, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 2.9375rem;
+  padding: 1.40625rem 0.1875rem 1.71875rem;
+  height: 13.75rem;
+  flex-shrink: 0;
+}
+.contact-bar__button {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  flex-direction: column;
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+.contact-bar__text {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .contact-bar {
+    border-radius: 1.25rem;
+    width: 4.875rem;
+    padding: 1.5rem 0.3125rem;
+    height: 22.25rem;
+  }
+  .contact-bar__text {
+    display: block;
+    color: var(--white-color);
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 1rem;
+    text-align: center;
   }
 }
 #banner-home {
@@ -12746,19 +12794,33 @@ html[data-size=small] .request-service .relative-container .image {
   border-right: 0.125rem solid var(--primary-color);
 }
 .glp-faq__tabs .accordion-button {
-  display: block;
+  position: relative;
   color: var(--body-color);
   text-decoration: none;
-  padding: 1.5625rem 1.5rem;
+  padding: 1.5625rem 3.75rem 1.5625rem 1.5rem;
   border-bottom: 1px solid var(--primary-color);
   background-color: transparent;
   outline: none;
+}
+.glp-faq__tabs .accordion-button::after {
+  position: absolute;
+  content: "\ea42";
+  background: none;
+  color: var(--primary-color);
+  font-family: "icomoon" !important;
+  width: initial;
+  height: initial;
+  font-size: 1.5rem;
+  color: var(--separator-color-alpha-8);
+  right: 1.875rem;
 }
 .glp-faq__tabs .accordion-button:last-child {
   border-bottom: none;
 }
 .glp-faq__tabs .accordion-button span {
   font-weight: bold;
+  align-self: flex-start;
+  margin-right: 0.3125rem;
 }
 .glp-faq__tabs .accordion-button:focus {
   outline: none;
@@ -12766,6 +12828,10 @@ html[data-size=small] .request-service .relative-container .image {
 }
 .glp-faq__tabs .accordion-button:not(.collapsed) {
   background-color: var(--background-color-2);
+}
+.glp-faq__tabs .accordion-button:not(.collapsed)::after {
+  color: var(--primary-color);
+  transform: none;
 }
 .glp-faq__content {
   text-align: left;
@@ -12888,7 +12954,6 @@ html[data-size=small] .request-service .relative-container .image {
     padding-bottom: 1.25rem;
   }
   .glp-faq #accordionFlushExample .accordion-button {
-    display: block;
     color: var(--body-color);
     text-decoration: none;
     padding: 1.125rem 0;
@@ -12897,12 +12962,24 @@ html[data-size=small] .request-service .relative-container .image {
     outline: none;
     font-size: 0.75rem;
     line-height: 1rem;
+    padding-right: 0.9375rem;
+  }
+  .glp-faq #accordionFlushExample .accordion-button::after {
+    content: "\e901";
+    background: none;
+    color: var(--primary-color);
+    font-family: "icomoon" !important;
+    width: initial;
+    height: initial;
+    font-size: 1.5rem;
   }
   .glp-faq #accordionFlushExample .accordion-button:last-child {
     border-bottom: none;
   }
   .glp-faq #accordionFlushExample .accordion-button span {
     font-weight: bold;
+    align-self: flex-start;
+    margin-right: 5px;
   }
   .glp-faq #accordionFlushExample .accordion-button:focus {
     outline: none;
@@ -13093,6 +13170,16 @@ html[data-size=small] .request-service .relative-container .image {
   background-color: var(--white-color);
   box-shadow: 0 0.125rem 0.5rem 0 rgba(0, 0, 0, 0.14);
 }
+.pqrs__container {
+  position: relative;
+  margin: 0 auto;
+}
+.pqrs__container .contact-bar {
+  position: absolute;
+  right: 0;
+  top: 5rem;
+  z-index: 1000;
+}
 
 @media only screen and (min-width: 768px) {
   .pqrs {
@@ -13118,5 +13205,30 @@ html[data-size=small] .request-service .relative-container .image {
     top: 0;
     padding: 2.75rem 5rem 2.3125rem 5rem;
     width: 110%;
+  }
+  .pqrs__container {
+    position: relative;
+    margin: 0 auto;
+  }
+  .pqrs__container .contact-bar {
+    right: -0.625rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .pqrs__container {
+    position: relative;
+    margin: 0 auto;
+  }
+  .pqrs__container .contact-bar {
+    right: -1.375rem;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .pqrs__container {
+    position: relative;
+    margin: 0 auto;
+  }
+  .pqrs__container .contact-bar {
+    right: -2rem;
   }
 }

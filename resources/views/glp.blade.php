@@ -392,7 +392,7 @@ encuentra en estado gaseoso a presión atmosférica normal.", 'image'=> 'images/
                 <h2 class="accordion-header" id="flush-headingOne">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                        <span>1.</span> ¿Cuáles son las capacidades de almacenamiento que manejamos en Rayogas?.
+                        <span>1. </span> ¿Cuáles son las capacidades de almacenamiento que manejamos en Rayogas?.
                     </button>
                 </h2>
                 <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
@@ -431,7 +431,7 @@ encuentra en estado gaseoso a presión atmosférica normal.", 'image'=> 'images/
                 <h2 class="accordion-header" id="flush-headingTwo">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                        <span>2.</span> ¿Cuáles son nuestras ubicaciones en el país?
+                        <span>2. </span> ¿Cuáles son nuestras ubicaciones en el país?
                     </button>
                 </h2>
                 <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
@@ -459,7 +459,7 @@ encuentra en estado gaseoso a presión atmosférica normal.", 'image'=> 'images/
                 <h2 class="accordion-header" id="flush-headingThree">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                        <span>3.</span> ¿Qué diferencia hay entre el GLP y el GN?
+                        <span>3. </span> ¿Qué diferencia hay entre el GLP y el GN?
                     </button>
                 </h2>
                 <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
@@ -489,11 +489,11 @@ encuentra en estado gaseoso a presión atmosférica normal.", 'image'=> 'images/
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingThree">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                        <span>4.</span> ¿En dónde puedo usar GLP Rayogas?
+                        data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                        <span>4. </span> ¿En dónde puedo usar GLP Rayogas?
                     </button>
                 </h2>
-                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
                     data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat eveniet alias adipisci
@@ -520,11 +520,11 @@ encuentra en estado gaseoso a presión atmosférica normal.", 'image'=> 'images/
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingThree">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                        <span>5.</span> ¿Cuáles son nuestros canales de atención?
+                        data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                        <span>5. </span> ¿Cuáles son nuestros canales de atención?
                     </button>
                 </h2>
-                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
                     data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat eveniet alias adipisci
@@ -551,11 +551,11 @@ encuentra en estado gaseoso a presión atmosférica normal.", 'image'=> 'images/
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingThree">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                        <span>6.</span>¿Qué debo hacer en caso de fuga?
+                        data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                        <span>6. </span>¿Qué debo hacer en caso de fuga?
                     </button>
                 </h2>
-                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
                     data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat eveniet alias adipisci
@@ -582,11 +582,11 @@ encuentra en estado gaseoso a presión atmosférica normal.", 'image'=> 'images/
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingThree">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                        <span>7.</span>¿Qué debo hacer en caso de incendio?
+                        data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                        <span>7. </span>¿Qué debo hacer en caso de incendio?
                     </button>
                 </h2>
-                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
                     data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat eveniet alias adipisci

@@ -253,18 +253,32 @@
         padding: 0;
         border-right: rem(2px) solid var(--primary-color);
         & .accordion-button {
-            display: block;
+            position: relative;
             color: var(--body-color);
             text-decoration: none;
-            padding: rem(25px) rem(24px);
+            padding: rem(25px) rem(60px) rem(25px) rem(24px);
             border-bottom: 1px solid var(--primary-color);
             background-color: transparent;
             outline: none;
+            &::after {
+                position: absolute;
+                content: "\ea42";
+                background: none;
+                color: var(--primary-color);
+                font-family: "icomoon" !important;
+                width: initial;
+                height: initial;
+                font-size: rem(24px);
+                color: var(--separator-color-alpha-8);
+                right: rem(30px);
+            }
             &:last-child {
                 border-bottom: none;
             }
             & span {
                 font-weight: bold;
+                align-self: flex-start;
+                margin-right: rem(5px);
             }
             &:focus {
                 outline: none;
@@ -272,6 +286,10 @@
             }
             &:not(.collapsed) {
                 background-color: var(--background-color-2);
+                &::after {
+                    color: var(--primary-color);
+                    transform: none;
+                }
             }
         }
     }
@@ -407,7 +425,6 @@
                 padding-bottom: rem(20px);
             }
             & .accordion-button {
-                display: block;
                 color: var(--body-color);
                 text-decoration: none;
                 padding: rem(18px) 0;
@@ -416,11 +433,23 @@
                 outline: none;
                 font-size: rem(12px);
                 line-height: rem(16px);
+                padding-right: rem(15px);
+                &::after {
+                    content: "\e901";
+                    background: none;
+                    color: var(--primary-color);
+                    font-family: "icomoon" !important;
+                    width: initial;
+                    height: initial;
+                    font-size: rem(24px);
+                }
                 &:last-child {
                     border-bottom: none;
                 }
                 & span {
                     font-weight: bold;
+                    align-self: flex-start;
+                    margin-right: 5px;
                 }
                 &:focus {
                     outline: none;

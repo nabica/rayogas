@@ -26,6 +26,16 @@
         background-color: var(--white-color);
         box-shadow: 0 rem(2px) rem(8px) 0 rgba(0, 0, 0, 0.14);
     }
+    &__container {
+        position: relative;
+        margin: 0 auto;
+        & .contact-bar {
+            position: absolute;
+            right: 0;
+            top: rem(80px);
+            z-index: 1000;
+        }
+    }
 }
 @media only screen and (min-width: 768px) {
     .pqrs {
@@ -51,8 +61,36 @@
             left: rem(-70px);
             top: 0;
             padding: rem(44px) rem(80px) rem(37px) rem(80px);
-
             width: 110%;
+        }
+        &__container {
+            position: relative;
+            margin: 0 auto;
+            & .contact-bar {
+                right: rem(-10px);
+            }
+        }
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .pqrs {
+        &__container {
+            position: relative;
+            margin: 0 auto;
+            & .contact-bar {
+                right: rem(-22px);
+            }
+        }
+    }
+}
+@media only screen and (min-width: 1400px) {
+    .pqrs {
+        &__container {
+            position: relative;
+            margin: 0 auto;
+            & .contact-bar {
+                right: rem(-32px);
+            }
         }
     }
 }

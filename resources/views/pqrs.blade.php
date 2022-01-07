@@ -3,7 +3,7 @@
 
 <section class="pqrs">
     <div class="container">
-        <div class="row align-items-center">
+        <div class="row align-items-center pqrs__container">
             <div class="col-12  col-lg-5 pqrs__side-banner">
                 <div class="pqrs__side-banner-text">
 
@@ -97,6 +97,7 @@
                     </div>
                 </form>
             </div>
+            @include('rayogas.components.contact-bar')
         </div>
     </div>
 </section>
