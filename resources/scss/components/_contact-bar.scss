@@ -1,0 +1,47 @@
+.contact-bar {
+    border: 1px solid var(--primary-color);
+    opacity: 0.8;
+    border-radius: rem(9px);
+    background-color: var(--primary-color-dark);
+    box-shadow: 0 0 2px 1px rgba(0, 158, 227, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: rem(47px);
+    padding: rem(22.5px) rem(3px) rem(27.5px);
+    height: rem(220px);
+    flex-shrink: 0;
+
+    &__button {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        flex-direction: column;
+        border: none;
+        background-color: transparent;
+        outline: none;
+    }
+    &__text {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .contact-bar {
+        border-radius: rem(20px);
+        width: rem(78px);
+        padding: rem(24px) rem(5px);
+        height: rem(356px);
+
+        &__text {
+            display: block;
+            color: var(--white-color);
+            font-size: rem(12px);
+            font-weight: bold;
+            letter-spacing: 0;
+            line-height: rem(16px);
+            text-align: center;
+        }
+    }
+}

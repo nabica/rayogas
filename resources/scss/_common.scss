@@ -1,3 +1,13 @@
+$html-font-size: 16px;
+
+@function stripUnit($value) {
+    $unit: calc($value * 0) + 1;
+    @return calc($value / $unit);
+}
+@function rem($pxValue) {
+    @return #{calc(stripUnit($pxValue) / stripUnit($html-font-size))}rem;
+}
+
 body {
     color: var(--body-color);
 }
@@ -16,7 +26,7 @@ select {
     width: 100%;
     height: 2.375rem;
     padding: 0 2.187rem 0 0.625rem;
-    border: 0.125rem solid #C9D3DD;
+    border: 0.125rem solid #c9d3dd;
     border-radius: 0.812rem;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -38,7 +48,165 @@ select {
         background: white;
     }
 }
+p {
+    margin: 0;
+    color: var(--body-color);
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: rem(24px);
+}
+.list-general {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: rem(24px);
+    & li {
+        padding-left: rem(16px);
+        &::before {
+            content: "\2022";
+            color: var(--primary-color);
+            font-weight: bold;
+            display: inline-block;
+            font-size: rem(24px);
+            margin-left: rem(-16px);
+            width: rem(16px);
+            line-height: rem(24px);
+        }
+    }
+}
 
+.form__general {
+    margin-top: rem(45px);
+    &-header {
+        margin-bottom: rem(10px);
+        &.line {
+            & h3 {
+                position: relative;
+                padding-left: rem(14px);
+                &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    height: rem(33.34px);
+                    width: rem(5.05px);
+                    border-radius: rem(3px);
+                    background-color: var(--primary-color-dark);
+                    left: 0;
+                    top: rem(9px);
+                }
+            }
+            & p {
+                padding-left: rem(14px);
+            }
+        }
+        & h3 {
+            color: var(--primary-color);
+            font-size: rem(36px);
+            font-weight: bold;
+            line-height: rem(42px);
+            margin-bottom: 0;
+        }
+        & p {
+            font-size: rem(20px);
+            font-weight: 300;
+            letter-spacing: 0;
+            line-height: rem(30px);
+        }
+    }
+    &-button {
+        display: block;
+        height: 49px;
+        width: 70%;
+        border-radius: 20px;
+        background-color: var(--primary-color);
+        color: var(--white-color);
+        outline: none;
+        border: none;
+        font-weight: bold;
+        margin: 0 auto;
+        margin-top: rem(45px);
+    }
+    &.was-validated {
+        & .select {
+            position: relative;
+            &:after {
+                content: "";
+                position: absolute;
+                display: block;
+                font-size: rem(12px);
+                right: 10px;
+                top: rem(9px);
+                pointer-events: none;
+            }
+        }
+    }
+
+    & label {
+        color: var(--primary-color-dark);
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 18px;
+    }
+    & input {
+        border: rem(2px) solid var(--component-color);
+        border-radius: 4px;
+        padding: rem(11px);
+        background-color: var(--white-color);
+        height: rem(49px);
+        color: var(--body-color);
+        &:active,
+        &:focus {
+            outline: none;
+            box-shadow: none;
+            border-color: var(--component-color);
+            color: var(--body-color);
+        }
+    }
+    & textarea {
+        border: rem(2px) solid var(--component-color);
+        border-radius: 4px;
+        background-color: var(--white-color);
+        color: var(--body-color);
+        resize: none;
+        &:active,
+        &:focus {
+            outline: none;
+            box-shadow: none;
+            border-color: var(--component-color);
+            color: var(--body-color);
+        }
+    }
+    & .select {
+        position: relative;
+        &:after {
+            content: "▼";
+            position: absolute;
+            display: block;
+            font-size: rem(12px);
+            right: 10px;
+            top: rem(16);
+            pointer-events: none;
+        }
+    }
+    & select {
+        border: rem(2px) solid var(--component-color);
+        border-radius: 4px;
+        padding: rem(11px);
+        background-color: var(--white-color);
+        height: rem(49px);
+        color: var(--body-color);
+        &:active,
+        &:focus {
+            outline: none;
+            box-shadow: none;
+            border-color: var(--component-color);
+            color: var(--body-color);
+        }
+    }
+}
 /* CAUTION: IE hackery ahead */
 select::-ms-expand {
     display: none; /* remove default arrow in IE 10 and 11 */
@@ -49,5 +217,90 @@ select::-ms-expand {
     select {
         background: none\9;
         padding: 0.312rem\9;
+    }
+}
+@media screen and (max-width: 762px) {
+    .list-general {
+        font-size: rem(12px);
+        line-height: rem(16px);
+        & li {
+            padding-left: rem(16px);
+            &::before {
+                content: "\2022";
+                color: var(--primary-color);
+                font-weight: bold;
+                display: inline-block;
+                font-size: rem(16px);
+                margin-left: rem(-16px);
+                width: rem(16px);
+                line-height: rem(16px);
+            }
+        }
+    }
+    p {
+        font-size: rem(12px);
+        line-height: rem(16px);
+    }
+    .form__general {
+        &-header {
+            max-width: 90%;
+            margin-bottom: rem(25px);
+            &.line {
+                & h3 {
+                    position: relative;
+                    padding-left: rem(5px);
+                    &::before {
+                        height: rem(30.34px);
+                        width: rem(3.05px);
+                        top: rem(7px);
+                    }
+                }
+                & p {
+                    padding-left: rem(5px);
+                }
+            }
+            & h3 {
+                font-size: rem(28px);
+
+                line-height: rem(34px);
+            }
+            & p {
+                font-size: rem(14px);
+                line-height: rem(18px);
+            }
+        }
+        & select,
+        & textarea,
+        & input {
+            font-size: rem(12px);
+            line-height: rem(16px);
+        }
+        &-button {
+            margin-top: rem(35px);
+            display: block;
+            height: 44px;
+            width: 90%;
+        }
+        & label {
+            font-size: rem(12px);
+            letter-spacing: 0;
+            line-height: rem(19px);
+        }
+        & input {
+            height: rem(34px);
+            padding: rem(7px);
+        }
+        & .select {
+            position: relative;
+            &:after {
+                font-size: rem(10px);
+
+                top: rem(12px);
+            }
+        }
+        & select {
+            height: rem(34px);
+            padding: rem(7px);
+        }
     }
 }

@@ -1,0 +1,181 @@
+.footer {
+    background-color: var(--background-color-2);
+    & .container {
+        position: relative;
+        padding: rem(50px) rem(21px) 0 rem(21px);
+    }
+    &__button {
+        top: rem(-22px);
+        left: calc(50% - rem(104px));
+        height: 44px;
+        width: 208px;
+        border: 1px solid var(--primary-color-dark);
+        border-radius: 22px;
+        background-color: var(--primary-color);
+        box-shadow: 0 2px 5px 0 rgba(131, 147, 168, 0.5);
+        color: var(--white-color);
+        position: absolute;
+    }
+    & h3 {
+        color: var(--primary-color);
+        font-size: rem(20px);
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: rem(36px);
+        margin-bottom: 0;
+        & + hr {
+            margin-top: rem(7px);
+            margin-bottom: rem(23px);
+            display: inline-block;
+            height: rem(4px);
+            width: rem(80px);
+            border-radius: rem(3px);
+            background-color: var(--primary-color-dark);
+            opacity: 1;
+        }
+    }
+    & h4 {
+        font-size: rem(12px);
+        line-height: rem(22px);
+        color: var(--primary-color-dark);
+        margin-bottom: 0;
+    }
+    & p {
+        font-size: rem(12px);
+        line-height: rem(22px);
+        color: var(--primary-color-dark);
+    }
+    &__sitemap {
+        list-style: none;
+        padding: 0;
+        margin: rem(25px) 0;
+        & .nav-item {
+            margin-bottom: rem(14px);
+            & .nav-link {
+                padding: 0;
+                font-size: rem(14px);
+                color: var(--primary-color);
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                & i {
+                    width: rem(6px);
+                    margin-right: 5px;
+                    color: var(--primary-color-dark);
+                }
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__normative {
+        margin-bottom: rem(45px);
+        &-list {
+            list-style: none;
+            padding-left: 0;
+            & .nav-item {
+                margin-bottom: rem(14px);
+                & .nav-link {
+                    padding: 0;
+                    font-size: rem(14px);
+                    color: var(--primary-color-dark);
+                    font-weight: 500;
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    &__social {
+        margin-bottom: rem(20px);
+        & h4 {
+            font-size: rem(14px);
+            line-height: rem(16px);
+            color: var(--body-color);
+        }
+        &-icons {
+            margin-top: 15px;
+            display: flex;
+            gap: rem(32px);
+        }
+    }
+    &__legal {
+        background-color: var(--primary-color);
+        padding: rem(20px);
+        & p {
+            text-align: center;
+            color: var(--white-color);
+        }
+    }
+}
+@media only screen and (min-width: 992px) {
+    .footer {
+        & .container {
+            position: relative;
+            padding: 0;
+            padding-top: rem(77px);
+            padding-bottom: rem(80px);
+        }
+        & h3 {
+            font-size: rem(24px);
+            line-height: rem(36px);
+        }
+        & h4 {
+            font-size: rem(16px);
+            line-height: rem(22px);
+        }
+        & p {
+            font-size: rem(16px);
+            line-height: rem(22px);
+        }
+        &__sitemap {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            margin-top: rem(30px);
+            & .nav-item {
+                margin-bottom: rem(14px);
+                & .nav-link {
+                    padding: 0;
+                    font-size: rem(14px);
+                    color: var(--primary-color);
+                    font-weight: bold;
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        &__contact {
+            margin-top: rem(20px);
+        }
+        &__normative {
+            margin: 0;
+            margin-top: rem(20px);
+            &-list {
+                & .nav-item {
+                    & .nav-link {
+                        font-size: rem(16px);
+                    }
+                }
+            }
+        }
+        &__social {
+            position: absolute;
+            margin-bottom: 0;
+            bottom: rem(61px);
+            & h4 {
+                font-size: rem(16px);
+            }
+            &-icons {
+                gap: rem(20px);
+            }
+        }
+        &__legal {
+            padding: rem(24px);
+        }
+    }
+}
