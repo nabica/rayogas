@@ -19,6 +19,7 @@
 <body>
     @include('rayogas.components.menu')
     @yield('content')
+    @include('rayogas.components.footer')
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 

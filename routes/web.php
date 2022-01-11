@@ -14,17 +14,22 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('rayogas.home');
 });
+
+Route::get('/nosotros', function () {
+    return view('rayogas.about');
+});
+
 Route::get('/glp', function () {
-    return view('glp');
+    return view('rayogas.glp');
 });
 Route::get('/blog/list', function () {
-    return view('blog-list');
+    return view('rayogas.blog-list');
 });
 Route::get('/blog/intern', function () {
-    return view('blog');
+    return view('rayogas.blog');
 });
 Route::get('/pqrs', function () {
-    return view('pqrs');
+    return view('rayogas.pqrs');
 });

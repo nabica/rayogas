@@ -11327,7 +11327,7 @@ html[data-theme=light] {
   --background-color: #FAFAFA;
   --wap-color: #00BB2D;
   --white-color: #FFFFFF;
-  --gray-color:#3B4754
+  --gray-color:#3B4754;
   /*Variables que manuel aún no le ha puesto nombre*/
   --separator-color-alpha-25: rgba(151, 151, 151, 0.25);
   --separator-color-alpha-8: rgba(201, 211, 221, 0.8);
@@ -12524,11 +12524,11 @@ html[data-size=small] .request-service .relative-container .image {
   font-weight: bold;
   letter-spacing: 0;
   line-height: 2.125rem;
-  color: var(--white-color);
 }
 #home-main-image .content p {
   margin: 0;
   padding-left: 10px;
+  color: var(--white-color);
 }
 #home-main-image .content p::after {
   content: "";
@@ -12541,6 +12541,113 @@ html[data-size=small] .request-service .relative-container .image {
   border-radius: 0.187rem;
   background-color: var(--primary-color-dark-2);
   margin-left: -15px;
+}
+
+#bg-home-rates {
+  background: url("/images/web/home/rates/home_banner_tarifas.png");
+  min-height: 8.25rem;
+}
+#bg-home-rates h3, #bg-home-rates .h3 {
+  color: var(--white-color);
+  font-size: 2.875rem;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 3.375rem;
+  text-align: center;
+}
+#bg-home-rates .btn {
+  padding: 0.812rem 2.375rem;
+  border: 0.062rem solid var(--white-color);
+  border-radius: 1.25rem;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+#bg-home-rates .btn:first-child {
+  margin-right: 1.875rem;
+}
+
+#banner-about {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("/images/web/about/nosotros_banner_main.png");
+}
+
+#about-team .description {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+#about-team .description p {
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 1.875rem;
+}
+
+#about-services {
+  border-radius: 1.25rem;
+  box-shadow: 0 0.125rem 0.5rem 0 rgba(0, 0, 0, 0.14);
+  padding-left: 5rem;
+  /*padding-top: rem(60px);
+  padding-bottom: rem(60px);*/
+  height: 25rem;
+}
+#about-services .content {
+  display: flex;
+  height: inherit;
+  align-items: center;
+}
+#about-services .content .text {
+  width: 70%;
+}
+#about-services .content .text .title {
+  margin-bottom: 1.875rem;
+  /*margin-left: 1rem;*/
+}
+#about-services .content .text .title::before {
+  content: "";
+  position: absolute;
+  width: 0.312rem;
+  height: 2.062rem;
+  display: block;
+  border-radius: 0.187rem;
+  background-color: var(--primary-color-dark);
+  margin-left: -1rem;
+  margin-top: 0.5rem;
+}
+#about-services .content .text .title h4, #about-services .content .text .title .h4 {
+  color: var(--primary-color);
+  font-size: 2.25rem;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 2.625rem;
+  margin: 0;
+}
+#about-services .content .text .text-description {
+  width: 70%;
+}
+#about-services .content .image {
+  width: 30%;
+}
+
+#about-our-values h3, #about-our-values .h3 {
+  color: var(--primary-color-dark);
+  font-size: 1.75rem;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 2.125rem;
+}
+#about-our-values p {
+  width: 72%;
+  margin: 0 auto 3.75rem auto;
+}
+
+#about-choosing h3, #about-choosing .h3 {
+  color: var(--primary-color-dark);
+  font-size: 1.75rem;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 2.25rem;
+  margin-top: 1.875rem;
+  margin-bottom: 1.25rem;
 }
 
 .glp h3, .glp .h3 {

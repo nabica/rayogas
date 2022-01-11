@@ -20,10 +20,11 @@
         font-weight: bold;
         letter-spacing: 0;
         line-height: 2.125rem;
-        color: var(--white-color);
+
         p {
             margin: 0;
             padding-left: 10px;
+            color: var(--white-color);
             &::after {
                 content: "";
                 position: absolute;
@@ -36,6 +37,29 @@
                 background-color: var(--primary-color-dark-2);
                 margin-left: -15px;
             }
+        }
+    }
+}
+
+#bg-home-rates {
+    background: url('/images/web/home/rates/home_banner_tarifas.png');
+    min-height: 8.25rem;
+    h3 {
+        color: var(--white-color);
+        font-size: 2.875rem;
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: 3.375rem;
+        text-align: center;
+    }
+    .btn {
+        padding: 0.812rem 2.375rem;
+        border: 0.062rem solid var(--white-color);
+        border-radius: 1.25rem;
+        background-color: var(--primary-color);
+        color: var(--white-color);
+        &:first-child {
+            margin-right: 1.875rem;
         }
     }
 }

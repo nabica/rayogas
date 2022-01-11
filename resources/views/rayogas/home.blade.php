@@ -1,26 +1,20 @@
 @extends('rayogas.layouts.master')
 @section('content')
 
-<!-- Banner -->
-<section>
-    <div class="banner" id="banner-home">
-        <div class="container">
-            <div class="banner-content">
-                <h1>Somos energía que mueve un país</h1>
-                <p>Somos empresa 100% colombiana que vive la diversidad de nuestro país en cada recorrido distribuyendo GLP como solución energética.</p>
-                <a href="">Conocer más de Rayogas</a>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End Banner -->
+@component('rayogas.components.banner')
+    @slot('id')banner-home @endslot
+    @slot('title')Somos energía que mueve un país @endslot
+    @slot('description')Somos empresa 100% colombiana que vive la diversidad de nuestro país en cada recorrido distribuyendo GLP como solución energética. @endslot
+    @slot('buttonLink')# @endslot
+    @slot('buttonText')Conocer más de Rayogas @endslot
+@endcomponent
 
 <!-- Team -->
 <div class="container">
     <section class="section">
-        <div class="heading-title">
-            <h2>Contamos con un equipo humano profesional y especializado para acompañarte</h2>
-        </div>
+        @component('rayogas.components.heading-title')
+            @slot('title')Contamos con un equipo humano profesional y especializado para acompañarte @endslot
+        @endcomponent
 
         <div class="row">
             <div class="col-md-6">
@@ -46,10 +40,10 @@
 <!-- Services -->
 <div class="container">
     <section class="section">
-        <div class="heading-title">
-            <h2>Nuestros servicios</h2>
-            <p>Contamos con un <strong>amplio portafolio de GLP en cilindros y a granel</strong> para nuestros clientes residenciales, comerciales e industriales, <strong>adaptándonos a sus necesidades</strong> específicas.</p>
-        </div>
+        @component('rayogas.components.heading-title')
+            @slot('title')Nuestros servicios @endslot
+            @slot('description')Contamos con un <strong>amplio portafolio de GLP en cilindros y a granel</strong> para nuestros clientes residenciales, comerciales e industriales, <strong>adaptándonos a sus necesidades</strong> específicas. @endslot
+        @endcomponent
 
         <div class="tabs">
             <div class="tabs-menu">
@@ -106,10 +100,10 @@
 <!-- End Coverage -->
 <section class="section bg-section">
     <div class="container">
-        <div class="heading-title">
-            <h2>Nuestra Cobertura</h2>
-            <p>Encuentra nuestro servicio en las principales ciudades del país. ¡Pregúntanos por la tuya!</p>
-        </div>
+        @component('rayogas.components.heading-title')
+            @slot('title')Nuestra Coberturas @endslot
+            @slot('description')Encuentra nuestro servicio en las principales ciudades del país. ¡Pregúntanos por la tuya! @endslot
+        @endcomponent
 
         <div class="map">
             <div class="row">
@@ -298,5 +292,23 @@
     </div>
 </section>
 <!-- End Request Service -->
+
+<!-- Home rates -->
+<section class="section" id="bg-home-rates">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Nuestras tarifas</h3>
+            </div>
+            <div class="col-md-6 text-center mt-1">
+                <a href="" class="btn">Octubre 2021</a>
+                <a href="" class="btn">Noviembre 2021</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Home rates end -->
+
+@include('rayogas.components.last-news')
 @endsection
 
