@@ -4,7 +4,7 @@
 @component('rayogas.components.banner')
     @slot('id')banner-about @endslot
     @slot('title')Somos una empresa 100% colombiana con un cálido compromiso @endslot
-    @slot('description')SNos dedicamos a la comercialización y distribución de gas licuado de petróleo (GLP) para usuarios residenciales, comerciales e industriales en el país. @endslot
+    @slot('description')Nos dedicamos a la comercialización y distribución de gas licuado de petróleo (GLP) para usuarios residenciales, comerciales e industriales en el país. @endslot
 @endcomponent
 
 <!-- About Team -->
@@ -46,7 +46,10 @@
                         </div>
 
                         <div class="image">
+                            <div>
                             <img src="{{ asset('images/web/about/nosotros_img_cilindros.png') }}" class="img-flui" alt="cilindros">
+                            </div>
+
                         </div>
                     </div>
                 </div>

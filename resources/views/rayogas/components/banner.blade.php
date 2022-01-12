@@ -6,7 +6,7 @@
                 <h1>{{ $title }}</h1>
                 <p>{{ $description }}</p>
                 @isset($buttonLink)
-                <a href="{{ $buttonLink }}">{{ $buttonText }}</a>
+                <a href="{{ $buttonLink }}" class="btn">{{ $buttonText }}</a>
                 @endisset
             </div>
         </div>

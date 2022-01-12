@@ -2,12 +2,11 @@
     margin-bottom: 3.75rem;
     h2 {
         color: var(--primary-color);
-        font-size: 2.25rem;
+        font-size: rem(16px);
         font-weight: bold;
         letter-spacing: 0;
-        line-height: 2.75rem;
+        line-height: rem(19px);
         text-align: center;
-        width: 70%;
         margin: 0 auto;
         margin-bottom: 2.5rem;
         position: relative;
@@ -25,8 +24,31 @@
         }
     }
     p {
-        width: 70%;
         margin: 0 auto;
         text-align: center;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .heading-title {
+        h2 {
+            width: 90%;
+            font-size: rem(36px);
+            line-height: rem(44px);
+        }
+        p {
+            width: 90%;
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .heading-title {
+        h2 {
+            width: 70%;
+        }
+        p {
+            width: 70%;
+        }
     }
 }

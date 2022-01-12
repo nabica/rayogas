@@ -2,22 +2,20 @@
     border-radius: 1.5rem;
     background-color: #FFFFFF;
     box-shadow: 0 2px 8px 0 rgba(0,0,0,0.14);
-    padding-right: 1.875rem;
 
     .relative-container {
-        position: relative;
+       /* position: relative;*/
         .image {
-            position: absolute;
-            left: -21.875rem;
+        /*    position: absolute;
+            left: -21.875rem;*/
             img {
                 /*max-width: 70%;*/
             }
         }
     }
 
-
     .content {
-        padding: 1.875rem 0;
+        padding: rem(30px) rem(20px);
 
         .title {
             margin-bottom: 1.875rem;
@@ -90,7 +88,7 @@
                 margin-top: 2.5rem;
 
                 .buttons {
-                    text-align: right;
+                    text-align: center;
 
                     button {
                         height: 3.25rem;
@@ -114,15 +112,15 @@
                         font-size: 1.125rem;
                         font-weight: bold;
                         letter-spacing: 0;
+                        display: block;
+                        margin-bottom: rem(20px);
                         /*line-height: 0;*/
                         div {
                             font-size: 0.875rem;
                             font-weight: 500;
                             margin-top: -0.425rem;
                         }
-                        &:first-child {
-                            margin-right: 1.25rem;
-                        }
+
                     }
 
                     .btn-green {
@@ -136,13 +134,12 @@
             }
 
             .indicators {
-                position: relative;
-                top: -1.562rem;
-
+                margin-top: rem(30px);
                 .dots {
                     height: 100%;
                     display: flex;
                     align-items: end;
+                    justify-content: center;
 
                     .dots-item {
                         display: inline-block;
@@ -166,11 +163,72 @@
 }
 
 
+@include media-breakpoint-up(md) {
+    .request-service {
+        .relative-container {
+            position: relative;
+            .image {
+                position: absolute;
+                left: -21.875rem;
+                img {
+                    /*max-width: 70%;*/
+                }
+            }
+        }
+        .content {
+            padding: rem(30px) 0;
+
+            form {
+                .controls {
+                    .buttons {
+
+
+                    }
+                }
+
+
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .request-service {
+        padding-right: 1.875rem;
+        .content {
+            form {
+                .controls {
+                    .buttons {
+                        text-align: right;
+
+                        a {
+                            display: inline-block;
+                            margin-bottom: 0;
+                            &:first-child {
+                                margin-right: 1.25rem;
+                            }
+                        }
+
+                    }
+                }
+                .indicators {
+                    position: relative;
+                    top: -1.562rem;
+                    .dots {
+                        justify-content: start;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
 html[data-size="small"] {
     .request-service {
         .relative-container {
             .image {
-                left: -27.875rem;
+                left: rem(-446px);
             }
         }
     }

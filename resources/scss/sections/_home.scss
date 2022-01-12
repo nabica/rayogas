@@ -8,6 +8,7 @@
     position: relative;
     display: flex;
     justify-content: center;
+    margin-top: rem(20px);
 
     .content {
         position: absolute;
@@ -25,6 +26,9 @@
             margin: 0;
             padding-left: 10px;
             color: var(--white-color);
+            font-size: rem(16px);
+            line-height: rem(19px);
+
             &::after {
                 content: "";
                 position: absolute;
@@ -41,25 +45,42 @@
     }
 }
 
+@include media-breakpoint-up(md) {
+    #home-main-image {
+        margin-top: 0;
+    }
+}
+
 #bg-home-rates {
     background: url('/images/web/home/rates/home_banner_tarifas.png');
     min-height: 8.25rem;
     h3 {
         color: var(--white-color);
-        font-size: 2.875rem;
+        font-size: rem(30px);
         font-weight: bold;
         letter-spacing: 0;
-        line-height: 3.375rem;
         text-align: center;
     }
     .btn {
-        padding: 0.812rem 2.375rem;
+        padding: rem(5px) rem(10px);
         border: 0.062rem solid var(--white-color);
         border-radius: 1.25rem;
         background-color: var(--primary-color);
         color: var(--white-color);
         &:first-child {
             margin-right: 1.875rem;
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+#bg-home-rates {
+        h3 {
+            font-size: rem(46px);
+            line-height: rem(54px);
+        }
+        .btn {
+            padding: rem(13px) rem(38px);
         }
     }
 }

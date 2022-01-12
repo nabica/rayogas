@@ -21,6 +21,10 @@ Route::get('/nosotros', function () {
     return view('rayogas.about');
 });
 
+Route::get('/productos-y-servicios', function () {
+    return view('rayogas.products');
+});
+
 Route::get('/glp', function () {
     return view('rayogas.glp');
 });

@@ -1,5 +1,4 @@
 .tabs-menu {
-    width: 60%;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -101,20 +100,27 @@
     }
 }
 
+@include media-breakpoint-up(md) {
+    .tabs-menu {
+        width: 60%;
+    }
+}
+
 .tabs-content {
     margin-top: 2.5rem;
     h3 {
         color: var(--primary-color-dark);
-        font-size: 1.75rem;
+        font-size: rem(22px);
         font-weight: bold;
         letter-spacing: 0;
-        line-height: 2.125rem;
-        margin-top: 2.5rem;
-        margin-bottom: 2.5rem;
+        line-height: rem(36px);
+        margin-top: rem(20px);
+        margin-bottom: rem(20px);
     }
     p {
-
+        margin-bottom: rem(20px);
     }
+
     .container-button-interest {
         text-align: center;
         margin-top: 2.5rem;
@@ -133,5 +139,84 @@
             padding: 0.812rem 3.125rem;
         }
     }
+}
 
+@include media-breakpoint-up(md) {
+    .tabs-content {
+        h3 {
+            font-size: rem(28px);
+            line-height: rem(34px);
+            margin-top: rem(40px);
+            margin-bottom: rem(40px);
+        }
+        p {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.tabs-content {
+    .service-design {
+        border-radius: rem(20px);
+        box-shadow: 0 rem(2px) rem(8px) 0 rgba(0,0,0,0.14);
+        padding-left: rem(80px);
+        /*padding-top: rem(60px);
+        padding-bottom: rem(60px);*/
+        height: rem(400px);
+        border: 1px solid blue;
+        .content {
+            display: flex;
+            height: inherit;
+            align-items: center;
+
+            .text {
+                width: 70%;
+
+                .title {
+                    margin-bottom: 1.875rem;
+                    /*margin-left: 1rem;*/
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: 0.312rem;
+                        height: 2.062rem;
+                        display: block;
+                        border-radius: 0.187rem;
+                        background-color: var(--primary-color);
+                        margin-left: -1rem;
+                        margin-top: 0.5rem;
+                    }
+
+                    h4 {
+                        color: var(--primary-color);
+                        font-size: rem(46px);
+                        font-weight: bold;
+                        letter-spacing: 0;
+                        line-height: rem(54px);
+                        margin: 0;
+                    }
+                    h5 {
+                        color: var(--primary-color-dark);
+                        font-size: rem(28px);
+                        font-weight: bold;
+                        letter-spacing: 0;
+                        line-height: rem(34px);
+                    }
+                }
+                .text-description {
+                    width: 75%;
+
+                    p {
+                        font-size: rem(20px);
+                        letter-spacing: 0;
+                        line-height: rem(30px);
+                    }
+                }
+            }
+            .image {
+                width: 30%;
+            }
+        }
+    }
 }
