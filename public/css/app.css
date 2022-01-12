@@ -11938,6 +11938,7 @@ select::-ms-expand {
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.23);
   border-radius: 0.75rem 0.75rem 0.75rem 0.75rem;
   padding: 0;
+  background-color: var(--white-color);
 }
 .tabs-menu ul .active {
   background-color: var(--primary-color);
@@ -12059,25 +12060,26 @@ select::-ms-expand {
     margin-bottom: 2.5rem;
   }
   .tabs-content p {
-    margin-bottom: 0;
+    /*margin-bottom: 0;*/
   }
 }
 .tabs-content .service-design {
   border-radius: 1.25rem;
   box-shadow: 0 0.125rem 0.5rem 0 rgba(0, 0, 0, 0.14);
-  padding-left: 5rem;
+  margin-top: 24.625rem;
   /*padding-top: rem(60px);
   padding-bottom: rem(60px);*/
-  height: 25rem;
   border: 1px solid blue;
 }
 .tabs-content .service-design .content {
   display: flex;
+  flex-direction: column;
   height: inherit;
   align-items: center;
+  padding: 0 1.25rem 1.25rem 1.25rem;
 }
 .tabs-content .service-design .content .text {
-  width: 70%;
+  margin-top: 6.25rem;
 }
 .tabs-content .service-design .content .text .title {
   margin-bottom: 1.875rem;
@@ -12096,31 +12098,140 @@ select::-ms-expand {
 }
 .tabs-content .service-design .content .text .title h4, .tabs-content .service-design .content .text .title .h4 {
   color: var(--primary-color);
-  font-size: 2.875rem;
-  font-weight: bold;
-  letter-spacing: 0;
-  line-height: 3.375rem;
-  margin: 0;
-}
-.tabs-content .service-design .content .text .title h5, .tabs-content .service-design .content .text .title .h5 {
-  color: var(--primary-color-dark);
   font-size: 1.75rem;
   font-weight: bold;
   letter-spacing: 0;
   line-height: 2.125rem;
+  margin: 0;
 }
-.tabs-content .service-design .content .text .text-description {
-  width: 75%;
+.tabs-content .service-design .content .text .title h5, .tabs-content .service-design .content .text .title .h5 {
+  color: var(--primary-color-dark);
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0;
 }
 .tabs-content .service-design .content .text .text-description p {
-  font-size: 1.25rem;
+  font-size: 0.875rem;
   letter-spacing: 0;
-  line-height: 1.875rem;
+  line-height: 1.125rem;
 }
 .tabs-content .service-design .content .image {
-  width: 30%;
+  /*height: rem(200px);*/
+  position: absolute;
+}
+.tabs-content .service-design .content .image .container-relative {
+  position: relative;
+  top: -25.5rem;
+  /*margin-left: -200px;*/
 }
 
+@media (min-width: 768px) {
+  .tabs-content .service-design {
+    /*height: rem(400px);*/
+    /*padding-left: rem(80px);*/
+    padding: 1.25rem 1.25rem 1.25rem 5rem;
+    margin-top: 0;
+  }
+  .tabs-content .service-design .content {
+    flex-direction: row;
+    padding: 0;
+  }
+  .tabs-content .service-design .content .text {
+    width: 70%;
+    margin-top: 0;
+  }
+  .tabs-content .service-design .content .text .title h4, .tabs-content .service-design .content .text .title .h4 {
+    font-size: 2.875rem;
+    line-height: 3.375rem;
+  }
+  .tabs-content .service-design .content .text .title h5, .tabs-content .service-design .content .text .title .h5 {
+    font-size: 1.75rem;
+    line-height: 2.125rem;
+  }
+  .tabs-content .service-design .content .text .text-description p {
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+  }
+  .tabs-content .service-design .content .image {
+    width: 30%;
+    height: auto;
+    position: initial;
+  }
+  .tabs-content .service-design .content .image .container-relative {
+    position: relative;
+    margin-left: -200px;
+    top: 0;
+  }
+}
+@media (min-width: 992px) {
+  .tabs-content .service-design .content {
+    height: 25rem;
+  }
+  .tabs-content .service-design .content .text .text-description {
+    width: 75%;
+  }
+}
+.tabs-content .product-design .content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+.tabs-content .product-design .content .text-content h4, .tabs-content .product-design .content .text-content .h4 {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 2.125rem;
+  margin-top: 1.875rem;
+  margin-bottom: 1.25rem;
+}
+.tabs-content .product-design .content .text-content p {
+  font-size: 0.875rem;
+  letter-spacing: 0;
+  line-height: 1.125rem;
+}
+.tabs-content .product-design .features h3, .tabs-content .product-design .features .h3 {
+  font-size: 1.375rem;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 2.125rem;
+  margin-top: 0.625rem;
+  margin-bottom: 1.25rem;
+}
+.tabs-content .product-design .features p:last-child {
+  margin-bottom: 1.875rem;
+}
+
+@media (min-width: 768px) {
+  .tabs-content .product-design .features {
+    margin-top: 2.5rem;
+  }
+  .tabs-content .product-design .features h3, .tabs-content .product-design .features .h3 {
+    height: 4rem;
+    width: 90%;
+    font-size: 1.75rem;
+  }
+}
+@media (min-width: 992px) {
+  .tabs-content .product-design .content .text-content {
+    padding-left: 1.875rem;
+    width: 70%;
+  }
+  .tabs-content .product-design .content .text-content h4, .tabs-content .product-design .content .text-content .h4 {
+    font-size: 2.25rem;
+    line-height: 2.625rem;
+    margin-bottom: 1.25rem;
+    margin-top: 0;
+    width: 80%;
+  }
+  .tabs-content .product-design .content .text-content p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .tabs-content .product-design .content .text-content p:last-child {
+    margin-bottom: 0;
+  }
+}
 .map {
   width: 100%;
   border-radius: 1.187rem;
