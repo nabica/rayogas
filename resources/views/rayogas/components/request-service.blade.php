@@ -23,7 +23,7 @@
                                     <h5>Cilindro o granel</h5>
                                 </div>
 
-                                <form action="">
+                                <form action="" class="form__general">
                                     <div class="steps">
                                         <div class="step ">
                                             <div class="row">
@@ -39,9 +39,11 @@
                                             <div class="row">
                                                 <div class="col">
                                                     <label for="">Tipo de persona</label>
-                                                    <select name="" id="">
-                                                        <option value="">Tipo de persona</option>
-                                                    </select>
+                                                    <div class="select">
+                                                        <select name="" id="" class="form-control">
+                                                            <option value="">Tipo de persona</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
                                                 <div class="col">
                                                     <label for="">Razón social</label>
@@ -49,9 +51,6 @@
                                                 </div>
                                             </div>
                                             <div class="row controls">
-                                                <{{-- div class="col-md-1">
-
-                                                </div> --}}
                                                 <div class="col-md-12">
                                                     <div class="buttons">
                                                         <button class="btn btn-primary">
@@ -66,37 +65,37 @@
                                             <div class="row">
                                                 <div class="col">
                                                     <label for="">Cilindro o granel</label>
-                                                    <select name="" id="">
-                                                        <option value="">Cilindro</option>
-                                                    </select>
+                                                    <div class="select">
+                                                        <select name="" id="" class="form-control">
+                                                            <option value="">Cilindro</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
                                                 <div class="col">
                                                     <label for="">Cantidad</label>
-                                                    <select name="" id="">
-                                                        <option value="">1 unidad</option>
-                                                    </select>
+                                                    <div class="select">
+                                                        <select name="" id="" class="form-control">
+                                                            <option value="">Unidad</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col">
                                                     <label for="">Presentación / Volumen</label>
-                                                    <select name="" id="">
-                                                        <option value="">40 libras</option>
-                                                    </select>
+                                                    <div class="select">
+                                                        <select name="" id="" class="form-control">
+                                                            <option value="">40 libras</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
                                                 <div class="col">
 
                                                 </div>
                                             </div>
                                             <div class="row controls">
-                                                {{-- <div class="col-md-1">
-
-                                                </div> --}}
                                                 <div class="col-md-12">
                                                     <div class="buttons">
-                                                        {{-- <button class="btn btn-primary">
-                                                            >
-                                                        </button> --}}
                                                         <a href="" class="btn btn-green">
                                                             Solicitar
                                                             <div>Pago en efectivo</div>

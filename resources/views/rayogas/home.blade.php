@@ -49,16 +49,16 @@
             <div class="tabs-menu">
                 <ul>
                     <li class="no-border">
-                        <a href="" >Hogar</a>
+                        <a href="hogar">Hogar</a>
                     </li>
                     <li class="active">
-                        <a href="">Industria</a>
+                        <a href="industria">Industria</a>
                     </li>
                     <li >
-                        <a href="">Agro</a>
+                        <a href="agro">Agro</a>
                     </li>
                     <li >
-                        <a href="">Horeca</a>
+                        <a href="horeca">Horeca</a>
                     </li>
                 </ul>
             </div>
@@ -90,14 +90,13 @@
                 <div class="container-button-interest">
                     <a href="">Me interesa</a>
                 </div>
-
             </div>
         </div>
     </section>
 </div>
 <!-- End Services -->
 
-@include('rayogas.components.map')
+@include('rayogas.components.map', ['backgroundSectionActive' => true])
 @include('rayogas.components.request-service')
 
 <!-- Home rates -->

@@ -11333,6 +11333,7 @@ html[data-theme=light] {
   --separator-color-alpha-8: rgba(201, 211, 221, 0.8);
   --separator-color-2: #ECECEF;
   --background-color-2: #F0F9FE;
+  --success-color: #00C85A;
 }
 
 html[data-theme=dark] {
@@ -11366,29 +11367,32 @@ body {
   background-color: var(--background-color-2);
 }
 
-select {
-  width: 100%;
+.forms-select {
+  position: relative;
+}
+.forms-select:after {
+  content: "▼";
+  position: absolute;
+  display: block;
+  font-size: 0.75rem;
+  right: 10px;
+  top: 0.625rem;
+  pointer-events: none;
+}
+.forms-select select {
+  border: 0.125rem solid var(--component-color);
+  border-radius: 0.8125rem;
+  padding: 0.3125rem 0.6875rem;
+  background-color: var(--white-color);
   height: 2.375rem;
-  padding: 0 2.187rem 0 0.625rem;
-  border: 0.125rem solid #c9d3dd;
-  border-radius: 0.812rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  cursor: pointer;
-  outline: none;
   color: var(--body-color);
-  font-size: 0.875rem;
-  font-weight: 300;
-  letter-spacing: 0;
-  /*line-height: 2.25rem;*/
-  background: url(/img/common/flecha-abajo-select.svg) 98% no-repeat white;
+  cursor: pointer;
 }
-select:hover {
-  background: url(/img/common/flecha-abajo-select.svg) 98% no-repeat white;
-}
-select option {
-  background: white;
+.forms-select select:active, .forms-select select:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: var(--component-color);
+  color: var(--body-color);
 }
 
 p {
@@ -12201,6 +12205,26 @@ select::-ms-expand {
 .tabs-content .product-design .features p:last-child {
   margin-bottom: 1.875rem;
 }
+.tabs-content .product-design .buttons {
+  text-align: center;
+}
+.tabs-content .product-design .buttons a {
+  padding: 1.0625rem 4.1875rem;
+  border-radius: 2rem;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0;
+  display: block;
+  margin-bottom: 1.25rem;
+}
+.tabs-content .product-design .buttons .btn-green {
+  background-color: var(--success-color);
+}
+.tabs-content .product-design .buttons .btn-blue {
+  background-color: var(--primary-color);
+}
 
 @media (min-width: 768px) {
   .tabs-content .product-design .features {
@@ -12210,6 +12234,16 @@ select::-ms-expand {
     height: 4rem;
     width: 90%;
     font-size: 1.75rem;
+  }
+  .tabs-content .product-design .buttons {
+    text-align: center;
+  }
+  .tabs-content .product-design .buttons a {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+  .tabs-content .product-design .buttons a:first-child {
+    margin-right: 1.25rem;
   }
 }
 @media (min-width: 992px) {
@@ -12379,9 +12413,6 @@ select::-ms-expand {
   background-color: #FFFFFF;
   outline: none;
 }
-.request-service .content form select {
-  height: 3.062rem;
-}
 .request-service .content form .controls {
   margin-top: 2.5rem;
 }
@@ -12418,10 +12449,10 @@ select::-ms-expand {
   margin-top: -0.425rem;
 }
 .request-service .content form .controls .buttons .btn-green {
-  background-color: #00C85A;
+  background-color: var(--success-color);
 }
 .request-service .content form .controls .buttons .btn-blue {
-  background-color: #009EE3;
+  background-color: var(--primary-color);
 }
 .request-service .content form .indicators {
   margin-top: 1.875rem;

@@ -25,21 +25,20 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="{{ route('rayogas.home') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Nosotros</a>
+                    <a class="nav-link" href="{{ route('rayogas.about') }}">Nosotros</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Productos y Servicios</a>
+                    <a class="nav-link" href="{{ route('rayogas.products') }}">Productos y Servicios</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">GLP</a>
+                    <a class="nav-link" href="{{ route('rayogas.glp') }}">GLP</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Blog</a>
+                    <a class="nav-link" href="{{ route('rayogas.blog') }}">Blog</a>
                 </li>
-
             </ul>
             <hr class="d-lg-none">
         </div>

@@ -37,7 +37,7 @@
                             <div class="content">
                                 <div class="image">
                                     <div class="container-relative">
-                                        <img src="{{ asset('images/web/products/services/servicios_img_cilindros.png') }}" class="img-fluid" alt="cilindros">
+                                        <img src="{{ asset('images/web/products/services/servicios_img_soporte.png') }}" class="img-fluid" alt="cilindros">
                                     </div>
                                 </div>
                                 <div class="text">
@@ -143,6 +143,11 @@
                                 <p>Disfruta de un buen momento al lado de una chimenea sin tener que quemar leña que ocasiona erosión. Ahora puedes usar chimeneas alimentadas con GLP Rayogas que proporciona calor y ambiente a un lugar frío y ¡cuida el medio ambiente!</p>
                             </div>
                         </div>
+                    </div>
+
+                    <div class="buttons">
+                        <a href="" class="btn btn-green">Solicitar asesoría</a>
+                        <a href="" class="btn">Solicitar servicio</a>
                     </div>
 
                 </div>

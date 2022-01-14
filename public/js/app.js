@@ -2068,6 +2068,8 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 __webpack_require__(/*! ./components/navbar */ "./resources/js/components/navbar.js");
 
+__webpack_require__(/*! ./components/tabs */ "./resources/js/components/tabs.js");
+
 __webpack_require__(/*! ./components/footer */ "./resources/js/components/footer.js");
 
 __webpack_require__(/*! ./components/form-validation */ "./resources/js/components/form-validation.js");
@@ -2155,6 +2157,29 @@ button.addEventListener("click", function () {
   button.classList.toggle("open");
   mobileButtons.classList.toggle("show");
 });
+
+/***/ }),
+
+/***/ "./resources/js/components/tabs.js":
+/*!*****************************************!*\
+  !*** ./resources/js/components/tabs.js ***!
+  \*****************************************/
+/***/ (() => {
+
+// Selectors
+var tabItems = document.querySelectorAll('.tabs .tabs-menu a'); // Events
+
+tabItems.forEach(function (element) {
+  element.addEventListener('click', clickOnTab);
+}); // Functions
+
+function clickOnTab() {
+  event.preventDefault();
+  var currentTabItem = event.target;
+  var tabContainer = currentTabItem.closest('.tabs');
+  var tabContent = tabContainer.querySelector('.tabs-content');
+  tabContent.innerHTML = "\n        <p>1. Este contenido es administrable?</p>\n        <p>2. Se va a generar dinamicamente ...</p>\n    ";
+}
 
 /***/ }),
 

@@ -1,5 +1,5 @@
 <!-- End Coverage -->
-<section class="section bg-section">
+<section class="section {{ isset($backgroundSectionActive) ? 'bg-section': '' }} ">
     <div class="container">
         @component('rayogas.components.heading-title')
             @slot('title')Nuestra Coberturas @endslot
@@ -16,14 +16,18 @@
 
                         <form action="">
                             <label for="">Departamento</label>
-                            <select name="" id="">
-                                <option value="">Seleccionar departamento</option>
-                            </select>
+                            <div class="forms-select">
+                                <select name="" id="" class="form-control">
+                                    <option value="">Seleccionar departamento</option>
+                                </select>
+                            </div>
 
                             <label for="">Municipio</label>
-                            <select name="" id="">
-                                <option value="">Seleccionar municipio</option>
-                            </select>
+                            <div class="forms-select">
+                                <select name="" id="" class="form-control">
+                                    <option value="">Seleccionar municipio</option>
+                                </select>
+                            </div>
                         </form>
 
                         <div class="locations">

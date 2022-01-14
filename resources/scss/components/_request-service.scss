@@ -80,10 +80,6 @@
                 outline: none;
             }
 
-            select {
-                height: 3.062rem;
-            }
-
             .controls {
                 margin-top: 2.5rem;
 
@@ -124,11 +120,11 @@
                     }
 
                     .btn-green {
-                        background-color: #00C85A;
+                        background-color: var(--success-color);
                     }
 
                     .btn-blue {
-                        background-color: #009EE3;
+                        background-color: var(--primary-color);
                     }
                 }
             }

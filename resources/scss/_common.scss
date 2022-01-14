@@ -22,32 +22,38 @@ body {
     background-color: var(--background-color-2);
 }
 
-select {
-    width: 100%;
-    height: 2.375rem;
-    padding: 0 2.187rem 0 0.625rem;
-    border: 0.125rem solid #c9d3dd;
-    border-radius: 0.812rem;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    cursor: pointer;
-    outline: none;
-
-    color: var(--body-color);
-    font-size: 0.875rem;
-    font-weight: 300;
-    letter-spacing: 0;
-    /*line-height: 2.25rem;*/
-
-    background: url(/img/common/flecha-abajo-select.svg) 98% no-repeat white;
-    &:hover {
-        background: url(/img/common/flecha-abajo-select.svg) 98% no-repeat white;
+.forms-select {
+    position: relative;
+    &:after {
+        content: "▼";
+        position: absolute;
+        display: block;
+        font-size: rem(12px);
+        right: 10px;
+        top: rem(10px);
+        pointer-events: none;
     }
-    option {
-        background: white;
+
+    select {
+        border: rem(2px) solid var(--component-color);
+        border-radius: rem(13px);
+        padding: rem(5px) rem(11px);
+        background-color: var(--white-color);
+        height: rem(38px);
+        color: var(--body-color);
+        cursor: pointer;
+        &:active,
+        &:focus {
+            outline: none;
+            box-shadow: none;
+            border-color: var(--component-color);
+            color: var(--body-color);
+        }
     }
 }
+
+
+
 p {
     margin: 0;
     color: var(--body-color);
