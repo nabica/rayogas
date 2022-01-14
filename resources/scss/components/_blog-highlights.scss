@@ -1,0 +1,39 @@
+.highlights {
+    padding-top: rem(20px);
+    padding-bottom: rem(50px);
+    &__header {
+        text-align: center;
+        margin-bottom: rem(30px);
+        & h3 {
+            color: var(--primary-color);
+            font-size: rem(18px);
+            font-weight: bold;
+            letter-spacing: 0;
+            line-height: rem(19px);
+            margin-bottom: 0;
+            & + hr {
+                margin-top: rem(16px);
+                margin-bottom: rem(16px);
+                display: inline-block;
+                height: rem(6px);
+                width: rem(80px);
+                border-radius: rem(3px);
+                background-color: var(--primary-color-dark);
+                opacity: 1;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 762px) {
+    .highlights {
+        padding-top: rem(40px);
+        padding-bottom: rem(150px);
+        &__header {
+            margin-bottom: rem(62px);
+            & h3 {
+                font-size: rem(36px);
+                line-height: rem(42px);
+            }
+        }
+    }
+}
