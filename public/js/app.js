@@ -2176,8 +2176,17 @@ tabItems.forEach(function (element) {
 function clickOnTab() {
   event.preventDefault();
   var currentTabItem = event.target;
+  var currentLiTabItem = currentTabItem.closest('li');
   var tabContainer = currentTabItem.closest('.tabs');
-  var tabContent = tabContainer.querySelector('.tabs-content');
+  var tabContent = tabContainer.querySelector('.tabs-content'); // Set current tab
+
+  var tabLiItems = tabContainer.querySelectorAll('.tabs-menu ul li');
+  console.log('tabLiItems ', tabLiItems);
+  tabLiItems.forEach(function (element) {
+    element.classList.remove('active');
+  });
+  currentLiTabItem.classList.add('active'); // Modify tab content
+
   tabContent.innerHTML = "\n        <p>1. Este contenido es administrable?</p>\n        <p>2. Se va a generar dinamicamente ...</p>\n    ";
 }
 

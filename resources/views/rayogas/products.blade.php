@@ -18,8 +18,8 @@
         <div class="tabs">
             <div class="tabs-menu">
                 <ul>
-                    <li class="no-border">
-                        <a href="" >Cilindros</a>
+                    <li class="">
+                        <a href="">Cilindros</a>
                     </li>
                     <li class="active">
                         <a href="">Gas a granel</a>
@@ -37,7 +37,7 @@
                             <div class="content">
                                 <div class="image">
                                     <div class="container-relative">
-                                        <img src="{{ asset('images/web/products/services/servicios_img_soporte.png') }}" class="img-fluid" alt="cilindros">
+                                        <img src="{{ asset('images/web/products/services/servicios_img_cilindros.png') }}" class="img-fluid" alt="cilindros">
                                     </div>
                                 </div>
                                 <div class="text">
@@ -74,7 +74,7 @@
         <div class="tabs">
             <div class="tabs-menu">
                 <ul>
-                    <li class="no-border">
+                    <li class="">
                         <a href="">Hogar</a>
                     </li>
                     <li class="active">
