@@ -96,11 +96,11 @@
                                             <div class="row controls">
                                                 <div class="col-md-12">
                                                     <div class="buttons">
-                                                        <a href="" class="btn btn-green">
+                                                        <a href="" class="btn btn-success">
                                                             Solicitar
                                                             <div>Pago en efectivo</div>
                                                         </a>
-                                                        <a href="" class="btn">
+                                                        <a href="" class="btn btn-primary">
                                                             Solicitar
                                                             <div>Pago en línea</div>
                                                         </a>

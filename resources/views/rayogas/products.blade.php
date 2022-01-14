@@ -146,8 +146,8 @@
                     </div>
 
                     <div class="buttons">
-                        <a href="" class="btn btn-green">Solicitar asesoría</a>
-                        <a href="" class="btn">Solicitar servicio</a>
+                        <a href="" class="btn btn-success">Solicitar asesoría</a>
+                        <a href="" class="btn btn-primary">Solicitar servicio</a>
                     </div>
 
                 </div>

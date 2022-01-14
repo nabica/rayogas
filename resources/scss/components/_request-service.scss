@@ -89,10 +89,7 @@
                     button {
                         height: 3.25rem;
                         border-radius: 1.25rem;
-                        background-color: #009EE3;
                         padding: 0 4.375rem;
-
-                        color: var(--white-color);
                         font-size: 1.5rem;
                         font-weight: bold;
                         letter-spacing: 0;
@@ -100,11 +97,8 @@
                         text-align: center;
                     }
 
-                    a {
+                    .btn {
                         padding: 0.312rem 1.875rem;
-                        border-radius: 1.25rem;
-                        background-color: #009EE3;
-                        color: var(--white-color);
                         font-size: 1.125rem;
                         font-weight: bold;
                         letter-spacing: 0;
@@ -117,14 +111,6 @@
                             margin-top: -0.425rem;
                         }
 
-                    }
-
-                    .btn-green {
-                        background-color: var(--success-color);
-                    }
-
-                    .btn-blue {
-                        background-color: var(--primary-color);
                     }
                 }
             }
@@ -197,7 +183,7 @@
                     .buttons {
                         text-align: right;
 
-                        a {
+                        .btn {
                             display: inline-block;
                             margin-bottom: 0;
                             &:first-child {

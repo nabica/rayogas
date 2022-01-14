@@ -88,7 +88,7 @@
                     </div>
                 </div>
                 <div class="container-button-interest">
-                    <a href="">Me interesa</a>
+                    <a href="" class="btn btn-primary">Me interesa</a>
                 </div>
             </div>
         </div>
