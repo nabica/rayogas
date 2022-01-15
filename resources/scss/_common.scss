@@ -23,6 +23,51 @@ body {
     background-color: var(--background-color-2);
 }
 
+// Buttons
+.btn {
+    padding: rem(17px) rem(67px);
+    border-radius: rem(32px);
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0;
+    display: block;
+    margin-bottom: rem(20px);
+    display: inline-block;
+
+    &:focus {
+        box-shadow: 0 4px 16px 0 rgba(131,147,168,0.75);
+    }
+}
+
+.btn-success {
+    background-color: var(--success-color);
+    border-color: var(--success-color);
+    &:hover {
+        background-color: var(--white-color);
+        color: var(--success-color);
+    }
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    &:hover {
+        background-color: var(--white-color);
+        color: var(--primary-color);
+    }
+}
+
+.btn-primary-dark {
+    background-color: var(--primary-color-dark);
+    border-color: var(--primary-color-dark);
+    &:hover {
+        background-color: var(--white-color);
+        color: var(--primary-color-dark);
+    }
+}
+
 .forms-select {
     position: relative;
     &:after {

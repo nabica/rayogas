@@ -11412,6 +11412,49 @@ body {
   background-color: var(--background-color-2);
 }
 
+.btn {
+  padding: 1.0625rem 4.1875rem;
+  border-radius: 2rem;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0;
+  display: block;
+  margin-bottom: 1.25rem;
+  display: inline-block;
+}
+.btn:focus {
+  box-shadow: 0 4px 16px 0 rgba(131, 147, 168, 0.75);
+}
+
+.btn-success {
+  background-color: var(--success-color);
+  border-color: var(--success-color);
+}
+.btn-success:hover {
+  background-color: var(--white-color);
+  color: var(--success-color);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+.btn-primary:hover {
+  background-color: var(--white-color);
+  color: var(--primary-color);
+}
+
+.btn-primary-dark {
+  background-color: var(--primary-color-dark);
+  border-color: var(--primary-color-dark);
+}
+.btn-primary-dark:hover {
+  background-color: var(--white-color);
+  color: var(--primary-color-dark);
+}
+
 .forms-select {
   position: relative;
 }
@@ -11975,7 +12018,7 @@ select::-ms-expand {
   letter-spacing: 0;
   line-height: 1rem;
 }
-.banner .banner-content a {
+.banner .banner-content .btn {
   margin-top: 1.25rem;
   font-size: 0.75rem;
   font-weight: bold;
@@ -12007,7 +12050,7 @@ select::-ms-expand {
     line-height: 1.75rem;
     margin-bottom: 40px;
   }
-  .banner .banner-content a {
+  .banner .banner-content .btn {
     margin-top: 2.5rem;
     font-size: 1rem;
     padding: 1.5625rem 3.6875rem;
@@ -12528,19 +12571,18 @@ select::-ms-expand {
   border-radius: 1.25rem;
   background-color: #009ee3;
   padding: 0 4.375rem;
-  color: var(--white-color);
   font-size: 1.5rem;
   font-weight: bold;
   letter-spacing: 0;
   line-height: 0;
   text-align: center;
 }
-.request-service .content form .controls .buttons a {
+.request-service .content form .controls .buttons .btn {
   padding: 0.312rem 1.875rem;
   margin-bottom: 1.25rem;
   /*line-height: 0;*/
 }
-.request-service .content form .controls .buttons a div {
+.request-service .content form .controls .buttons .btn div {
   font-size: 0.875rem;
   font-weight: 500;
   margin-top: -0.425rem;
@@ -12592,11 +12634,11 @@ select::-ms-expand {
   .request-service .content form .controls .buttons {
     text-align: right;
   }
-  .request-service .content form .controls .buttons a {
+  .request-service .content form .controls .buttons .btn {
     display: inline-block;
     margin-bottom: 0;
   }
-  .request-service .content form .controls .buttons a:first-child {
+  .request-service .content form .controls .buttons .btn:first-child {
     margin-right: 1.25rem;
   }
   .request-service .content form .indicators {
