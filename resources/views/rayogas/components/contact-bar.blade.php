@@ -1,4 +1,4 @@
-<div class="contact-bar">
+<div @class([ 'contact-bar' , 'fixed'=> @isset($fixed), ])>
     <button class="contact-bar__button">
 
         <img src="{{ asset('images/web/common/icn_sidebar_pqrs.png') }}" alt="" class="img-fluid">

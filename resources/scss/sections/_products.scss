@@ -1,5 +1,11 @@
 #banner-products {
-    background-image: linear-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.0)),
-        url('/images/web/products/servicios_banner_main.png'
-    );
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+        url("/images/web/products/servicios_banner_main.png");
+}
+
+.services {
+    padding: rem(80px) 0 rem(150px);
+}
+.products {
+    padding: rem(80px) 0;
 }

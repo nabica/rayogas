@@ -1,7 +1,6 @@
 #banner-home {
-    background-image: linear-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.0)),
-        url('/images/web/home/home_banner_main.png'
-    );
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+        url("/images/web/home/home_banner_main.png");
 }
 
 #home-main-image {
@@ -52,7 +51,8 @@
 }
 
 #bg-home-rates {
-    background: url('/images/web/home/rates/home_banner_tarifas.png');
+    background: url("/images/web/home/rates/home_banner_tarifas.png");
+    background-size: cover;
     min-height: 8.25rem;
     h3 {
         color: var(--white-color);
@@ -62,11 +62,8 @@
         text-align: center;
     }
     .btn {
-        padding: rem(5px) rem(10px);
         border: 0.062rem solid var(--white-color);
-        border-radius: 1.25rem;
-        background-color: var(--primary-color);
-        color: var(--white-color);
+
         &:first-child {
             margin-right: 1.875rem;
         }
@@ -74,7 +71,7 @@
 }
 
 @include media-breakpoint-up(lg) {
-#bg-home-rates {
+    #bg-home-rates {
         h3 {
             font-size: rem(46px);
             line-height: rem(54px);

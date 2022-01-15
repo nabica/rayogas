@@ -2,8 +2,9 @@
 <section class="section {{ isset($backgroundSectionActive) ? 'bg-section': '' }} ">
     <div class="container">
         @component('rayogas.components.heading-title')
-            @slot('title')Nuestra Coberturas @endslot
-            @slot('description')Encuentra nuestro servicio en las principales ciudades del país. ¡Pregúntanos por la tuya! @endslot
+        @slot('title')Nuestra Coberturas @endslot
+        @slot('description')Encuentra nuestro servicio en las principales ciudades del país. ¡Pregúntanos por la tuya!
+        @endslot
         @endcomponent
 
         <div class="map">
@@ -11,7 +12,8 @@
                 <div class="col-md-3">
                     <div class="map-controls">
                         <div class="logo">
-                            <img src="{{ asset('images/web/common/img_logo_flame_map.png') }}" class="img-fluid" alt="logo flama rayogas">
+                            <img src="{{ asset('images/web/common/img_logo_flame_map.png') }}" class="img-fluid"
+                                alt="logo flama rayogas">
                         </div>
 
                         <form action="">
@@ -55,7 +57,7 @@
                     </div>
                 </div>
                 <div class="col-md-9">
-                    right
+                    <div id="map"></div>
                 </div>
             </div>
         </div>

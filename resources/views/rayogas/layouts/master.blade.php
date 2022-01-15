@@ -17,9 +17,9 @@
 </head>
 
 <body>
-    @include('rayogas.components.menu')
+    @include('rayogas.components.menu',['navbar'=>'true'])
     @yield('content')
-    @include('rayogas.components.footer')
+    @include('rayogas.components.footer',['upButton'=> 'true'])
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 

@@ -8,8 +8,9 @@ encuentra en estado gaseoso a presión atmosférica normal.", 'image'=> 'images/
     <div class="container">
 
         <div class="glp-properties__header">
-            <h3>Propiedades</h3>
-            <hr>
+            @component('rayogas.components.heading-title')
+            @slot('title')Propiedades @endslot
+            @endcomponent
             <p>Su propiedad de licuado permite que el GLP sea almacenado y transportado como líquido y utilizado como
                 gas. De esta manera, se puede aprovechar el poco espacio que se requiere para su almacenamiento en
                 estado líquido e igualmente aprovechar la calidad de combustión en su estado gaseoso.</p>
@@ -35,7 +36,7 @@ encuentra en estado gaseoso a presión atmosférica normal.", 'image'=> 'images/
                             convirtiéndose en una alternativa energética altamente eficiente.</p>
                     </div>
                     <div class=" col-12 glp-properties__body-bullet">
-                        <img src="{{ asset('images\web\common\icn_glp_flame.png') }}" alt="">
+                        <img src="{{ asset('images\web\common\icn_glp_cilindro.png') }}" alt="">
 
                         <p>El GLP es realmente portátil al ser fácilmente transportable en las cantidades requeridas.
                         </p>
@@ -47,9 +48,10 @@ encuentra en estado gaseoso a presión atmosférica normal.", 'image'=> 'images/
 </section>
 <section class="glp glp-recommendations">
     <div class="container">
+        @component('rayogas.components.heading-title')
+        @slot('title')Recomendaciones para su uso seguro @endslot
+        @endcomponent
 
-        <h3>Recomendaciones para su uso seguro</h3>
-        <hr>
         <div class="glp-recommendations__container row">
             <div class="col-12 col-md-6">
                 <ul class="glp-recommendations__list">
@@ -90,37 +92,47 @@ encuentra en estado gaseoso a presión atmosférica normal.", 'image'=> 'images/
             <div class="col-12 col-md-6 d-flex align-items-center">
                 <div class="glp-recommendations__documents">
                     <ul class="glp-recommendations__documents-list">
+                        <li> <a href="" download="">
+                                <div>
+                                    <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
+                                    <p>
+                                        Manual de seguridad del usuario.
+                                    </p>
+                                </div>
+                                <div>
+                                    <i class="icon-download"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li> <a href="" download="">
+                                <div>
+                                    <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
+                                    <p>Plegable montacarga</p>
+                                </div>
+                                <div>
+                                    <i class="icon-download"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li> <a href="" download="">
+                                <div><img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
+                                    <p>Plegable usuario</p>
+                                </div>
+                                <div>
+                                    <i class="icon-download"></i>
+                                </div>
+                            </a>
+                        </li>
                         <li>
-                            <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
-                            <p>
-                                Manual de seguridad del usuario.
-                            </p>
-                            <div>
-                                <a href="" download=""> <img src="{{ asset('images\web\common\icn_download.png') }}"
-                                        alt="download"></a>
-                            </div>
-                        </li>
-                        <li> <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
-                            <p>Plegable montacarga</p>
-                            <div>
-                                <a href="" download=""> <img src="{{ asset('images\web\common\icn_download.png') }}"
-                                        alt="download"></a>
-                            </div>
-                        </li>
-                        <li> <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
-                            <p>Plegable usuario</p>
-                            <div>
-                                <a href="" download=""> <img src="{{ asset('images\web\common\icn_download.png') }}"
-                                        alt="download"></a>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
-                            <p>Plegable granel</p>
-                            <div>
-                                <a href="" download=""> <img src="{{ asset('images\web\common\icn_download.png') }}"
-                                        alt="download"></a>
-                            </div>
+                            <a href="" download="">
+                                <div>
+                                    <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
+                                    <p>Plegable granel</p>
+                                </div>
+                                <div>
+                                    <i class="icon-download"></i>
+                                </div>
+                            </a>
                         </li>
 
                 </div>
@@ -184,9 +196,10 @@ encuentra en estado gaseoso a presión atmosférica normal.", 'image'=> 'images/
 </section>
 <section class="glp glp-faq">
     <div class="container">
+        @component('rayogas.components.heading-title')
+        @slot('title')Preguntas frecuentes @endslot
+        @endcomponent
 
-        <h3>Preguntas frecuentes </h3>
-        <hr>
         <div class="glp-faq__container row mx-0 d-none d-md-flex" id="faqAccordionDesk">
             <div class="col-6 glp-faq__tabs">
 
@@ -614,5 +627,5 @@ encuentra en estado gaseoso a presión atmosférica normal.", 'image'=> 'images/
     </div>
 
 </section>
-@include('rayogas.components.footer')
+
 @endsection

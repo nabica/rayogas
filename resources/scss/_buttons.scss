@@ -1,8 +1,6 @@
 .btn-primary {
-    display: block;
-    width: rem(278px);
     border-radius: 20px;
-    padding: rem(13px) rem(35px);
+    padding: rem(14px) rem(35px);
     border: 2px solid var(--primary-color);
     background-color: var(--primary-color);
     box-shadow: 0 rem(2px) rem(8px) 0 rgba(0, 158, 227, 0.24);
@@ -24,10 +22,8 @@
         border-color: var(--component-color);
     }
     &--dark {
-        display: block;
-        width: rem(278px);
         border-radius: 20px;
-        padding: rem(13px) rem(35px);
+        padding: rem(14px) rem(35px);
         border: 2px solid var(--primary-color-dark);
         background-color: var(--primary-color-dark);
         box-shadow: 0 rem(2px) rem(8px) 0 rgba(0, 158, 227, 0.24);
@@ -38,6 +34,29 @@
             background-color: var(--white-color);
             color: var(--primary-color-dark);
             border-color: var(--primary-color-dark);
+        }
+        &:active {
+            box-shadow: 0 rem(4px) rem(16px) 0 rgba(131, 147, 168, 0.75);
+        }
+        &:disabled {
+            background-color: var(--background-color);
+            color: var(--component-color);
+            border-color: var(--component-color);
+        }
+    }
+    &--green {
+        border-radius: 20px;
+        padding: rem(26px) rem(35px);
+        border: 2px solid var(--wap-color);
+        background-color: var(--wap-color);
+        box-shadow: 0 rem(2px) rem(8px) 0 rgba(0, 158, 227, 0.24);
+        font-size: rem(16px);
+        color: var(--white-color);
+        font-weight: bold;
+        &:hover {
+            background-color: var(--white-color);
+            color: var(--wap-color);
+            border-color: var(--wap-color);
         }
         &:active {
             box-shadow: 0 rem(4px) rem(16px) 0 rgba(131, 147, 168, 0.75);

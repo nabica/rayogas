@@ -1,6 +1,337 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./node_modules/@googlemaps/js-api-loader/dist/index.esm.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/@googlemaps/js-api-loader/dist/index.esm.js ***!
+  \******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "DEFAULT_ID": () => (/* binding */ DEFAULT_ID),
+/* harmony export */   "Loader": () => (/* binding */ Loader),
+/* harmony export */   "LoaderStatus": () => (/* binding */ LoaderStatus)
+/* harmony export */ });
+// do not edit .js files directly - edit src/index.jst
+
+
+
+var fastDeepEqual = function equal(a, b) {
+  if (a === b) return true;
+
+  if (a && b && typeof a == 'object' && typeof b == 'object') {
+    if (a.constructor !== b.constructor) return false;
+
+    var length, i, keys;
+    if (Array.isArray(a)) {
+      length = a.length;
+      if (length != b.length) return false;
+      for (i = length; i-- !== 0;)
+        if (!equal(a[i], b[i])) return false;
+      return true;
+    }
+
+
+
+    if (a.constructor === RegExp) return a.source === b.source && a.flags === b.flags;
+    if (a.valueOf !== Object.prototype.valueOf) return a.valueOf() === b.valueOf();
+    if (a.toString !== Object.prototype.toString) return a.toString() === b.toString();
+
+    keys = Object.keys(a);
+    length = keys.length;
+    if (length !== Object.keys(b).length) return false;
+
+    for (i = length; i-- !== 0;)
+      if (!Object.prototype.hasOwnProperty.call(b, keys[i])) return false;
+
+    for (i = length; i-- !== 0;) {
+      var key = keys[i];
+
+      if (!equal(a[key], b[key])) return false;
+    }
+
+    return true;
+  }
+
+  // true if both NaN, false otherwise
+  return a!==a && b!==b;
+};
+
+/**
+ * Copyright 2019 Google LLC. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at.
+ *
+ *      Http://www.apache.org/licenses/LICENSE-2.0.
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+const DEFAULT_ID = "__googleMapsScriptId";
+/**
+ * The status of the [[Loader]].
+ */
+var LoaderStatus;
+(function (LoaderStatus) {
+    LoaderStatus[LoaderStatus["INITIALIZED"] = 0] = "INITIALIZED";
+    LoaderStatus[LoaderStatus["LOADING"] = 1] = "LOADING";
+    LoaderStatus[LoaderStatus["SUCCESS"] = 2] = "SUCCESS";
+    LoaderStatus[LoaderStatus["FAILURE"] = 3] = "FAILURE";
+})(LoaderStatus || (LoaderStatus = {}));
+/**
+ * [[Loader]] makes it easier to add Google Maps JavaScript API to your application
+ * dynamically using
+ * [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+ * It works by dynamically creating and appending a script node to the the
+ * document head and wrapping the callback function so as to return a promise.
+ *
+ * ```
+ * const loader = new Loader({
+ *   apiKey: "",
+ *   version: "weekly",
+ *   libraries: ["places"]
+ * });
+ *
+ * loader.load().then((google) => {
+ *   const map = new google.maps.Map(...)
+ * })
+ * ```
+ */
+class Loader {
+    /**
+     * Creates an instance of Loader using [[LoaderOptions]]. No defaults are set
+     * using this library, instead the defaults are set by the Google Maps
+     * JavaScript API server.
+     *
+     * ```
+     * const loader = Loader({apiKey, version: 'weekly', libraries: ['places']});
+     * ```
+     */
+    constructor({ apiKey, channel, client, id = DEFAULT_ID, libraries = [], language, region, version, mapIds, nonce, retries = 3, url = "https://maps.googleapis.com/maps/api/js", }) {
+        this.CALLBACK = "__googleMapsCallback";
+        this.callbacks = [];
+        this.done = false;
+        this.loading = false;
+        this.errors = [];
+        this.version = version;
+        this.apiKey = apiKey;
+        this.channel = channel;
+        this.client = client;
+        this.id = id || DEFAULT_ID; // Do not allow empty string
+        this.libraries = libraries;
+        this.language = language;
+        this.region = region;
+        this.mapIds = mapIds;
+        this.nonce = nonce;
+        this.retries = retries;
+        this.url = url;
+        if (Loader.instance) {
+            if (!fastDeepEqual(this.options, Loader.instance.options)) {
+                throw new Error(`Loader must not be called again with different options. ${JSON.stringify(this.options)} !== ${JSON.stringify(Loader.instance.options)}`);
+            }
+            return Loader.instance;
+        }
+        Loader.instance = this;
+    }
+    get options() {
+        return {
+            version: this.version,
+            apiKey: this.apiKey,
+            channel: this.channel,
+            client: this.client,
+            id: this.id,
+            libraries: this.libraries,
+            language: this.language,
+            region: this.region,
+            mapIds: this.mapIds,
+            nonce: this.nonce,
+            url: this.url,
+        };
+    }
+    get status() {
+        if (this.errors.length) {
+            return LoaderStatus.FAILURE;
+        }
+        if (this.done) {
+            return LoaderStatus.SUCCESS;
+        }
+        if (this.loading) {
+            return LoaderStatus.LOADING;
+        }
+        return LoaderStatus.INITIALIZED;
+    }
+    get failed() {
+        return this.done && !this.loading && this.errors.length >= this.retries + 1;
+    }
+    /**
+     * CreateUrl returns the Google Maps JavaScript API script url given the [[LoaderOptions]].
+     *
+     * @ignore
+     */
+    createUrl() {
+        let url = this.url;
+        url += `?callback=${this.CALLBACK}`;
+        if (this.apiKey) {
+            url += `&key=${this.apiKey}`;
+        }
+        if (this.channel) {
+            url += `&channel=${this.channel}`;
+        }
+        if (this.client) {
+            url += `&client=${this.client}`;
+        }
+        if (this.libraries.length > 0) {
+            url += `&libraries=${this.libraries.join(",")}`;
+        }
+        if (this.language) {
+            url += `&language=${this.language}`;
+        }
+        if (this.region) {
+            url += `&region=${this.region}`;
+        }
+        if (this.version) {
+            url += `&v=${this.version}`;
+        }
+        if (this.mapIds) {
+            url += `&map_ids=${this.mapIds.join(",")}`;
+        }
+        return url;
+    }
+    deleteScript() {
+        const script = document.getElementById(this.id);
+        if (script) {
+            script.remove();
+        }
+    }
+    /**
+     * Load the Google Maps JavaScript API script and return a Promise.
+     */
+    load() {
+        return this.loadPromise();
+    }
+    /**
+     * Load the Google Maps JavaScript API script and return a Promise.
+     *
+     * @ignore
+     */
+    loadPromise() {
+        return new Promise((resolve, reject) => {
+            this.loadCallback((err) => {
+                if (!err) {
+                    resolve(window.google);
+                }
+                else {
+                    reject(err.error);
+                }
+            });
+        });
+    }
+    /**
+     * Load the Google Maps JavaScript API script with a callback.
+     */
+    loadCallback(fn) {
+        this.callbacks.push(fn);
+        this.execute();
+    }
+    /**
+     * Set the script on document.
+     */
+    setScript() {
+        if (document.getElementById(this.id)) {
+            // TODO wrap onerror callback for cases where the script was loaded elsewhere
+            this.callback();
+            return;
+        }
+        const url = this.createUrl();
+        const script = document.createElement("script");
+        script.id = this.id;
+        script.type = "text/javascript";
+        script.src = url;
+        script.onerror = this.loadErrorCallback.bind(this);
+        script.defer = true;
+        script.async = true;
+        if (this.nonce) {
+            script.nonce = this.nonce;
+        }
+        document.head.appendChild(script);
+    }
+    /**
+     * Reset the loader state.
+     */
+    reset() {
+        this.deleteScript();
+        this.done = false;
+        this.loading = false;
+        this.errors = [];
+        this.onerrorEvent = null;
+    }
+    resetIfRetryingFailed() {
+        if (this.failed) {
+            this.reset();
+        }
+    }
+    loadErrorCallback(e) {
+        this.errors.push(e);
+        if (this.errors.length <= this.retries) {
+            const delay = this.errors.length * Math.pow(2, this.errors.length);
+            console.log(`Failed to load Google Maps script, retrying in ${delay} ms.`);
+            setTimeout(() => {
+                this.deleteScript();
+                this.setScript();
+            }, delay);
+        }
+        else {
+            this.onerrorEvent = e;
+            this.callback();
+        }
+    }
+    setCallback() {
+        window.__googleMapsCallback = this.callback.bind(this);
+    }
+    callback() {
+        this.done = true;
+        this.loading = false;
+        this.callbacks.forEach((cb) => {
+            cb(this.onerrorEvent);
+        });
+        this.callbacks = [];
+    }
+    execute() {
+        this.resetIfRetryingFailed();
+        if (this.done) {
+            this.callback();
+        }
+        else {
+            // short circuit and warn if google.maps is already loaded
+            if (window.google && window.google.maps && window.google.maps.version) {
+                console.warn("Google Maps already loaded outside @googlemaps/js-api-loader." +
+                    "This may result in undesirable behavior as options and script parameters may not match.");
+                this.callback();
+                return;
+            }
+            if (this.loading) ;
+            else {
+                this.loading = true;
+                this.setCallback();
+                this.setScript();
+            }
+        }
+    }
+}
+
+
+//# sourceMappingURL=index.esm.js.map
+
+
+/***/ }),
+
 /***/ "./node_modules/axios/index.js":
 /*!*************************************!*\
   !*** ./node_modules/axios/index.js ***!
@@ -2068,11 +2399,11 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 __webpack_require__(/*! ./components/navbar */ "./resources/js/components/navbar.js");
 
-__webpack_require__(/*! ./components/tabs */ "./resources/js/components/tabs.js");
-
 __webpack_require__(/*! ./components/footer */ "./resources/js/components/footer.js");
 
 __webpack_require__(/*! ./components/form-validation */ "./resources/js/components/form-validation.js");
+
+__webpack_require__(/*! ./maps */ "./resources/js/maps.js");
 
 
 
@@ -2160,26 +2491,29 @@ button.addEventListener("click", function () {
 
 /***/ }),
 
-/***/ "./resources/js/components/tabs.js":
-/*!*****************************************!*\
-  !*** ./resources/js/components/tabs.js ***!
-  \*****************************************/
-/***/ (() => {
+/***/ "./resources/js/maps.js":
+/*!******************************!*\
+  !*** ./resources/js/maps.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-// Selectors
-var tabItems = document.querySelectorAll('.tabs .tabs-menu a'); // Events
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _googlemaps_js_api_loader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @googlemaps/js-api-loader */ "./node_modules/@googlemaps/js-api-loader/dist/index.esm.js");
 
-tabItems.forEach(function (element) {
-  element.addEventListener('click', clickOnTab);
-}); // Functions
-
-function clickOnTab() {
-  event.preventDefault();
-  var currentTabItem = event.target;
-  var tabContainer = currentTabItem.closest('.tabs');
-  var tabContent = tabContainer.querySelector('.tabs-content');
-  tabContent.innerHTML = "\n        <p>1. Este contenido es administrable?</p>\n        <p>2. Se va a generar dinamicamente ...</p>\n    ";
-}
+var loader = new _googlemaps_js_api_loader__WEBPACK_IMPORTED_MODULE_0__.Loader({
+  apiKey: "AIzaSyC9tzSW2IbvsnJVTn1_3VOz__mrba6e8g4",
+  version: "weekly"
+});
+loader.load().then(function () {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: {
+      lat: -34.397,
+      lng: 150.644
+    },
+    zoom: 8
+  });
+});
 
 /***/ }),
 
@@ -2413,7 +2747,7 @@ process.umask = function() { return 0; };
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"_from":"axios@^0.21","_id":"axios@0.21.4","_inBundle":false,"_integrity":"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==","_location":"/axios","_phantomChildren":{},"_requested":{"type":"range","registry":true,"raw":"axios@^0.21","name":"axios","escapedName":"axios","rawSpec":"^0.21","saveSpec":null,"fetchSpec":"^0.21"},"_requiredBy":["#DEV:/"],"_resolved":"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz","_shasum":"c67b90dc0568e5c1cf2b0b858c43ba28e2eda575","_spec":"axios@^0.21","_where":"C:\\\\laragon\\\\www\\\\rayogas","author":{"name":"Matt Zabriskie"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"bugs":{"url":"https://github.com/axios/axios/issues"},"bundleDependencies":false,"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}],"dependencies":{"follow-redirects":"^1.14.0"},"deprecated":false,"description":"Promise based HTTP client for the browser and node.js","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"homepage":"https://axios-http.com","jsdelivr":"dist/axios.min.js","keywords":["xhr","http","ajax","promise","node"],"license":"MIT","main":"index.js","name":"axios","repository":{"type":"git","url":"git+https://github.com/axios/axios.git"},"scripts":{"build":"NODE_ENV=production grunt build","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","examples":"node ./examples/server.js","fix":"eslint --fix lib/**/*.js","postversion":"git push && git push --tags","preversion":"npm test","start":"node ./sandbox/server.js","test":"grunt test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json"},"typings":"./index.d.ts","unpkg":"dist/axios.min.js","version":"0.21.4"}');
+module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"Promise based HTTP client for the browser and node.js","main":"index.js","scripts":{"test":"grunt test","start":"node ./sandbox/server.js","build":"NODE_ENV=production grunt build","preversion":"npm test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json","postversion":"git push && git push --tags","examples":"node ./examples/server.js","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","fix":"eslint --fix lib/**/*.js"},"repository":{"type":"git","url":"https://github.com/axios/axios.git"},"keywords":["xhr","http","ajax","promise","node"],"author":"Matt Zabriskie","license":"MIT","bugs":{"url":"https://github.com/axios/axios/issues"},"homepage":"https://axios-http.com","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"jsdelivr":"dist/axios.min.js","unpkg":"dist/axios.min.js","typings":"./index.d.ts","dependencies":{"follow-redirects":"^1.14.0"},"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}]}');
 
 /***/ })
 

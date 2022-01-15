@@ -11,4 +11,8 @@ class PqrsController extends Controller
     {
         return view('rayogas.pqrs');
     }
+    public function tanks()
+    {
+        return view('rayogas.thank-you-page');
+    }
 }

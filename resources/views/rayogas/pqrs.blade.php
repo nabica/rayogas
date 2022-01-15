@@ -25,42 +25,42 @@
                     <div class="col-md-6 mt-0">
                         <label for="name" class="form-label">Nombre</label>
                         <input type="text" class="form-control" id="name" required>
-                        <div class="valid-feedback">
+                        <div class="invalid-feedback">
                             Este campo es requerido
                         </div>
                     </div>
                     <div class="col-md-6 mt-0">
                         <label for="document" class="form-label">Cédula</label>
                         <input type="text" class="form-control" id="document" required>
-                        <div class="valid-feedback">
+                        <div class="invalid-feedback">
                             Este campo es requerido
                         </div>
                     </div>
                     <div class="col-md-6">
                         <label for="city" class="form-label">Ciudad</label>
                         <input type="text" class="form-control" id="city" required>
-                        <div class="valid-feedback">
+                        <div class="invalid-feedback">
                             Este campo es requerido
                         </div>
                     </div>
                     <div class="col-md-6">
                         <label for="phone" class="form-label">Teléfono</label>
                         <input type="text" class="form-control" id="phone" required>
-                        <div class="valid-feedback">
+                        <div class="invalid-feedback">
                             Este campo es requerido
                         </div>
                     </div>
                     <div class="col-12">
                         <label for="email" class="form-label">Correo electrónico</label>
                         <input type="email" class="form-control" id="email" required>
-                        <div class="valid-feedback">
+                        <div class="invalid-feedback">
                             Este campo es requerido
                         </div>
                     </div>
                     <div class="col-12">
                         <label for="description" class="form-label">Descripción</label>
                         <textarea class="form-control" rows="3" required></textarea>
-                        <div class="valid-feedback">
+                        <div class="invalid-feedback">
                             Este campo es requerido
                         </div>
                     </div>
@@ -73,9 +73,9 @@
                                 <option value="2">Option 2</option>
                                 <option value="3">Option 3</option>
                             </select>
-                        </div>
-                        <div class="valid-feedback">
-                            Este campo es requerido
+                            <div class="invalid-feedback">
+                                Este campo es requerido
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-6 ">
@@ -87,9 +87,9 @@
                                 <option value="2">Option 2</option>
                                 <option value="3">Option 3</option>
                             </select>
-                        </div>
-                        <div class="valid-feedback">
-                            Este campo es requerido
+                            <div class="invalid-feedback">
+                                Este campo es requerido
+                            </div>
                         </div>
                     </div>
                     <div class="col-12">
@@ -97,9 +97,9 @@
                     </div>
                 </form>
             </div>
-            @include('rayogas.components.contact-bar')
+            @include('rayogas.components.contact-bar', ['fixed'=>'true'])
         </div>
     </div>
 </section>
-@include('rayogas.components.footer')
+
 @endsection

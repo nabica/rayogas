@@ -1,5 +1,4 @@
 $html-font-size: 16px;
-
 @function stripUnit($value) {
     $unit: calc($value * 0) + 1;
     @return calc($value / $unit);
@@ -7,7 +6,9 @@ $html-font-size: 16px;
 @function rem($pxValue) {
     @return #{calc(stripUnit($pxValue) / stripUnit($html-font-size))}rem;
 }
-
+* {
+    font-family: "Gotham";
+}
 body {
     color: var(--body-color);
 }
@@ -46,13 +47,11 @@ body {
         &:focus {
             outline: none;
             box-shadow: none;
-            border-color: var(--component-color);
+            border-color: var(--primary-color-dark);
             color: var(--body-color);
         }
     }
 }
-
-
 
 p {
     margin: 0;
@@ -147,6 +146,17 @@ p {
                 pointer-events: none;
             }
         }
+        & .form-control {
+            &:invalid {
+                border-color: var(--alert-color);
+                background-image: none;
+            }
+            &:valid {
+                border-color: var(--component-color);
+                box-shadow: none;
+                background-image: none;
+            }
+        }
     }
 
     & label {
@@ -167,7 +177,7 @@ p {
         &:focus {
             outline: none;
             box-shadow: none;
-            border-color: var(--component-color);
+            border-color: var(--primary-color-dark);
             color: var(--body-color);
         }
     }
@@ -181,7 +191,7 @@ p {
         &:focus {
             outline: none;
             box-shadow: none;
-            border-color: var(--component-color);
+            border-color: var(--primary-color-dark);
             color: var(--body-color);
         }
     }
@@ -208,7 +218,7 @@ p {
         &:focus {
             outline: none;
             box-shadow: none;
-            border-color: var(--component-color);
+            border-color: var(--primary-color-dark);
             color: var(--body-color);
         }
     }

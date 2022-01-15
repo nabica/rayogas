@@ -12,6 +12,11 @@
     padding: rem(22.5px) rem(3px) rem(27.5px);
     height: rem(220px);
     flex-shrink: 0;
+    &.fixed {
+        position: fixed;
+        right: 0;
+        z-index: 1000;
+    }
 
     &__button {
         display: flex;
@@ -33,7 +38,9 @@
         width: rem(78px);
         padding: rem(24px) rem(5px);
         height: rem(356px);
-
+        &.fixed {
+            right: rem(40px);
+        }
         &__text {
             display: block;
             color: var(--white-color);
@@ -42,6 +49,13 @@
             letter-spacing: 0;
             line-height: rem(16px);
             text-align: center;
+        }
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .contact-bar {
+        &.fixed {
+            right: rem(60px);
         }
     }
 }

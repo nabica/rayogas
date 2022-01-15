@@ -105,5 +105,5 @@ que sabemos te interesan.", 'image'=> '/images/web/blog/blog_banner_main.png'])
         </nav>
     </div>
 </section>
-@include('rayogas.components.footer')
+
 @endsection

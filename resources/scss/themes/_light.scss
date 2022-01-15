@@ -1,21 +1,21 @@
- html[data-theme="light"] {
-    --primary-color: #009EE3;
-    --primary-color-dark: #003B7F;
-    --primary-color-dark-2: #0A0C64;
-    --primary-color-alfa-85: rgba(0,158,227,0.85);
-    --primary-color-dark-alfa-80:  rgba(0,59,127,0.80);
-    --body-color: #8393A8;
-    --component-color: #C9D3DD;
-    --background-color: #FAFAFA;
-    --wap-color: #00BB2D;
-    --white-color: #FFFFFF;
-    --gray-color :#3B4754;
+html[data-theme="light"] {
+    --primary-color: #009ee3;
+    --primary-color-dark: #003b7f;
+    --primary-color-dark-2: #0a0c64;
+    --primary-color-alfa-85: rgba(0, 158, 227, 0.85);
+    --primary-color-dark-alfa-80: rgba(0, 59, 127, 0.8);
+    --body-color: #8393a8;
+    --component-color: #c9d3dd;
+    --background-color: #fafafa;
+    --wap-color: #00bb2d;
+    --white-color: #ffffff;
+    --gray-color: #3b4754;
 
     /*Variables que manuel aún no le ha puesto nombre*/
     --separator-color-alpha-25: rgba(151, 151, 151, 0.25);
     --separator-color-alpha-8: rgba(201, 211, 221, 0.8);
-    --separator-color-2: #ECECEF;
-    --background-color-2: #F0F9FE;
-    --success-color: #00C85A;
-
- }
+    --separator-color-2: #ececef;
+    --background-color-2: #f0f9fe;
+    --success-color: #00c85a;
+    --alert-color: #f65a5a;
+}

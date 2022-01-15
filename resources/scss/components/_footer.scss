@@ -7,14 +7,13 @@
     &__button {
         top: rem(-22px);
         left: calc(50% - rem(104px));
-        height: 44px;
-        width: 208px;
-        border: 1px solid var(--primary-color-dark);
-        border-radius: 22px;
-        background-color: var(--primary-color);
-        box-shadow: 0 2px 5px 0 rgba(131, 147, 168, 0.5);
-        color: var(--white-color);
+        padding: rem(8px) rem(72px);
         position: absolute;
+        display: inline-flex;
+        align-items: center;
+        & i {
+            margin-left: 5px;
+        }
     }
     & h3 {
         color: var(--primary-color);
@@ -59,6 +58,9 @@
                 display: flex;
                 align-items: center;
                 gap: 5px;
+                &:hover {
+                    color: var(--primary-color-dark);
+                }
                 & i {
                     width: rem(6px);
                     margin-right: 5px;
@@ -82,6 +84,9 @@
                     font-size: rem(14px);
                     color: var(--primary-color-dark);
                     font-weight: 500;
+                    &:hover {
+                        color: var(--primary-color);
+                    }
                 }
                 &:last-child {
                     margin-bottom: 0;
@@ -167,6 +172,7 @@
             position: absolute;
             margin-bottom: 0;
             bottom: rem(61px);
+            width: rem(250px);
             & h4 {
                 font-size: rem(16px);
             }

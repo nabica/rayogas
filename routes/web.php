@@ -16,4 +16,5 @@ Route::namespace("App\Http\Controllers\Rayogas")->group(function () {
     Route::get("/blog", "BlogController@index")->name('rayogas.blog');
     Route::get("/blog/show", "BlogController@show")->name('rayogas.blog.show');
     Route::get("/pqrs", "PqrsController@index")->name('rayogas.pqrs');
+    Route::get("pqrs/thanks", "PqrsController@tanks")->name('rayogas.thanks');
 });

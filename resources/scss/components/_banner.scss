@@ -1,9 +1,8 @@
 .banner {
     width: 100%;
     height: rem(278px);
-    background-image: linear-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.0)),
-        url('https://via.placeholder.com/1200x600'
-    );
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+        url("https://via.placeholder.com/1200x600");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -35,10 +34,6 @@
         }
         a {
             margin-top: rem(20px);
-            border-radius: 1.18rem;
-            background-color: var(--primary-color-dark);
-            box-shadow: 0 2px 5px 4px rgba(255,255,255,0.1);
-            color: var(--white-color);
             font-size: rem(12px);
             font-weight: bold;
             letter-spacing: 0;

@@ -30,9 +30,8 @@
         position: relative;
         margin: 0 auto;
         & .contact-bar {
-            position: absolute;
             right: 0;
-            top: rem(80px);
+            top: rem(150px);
             z-index: 1000;
         }
     }
@@ -66,9 +65,6 @@
         &__container {
             position: relative;
             margin: 0 auto;
-            & .contact-bar {
-                right: rem(-10px);
-            }
         }
     }
 }
@@ -78,7 +74,7 @@
             position: relative;
             margin: 0 auto;
             & .contact-bar {
-                right: rem(-22px);
+                right: rem(24px);
             }
         }
     }
@@ -89,7 +85,7 @@
             position: relative;
             margin: 0 auto;
             & .contact-bar {
-                right: rem(-32px);
+                right: rem(40px);
             }
         }
     }

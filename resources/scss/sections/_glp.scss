@@ -128,35 +128,49 @@
             padding: 0;
             margin-bottom: 0;
             & li {
-                display: flex;
-                align-items: center;
-                gap: rem(18px);
                 margin-bottom: rem(53px);
                 &:last-child {
                     margin-bottom: 0;
                 }
-                & > p {
-                    font-size: rem(20px);
-                    font-weight: 500;
-                    letter-spacing: 0;
-                    line-height: rem(26px);
-                    text-decoration: underline;
-                }
-                & > div {
+                & a {
                     display: flex;
-                    justify-content: flex-end;
-                    flex-grow: 1;
-                    & > a {
-                        height: 40px;
-                        width: 75px;
-                        flex-shrink: 0;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        border: 1px solid var(--primary-color-dark);
-                        background-color: var(--white-color);
-                        box-shadow: 0 rem(2px) rem(4px) 0 rgba(76, 76, 76, 0.12);
-                        border-radius: rem(30px);
+                    justify-content: space-between;
+                    align-items: center;
+                    text-decoration: none;
+                    & div {
+                        &:first-child {
+                            display: flex;
+                            gap: rem(18px);
+                            align-items: center;
+                            & > p {
+                                font-size: rem(20px);
+                                font-weight: 500;
+                                letter-spacing: 0;
+                                line-height: rem(26px);
+                                text-decoration: underline;
+                            }
+                        }
+                        &:last-child {
+                            height: 40px;
+                            width: 75px;
+                            flex-shrink: 0;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border: 1px solid var(--primary-color-dark);
+                            background-color: var(--white-color);
+                            box-shadow: 0 rem(2px) rem(4px) 0
+                                rgba(76, 76, 76, 0.12);
+                            border-radius: rem(30px);
+                            font-size: rem(24px);
+                            color: var(--primary-color);
+                        }
+                    }
+                    &:hover {
+                        & div:last-child {
+                            background-color: var(--primary-color);
+                            color: var(--white-color);
+                        }
                     }
                 }
             }
@@ -284,7 +298,8 @@
                 outline: none;
                 box-shadow: none;
             }
-            &:not(.collapsed) {
+            &:not(.collapsed),
+            &:hover {
                 background-color: var(--background-color-2);
                 &::after {
                     color: var(--primary-color);
@@ -371,18 +386,16 @@
         &__documents {
             &-list {
                 & li {
-                    flex-direction: column;
-                    gap: rem(5px);
-
-                    & p {
-                        font-size: 12px;
-                    }
                     & a {
-                        height: 22px !important;
-                        width: 156px !important;
-                        & img {
-                            height: 12px;
-                            width: 15px;
+                        & div {
+                            &:first-child {
+                                & p {
+                                    font-size: rem(12px);
+                                }
+                            }
+                            &:last-child {
+                                font-size: rem(16px);
+                            }
                         }
                     }
                 }

@@ -14,7 +14,7 @@
         &-text {
             max-width: rem(654px);
             max-height: rem(306px);
-            padding: rem(51px) rem(56px) rem(56px) rem(23px);
+            padding: rem(52px) rem(47px) rem(46px) rem(31px);
             background-color: var(--primary-color-alfa-85);
             border-radius: rem(25px);
             & > h1 {
@@ -32,6 +32,10 @@
                 line-height: rem(28px);
             }
         }
+    }
+    & .btn-primary--dark {
+        width: rem(306px);
+        margin-top: rem(30px);
     }
 }
 

@@ -7,23 +7,29 @@
             <div class="col-12 col-md-3">
                 <ul class="footer__sitemap">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#"><i class="icon-cheveron-right"></i>
+                        <a class="nav-link active" aria-current="page" href="{{ route('rayogas.home') }}"><i
+                                class="icon-cheveron-right"></i>
                             Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="icon-cheveron-right"></i> Nosotros</a>
+                        <a class="nav-link" href="{{ route('rayogas.about') }}"><i class="icon-cheveron-right"></i>
+                            Nosotros</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="icon-cheveron-right"></i> Productos y Servicios</a>
+                        <a class="nav-link" href="{{ route('rayogas.products') }}"><i class="icon-cheveron-right"></i>
+                            Productos y Servicios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="icon-cheveron-right"></i> GLP</a>
+                        <a class="nav-link" href="{{ route('rayogas.glp') }}"><i class="icon-cheveron-right"></i>
+                            GLP</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="icon-cheveron-right"></i> Blog</a>
+                        <a class="nav-link" href="{{ route('rayogas.blog') }}"><i class="icon-cheveron-right"></i>
+                            Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="icon-cheveron-right"></i> PQRS</a>
+                        <a class="nav-link" href="{{ route('rayogas.pqrs') }}"><i class="icon-cheveron-right"></i>
+                            PQRS</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"><i class="icon-cheveron-right"></i> Autogestión</a>
@@ -88,8 +94,10 @@
                 </div>
             </div>
         </div>
-        <button class="footer__button" id="footer__button"> Subir <img
-                src="{{ asset('images/web/common/icn_boton_up_footer.png') }}" alt="facebook"></button>
+        @if(isset($upButton))
+        <button class="footer__button btn btn-primary" id="footer__button"> Subir <i
+                class="icon-circle-up"></i></button>
+        @endif
     </div>
     <div class="footer__legal">
         <p>© RayoGas E.S.P. Todos los derechos reservados.</p>
