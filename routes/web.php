@@ -18,3 +18,15 @@ Route::namespace("App\Http\Controllers\Rayogas")->group(function () {
     Route::get("/pqrs", "PqrsController@index")->name('rayogas.pqrs');
     Route::get("pqrs/thanks", "PqrsController@tanks")->name('rayogas.thanks');
 });
+
+
+//Acceder desde el navegador asi http://mps.local/lotus
+Route::prefix('lotus')->group(function () {
+    Route::view('login', 'admin.auth.login')->name('login');
+    /*Route::middleware(['guest'])->group(function () {
+        Route::view('login', 'auth.login')->name('login');
+    });*/
+    Route::post('login', [LoginController::class, 'index'])->name('auth.login');
+    Route::post('logout', [LogoutController::class, 'index'])->name('auth.logout');
+
+});

@@ -9,18 +9,15 @@
     @yield('metatags_seo')
     <title>@yield('title')</title>
 
-    <!-- Fonts -->
-
-
     <!-- Styles -->
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
+    <link rel="stylesheet" href="{{ mix('css/rayogas/app.css') }}">
 </head>
 
 <body>
     @include('rayogas.components.menu')
     @yield('content')
     @include('rayogas.components.footer')
-    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ mix('js/rayogas/app.js') }}"></script>
 </body>
 
 </html>

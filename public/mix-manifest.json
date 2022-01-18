@@ -1,4 +1,6 @@
 {
-    "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css"
+    "/js/admin/app.js": "/js/admin/app.js?id=3dff3fda2b0fcc0cdb30",
+    "/js/rayogas/app.js": "/js/rayogas/app.js?id=d70a23368bc4dfb0cc14",
+    "/css/rayogas/app.css": "/css/rayogas/app.css?id=9f68bd026b488d357ca9",
+    "/css/admin/app.css": "/css/admin/app.css?id=a6cbad80d306eb3c0bb4"
 }

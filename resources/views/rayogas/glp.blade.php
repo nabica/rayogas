@@ -85,7 +85,7 @@ encuentra en estado gaseoso a presión atmosférica normal.", 'image'=> 'images/
                         <p>Mantén limpios los conductos de evacuación del gas.</p>
                     </li>
                     <li><img src="{{ asset('images\web\common\icn_glp_bullet.png') }}" alt="alert">
-                        <p>Ante cualquier duda comunícate con nosotros a la línea 01 8000 959595.</p>
+                        <p>Ante cualquier duda comunícate con nosotros <br> a la línea 01 8000 959595.</p>
                     </li>
                 </ul>
             </div>
