@@ -11281,3 +11281,14 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.section {
+  padding-top: 40px;
+}
+
+.page-title-box {
+  margin-bottom: 40px;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}

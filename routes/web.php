@@ -4,6 +4,39 @@ use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
+| Admin Routes
+|--------------------------------------------------------------------------
+*/
+
+//Acceder desde el navegador asi http://rayogas.test/lotus
+Route::prefix('lotus')->group(function () {
+    Route::namespace("App\Http\Controllers\Admin")->group(function () {
+        // Authentication
+        Route::middleware(['GuestAdminUser'])->group(function () {
+            Route::view('login', 'admin.auth.login')->name('admin.login');
+        });
+
+        Route::post('login', 'LoginController@index')
+        ->name('admin.auth.login');
+
+        Route::post('logout', 'LogoutController@index')
+        ->name('admin.auth.logout');
+
+        // Por hacer: Verificar que solo puedan ingresar usuarios de tipo administrador
+        Route::middleware(['CheckAdminUserAuth'])->group(function () {
+            Route::view('/', 'admin.welcome')->name('admin.welcome');
+
+            Route::resource('/home/banner', 'Home\HomeBannerController', ['as' => 'admin.home'])->only(['edit', 'update']);
+
+            Route::resource('/home/feature', 'Home\HomeFeatureController', ['as' => 'admin.home'])->only(['edit', 'update']);
+
+            Route::resource('/home/rates', 'Home\HomeRateController', ['as' => 'admin.home'])->only(['index', 'edit', 'update']);
+        });
+    });
+});
+
+/*
+|--------------------------------------------------------------------------
 | Rayogas Routes
 |--------------------------------------------------------------------------
 */
@@ -17,16 +50,4 @@ Route::namespace("App\Http\Controllers\Rayogas")->group(function () {
     Route::get("/blog/show", "BlogController@show")->name('rayogas.blog.show');
     Route::get("/pqrs", "PqrsController@index")->name('rayogas.pqrs');
     Route::get("pqrs/thanks", "PqrsController@tanks")->name('rayogas.thanks');
-});
-
-
-//Acceder desde el navegador asi http://mps.local/lotus
-Route::prefix('lotus')->group(function () {
-    Route::view('login', 'admin.auth.login')->name('login');
-    /*Route::middleware(['guest'])->group(function () {
-        Route::view('login', 'auth.login')->name('login');
-    });*/
-    Route::post('login', [LoginController::class, 'index'])->name('auth.login');
-    Route::post('logout', [LogoutController::class, 'index'])->name('auth.logout');
-
 });

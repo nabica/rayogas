@@ -19,6 +19,7 @@
     },
     "dependencies": {
         "@googlemaps/js-api-loader": "^1.13.2",
+        "@popperjs/core": "^2.11.2",
         "bootstrap": "^5.1.3"
     }
 }
