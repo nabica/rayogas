@@ -22,7 +22,7 @@ class AboutValueController extends Controller
 
     public function index()
     {
-        $values = AboutValue::latest('id')->paginate(5);
+        $values = AboutValue::latest('id')->paginate(10);
         return view('admin.sections.about.values.index', compact('values'));
     }
 

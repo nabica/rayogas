@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
-class GlpFaqSeeder extends Seeder
+class BlogBannerSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,6 +13,9 @@ class GlpFaqSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\Glp\GlpFaq::factory(10)->create();
+        \App\Models\Blog\BlogBanner::create([
+            'title' => 'title banner',
+            'description' => 'desc ',
+        ]);
     }
 }

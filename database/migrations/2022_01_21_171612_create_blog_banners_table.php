@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateGlpFaqsTable extends Migration
+class CreateBlogBannersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateGlpFaqsTable extends Migration
      */
     public function up()
     {
-        Schema::create('glp_faqs', function (Blueprint $table) {
+        Schema::create('blog_banners', function (Blueprint $table) {
             $table->id();
             $table->string('title')->nullable();
             $table->text('description')->nullable();
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class CreateGlpFaqsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('glp_faqs');
+        Schema::dropIfExists('blog_banners');
     }
 }

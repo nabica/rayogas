@@ -11292,3 +11292,7 @@ textarea.form-control-lg {
 .form-group {
   margin-bottom: 1rem;
 }
+
+.ck-editor__editable_inline {
+  min-height: 200px;
+}

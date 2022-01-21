@@ -67,6 +67,20 @@
                         <li>
                             <a class="dropdown-item" href="{{ route('admin.glp.recommendation-pdfs.index') }}">Recomendaciones (pdfs)</a>
                         </li>
+                        <li>
+                            <a class="dropdown-item" href="{{ route('admin.glp.faqs.index') }}">Preguntas frecuentes</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Blog
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li>
+                            <a class="dropdown-item" href="{{ route('admin.blog.banner.edit', 1) }}">Banner</a>
+                        </li>
                     </ul>
                 </li>
             </ul>

@@ -51,6 +51,11 @@ Route::prefix('lotus')->group(function () {
             Route::resource('/glp/recommendation-tips', 'Glp\GlpRecommendationTipController', ['as' => 'admin.glp'])->only(['index','edit', 'update']);
 
             Route::resource('/glp/recommendation-pdfs', 'Glp\GlpRecommendationPdfController', ['as' => 'admin.glp'])->only(['index','edit', 'update']);
+
+            Route::resource('/glp/faqs', 'Glp\GlpFaqController', ['as' => 'admin.glp']);
+
+            // Blog
+            Route::resource('/blog/banner', 'Blog\BlogBannerController', ['as' => 'admin.blog'])->only(['edit', 'update']);
         });
     });
 });

@@ -53,5 +53,13 @@ class DatabaseSeeder extends Seeder
         $this->call(GlpBannerSeeder::class);
         $this->call(GlpRecommendationTipSeeder::class);
         $this->call(GlpRecommendationPdfSeeder::class);
+        $this->call(GlpFaqSeeder::class);
+
+        /*
+        |----------------------------------------------------------------------
+        | Blog seeders
+        |----------------------------------------------------------------------
+        */
+        $this->call(BlogBannerSeeder::class);
     }
 }

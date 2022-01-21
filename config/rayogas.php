@@ -21,4 +21,7 @@ return [
         'banner' => env('GLP_BANNER_FOLDER', null),
         'recommendationPdfs' => env('GLP_RECOMMENDATION_PDFS_FOLDER', null),
     ],
+    'blog' => [
+        'banner' => env('BLOG_BANNER_FOLDER', null),
+    ],
 ];
