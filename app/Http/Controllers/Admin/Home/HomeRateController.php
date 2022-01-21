@@ -21,7 +21,7 @@ class HomeRateController extends Controller
 
     public function index()
     {
-        $rates = HomeRate::latest('id')->get();
+        $rates = HomeRate::oldest('id')->get();
         return view('admin.sections.home.rates.index', compact('rates'));
     }
 

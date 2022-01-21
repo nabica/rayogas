@@ -5,14 +5,14 @@
 <div class="row">
     <div class="col-12">
         <div class="page-title-box d-flex align-items-center justify-content-between">
-            <h4 class="mb-0">Banner Principal</h4>
+            <h4 class="mb-0">Destacados</h4>
 
-            <div class="page-title-right">
+            {{-- <div class="page-title-right">
                 <ol class="breadcrumb m-0">
                     <li class="breadcrumb-item"><a href="javascript: void(0);">Forms</a></li>
                     <li class="breadcrumb-item active">Basic Elements</li>
                 </ol>
-            </div>
+            </div> --}}
 
         </div>
     </div>
@@ -23,7 +23,7 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-                    {{-- @include('admin.snippets.success-message')
+                    @include('admin.components.success-message')
 
                     <div class="table-responsive">
                         <table class="table table-hover">
@@ -35,18 +35,18 @@
                             </tr>
                           </thead>
                           <tbody>
-                            @foreach($banners as $banner)
+                            @foreach($features as $feature)
                               <tr>
-                                <td>{{ $banner->id }}</td>
-                                <td>{{ $banner->titulo }}</td>
+                                <td>{{ $feature->id }}</td>
+                                <td>{{ $feature->title }}</td>
                                 <td>
-                                  <a href="{{ route('admin.home.banner.edit', $banner->id) }}" class="btn btn-primary">Editar</a>
+                                  <a href="{{ route('admin.about.features.edit', $feature->id) }}" class="btn btn-primary">Editar</a>
                                </td>
                               </tr>
                             @endforeach
                           </tbody>
                         </table>
-                    </div> --}}
+                    </div>
             </div>
         </div>
     </div> <!-- end col -->

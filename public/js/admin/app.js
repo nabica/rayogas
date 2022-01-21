@@ -5260,7 +5260,10 @@ module.exports = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
+/* harmony import */ var _common_list__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./common/list */ "./resources/js/admin/common/list.js");
+/* harmony import */ var _common_list__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_common_list__WEBPACK_IMPORTED_MODULE_1__);
 __webpack_require__(/*! ./bootstrap */ "./resources/js/admin/bootstrap.js");
+
 
 
 
@@ -5274,6 +5277,30 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/admin/bootstrap.js");
 
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+
+/***/ }),
+
+/***/ "./resources/js/admin/common/list.js":
+/*!*******************************************!*\
+  !*** ./resources/js/admin/common/list.js ***!
+  \*******************************************/
+/***/ (() => {
+
+// Selectors
+var deleteRecord = document.querySelectorAll('.form-delete-record'); // Events
+
+deleteRecord.forEach(function (element) {
+  element.addEventListener('submit', clickDeleteRecord);
+}); // Functions
+
+function clickDeleteRecord() {
+  event.preventDefault();
+  var element = event.target;
+
+  if (confirm('Este registro se eliminará. ¿Estas seguro de continuar?')) {
+    element.submit();
+  }
+}
 
 /***/ }),
 
@@ -10594,6 +10621,18 @@ module.exports = JSON.parse('{"_from":"axios@^0.21","_id":"axios@0.21.4","_inBun
 /******/ 				}
 /******/ 			}
 /******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
 /******/ 		};
 /******/ 	})();
 /******/ 	

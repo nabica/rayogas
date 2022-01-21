@@ -3,7 +3,6 @@
 namespace App\Models\Home;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-//use Database\Factories\Home\HomeFeatureFactory;
 use Illuminate\Database\Eloquent\Model;
 use Config;
 
@@ -35,9 +34,4 @@ class HomeFeature extends Model
     {
         return asset($this->uploadsFolder . '/' . $this->featureFolder . '/' . $this->getFolderId() . '/' . $this->image);
     }
-
-    /*protected static function newFactory()
-    {
-        return HomeFeatureFactory::new();
-    }*/
 }

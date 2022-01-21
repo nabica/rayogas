@@ -3,7 +3,6 @@
 namespace App\Models\Home;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-//use Database\Factories\Home\HomeBannerFactory;
 use Illuminate\Database\Eloquent\Model;
 use Config;
 
@@ -35,9 +34,4 @@ class HomeBanner extends Model
     {
         return asset($this->uploadsFolder . '/' . $this->bannerFolder . '/' . $this->getFolderId() . '/' . $this->image);
     }
-
-    /*protected static function newFactory()
-    {
-        return HomeBannerFactory::new();
-    }*/
 }

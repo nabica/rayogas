@@ -27,5 +27,31 @@ class DatabaseSeeder extends Seeder
         $this->call(HomeBannerSeeder::class);
         $this->call(HomeFeatureSeeder::class);
         $this->call(HomeRateSeeder::class);
+
+        /*
+        |----------------------------------------------------------------------
+        | About seeders
+        |----------------------------------------------------------------------
+        */
+        $this->call(AboutBannerSeeder::class);
+        $this->call(AboutFeatureSeeder::class);
+        $this->call(AboutValueSeeder::class);
+        $this->call(AboutWhyChooseFeatureSeeder::class);
+
+        /*
+        |----------------------------------------------------------------------
+        | Products seeders
+        |----------------------------------------------------------------------
+        */
+        $this->call(ProductsBannerSeeder::class);
+
+        /*
+        |----------------------------------------------------------------------
+        | Glp seeders
+        |----------------------------------------------------------------------
+        */
+        $this->call(GlpBannerSeeder::class);
+        $this->call(GlpRecommendationTipSeeder::class);
+        $this->call(GlpRecommendationPdfSeeder::class);
     }
 }
