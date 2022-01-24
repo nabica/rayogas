@@ -81,6 +81,9 @@
                         <li>
                             <a class="dropdown-item" href="{{ route('admin.blog.banner.edit', 1) }}">Banner</a>
                         </li>
+                        <li>
+                            <a class="dropdown-item" href="{{ route('admin.blog.posts.index') }}">Artículos</a>
+                        </li>
                     </ul>
                 </li>
             </ul>

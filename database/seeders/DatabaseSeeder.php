@@ -61,5 +61,6 @@ class DatabaseSeeder extends Seeder
         |----------------------------------------------------------------------
         */
         $this->call(BlogBannerSeeder::class);
+        $this->call(BlogPostSeeder::class);
     }
 }

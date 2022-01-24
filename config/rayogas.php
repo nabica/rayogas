@@ -23,5 +23,6 @@ return [
     ],
     'blog' => [
         'banner' => env('BLOG_BANNER_FOLDER', null),
+        'posts' => env('BLOG_POSTS_FOLDER', null),
     ],
 ];
