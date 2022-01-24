@@ -10,14 +10,16 @@
     <title>@yield('title')</title>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="{{ mix('./css/rayogas/app.css') }}">
+    {{-- <link rel="stylesheet" href="{{ mix('./css/rayogas/app.css') }}"> --}}
+    <link rel="stylesheet" href="https://www.rayogas.com/rayogas-pruebas/public/css/rayogas/app.css">
 </head>
 
 <body>
     @include('rayogas.components.menu',['navbar'=>'true'])
     @yield('content')
     @include('rayogas.components.footer',['upButton'=> 'true'])
-    <script src="{{ mix('./js/rayogas/app.js') }}"></script>
+    {{-- <script src="{{ mix('./js/rayogas/app.js') }}"></script> --}}
+    <link rel="stylesheet" href="https://www.rayogas.com/rayogas-pruebas/public/js/rayogas/app.js">
 </body>
 
 </html>
