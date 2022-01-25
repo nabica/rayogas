@@ -14,8 +14,9 @@ class ProductsBannerSeeder extends Seeder
     public function run()
     {
         \App\Models\Products\ProductsBanner::create([
-            'title' => 'title banner',
-            'description' => 'desc ',
+            'title' => 'Somos energía para tu empresa',
+            'description' => 'Contamos con un amplio portafolio de servicios que se adaptan a las necesidades específicas de tu
+industria, empresa u hogar',
         ]);
     }
 }

@@ -14,13 +14,13 @@ class AboutFeatureSeeder extends Seeder
     public function run()
     {
         \App\Models\About\AboutFeature::create([
-            'title' => 'destacado 1',
-            'description' => 'desc ',
+            'title' => 'Nuestro equipo profesional está totalmente capacitado para asesorarte de principio a fin',
+            'description' => '<p>En <strong>Rayogas</strong>, está nuestro equipo en constante formación para <strong>fortalecer su conocimiento</strong> y ampliar su posibilidad de crecer profesionalmente.</p> ',
         ]);
 
         \App\Models\About\AboutFeature::create([
-            'title' => 'destacado 2',
-            'description' => 'desc ',
+            'title' => 'El servicio que brindamos se enfoca en el cumplimiento',
+            'description' => '<p>El buen servicio y cumplimiento de las expectativas de nuestros clientes es uno de nuestro grandes objetivos, dedicándonos a brindarles acompañamiento durante todo el proceso de compra hasta su instalación y mantenimiento.</p>',
         ]);
     }
 }

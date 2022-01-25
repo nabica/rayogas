@@ -3,35 +3,37 @@
 
 @component('rayogas.components.banner')
 @slot('id')banner-home @endslot
-@slot('title')Somos energía que mueve un país @endslot
-@slot('description')Somos empresa 100% colombiana que vive la diversidad de nuestro país en cada recorrido distribuyendo
-GLP como solución energética. @endslot
-@slot('buttonLink')# @endslot
-@slot('buttonText')Conocer más de Rayogas @endslot
+@isset($homeBanner->image)
+@slot('image'){{ $homeBanner->image_url }} @endslot
+@endisset
+@slot('title'){{ $homeBanner->title }} @endslot
+@slot('description'){{ $homeBanner->description }} @endslot
+@slot('buttonLink'){{ $homeBanner->button_link }} @endslot
+@slot('buttonText'){{ $homeBanner->button_text }} @endslot
 @endcomponent
 
 <!-- Team -->
 <div class="container">
     <section class="section">
         @component('rayogas.components.heading-title')
-        @slot('title')Contamos con un equipo humano profesional y especializado para acompañarte @endslot
+        @slot('title'){{ $homeFeature->title }} @endslot
         @endcomponent
 
         <div class="row">
             <div class="col-md-6">
-                <p>
-                    Año tras año hemos crecido en <strong>liderazgo y posicionamiento</strong> en el país,
-                    <strong>apoyando</strong> a miles de personas y proyectos con productos que cuentan con los
-                    <strong>mayores estándares de calidad</strong> y seguridad en todas las fases de envasado e
-                    instalación, asegurando un <strong>menor riesgo</strong> en su uso.
-                </p>
+                {!! $homeFeature->description !!}
             </div>
             <div class="col-md-6">
                 <div id="home-main-image">
+                    @if(isset($homeFeature->image))
+                    <img src="{{ $homeFeature->image_url }}" class="img-fluid"
+                        alt="más de 50 años">
+                    @else
                     <img src="{{ asset('images/web/home/home_img_principal.png') }}" class="img-fluid"
                         alt="más de 50 años">
+                    @endif
                     <div class="content">
-                        <p>Más de 50 años llevando energía a los rincones del país</p>
+                        <p>{{ $homeFeature->image_description }}</p>
                     </div>
                 </div>
             </div>
@@ -223,8 +225,9 @@ GLP como solución energética. @endslot
                 <h3>Nuestras tarifas</h3>
             </div>
             <div class="col-lg-6 text-center mt-1">
-                <a href="" class="btn btn-primary">Octubre 2021</a>
-                <a href="" class="btn btn-primary">Noviembre 2021</a>
+                @foreach($homeRates as $homeRate)
+                <a href="{{ $homeRate->file_url }}" target="blank" class="btn btn-primary">{{ $homeRate->button_text }}</a>
+                @endforeach
             </div>
         </div>
     </div>

@@ -14,11 +14,11 @@ class HomeRateSeeder extends Seeder
     public function run()
     {
         \App\Models\Home\HomeRate::create([
-            'button_text' => 'boton 1',
+            'button_text' => 'Octubre 2021',
         ]);
 
         \App\Models\Home\HomeRate::create([
-            'button_text' => 'boton 2',
+            'button_text' => 'Noviembre 2021',
         ]);
     }
 }

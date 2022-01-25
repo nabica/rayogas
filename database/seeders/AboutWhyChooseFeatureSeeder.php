@@ -14,18 +14,18 @@ class AboutWhyChooseFeatureSeeder extends Seeder
     public function run()
     {
         \App\Models\About\AboutWhyChooseFeature::create([
-            'title' => 'titulo 1',
-            'description' => 'des 1'
+            'title' => 'Seguridad en abastecimiento',
+            'description' => 'Contamos con nuestro aliado estratégico Almagas, comercializadora mayorista, garantizando el abastecimiento seguro.'
         ]);
 
         \App\Models\About\AboutWhyChooseFeature::create([
-            'title' => 'titulo 2',
-            'description' => 'des 2'
+            'title' => 'Carro tanques y Cisternas',
+            'description' => 'Nuestros carro tanques cuentan con control de suministro de líquido, garantizando la entrega precisa y correcta a cada usuario. Contamos con más de 200 vehículos repartidores y transportadores de GLP.'
         ]);
 
         \App\Models\About\AboutWhyChooseFeature::create([
-            'title' => 'titulo 3',
-            'description' => 'des 3'
+            'title' => 'Manejo de Sustancias',
+            'description' => 'Nuestro personal cuentan con la experiencia y capacitación en el manejo adecuado de sustancias peligrosas.'
         ]);
     }
 }

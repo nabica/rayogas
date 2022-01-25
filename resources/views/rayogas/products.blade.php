@@ -3,9 +3,11 @@
 
 @component('rayogas.components.banner')
 @slot('id')banner-products @endslot
-@slot('title')Somos energía para tu empresa @endslot
-@slot('description')Contamos con un amplio portafolio de servicios que se adaptan a las necesidades específicas de tu
-industria, empresa u hogar. @endslot
+@isset($productsBanner->image)
+@slot('image'){{ $productsBanner->image_url }} @endslot
+@endisset
+@slot('title'){{ $productsBanner->title }} @endslot
+@slot('description'){{ $productsBanner->description }} @endslot
 @endcomponent
 
 <!-- Services -->

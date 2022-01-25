@@ -14,10 +14,10 @@ class HomeBannerSeeder extends Seeder
     public function run()
     {
         \App\Models\Home\HomeBanner::factory(1)->create([
-            'title' => 'title banner',
-            'description' => 'desc ',
-            'button_text' => 'text',
-            'button_link' => 'link'
+            'title' => 'Somos energía que mueve un país',
+            'description' => 'Somos empresa 100% colombiana que vive la diversidad de nuestro país en cada recorrido distribuyendo',
+            'button_text' => 'Conocer más de Rayogas',
+            'button_link' => '#'
         ]);
     }
 }
