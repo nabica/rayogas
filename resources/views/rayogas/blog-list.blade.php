@@ -1,12 +1,32 @@
 @extends('rayogas.layouts.master')
 @section('content')
-@include('rayogas.components.banner-general', ['title' => "Ponte al día sobre todo lo relacionado al GLP", 'text' =>
-"Descubre datos interesantes sobre el GLP (Gas Licuado de Petróleo), noticas, casos de éxito, avances, entre otros temas
-que sabemos te interesan.", 'image'=> '/images/web/blog/blog_banner_main.png'])
+
+@component('rayogas.components.banner')
+@slot('id')banner-blog @endslot
+@isset($blogBanner->image)
+@slot('image'){{ $blogBanner->image_url }} @endslot
+@endisset
+@slot('title'){{ $blogBanner->title }} @endslot
+@slot('description'){{ $blogBanner->description }} @endslot
+@endcomponent
+
 <section class="blog-list">
     <div class="container">
         <div class="row">
-            <a href="#" class="col-lg-4 col-md-6 col-12 blog-list__item">
+            @foreach($blogPosts as $blogPost)
+            <a href="{{ route('rayogas.blog.show', $blogPost->slug) }}" class="col-lg-4 col-md-6 col-12 blog-list__item">
+                <img src="{{ isset($blogPost->thumb_image) ? $blogPost->thumb_image_url : asset('images/web/blog/img_blog_preview_1.png') }}" alt="" class="w-100">
+                <div class="blog-list__item-description">
+                    <div class="blog-list__item-title">
+                        <h3>{{ $blogPost->title }}</h3>
+                        <hr>
+                    </div>
+                    <p class="blog-list__item-text">{{ $blogPost->excerpt_description }}</p>
+                </div>
+            </a>
+            @endforeach
+
+            {{-- <a href="#" class="col-lg-4 col-md-6 col-12 blog-list__item">
                 <img src="{{asset('images/web/blog/img_blog_preview_1.png')}}" alt="" class="w-100">
                 <div class="blog-list__item-description">
                     <div class="blog-list__item-title">
@@ -84,8 +104,9 @@ que sabemos te interesan.", 'image'=> '/images/web/blog/blog_banner_main.png'])
                         costo como en beneficio. Solo basta con ver en el mundo a los vehículos que utilizan gas propano
                         y que tienen un rendimiento mucho mayor con relación al número de kilómetros que recorren.</p>
                 </div>
-            </a>
+            </a> --}}
         </div>
+        {{-- {{ $blogPosts->links() }} --}}
         <nav aria-label="Page navigation" class="blog-list__pagination">
             <ul class="pagination">
                 <!--                 <li class="page-item">

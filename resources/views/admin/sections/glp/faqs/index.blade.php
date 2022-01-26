@@ -40,7 +40,7 @@
                           <tbody>
                             @foreach($faqs as $faq)
                               <tr>
-                                <td>{{ $faq->id }}</td>
+                                <td>{{ $loop->index + 1 }}</td>
                                 <td>{{ $faq->title }}</td>
                                 <td>
                                     {!! Form::open(['route' => ['admin.glp.faqs.destroy', $faq->id], 'method' => 'delete', 'class' => 'form-delete-record']) !!}

@@ -1,3 +1,9 @@
+#banner-blog {
+    background-image: linear-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.0)),
+        url('/images/web/blog/blog_banner_main.png'
+    );
+}
+
 .blog {
     padding: rem(20px) 0;
     &__image {

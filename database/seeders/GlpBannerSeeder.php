@@ -14,8 +14,10 @@ class GlpBannerSeeder extends Seeder
     public function run()
     {
         \App\Models\Glp\GlpBanner::create([
-            'title' => 'title banner',
-            'description' => 'desc ',
+            'title' => 'El GLP una alternativa ideal',
+            'description' => 'El GLP o Gas
+Licuado de Petróleo es un combustible producto de una mezcla de hidrocarburos, principalmente propano y/o butano, que se
+encuentra en estado gaseoso a presión atmosférica normal.',
         ]);
     }
 }

@@ -14,8 +14,9 @@ class BlogBannerSeeder extends Seeder
     public function run()
     {
         \App\Models\Blog\BlogBanner::create([
-            'title' => 'title banner',
-            'description' => 'desc ',
+            'title' => 'Ponte al día sobre todo lo relacionado al GLP',
+            'description' => 'Descubre datos interesantes sobre el GLP (Gas Licuado de Petróleo), noticas, casos de éxito, avances, entre otros temas
+que sabemos te interesan.',
         ]);
     }
 }

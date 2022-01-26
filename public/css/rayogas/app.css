@@ -13196,6 +13196,10 @@ select::-ms-expand {
   padding: 5rem 0;
 }
 
+#banner-glp {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("/images/web/glp/glp_banner_main.png");
+}
+
 .glp h3, .glp .h3 {
   color: var(--primary-color);
   font-size: 2.25rem;
@@ -13733,6 +13737,10 @@ select::-ms-expand {
     padding: 5rem 0 7.125rem 0;
   }
 }
+#banner-blog {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("/images/web/blog/blog_banner_main.png");
+}
+
 .blog {
   padding: 1.25rem 0;
 }

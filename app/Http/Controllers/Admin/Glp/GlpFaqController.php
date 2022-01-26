@@ -21,7 +21,7 @@ class GlpFaqController extends Controller
 
     public function index()
     {
-        $faqs = GlpFaq::latest('id')->paginate(10);
+        $faqs = GlpFaq::oldest('id')->paginate(10);
         return view('admin.sections.glp.faqs.index', compact('faqs'));
     }
 

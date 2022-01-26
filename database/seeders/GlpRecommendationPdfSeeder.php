@@ -13,6 +13,20 @@ class GlpRecommendationPdfSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\Glp\GlpRecommendationPdf::factory(4)->create();
+        \App\Models\Glp\GlpRecommendationPdf::factory()->create([
+            'title' => 'Manual de seguridad del usuario'
+        ]);
+
+        \App\Models\Glp\GlpRecommendationPdf::factory()->create([
+            'title' => 'Plegable montacarga'
+        ]);
+
+        \App\Models\Glp\GlpRecommendationPdf::factory()->create([
+            'title' => 'Plegable usuario'
+        ]);
+
+        \App\Models\Glp\GlpRecommendationPdf::factory()->create([
+            'title' => 'Plegable granel'
+        ]);
     }
 }
