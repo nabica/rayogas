@@ -73,7 +73,7 @@
         <div class="row">
             @foreach($aboutValues as $aboutValue)
             <div class="col-md-4 text-center">
-                <img src="{{ asset('images/web/about/values/icn_nosotros_valores_liderazgo.png') }}" class="img-fluid" alt="">
+                <img src="{{ isset($aboutValue->image) ? $aboutValue->image_url : asset('images/web/about/values/icn_nosotros_valores_liderazgo.png') }}" class="img-fluid" alt="">
                 <h3>{{ $aboutValue->title }}</h3>
                 <p>{{ $aboutValue->description }}</p>
             </div>
