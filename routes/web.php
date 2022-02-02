@@ -58,6 +58,8 @@ Route::prefix('lotus')->group(function () {
             Route::resource('/blog/banner', 'Blog\BlogBannerController', ['as' => 'admin.blog'])->only(['edit', 'update']);
 
             Route::resource('/blog/posts', 'Blog\BlogPostController', ['as' => 'admin.blog']);
+            
+            
         });
     });
 });
@@ -77,4 +79,5 @@ Route::namespace("App\Http\Controllers\Rayogas")->group(function () {
     Route::get("/blog/{slug}", "BlogController@show")->name('rayogas.blog.show');
     Route::get("/pqrs", "PqrsController@index")->name('rayogas.pqrs');
     Route::get("pqrs/thanks", "PqrsController@tanks")->name('rayogas.thanks');
+    Route::get('/transparencia', 'TransparencyController@index')->name('rayogas.transparency');
 });
