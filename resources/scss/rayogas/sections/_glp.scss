@@ -1,12 +1,11 @@
 #banner-glp {
-    background-image: linear-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.0)),
-        url('/images/web/glp/glp_banner_main.png'
-    );
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+        url("/images/web/glp/glp_banner_main.png");
 }
 
 .glp {
     & h3 {
-        color: var(--primary-color);
+        color: var(--font-color-primary);
         font-size: rem(36px);
         font-weight: bold;
         letter-spacing: 0;
@@ -169,7 +168,7 @@
                                 rgba(76, 76, 76, 0.12);
                             border-radius: rem(30px);
                             font-size: rem(24px);
-                            color: var(--primary-color);
+                            color: var(--font-color-primary);
                         }
                     }
                     &:hover {
@@ -274,7 +273,7 @@
         border-right: rem(2px) solid var(--primary-color);
         & .accordion-button {
             position: relative;
-            color: var(--body-color);
+            color: var(--font-color-text);
             text-decoration: none;
             padding: rem(25px) rem(60px) rem(25px) rem(24px);
             border-bottom: 1px solid var(--primary-color);
@@ -284,7 +283,7 @@
                 position: absolute;
                 content: "\ea42";
                 background: none;
-                color: var(--primary-color);
+                color: var(--font-color-primary);
                 font-family: "icomoon" !important;
                 width: initial;
                 height: initial;
@@ -308,7 +307,7 @@
             &:hover {
                 background-color: var(--background-color-2);
                 &::after {
-                    color: var(--primary-color);
+                    color: var(--font-color-primary);
                     transform: none;
                 }
             }
@@ -444,7 +443,7 @@
                 padding-bottom: rem(20px);
             }
             & .accordion-button {
-                color: var(--body-color);
+                color: var(--font-color-text);
                 text-decoration: none;
                 padding: rem(18px) 0;
                 border-bottom: 1px solid var(--primary-color);
@@ -456,7 +455,7 @@
                 &::after {
                     content: "\e901";
                     background: none;
-                    color: var(--primary-color);
+                    color: var(--font-color-primary);
                     font-family: "icomoon" !important;
                     width: initial;
                     height: initial;

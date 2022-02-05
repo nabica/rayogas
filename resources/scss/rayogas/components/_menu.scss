@@ -17,14 +17,14 @@
         justify-content: space-between;
         align-items: center;
         padding: rem(18px) 0;
-        & #btn-accessibility {
+        & .btn-accessibility {
             display: flex;
             justify-content: center;
             align-items: center;
             height: rem(32px);
             width: rem(95px);
             border: rem(1px) solid var(--primary-color);
-            color: var(--primary-color-dark);
+            color: var(--font-color-secondary);
             font-weight: bold;
             text-decoration: none;
             border-radius: 16px;
@@ -96,7 +96,7 @@
         left: 0;
         right: 0;
         z-index: 100;
-        background-color: var(--white-color);
+        background-color: var(--body-color);
         padding: rem(33px) rem(16px) rem(56px);
         display: flex;
         flex-direction: column;
@@ -108,7 +108,7 @@
             justify-content: space-between;
             max-width: rem(320px);
             & a {
-                color: var(--body-color);
+                color: var(--font-color-text);
                 text-decoration: none;
             }
         }
@@ -120,7 +120,7 @@
             opacity: 1;
             height: 4px;
             border-radius: 3px;
-            color: var(--primary-color);
+            color: var(--font-color-primary);
             margin: rem(40px) 0 rem(47px);
         }
         & li {
@@ -137,8 +137,72 @@
 
             &.active,
             &:hover {
-                color: var(--primary-color) !important;
+                color: var(--font-color-primary) !important;
                 border-bottom: 2px solid var(--primary-color);
+            }
+        }
+    }
+    & .accessibility {
+        &-menu {
+            display: none;
+            max-width: rem(333px);
+            border: rem(1px) solid var(--primary-color);
+            border-radius: rem(11px);
+            background-color: var(--body-color);
+            box-shadow: 0 rem(4px) 1 rem(8px) 0 rgba(0, 0, 0, 0.1);
+            padding: rem(32px);
+            position: absolute;
+            top: 75%;
+            left: rem(25px);
+            &.show {
+                display: block;
+                z-index: 100001;
+            }
+            &__triangle {
+                width: rem(22px);
+                height: rem(24px);
+                overflow: hidden;
+                background-color: var(--body-color);
+                position: absolute;
+                top: rem(-24px);
+                left: rem(20px);
+                .arrow-up {
+                    width: rem(23px);
+                    height: rem(29px);
+                    transform: rotate(47deg) skew(19deg, 13deg)
+                        translateY(rem(5px)) translateX(-3px);
+                    transform-origin: bottom left;
+                    border: rem(1px) solid var(--primary-color);
+                }
+            }
+            &__header {
+                display: flex;
+                margin-bottom: rem(37px);
+                & img {
+                    flex-shrink: 0;
+                }
+                & h3 {
+                    color: var(--primary-color-dark);
+                    font-size: rem(28px);
+                    letter-spacing: 0;
+                    line-height: rem(34px);
+                }
+            }
+            &__body {
+                text-align: center;
+                & p {
+                    color: var(--font-color-text);
+                    font-size: rem(12px);
+                    font-weight: 500;
+                    letter-spacing: 0;
+                }
+                & button {
+                    height: rem(80px);
+                    width: rem(117px);
+                    border: 1px solid var(--component-color);
+                    border-radius: rem(10px);
+                    background-color: var(--white-color);
+                }
             }
         }
     }
@@ -173,9 +237,24 @@
             justify-content: space-between;
             align-items: center;
             padding: rem(18px) 0;
-            & #btn-accessibility {
+            & .btn-accessibility {
                 height: rem(32px);
                 width: rem(51px);
+            }
+        }
+        & .accessibility {
+            &-container {
+                position: relative;
+            }
+            &-menu {
+                top: rem(60px);
+                left: rem(-276px);
+
+                &__triangle {
+                    top: rem(-24px);
+                    right: rem(20px);
+                    left: initial;
+                }
             }
         }
     }

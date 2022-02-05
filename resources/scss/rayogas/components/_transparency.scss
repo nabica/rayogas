@@ -6,7 +6,7 @@
         text-align: center;
     }
     & h4 {
-        color: var(--primary-color);
+        color: var(--font-color-primary);
         font-size: rem(16px);
         font-weight: bold;
         letter-spacing: 0;
@@ -14,7 +14,7 @@
         margin-bottom: rem(9px);
     }
     & h2 {
-        color: var(--primary-color);
+        color: var(--font-color-primary);
         margin-top: rem(15px);
         font-size: rem(28px);
         line-height: rem(34px);
@@ -51,11 +51,10 @@
     &__card {
         width: 100%;
         border-radius: rem(24px);
-        background-color: #ffffff;
         box-shadow: 0 rem(2px) rem(8px) 0 rgba(0, 0, 0, 0.14);
         padding: rem(21px) rem(15px) rem(40px) rem(15px);
         & a {
-            color: var(--primary-color);
+            color: var(--font-color-primary);
         }
         &-header {
             margin-bottom: rem(10px);
@@ -63,7 +62,7 @@
         &-phones {
             & h4 {
                 font-size: rem(12px);
-                color: var(--primary-color);
+                color: var(--font-color-primary);
                 margin-bottom: 0;
             }
             & p {
@@ -84,7 +83,7 @@
             }
             & a {
                 font-size: rem(12px);
-                color: var(--primary-color);
+                color: var(--font-color-primary);
             }
         }
     }
@@ -205,7 +204,7 @@
             &-phones {
                 & h4 {
                     font-size: rem(16px);
-                    color: var(--primary-color);
+                    color: var(--font-color-primary);
                     line-height: rem(22px);
                 }
                 & p {
@@ -227,7 +226,7 @@
                 }
                 & a {
                     font-size: rem(16px);
-                    color: var(--primary-color);
+                    color: var(--font-color-primary);
                     line-height: rem(22px);
                 }
             }

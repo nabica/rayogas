@@ -1,5 +1,40 @@
- html[data-theme="dark"] {
-    --primary-color: gray;
-    --primary-color-dark: black;
-    --white-color: #FFFFFF;
- }
+html[data-theme="dark"] {
+    --primary-color: #fff;
+    --primary-color-dark: #fff;
+    --primary-color-dark-2: #fff;
+    --primary-color-alfa-85: rgba(0, 0, 0, 0.85);
+    --primary-color-dark-alfa-80: rgba(0, 0, 0, 0.8);
+    --font-color-text: #fff;
+    --font-color-primary: #fff;
+    --font-color-secondary: #000;
+    --font-color-tertiary: #000;
+    --font-color-queaternary: #000;
+    --hover-color-primary: #000;
+    --body-color: #000;
+    --component-color: #fff;
+    --background-color: #000;
+    --wap-color: #000;
+    --white-color: #fff;
+    --gray-color: #fff;
+
+    /*Variables que manuel aún no le ha puesto nombre*/
+    --separator-color-alpha-25: rgba(151, 151, 151, 0.25);
+    --separator-color-alpha-8: rgba(201, 211, 221, 0.8);
+    --separator-color-2: #ececef;
+    --background-color-2: #000;
+    --success-color: #00c85a;
+    --alert-color: #f65a5a;
+
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+
+    & .glp-recommendations__documents-list li a div:first-child > p,
+    .download-card__list li a div:first-child > p {
+        color: var(--font-color-secondary);
+    }
+
+    & button[class*="btn-primary"]:hover,
+    & a[class*="btn-primary"]:hover {
+        color: #000 !important;
+    }
+}

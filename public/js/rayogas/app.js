@@ -2458,11 +2458,86 @@ Array.prototype.slice.call(forms).forEach(function (form) {
   \***************************************************/
 /***/ (() => {
 
-var button = document.getElementById("navbar_button");
-var mobileButtons = document.getElementById("mobile-buttons");
-button.addEventListener("click", function () {
-  button.classList.toggle("open");
-  mobileButtons.classList.toggle("show");
+var html = document.getElementsByTagName("html")[0];
+var navbarButton = document.getElementById("navbar_button");
+var navbarMobileButtons = document.getElementById("mobile-buttons");
+var buttonMenuAccess = document.getElementById("btnAccessibility");
+var buttonMenuAccessMobile = document.getElementById("btnAccessibilityMobile");
+var buttonsIncreaseText = document.querySelectorAll(".increaseText");
+var buttonsDecreaseText = document.querySelectorAll(".decreaseText");
+var buttonsContrast = document.querySelectorAll(".contrast-btn");
+var buttonsOnlyText = document.querySelectorAll(".only-text-btn");
+navbarButton.addEventListener("click", function () {
+  navbarButton.classList.toggle("open");
+  navbarMobileButtons.classList.toggle("show");
+});
+buttonMenuAccess.addEventListener("click", function (e) {
+  e.preventDefault();
+  var menu = document.getElementById("accessibility-menu");
+  menu.classList.toggle("show");
+});
+buttonMenuAccessMobile.addEventListener("click", function (e) {
+  e.preventDefault();
+  var menu = document.getElementById("accessibility-menu-mobile");
+  menu.classList.toggle("show");
+});
+buttonsIncreaseText.forEach(function (button) {
+  button.addEventListener("click", function () {
+    var sizes = ["small", "medium", "large"];
+    var index = sizes.findIndex(function (size) {
+      return size === html.dataset.size;
+    });
+    console.log(index);
+
+    if (sizes[index + 1]) {
+      html.dataset.size = sizes[index + 1];
+    }
+  });
+});
+buttonsDecreaseText.forEach(function (button) {
+  button.addEventListener("click", function () {
+    var sizes = ["small", "medium", "large"];
+    var index = sizes.findIndex(function (size) {
+      return size === html.dataset.size;
+    });
+    console.log(index);
+
+    if (sizes[index - 1]) {
+      html.dataset.size = sizes[index - 1];
+    }
+  });
+});
+buttonsContrast.forEach(function (button) {
+  button.addEventListener("click", function () {
+    var themes = ["light", "dark"];
+    var nextTheme = themes.filter(function (theme) {
+      return theme !== html.dataset.theme;
+    });
+
+    if (nextTheme.length === 1) {
+      html.dataset.theme = nextTheme[0];
+      window.localStorage.setItem("theme", nextTheme[0]);
+    } else {
+      html.dataset.theme = themes[1];
+      window.localStorage.setItem("theme", themes[1]);
+    }
+  });
+});
+buttonsOnlyText.forEach(function (button) {
+  button.addEventListener("click", function () {
+    var themes = ["light", "text"];
+    var nextTheme = themes.filter(function (theme) {
+      return theme !== html.dataset.theme;
+    });
+
+    if (nextTheme.length === 1) {
+      html.dataset.theme = nextTheme[0];
+      window.localStorage.setItem("theme", nextTheme[0]);
+    } else {
+      html.dataset.theme = themes[1];
+      window.localStorage.setItem("theme", themes[1]);
+    }
+  });
 });
 
 /***/ }),
@@ -2512,13 +2587,17 @@ var loader = new _googlemaps_js_api_loader__WEBPACK_IMPORTED_MODULE_0__.Loader({
   version: "weekly"
 });
 loader.load().then(function () {
-  map = new google.maps.Map(document.getElementById("map"), {
-    center: {
-      lat: -34.397,
-      lng: 150.644
-    },
-    zoom: 8
-  });
+  var map = document.getElementById("map");
+
+  if (map) {
+    var loadedMap = new google.maps.Map(map, {
+      center: {
+        lat: -34.397,
+        lng: 150.644
+      },
+      zoom: 8
+    });
+  }
 });
 
 /***/ }),
@@ -2824,8 +2903,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap_dist_js_bootstrap_bundle_min__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_js_bootstrap_bundle_min__WEBPACK_IMPORTED_MODULE_0__);
 __webpack_require__(/*! ./bootstrap */ "./resources/js/rayogas/bootstrap.js");
 
-__webpack_require__(/*! ./bootstrap */ "./resources/js/rayogas/bootstrap.js");
-
 __webpack_require__(/*! ./components/navbar */ "./resources/js/rayogas/components/navbar.js");
 
 __webpack_require__(/*! ./components/footer */ "./resources/js/rayogas/components/footer.js");
@@ -2837,6 +2914,14 @@ __webpack_require__(/*! ./components/transparency */ "./resources/js/rayogas/com
 __webpack_require__(/*! ./maps */ "./resources/js/rayogas/maps.js");
 
 
+document.addEventListener("DOMContentLoaded", function () {
+  var savedTheme = window.localStorage.getItem("theme");
+  var html = document.getElementsByTagName("html")[0];
+
+  if (savedTheme) {
+    html.dataset.theme = savedTheme;
+  }
+});
 })();
 
 /******/ })()

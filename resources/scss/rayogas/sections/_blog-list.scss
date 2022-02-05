@@ -52,8 +52,9 @@
                     font-weight: bold;
                     line-height: rem(36px);
                     color: var(--gray-color);
+                    background-color: transparent;
                     &.active {
-                        color: var(--primary-color);
+                        color: var(--font-color-primary);
                     }
                 }
             }

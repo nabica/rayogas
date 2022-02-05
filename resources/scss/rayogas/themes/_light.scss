@@ -3,12 +3,18 @@ html[data-theme="light"] {
     --primary-color-dark: #003b7f;
     --primary-color-dark-2: #0a0c64;
     --primary-color-alfa-85: rgba(0, 158, 227, 0.85);
-    --primary-color-dark-alfa-80: rgba(0, 59, 127, 0.8);
-    --body-color: #8393a8;
+    --primary-color-dark-alfa-80: #003b7fcc;
+    --font-color-text: #8393a8;
+    --font-color-primary: #009ee3;
+    --font-color-secondary: #003b7f;
+    --font-color-tertiary: #fff;
+    --font-color-queaternary: #009ee3;
+    --hover-color-primary: #009ee3;
+    --body-color: #fff;
     --component-color: #c9d3dd;
     --background-color: #fafafa;
     --wap-color: #00bb2d;
-    --white-color: #ffffff;
+    --white-color: #fff;
     --gray-color: #3b4754;
 
     /*Variables que manuel aún no le ha puesto nombre*/

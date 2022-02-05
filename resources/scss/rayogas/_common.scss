@@ -10,7 +10,7 @@ $html-font-size: 16px;
     font-family: "Gotham";
 }
 body {
-    color: var(--body-color);
+    background-color: var(--body-color);
 }
 .section {
     padding-top: 2.5rem;
@@ -28,7 +28,7 @@ body {
     padding: rem(17px) rem(67px);
     border-radius: rem(32px);
     background-color: var(--primary-color);
-    color: var(--white-color);
+    color: var(--font-color-text-secondary);
     font-size: 1rem;
     font-weight: bold;
     letter-spacing: 0;
@@ -38,33 +38,6 @@ body {
 
     &:focus {
         box-shadow: 0 4px 16px 0 rgba(131, 147, 168, 0.75);
-    }
-}
-
-.btn-success {
-    background-color: var(--success-color);
-    border-color: var(--success-color);
-    &:hover {
-        background-color: var(--white-color);
-        color: var(--success-color);
-    }
-}
-
-.btn-primary {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-    &:hover {
-        background-color: var(--white-color);
-        color: var(--primary-color);
-    }
-}
-
-.btn-primary-dark {
-    background-color: var(--primary-color-dark);
-    border-color: var(--primary-color-dark);
-    &:hover {
-        background-color: var(--white-color);
-        color: var(--primary-color-dark);
     }
 }
 
@@ -86,21 +59,21 @@ body {
         padding: rem(5px) rem(11px);
         background-color: var(--white-color);
         height: rem(38px);
-        color: var(--body-color);
+        color: var(--font-color-text);
         cursor: pointer;
         &:active,
         &:focus {
             outline: none;
             box-shadow: none;
             border-color: var(--primary-color-dark);
-            color: var(--body-color);
+            color: var(--font-color-text);
         }
     }
 }
 
 p {
     margin: 0;
-    color: var(--body-color);
+    color: var(--font-color-text);
     font-weight: 300;
     letter-spacing: 0;
     line-height: rem(24px);
@@ -131,7 +104,7 @@ strong {
     font-weight: bold;
     color: var(--gray-color);
     &.gray {
-        color: var(--body-color);
+        color: var(--font-color-text);
     }
 }
 h1,
@@ -159,7 +132,7 @@ h2.sideLine {
     }
 }
 h3.heading__primary {
-    color: var(--primary-color) !important;
+    color: var(--font-color-primary) !important;
     font-size: rem(24px);
     font-weight: bold;
     line-height: rem(32px);
@@ -190,7 +163,7 @@ h3.heading__primary {
         padding-left: rem(16px);
         &::before {
             content: "\2022";
-            color: var(--primary-color);
+            color: var(--font-color-primary);
             font-weight: bold;
             display: inline-block;
             font-size: rem(24px);
@@ -226,7 +199,7 @@ h3.heading__primary {
             }
         }
         & h3 {
-            color: var(--primary-color);
+            color: var(--font-color-primary);
             font-size: rem(36px);
             font-weight: bold;
             line-height: rem(42px);
@@ -291,27 +264,27 @@ h3.heading__primary {
         padding: rem(11px);
         background-color: var(--white-color);
         height: rem(49px);
-        color: var(--body-color);
+        color: var(--font-color-text);
         &:active,
         &:focus {
             outline: none;
             box-shadow: none;
             border-color: var(--primary-color-dark);
-            color: var(--body-color);
+            color: var(--font-color-text);
         }
     }
     & textarea {
         border: rem(2px) solid var(--component-color);
         border-radius: 4px;
         background-color: var(--white-color);
-        color: var(--body-color);
+        color: var(--font-color-text);
         resize: none;
         &:active,
         &:focus {
             outline: none;
             box-shadow: none;
             border-color: var(--primary-color-dark);
-            color: var(--body-color);
+            color: var(--font-color-text);
         }
     }
     & .select {
@@ -328,17 +301,17 @@ h3.heading__primary {
     }
     & select {
         border: rem(2px) solid var(--component-color);
-        border-radius: 4px;
+        border-radius: rem(4px);
         padding: rem(11px);
-        background-color: var(--white-color);
+        background-color: transparent;
         height: rem(49px);
-        color: var(--body-color);
+        color: var(--font-color-text);
         &:active,
         &:focus {
             outline: none;
             box-shadow: none;
             border-color: var(--primary-color-dark);
-            color: var(--body-color);
+            color: var(--font-color-text);
         }
     }
 }
@@ -400,7 +373,7 @@ h3.heading__primary {
                         box-shadow: 0 rem(2px) rem(4px) 0 rgba(76, 76, 76, 0.12);
                         border-radius: rem(30px);
                         font-size: rem(24px);
-                        color: var(--primary-color);
+                        color: var(--font-color-primary);
                         margin: 0 auto;
                     }
                 }
@@ -441,7 +414,7 @@ select::-ms-expand {
             padding-left: rem(16px);
             &::before {
                 content: "\2022";
-                color: var(--primary-color);
+                color: var(--font-color-primary);
                 font-weight: bold;
                 display: inline-block;
                 font-size: rem(16px);

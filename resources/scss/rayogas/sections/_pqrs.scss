@@ -7,7 +7,7 @@
             margin-bottom: rem(20px);
             max-width: 90%;
             & h3 {
-                color: var(--primary-color);
+                color: var(--font-color-primary);
                 font-size: rem(28px);
                 line-height: rem(34px);
             }
@@ -45,7 +45,7 @@
                 margin-bottom: rem(20px);
                 max-width: 70%;
                 & h3 {
-                    color: var(--primary-color);
+                    color: var(--font-color-primary);
                     font-size: rem(46px);
                     line-height: rem(54px);
                 }

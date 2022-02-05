@@ -159,8 +159,9 @@
         <div class="glp-faq__container row mx-0 d-none d-md-flex" id="faqAccordionDesk">
             <div class="col-6 glp-faq__tabs">
                 @foreach($glpFaqs as $glpFaq)
-                <button class="accordion-button {{ $loop->index == 0 ? '' : 'collapsed' }}" type="button" data-bs-toggle="collapse"
-                    data-bs-parent="#faqAccordionDesk" data-bs-target="#collapse-{{ $glpFaq->id }}" aria-expanded="true"
+                <button class="accordion-button {{ $loop->index == 0 ? '' : 'collapsed' }}" type="button"
+                    data-bs-toggle="collapse" data-bs-parent="#faqAccordionDesk"
+                    data-bs-target="#collapse-{{ $glpFaq->id }}" aria-expanded="true"
                     aria-controls="collapse-{{ $glpFaq->id }}">
                     <span>{{ $loop->index + 1 }}. </span> {{ $glpFaq->title }}
                 </button>
@@ -168,8 +169,9 @@
             </div>
             <div class="col-6 glp-faq__content">
                 @foreach($glpFaqs as $glpFaq)
-                <div id="collapse-{{ $glpFaq->id }}" class="accordion-collapse collapse {{ $loop->index == 0 ? 'show' : '' }}" aria-labelledby="headingOne"
-                    data-bs-parent="#faqAccordionDesk">
+                <div id="collapse-{{ $glpFaq->id }}"
+                    class="accordion-collapse collapse {{ $loop->index == 0 ? 'show' : '' }}"
+                    aria-labelledby="headingOne" data-bs-parent="#faqAccordionDesk">
                     <div class="accordion-body">
                         {!! $glpFaq->description !!}
                     </div>
@@ -185,12 +187,13 @@
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-heading-{{ $glpFaq->id }}">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapse-{{ $glpFaq->id }}" aria-expanded="false" aria-controls="flush-collapse-{{ $glpFaq->id }}">
+                        data-bs-target="#flush-collapse-{{ $glpFaq->id }}" aria-expanded="false"
+                        aria-controls="flush-collapse-{{ $glpFaq->id }}">
                         <span>{{ $loop->index + 1 }}. </span> {{ $glpFaq->title }}
                     </button>
                 </h2>
-                <div id="flush-collapse-{{ $glpFaq->id }}" class="accordion-collapse collapse" aria-labelledby="flush-heading-{{ $glpFaq->id }}"
-                    data-bs-parent="#accordionFlushExample">
+                <div id="flush-collapse-{{ $glpFaq->id }}" class="accordion-collapse collapse"
+                    aria-labelledby="flush-heading-{{ $glpFaq->id }}" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
                         {!! $glpFaq->description !!}
                     </div>
