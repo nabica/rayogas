@@ -29,9 +29,10 @@ buttonsIncreaseText.forEach((button) => {
     button.addEventListener("click", () => {
         const sizes = ["small", "medium", "large"];
         const index = sizes.findIndex((size) => size === html.dataset.size);
-        console.log(index);
+
         if (sizes[index + 1]) {
             html.dataset.size = sizes[index + 1];
+            window.localStorage.setItem("size", sizes[index + 1]);
         }
     });
 });
@@ -39,9 +40,10 @@ buttonsDecreaseText.forEach((button) => {
     button.addEventListener("click", () => {
         const sizes = ["small", "medium", "large"];
         const index = sizes.findIndex((size) => size === html.dataset.size);
-        console.log(index);
+
         if (sizes[index - 1]) {
             html.dataset.size = sizes[index - 1];
+            window.localStorage.setItem("size", sizes[index - 1]);
         }
     });
 });

@@ -2487,10 +2487,10 @@ buttonsIncreaseText.forEach(function (button) {
     var index = sizes.findIndex(function (size) {
       return size === html.dataset.size;
     });
-    console.log(index);
 
     if (sizes[index + 1]) {
       html.dataset.size = sizes[index + 1];
+      window.localStorage.setItem("size", sizes[index + 1]);
     }
   });
 });
@@ -2500,10 +2500,10 @@ buttonsDecreaseText.forEach(function (button) {
     var index = sizes.findIndex(function (size) {
       return size === html.dataset.size;
     });
-    console.log(index);
 
     if (sizes[index - 1]) {
       html.dataset.size = sizes[index - 1];
+      window.localStorage.setItem("size", sizes[index - 1]);
     }
   });
 });
@@ -2916,10 +2916,15 @@ __webpack_require__(/*! ./maps */ "./resources/js/rayogas/maps.js");
 
 document.addEventListener("DOMContentLoaded", function () {
   var savedTheme = window.localStorage.getItem("theme");
+  var savedSize = window.localStorage.getItem("size");
   var html = document.getElementsByTagName("html")[0];
 
   if (savedTheme) {
     html.dataset.theme = savedTheme;
+  }
+
+  if (savedSize) {
+    html.dataset.size = savedSize;
   }
 });
 })();

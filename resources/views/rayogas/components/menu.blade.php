@@ -111,7 +111,7 @@
                             <p>Reducir texto</p>
                         </div>
                         <div class="col-6">
-                            <button class="contrast-btn"><img src="{{ asset('images/web/common/eye.png') }}"
+                            <button class="contrast-btn"><img src="{{ asset('images/web/common/icon-contrast.png') }}"
                                     alt=""></button>
                             <p>Contraste</p>
                         </div>
