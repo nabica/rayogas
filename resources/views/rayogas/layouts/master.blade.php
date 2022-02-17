@@ -17,6 +17,7 @@
     @include('rayogas.components.menu',['navbar'=>'true'])
     @yield('content')
     @include('rayogas.components.footer',['upButton'=> 'true'])
+    @include('rayogas.components.payment-modal')
     <script src="{{ mix('js/rayogas/app.js') }}"></script>
 </body>
 

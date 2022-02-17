@@ -387,6 +387,14 @@ h3.heading__primary {
         }
     }
 }
+.modal {
+    &.show {
+        z-index: 20001;
+    }
+    &-backdrop.show {
+        z-index: 20000;
+    }
+}
 /* CAUTION: IE hackery ahead */
 select::-ms-expand {
     display: none; /* remove default arrow in IE 10 and 11 */
