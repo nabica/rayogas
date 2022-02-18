@@ -25,14 +25,12 @@
                     </div>
                     <div class="col-12 col-lg-6 payment-modal__method">
                         <div class="payment-modal__method-image">
-
                             <img class="img-fluid" src="{{asset('images/web/paymentModal/modal_pago_efectivo.png')}}"
                                 alt="">
                         </div>
                         <a href="" class='btn btn-primary payment-modal__method-button'>Efectivo</a>
                         <div>
-
-                            <img class="img-fluid" src="{{asset('images/web/paymentModal/logos_tarjeta.png')}}" alt="">
+                            <img class="img-fluid" src="{{asset('images/web/paymentModal/logos_efectivo.png')}}" alt="">
                         </div>
                     </div>
                 </div>
