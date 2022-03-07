@@ -1,4 +1,22 @@
 @extends('rayogas.layouts.master')
+@section('metatags_facebook')
+  <meta property="og:title" content="{{ config('app.name') }} | Productos y servicios sobre GLP a la medida de tu necesidad">
+  <meta property="og:site_name" content="{{ config('app.name') }}">
+  <meta property="og:url" content="{{ Request::url() }}">
+  <meta property="og:description" content="Te asosaremos desde el inicio para elegir la mejor opción de GLP, un gas con el mejor rendimiento. Úsalo en: hogares, industrias, agricultura, u horeca.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="{{ $productsBanner->image_url }}">
+@endsection
+@section('metatags_seo')
+    <meta name="title" content="{{ config('app.name') }} | Productos y servicios sobre GLP a la medida de tu necesidad">
+    <meta name="description" content="Te asosaremos desde el inicio para elegir la mejor opción de GLP, un gas con el mejor rendimiento. Úsalo en: hogares, industrias, agricultura, u horeca.">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="Spanish">
+    <meta name="revisit-after" content="30 days">
+    <meta name="author" content="{{ config('app.name') }}">
+@endsection
+@section('title', config('app.name') . ' | Productos y servicios sobre GLP a la medida de tu necesidad')
 @section('content')
 
 @component('rayogas.components.banner')

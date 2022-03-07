@@ -1,4 +1,22 @@
 @extends('rayogas.layouts.master')
+@section('metatags_facebook')
+  <meta property="og:title" content="{{ config('app.name') }} | Comunícate con nosotros ante cualquier inquietud">
+  <meta property="og:site_name" content="{{ config('app.name') }}">
+  <meta property="og:url" content="{{ Request::url() }}">
+  <meta property="og:description" content="Escríbenos a través del siguiente formulario, uno de nuestros asesores se pondrá en contacto contigo lo más pronto para ayudarte.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="{{ asset('images/web/pqrs/pqrs_img_principal.png') }}">
+@endsection
+@section('metatags_seo')
+    <meta name="title" content="{{ config('app.name') }} | Comunícate con nosotros ante cualquier inquietud">
+    <meta name="description" content="Escríbenos a través del siguiente formulario, uno de nuestros asesores se pondrá en contacto contigo lo más pronto para ayudarte.">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="Spanish">
+    <meta name="revisit-after" content="30 days">
+    <meta name="author" content="{{ config('app.name') }}">
+@endsection
+@section('title', config('app.name') . ' | Comunícate con nosotros ante cualquier inquietud')
 @section('content')
 
 <section class="pqrs">
@@ -12,7 +30,7 @@
                         queja, reclamo o sugerencia que tengas y poder evaluarla.</p>
                 </div>
                 <div class="pqrs__side-banner-image">
-                    <img src="{{ asset('images\web\pqrs\pqrs_img_principal.png') }}" alt="principal image pqrs"
+                    <img src="{{ asset('images/web/pqrs/pqrs_img_principal.png') }}" alt="principal image pqrs"
                         class="img-fluid">
                 </div>
             </div>

@@ -4,8 +4,9 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-
-        <title>{{ config('app.name') }}</title>
+        @yield('metatags_facebook')
+        @yield('metatags_seo')
+        <title>@yield('title')</title>
 
         <!-- Styles -->
         {{-- <link rel="shortcut icon" href="assets/images/favicon.ico"> --}}

@@ -1,4 +1,22 @@
 @extends('rayogas.layouts.master')
+@section('metatags_facebook')
+  <meta property="og:title" content="{{ config('app.name') }} | Blog - ¡Artículos que te interesan sobre el GLP!">
+  <meta property="og:site_name" content="{{ config('app.name') }}">
+  <meta property="og:url" content="{{ Request::url() }}">
+  <meta property="og:description" content="Descubre datos interesantes sobre el GLP (Gas Licuado de Petróleo), como noticas, casos de éxito, avances, y más temas de este gas y su impacto en el país.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="{{ $blogBanner->image_url }}">
+@endsection
+@section('metatags_seo')
+    <meta name="title" content="{{ config('app.name') }} | Blog - ¡Artículos que te interesan sobre el GLP!">
+    <meta name="description" content="Descubre datos interesantes sobre el GLP (Gas Licuado de Petróleo), como noticas, casos de éxito, avances, y más temas de este gas y su impacto en el país.">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="Spanish">
+    <meta name="revisit-after" content="30 days">
+    <meta name="author" content="{{ config('app.name') }}">
+@endsection
+@section('title', config('app.name') . ' | Blog - ¡Artículos que te interesan sobre el GLP!')
 @section('content')
 
 @component('rayogas.components.banner')

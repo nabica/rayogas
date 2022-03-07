@@ -1,4 +1,22 @@
 @extends('rayogas.layouts.master')
+@section('metatags_facebook')
+  <meta property="og:title" content="{{ config('app.name') }} | Conoce más acerca de nosotros y nuestros servicios">
+  <meta property="og:site_name" content="{{ config('app.name') }}">
+  <meta property="og:url" content="{{ Request::url() }}">
+  <meta property="og:description" content="Somos una empresa 100% colombiana con presencia en las principales zonas del país, que cuenta con un equipo altamente capacitado para apoyarte.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="{{ $aboutBanner->image_url }}">
+@endsection
+@section('metatags_seo')
+    <meta name="title" content="{{ config('app.name') }} | Conoce más acerca de nosotros y nuestros servicios">
+    <meta name="description" content="Somos una empresa 100% colombiana con presencia en las principales zonas del país, que cuenta con un equipo altamente capacitado para apoyarte.">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="Spanish">
+    <meta name="revisit-after" content="30 days">
+    <meta name="author" content="{{ config('app.name') }}">
+@endsection
+@section('title', config('app.name') . ' | Conoce más acerca de nosotros y nuestros servicios')
 @section('content')
 
 @component('rayogas.components.banner')
