@@ -68,7 +68,7 @@
                 <hr>
                 <ul class="footer__normative-list">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Transparencia</a>
+                        <a class="nav-link active" aria-current="page" href="{{ route('rayogas.transparency')}}">Transparencia</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Usuarios</a>
