@@ -12329,7 +12329,7 @@ select::-ms-expand {
 }
 .banner .banner-content {
   background-color: var(--primary-color-alfa-85);
-  width: 70%;
+  width: 50%;
   padding: 1.25rem;
   border-radius: 1.562rem;
 }
@@ -12349,6 +12349,7 @@ select::-ms-expand {
 }
 .banner .banner-content .btn {
   margin-top: 1.25rem;
+  margin-bottom: 0;
   font-size: 0.75rem;
   font-weight: bold;
   letter-spacing: 0;
@@ -12362,7 +12363,7 @@ select::-ms-expand {
     height: 37.5rem;
   }
   .banner .banner-content {
-    padding: 3.75rem;
+    padding: 1.25rem;
   }
   .banner .banner-content h1, .banner .banner-content .h1 {
     color: var(--white-color);
@@ -12377,10 +12378,10 @@ select::-ms-expand {
     font-weight: 500;
     letter-spacing: 0;
     line-height: 1.75rem;
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
   }
   .banner .banner-content .btn {
-    margin-top: 2.5rem;
+    margin-top: 0.625rem;
     font-size: 1rem;
     padding: 1.5625rem 3.6875rem;
   }

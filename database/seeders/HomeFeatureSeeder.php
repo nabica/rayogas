@@ -21,7 +21,7 @@ class HomeFeatureSeeder extends Seeder
                     <strong>mayores estándares de calidad</strong> y seguridad en todas las fases de envasado e
                     instalación, asegurando un <strong>menor riesgo</strong> en su uso.
                 </p>',
-            'image_description' => 'Más de 50 años llevando energía a los rincones del país',
+            'image_description' => 'Más de 50 años distribuyendo GLP a los rincones del país',
         ]);
     }
 }

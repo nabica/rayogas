@@ -39,7 +39,7 @@
         @endcomponent
 
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 d-flex align-items-center">
                 {!! $homeFeature->description !!}
             </div>
             <div class="col-md-6">
@@ -129,7 +129,7 @@
                                 libre de plomo, azufre y otros productos contaminantes.</p>
 
                             <p>Miles de personas lo eligen al ser una alternativa energética limpia y altamente
-                                eficiente. </p>
+                                eficiente, que además mantiene los bosques libres de la deforestación ya que evita el uso de leña. </p>
                         </div>
                     </div>
                     <div class="container-button-interest">
@@ -146,7 +146,7 @@
                                 evolucionar en tu sector.
                             </p>
                             <p>
-                                Corte industrial, carburación montacargas, calderas, fundición, calefacción,
+                                Puedes utilizarla en: corte industrial, carburación montacargas, calderas, fundición, calefacción,
                                 gasodomésticos y refrigeración industrial y generación de energía.</p>
                         </div>
                         <div class="col-md-4">
@@ -160,9 +160,9 @@
                             <img src="{{ asset('images/web/home/services/home_servicios_industria_3.png') }}"
                                 class="w-100" alt="">
                             <h3>Te acompañamos en el proceso</h3>
-                            <p>De inicio a fin estamos contigo, desde la asesoría inicial, hasta la instalación y
-                                mantenimiento del producto para hacer crecer tu industria. Construcción,
-                                impermeabilización, flamear, náutico. </p>
+                            <p>De inicio a fin estamos contigo, desde la asesoría, hasta la instalación y
+                                mantenimiento del producto para hacer crecer tu industria. El GLP es ideal para la construcción,
+                                impermeabilización, procesos de flameación y náutico. </p>
                         </div>
                     </div>
                     <div class="container-button-interest">
@@ -177,13 +177,14 @@
                             <h3>Cuida tus procesos</h3>
                             <p>El detalle en tus procesos de producción puede marcar la diferencia. Usa el poder del GLP
                                 desde el primer hasta el último proceso. </p>
-                            <p> Asesoría en el manejo de temperatura adecuada para tu producción.</p>
+
                         </div>
                         <div class="col-md-4">
                             <img src="{{ asset('images/web/home/services/home_servicios_agro_2.png') }}" class="w-100"
                                 alt="">
                             <h3>Temperaturas ideales</h3>
                             <p>Logra la temperatura que necesitas en tu producción de manera estable y controlada.</p>
+                             <p> Asesoría en el manejo de temperatura adecuada para tu producción.</p>
                         </div>
                         <div class="col-md-4">
                             <img src="{{ asset('images/web/home/services/home_servicios_agro_3.png') }}" class="w-100"
