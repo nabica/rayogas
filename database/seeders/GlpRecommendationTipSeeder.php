@@ -30,7 +30,7 @@ class GlpRecommendationTipSeeder extends Seeder
         ]);
 
         \App\Models\Glp\GlpRecommendationTip::factory()->create([
-            'title' => 'No olvides el color de la llama azul parejo, sin rastros amarillentos, si los identificas comunícate con nosotros.'
+            'title' => 'Verifica el color de la llama debe ser azul parejo, si encuentras algo diferente comunícate con nosotros.'
         ]);
 
         \App\Models\Glp\GlpRecommendationTip::factory()->create([

@@ -35,9 +35,7 @@
             @component('rayogas.components.heading-title')
             @slot('title')Propiedades @endslot
             @endcomponent
-            <p>Su propiedad de licuado permite que el GLP sea almacenado y transportado como líquido y utilizado como
-                gas. De esta manera, se puede aprovechar el poco espacio que se requiere para su almacenamiento en
-                estado líquido e igualmente aprovechar la calidad de combustión en su estado gaseoso.</p>
+            <p> Su propiedad de licuado permite que el GLP sea almacenado y transportado como líquido y utilizado como gas combustible. De esta manera, se puede aprovechar el poco espacio que se requiere para su almacenamiento en esta líquido e igualmente aprovechar la calidad de combustión en su estado gaseoso. </p>
         </div>
         <div class="glp-properties__body row">
             <div class="col-12 col-md-6">
@@ -131,7 +129,7 @@
             <div class="col-12 col-md-6">
                 <h3 class="full-w">Construcción de instalaciones de acuerdo a las necesidades del cliente</h3>
                 <ul class="list-general   glp-about__list--m1">
-                    <li>Conversión de equipos y sistemas de combustión para su funcionamiento con gas natural o gas
+                    <li>Conversión de equipos y sistemas de combustión para su funcionamiento con gas
                         propano, asegurando adecuación y montaje de sistemas de seguridad de equipos y partes.</li>
                     <li>Propanoductos que requieran: obras civiles de excavación, rotura de andenes, cruces de vías,
                         prueba y puesta en servicio de la tubería y ejecución de instalaciones internas y conexión del
@@ -151,14 +149,8 @@
     <div class="container">
         <div class="row glp-information__container">
             <div class="col-12 col-md-6">
-                <h3>Instalación y almacenamiento rayogas</h3>
-                <p>RAYOGAS suministra e instala la totalidad de recipientes de almacenamiento de GLP, incluyendo tanques
-                    y accesorios requeridos, de manera que usted esté tranquilo de la seguridad del procedimiento.
-                    De manera responsable nuestra empresa realiza el diseño, instalación, prueba y puesta en servicio de
-                    plantas de almacenamiento y envasado de recipientes GLP RAYOGAS.
-                    Así mismo, RAYOGAS se encarga del diseño y ejecución de las obras civiles complementarias, tales
-                    como vías de acceso, plataformas de llenado, bases para tanques o cualquier otro montaje específico
-                    que se requiera para cada caso de almacenamiento.</p>
+                <h3>Instalación y almacenamiento</h3>
+                <p>Rayogas suministra e instala la totalidad de recipientes de almacenamiento de GLP, incluyendo tanques y accesorios requeridos, de manera que usted esté tranquilo de la seguridad del procedimiento. De manera responsable nuestra empresa realiza diseño, instalación, prueba y puesta en servicio de plantas de almacenamiento y envasado de GLP. Así mismo, Rayogas se encarga del diseño y ejecución de las obras civiles complementarias, tales como vías de acceso, plataformas de llenado, bases para tanques o cualquier otro montaje específico que se requiera para cada caso de almacenamiento.</p>
             </div>
             <div class="col-12 col-md-6">
                 <img src="{{asset('images\web\glp\glp_img_instalacion.png')}}" alt="" class="w-100">

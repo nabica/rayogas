@@ -160,17 +160,17 @@
             <div class="col-md-4">
                 <img src="{{ isset($aboutWhyChooseFeature[0]->image) ? $aboutWhyChooseFeature[0]->image_url : asset('images/web/about/choosing/nosotros_glprayogas_abastecimiento.png') }}" class="img-fluid" alt="">
                 <h3>{{ $aboutWhyChooseFeature[0]->title }}</h3>
-                <p>{{ $aboutWhyChooseFeature[0]->description }}</p>
+                <p>{!! $aboutWhyChooseFeature[0]->description !!}</p>
             </div>
             <div class="col-md-4">
                 <img src="{{ isset($aboutWhyChooseFeature[1]->image) ? $aboutWhyChooseFeature[1]->image_url : asset('images/web/about/choosing/nosotros_glprayogas_carrotanques.png') }}" class="img-fluid" alt="">
                 <h3>{{ $aboutWhyChooseFeature[1]->title }}</h3>
-                <p>{{ $aboutWhyChooseFeature[1]->description }}</p>
+                <p>{!! $aboutWhyChooseFeature[1]->description !!}</p>
             </div>
             <div class="col-md-4">
                 <img src="{{ isset($aboutWhyChooseFeature[2]->image) ? $aboutWhyChooseFeature[2]->image_url : asset('images/web/about/choosing/nosotros_glprayogas_sustancias.png') }}" class="img-fluid" alt="">
                 <h3>{{ $aboutWhyChooseFeature[2]->title }}</h3>
-                <p>{{ $aboutWhyChooseFeature[2]->description }}</p>
+                <p>{!! $aboutWhyChooseFeature[2]->description !!}</p>
             </div>
         </div>
     </div>

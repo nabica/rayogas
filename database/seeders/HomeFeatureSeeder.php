@@ -18,10 +18,10 @@ class HomeFeatureSeeder extends Seeder
             'description' => '<p>
                     Año tras año hemos crecido en <strong>liderazgo y posicionamiento</strong> en el país,
                     <strong>apoyando</strong> a miles de personas y proyectos con productos que cuentan con los
-                    <strong>mayores estándares de calidad</strong> y seguridad en todas las fases de envasado e
-                    instalación, asegurando un <strong>menor riesgo</strong> en su uso.
+                    <strong>mayores estándares de calidad</strong> y seguridad en todas las fases de envasado,
+                    instalación y distribución asegurando un <strong>menor riesgo</strong> en su uso.
                 </p>',
-            'image_description' => 'Más de 50 años distribuyendo GLP a los rincones del país',
+            'image_description' => 'Más de 50 años distribuyendo GLP a todos los rincones del país',
         ]);
     }
 }

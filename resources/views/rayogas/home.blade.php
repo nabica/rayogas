@@ -132,9 +132,9 @@
                                 eficiente, que además mantiene los bosques libres de la deforestación ya que evita el uso de leña. </p>
                         </div>
                     </div>
-                    <div class="container-button-interest">
+                    {{-- <div class="container-button-interest">
                         <a href="" class="btn btn-primary">Me interesa</a>
-                    </div>
+                    </div> --}}
                 </div>
                 <div class="tab-pane fade " id="products-content-2" role="tabpanel" aria-labelledby="products-2">
                     <div class="row">
@@ -142,12 +142,10 @@
                             <img src="{{ asset('images/web/home/services/home_servicios_industria_1.png') }}"
                                 class="w-100" alt="">
                             <h3>Un facilitador para tu crecimiento</h3>
-                            <p>Energía flexible, limpia y segura es la que recibes con GLP Rayogas, una oportunidad de
-                                evolucionar en tu sector.
+                            <p>"Energía flexible, limpia y segura es la que recibes con GLP Rayogas, una oportunidad de evolucionar en tu sector.
                             </p>
                             <p>
-                                Puedes utilizarla en: corte industrial, carburación montacargas, calderas, fundición, calefacción,
-                                gasodomésticos y refrigeración industrial y generación de energía.</p>
+                                Puedes utilizarlo en: Corte industrial, carburación montacargas, calderas, fundición, calefacción, gasodomésticos y refrigeración industrial y generación de energía.</p>
                         </div>
                         <div class="col-md-4">
                             <img src="{{ asset('images/web/home/services/home_servicios_industria_2.png') }}"
@@ -160,14 +158,12 @@
                             <img src="{{ asset('images/web/home/services/home_servicios_industria_3.png') }}"
                                 class="w-100" alt="">
                             <h3>Te acompañamos en el proceso</h3>
-                            <p>De inicio a fin estamos contigo, desde la asesoría, hasta la instalación y
-                                mantenimiento del producto para hacer crecer tu industria. El GLP es ideal para la construcción,
-                                impermeabilización, procesos de flameación y náutico. </p>
+                            <p>De inicio a fin estamos contigo, desde la primera asesoría, hasta la instalación y mantenimiento del producto para hacer crecer tu industria. Puedes usarlo para: Construcción, impermeabilización, flamear y usos náuticos. </p>
                         </div>
                     </div>
-                    <div class="container-button-interest">
+                    {{-- <div class="container-button-interest">
                         <a href="" class="btn btn-primary">Me interesa</a>
-                    </div>
+                    </div> --}}
                 </div>
                 <div class="tab-pane fade " id="products-content-3" role="tabpanel" aria-labelledby="products-3">
                     <div class="row">
@@ -183,8 +179,8 @@
                             <img src="{{ asset('images/web/home/services/home_servicios_agro_2.png') }}" class="w-100"
                                 alt="">
                             <h3>Temperaturas ideales</h3>
-                            <p>Logra la temperatura que necesitas en tu producción de manera estable y controlada.</p>
-                             <p> Asesoría en el manejo de temperatura adecuada para tu producción.</p>
+                            <p>Logra la temperatura que necesitas en tu producción de manera estable y controlada. </p>
+                             <p>Asesoría en el manejo de temperatura adecuada para tu producción.</p>
                         </div>
                         <div class="col-md-4">
                             <img src="{{ asset('images/web/home/services/home_servicios_agro_3.png') }}" class="w-100"
@@ -194,9 +190,9 @@
                                 calderas, cocción, secado, conserva, granjas, criaderos y más. </p>
                         </div>
                     </div>
-                    <div class="container-button-interest">
+                    {{-- <div class="container-button-interest">
                         <a href="" class="btn btn-primary">Me interesa</a>
-                    </div>
+                    </div> --}}
                 </div>
                 <div class="tab-pane fade " id="products-content-4" role="tabpanel" aria-labelledby="products-4">
                     <div class="row">
@@ -205,7 +201,7 @@
                                 alt="">
                             <h3>Espacios acogedores</h3>
                             <p>Ambienta cada espacio de tu hotel, restaurante, spa, entre otros, con temperaturas
-                                ideales que agradaran a tus clientes.</p>
+                                ideales que agradarán a tus clientes.</p>
                         </div>
                         <div class="col-md-4">
                             <img src="{{ asset('images/web/home/services/home_servicios_horeca_2.png') }}" class="w-100"
@@ -222,10 +218,14 @@
                                 hornos, calderas, lavanderías, zonas húmedas ¡y más! </p>
                         </div>
                     </div>
-                    <div class="container-button-interest">
-                        <a href="" class="btn btn-primary">Me interesa</a>
-                    </div>
+                    {{-- <div class="container-button-interest">
+                        <a href="https://api.whatsapp.com/send?phone=57310%202388245&text=Hola,%20estoy%20interesado%20en%20un%20servicio" target="blank" class="btn btn-primary">Me interesa</a>
+                    </div> --}}
                 </div>
+
+                <div class="container-button-interest">
+                        <a href="https://api.whatsapp.com/send?phone=57310%202388245&text=Hola,%20estoy%20interesado%20en%20un%20servicio" target="blank" class="btn btn-primary">Me interesa</a>
+                    </div>
 
             </div>
 
@@ -234,8 +234,8 @@
 </div>
 <!-- End Services -->
 
-@include('rayogas.components.map', ['backgroundSectionActive' => true])
 @include('rayogas.components.request-service')
+@include('rayogas.components.map', ['backgroundSectionActive' => true])
 
 <!-- Home rates -->
 <section class="section" id="bg-home-rates">

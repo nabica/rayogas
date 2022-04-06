@@ -15,7 +15,7 @@ class AboutFeatureSeeder extends Seeder
     {
         \App\Models\About\AboutFeature::create([
             'title' => 'Nuestro equipo profesional está totalmente capacitado para asesorarte de principio a fin',
-            'description' => '<p>En <strong>Rayogas</strong>, está nuestro equipo en constante formación para <strong>fortalecer su conocimiento</strong> y ampliar su posibilidad de crecer profesionalmente.</p> ',
+            'description' => '<p>En <strong>Rayogas</strong>,  nuestro equipo está en constante formación para <strong>fortalecer su conocimiento</strong> y ampliar su posibilidad de crecer profesionalmente.</p> ',
         ]);
 
         \App\Models\About\AboutFeature::create([

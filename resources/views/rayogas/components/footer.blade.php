@@ -88,9 +88,9 @@
                     <a href="">
                         <img src="{{ asset('images/web/common/icn_footer_ig.png') }}" alt="instagram">
                     </a>
-                    <a href="">
+                    {{-- <a href="">
                         <img src="{{ asset('images/web/common/icn_footer_tw.png') }}" alt="twitter">
-                    </a>
+                    </a> --}}
                 </div>
             </div>
         </div>

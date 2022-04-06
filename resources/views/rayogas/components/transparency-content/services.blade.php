@@ -106,11 +106,11 @@
                                 <h4>Correo físico o postal:</h4>
                                 <p>Cra 2da nº 48-98 Cazucá, Soacha, Cundinamarca</p>
                                 <h4>Correo de notificaciones judiciales:</h4>
-                                <a>notificaciones@rayogas.com</a>
+                                <a href="">notificacion@rayogas.com</a>
                                 <h4>Link PQR:</h4>
                                 <a href="">http://www.rayogas.co/pqr_clientes.aspx</a>
                                 <h4>Correo notificaciones judiciales:</h4>
-                                <a href="">notificaciones@rayogas.com</a>
+                                <a href="">notificacion@rayogas.com</a>
                             </div>
                         </div>
                     </div>

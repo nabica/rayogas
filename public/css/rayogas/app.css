@@ -12526,6 +12526,7 @@ select::-ms-expand {
 .tabs-content .container-button-interest {
   align-self: center;
   margin-top: 2.5rem;
+  text-align: center;
 }
 
 @media (min-width: 768px) {
@@ -13153,7 +13154,7 @@ select::-ms-expand {
 .footer__social h4, .footer__social .h4 {
   font-size: 0.875rem;
   line-height: 1rem;
-  color: var(--body-color);
+  color: var(--font-color-primary);
 }
 .footer__social-icons {
   margin-top: 15px;
@@ -13237,7 +13238,7 @@ select::-ms-expand {
   opacity: 0.8;
   border-radius: 0.5625rem;
   background-color: var(--primary-color-dark);
-  box-shadow: 0 0 2px 1px rgba(0, 158, 227, 0.5);
+  /*box-shadow: 0 0 2px 1px rgba(0, 158, 227, 0.5);*/
   display: flex;
   flex-direction: column;
   justify-content: space-between;

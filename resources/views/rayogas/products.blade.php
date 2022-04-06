@@ -76,12 +76,11 @@
                                 <div class="text-description">
                                     <p>Acompañamos los mejores momentos en el hogar con GLP versátil para usar
                                         en
-                                        diferentes presentaciones: <strong>5Kl, 7Kl, 9Kl, 15 Kl, 18Kl, 36Kl,
-                                            45Kl.</strong></p>
+                                        diferentes presentaciones de tanques: <strong>10Lb, 14Lb, 20Lb, 30Lb, 40Lb, 100 Lb.</strong></p>
 
                                     <p>También puedes acceder a <strong>cilindros especializados
                                             montacarga</strong>
-                                        en presentaciones de <strong>15Kl, 18Kl, 22Kl.</strong></p>
+                                        en presentaciones de <strong>30Lb, 40Lb, 50Lb</strong></p>
                                 </div>
                             </div>
                         </div>
@@ -127,8 +126,8 @@
 
                                 </div>
                                 <div class="text-description">
-                                    <p>Recibe mantenimiento de sistemas de Almacenamiento y Redes de
-                                        Distribución. Nuestros ingenieros especializados realizan las revisiones
+                                    <p>Recibe mantenimiento de sistemas de almacenamiento y redes de
+                                        distribución. Nuestros ingenieros especializados realizan las revisiones
                                         y pruebas necesarias para garantizar su óptimo funcionamiento.</p>
 
                                     <ul class="list-general">
@@ -241,12 +240,7 @@
                                     <img src="{{ asset('images/web/products/products/icons/icn_servicios_hogar_calefactor.png') }}"
                                         class="img-fluid" alt="">
                                     <h3>Calentadores de ambiente</h3>
-                                    <p>Una excelente alternativa para la calefacción, pues se convierte en una opción
-                                        económica y factible aún fuera de la ciudad. Disfruta de una cómoda temperatura
-                                        al
-                                        exterior de tu casa aprovechando los exteriores para congregar a tu familia y
-                                        tus
-                                        amigos al utilizarlo en calefactores para terrazas.</p>
+                                    <p>Una excelente alternativa para la calefacción, ya que se convierte en una opción económica y factible aún fuera de la ciudad. Disfruta de una cómoda temperatura al exterior de tu casa con tu familia y amigos al utilizar el GLP en tus calefactores de terrazas. </p>
                                 </div>
                                 <div class="col-md-4 text-left">
                                     <img src="{{ asset('images/web/products/products/icons/icn_servicios_hogar_calentador.png') }}"
@@ -378,7 +372,7 @@
                                         <h4>Agro</h4>
                                         <p>Optimiza tus procesos de producción de alimentos y animales en granjas con el
                                             poder del GLP Rayogas. Una alternativa flexible para cuidar el paso a paso
-                                            en tu producción y obtener mejores resultados.
+                                            en tu producción y así obtener mejores resultados.
                                         </p>
 
 
@@ -473,8 +467,7 @@
                                             a tus usuarios en cada lugar de tu negocio.
                                         </p>
                                         <p>
-                                            También optimiza los espacios al usar poca infraestructura volviendo más
-                                            eficientes los espacios.
+                                            Logra optimizar los espacios al usar poca infraestructura.
                                         </p>
                                     </div>
                                 </div>
@@ -487,10 +480,7 @@
                                         class="img-fluid" alt="">
                                     <h3>Estufas industriales</h3>
                                     <p>El consumo energético y la rapidez en la cocción de los alimentos son puntos
-                                        decisivos para la cocina de tu negocio. Por esa razón, GLP Rayogas te ofrece
-                                        rapidez para obtener la temperatura adecuada y agilizar los tiempos de servicio
-                                        de tus comensales, y por lo tanto ampliar tu capacidad, sin desperdicios de
-                                        energía adicionales esperando a que tus equipos logren la temperatura adecuada.
+                                        decisivos para la cocina de tu negocio. Por esa razón, GLP Rayogas te ofrece rapidez para obtener la temperatura adecuada, agiliza los tiempos de servicio para tus comensales, por lo tanto amplía tu capacidad.
                                     </p>
 
                                 </div>
@@ -508,10 +498,7 @@
                                     <img src="{{ asset('images/web/products/products/icons/icn_servicios_hogar_piscina.png') }}"
                                         class="img-fluid" alt="">
                                     <h3>Climatización para piscinas</h3>
-                                    <p>Lograr la temperatura ideal de las piscinas, sean interiores o exteriores, es una
-                                        realidad con GLP Rayogas. La propiedad del GLP de calentar de manera rápida el
-                                        agua, le permite a tus huéspedes disfrutar de la piscina obteniendo la mejor
-                                        eficiencia energética, independientemente de su tamaño o localización.</p>
+                                    <p>Lograr la temperatura ideal de las piscinas, sean interiores o exteriores, es una realidad con GLP Rayogas, que además cuenta con su poder calorífico generando el calentamiento del agua de forma rápida, permitiéndole a tus huéspedes disfrutar de la piscina, obteniendo la mejor eficiencia energética, independientemente de su tamaño o localización.</p>
                                 </div>
                             </div>
                             <div class="row">
@@ -519,10 +506,7 @@
                                     <img src="{{ asset('images/web/products/products/icons/icn_servicios_agro_agroindustria.png') }}"
                                         class="img-fluid" alt="">
                                     <h3>Hornos para panaderías y calderas de agua caliente</h3>
-                                    <p>Usa en hornos para el secado de harinas, secado de pastas, de sémolas entre otros
-                                        y panadería en general. También accede a una gran capacidad de reserva con una
-                                        temperatura constante y con un caudal regular para la alimentar a satisfacción
-                                        habitaciones, zonas húmedas y cocinas con agua caliente.
+                                    <p>Usa en hornos para secado de harinas, secado de pastas, sémolas entre otros y panadería en general. También accede a una gran capacidad de reserva con una temperatura constante y con un caudal regular para alimentar a satisfacción habitaciones, zonas húmedas y cocinas con agua caliente.
                                     </p>
 
                                 </div>

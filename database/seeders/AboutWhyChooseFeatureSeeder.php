@@ -19,8 +19,8 @@ class AboutWhyChooseFeatureSeeder extends Seeder
         ]);
 
         \App\Models\About\AboutWhyChooseFeature::create([
-            'title' => 'Carro tanques y Cisternas',
-            'description' => 'Nuestros carro tanques cuentan con control de suministro de líquido, garantizando la entrega precisa y correcta a cada usuario. Contamos con más de 200 vehículos repartidores y transportadores de GLP.'
+            'title' => 'Flota propia',
+            'description' => 'Nuestros carro tanques cuentan con control de suministro de líquido, garantizando la entrega precisa y correcta a cada usuario. Contamos con más de 200 vehículos  cómo <strong>carro tanques, cisternas y vehículos repartidores transportadores de GLP</strong>.'
         ]);
 
         \App\Models\About\AboutWhyChooseFeature::create([

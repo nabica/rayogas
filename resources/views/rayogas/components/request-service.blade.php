@@ -59,7 +59,9 @@
                                         <label for="">Cilindro o granel</label>
                                         <div class="select">
                                             <select name="" id="" class="form-control">
-                                                <option value="">Cilindro</option>
+                                                <option value="cilindro">Cilindro</option>
+                                                <option value="granel">Granel</option>
+                                                <option value="instalaciones">Instalaciones</option>
                                             </select>
                                         </div>
                                     </div>
