@@ -9,7 +9,7 @@
     </button>
     <button class="contact-bar__button">
 
-        <img src="{{ asset('images/web/common/icn_sidebar_wap_granel.png') }}" alt="" class="img-fluid">
+        <img src="{{ asset('images/web/common/icn_sidebar_chat.png') }}" alt="" class="img-fluid">
 
 
         <p class="contact-bar__text">Servicio al cliente</p>
