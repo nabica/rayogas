@@ -47,6 +47,29 @@
                     </div>
                 </div>
             </div>
+
+            <div class="row">
+                <div class="col-12 mb-3 mb-md-0">
+                    <h4>Directorio entidades</h4>
+                    <br>
+                    <p>Comisión de Regulación de Energía y Gas www.creg.gov.co</p>
+                    <p>Ministerio de Minas y Energía www.minenergia.gov.co</p>
+                    <p>Superintendencia de Servicios Públicos Domiciliarios www.superservicios.gov.co</p>
+                    <p>Superintendencia de Industria y Comercio www.sic.gov.co</p>
+
+                    <br>
+                    <h4>Directorio de agremiación</h4>
+                    <br>
+                    <p>RAYOGAS SA ESP se encuentra agremiada en la Asociación Colombiana de GLP -GASNOVA</p>
+                    <p>Datos de contacto</p>
+                    <p>Teléfono: (057) 350 8643126</p>
+                    <p>Email: info@gasnova.co</p>
+                    <p>Dirección</p>
+                    <p>Calle 90 No. 19A – 49, oficina 607</p>
+                    <p>Bogotá, Colombia</p>
+
+                </div>
+            </div>
         </section>
     </div>
     <div class="download bg-section">
