@@ -73,8 +73,8 @@
                         <div class="col-12 col-md-6">
                             <p>Contamos con la línea de servicio al cliente <strong>(601) 5802323</strong>,
                                 línea
-                                gratuita <strong>01 8000 95 95</strong>
-                                95 y en cada planta de RAYOGAS S.A. ESP se cuenta con una oficina de PQRS en
+                                gratuita <strong>01 8000 95 95 95</strong>
+                                 y en cada planta de RAYOGAS S.A. ESP se cuenta con una oficina de PQRS en
                                 donde se
                                 atiende al usuario de manera personalizada:</p>
                             <div class="transparency__card-phones">

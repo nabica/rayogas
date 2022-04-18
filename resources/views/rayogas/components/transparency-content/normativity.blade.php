@@ -159,7 +159,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-12 col-md-6">
+                {{-- <div class="col-12 col-md-6">
                     <div class="download-card">
                         <ul class="download-card__list">
                             <li>
@@ -204,7 +204,7 @@
 
                         </ul>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
