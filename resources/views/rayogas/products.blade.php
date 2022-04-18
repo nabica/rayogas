@@ -430,7 +430,7 @@
                                     <img src="{{ asset('images/web/products/products/icons/icn_servicios_agro_granjas.png') }}"
                                         class="img-fluid" alt="">
                                     <h3>Granjas y criaderos</h3>
-                                    <p>Para el levante y cuidado de aves de corral, cerdos y peces.</p>
+                                    <p>Con el fin de cuidar de la mejor manera a tus animales, el GLP es la opción indicada para el levante de aves de corral, cerdos y peces. Con nuestro gas creas la temperatura, humedad y energía adecuada para que estén cómodos con los cuidados necesarios día y noche.</p>
                                 </div>
                                 <div class="col-md-4 text-left">
                                     <img src="{{ asset('images/web/products/products/icons/icn_servicios_agro_invernaderos.png') }}"
