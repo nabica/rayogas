@@ -9,8 +9,8 @@
                 <div class="col-12 col-md-6">
                     <p class="f20">Mecanismos de atención - Localización</p>
                     <p>Contamos con la línea de servicio al cliente <strong>(601) 5802323</strong>, línea
-                        gratuita <strong>01 8000 95 95</strong>
-                        95 y en cada planta de RAYOGAS S.A. ESP se cuenta con una oficina de PQRS en donde se
+                        gratuita <strong>01 8000 95 95 95</strong>
+                         y en cada planta de RAYOGAS S.A. ESP se cuenta con una oficina de PQRS en donde se
                         atiende al usuario de manera personalizada:</p>
                     <div class="transparency__card-phones">
                         <h4>Planta Cazucá:</h4>
@@ -89,46 +89,41 @@
                 <div class="col-12 col-md-6">
                     <ul class="security__list">
                         <li><img src="{{ asset('images\web\common\icn_glp_bullet.png') }}" alt="bullet">
-                            <p> a)
-                                Minimizar el riesgo de los procesos misionales de RAYOGAS
+                            <p>Minimizar el riesgo de los procesos misionales de RAYOGAS
                                 S.A. ESP.</p>
                         </li>
                         <li><img src="{{ asset('images\web\common\icn_glp_bullet.png') }}" alt="bullet">
-                            <p> b)
-                                Cumplir con los principios de seguridad de la información.</p>
+                            <p>Cumplir con los principios de seguridad de la información.</p>
                         </li>
                         <li><img src="{{ asset('images\web\common\icn_glp_bullet.png') }}" alt="bullet">
-                            <p> c)
-                                Cumplir con los principios de la función administrativa.</p>
+                            <p>Cumplir con los principios de la función administrativa.</p>
                         </li>
                         <li><img src="{{ asset('images\web\common\icn_glp_bullet.png') }}" alt="bullet">
-                            <p> d)
-                                Mantener la confianza de los funcionarios, contratistas y terceros.</p>
+                            <p> Mantener la confianza de los funcionarios, contratistas y terceros.</p>
                         </li>
                         <li><img src="{{ asset('images\web\common\icn_glp_bullet.png') }}" alt="bullet">
-                            <p>e)
-                                Apoyar la innovación tecnológica.</p>
+                            <p>Apoyar la innovación tecnológica.</p>
                         </li>
                     </ul>
                 </div>
                 <div class="col-12 col-md-6">
                     <ul class="security__list">
                         <li><img src="{{ asset('images\web\common\icn_glp_bullet.png') }}" alt="bullet">
-                            <p>f) Implementar el sistema de gestión de seguridad de la información.</p>
+                            <p>Implementar el sistema de gestión de seguridad de la información.</p>
                         </li>
                         <li><img src="{{ asset('images\web\common\icn_glp_bullet.png') }}" alt="bullet">
-                            <p>g) Proteger los activos de información.</p>
+                            <p>Proteger los activos de información.</p>
                         </li>
                         <li><img src="{{ asset('images\web\common\icn_glp_bullet.png') }}" alt="bullet">
-                            <p> h) Establecer las políticas, procedimientos e instructivos en materia de
+                            <p>Establecer las políticas, procedimientos e instructivos en materia de
                                 seguridad de la información.</p>
                         </li>
                         <li><img src="{{ asset('images\web\common\icn_glp_bullet.png') }}" alt="bullet">
-                            <p> i) Fortalecer la cultura de seguridad de la información en los funcionarios,
+                            <p>Fortalecer la cultura de seguridad de la información en los funcionarios,
                                 terceros, aprendices, practicantes y clientes de RAYOGAS S.A. ESP.</p>
                         </li>
                         <li><img src="{{ asset('images\web\common\icn_glp_bullet.png') }}" alt="bullet">
-                            <p>j) Garantizar la continuidad del negocio frente a incidentes.</p>
+                            <p>Garantizar la continuidad del negocio frente a incidentes.</p>
                         </li>
                     </ul>
                 </div>
@@ -216,6 +211,9 @@
                 </div>
             </div>
             <div class="row politics__privacity">
+                <div class="col-12 politics__list-header">
+                    <p class="bottomLine transparency__header-text">Política de privacidad </p>
+                </div>
                 <div class="col-12">
                     <img src="{{ asset('images/web/transparency/img_transparencia_mecanismos_2.png') }}"
                         alt="privacity">
