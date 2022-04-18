@@ -133,6 +133,9 @@
     }
     p {
         margin-bottom: rem(20px);
+        strong {
+            color: var(--font-color-text);
+        }
     }
 }
 

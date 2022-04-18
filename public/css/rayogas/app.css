@@ -13809,6 +13809,9 @@ select::-ms-expand {
 #about-choosing p {
   margin-bottom: 1.25rem;
 }
+#about-choosing p strong {
+  color: var(--font-color-text);
+}
 
 @media (min-width: 768px) {
   #about-choosing p {

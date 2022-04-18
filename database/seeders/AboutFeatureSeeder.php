@@ -20,7 +20,7 @@ class AboutFeatureSeeder extends Seeder
 
         \App\Models\About\AboutFeature::create([
             'title' => 'El servicio que brindamos se enfoca en el cumplimiento',
-            'description' => '<p>El buen servicio y cumplimiento de las expectativas de nuestros clientes es uno de nuestro grandes objetivos, dedicándonos a brindarles acompañamiento durante todo el proceso de compra hasta su instalación y mantenimiento.</p>',
+            'description' => '<p>Nuestra política integral se basa en brindar la mejor atención, procesos y servicios a nuestros trabajadores, clientes, accionistas, visitantes, proveedores, contratistas, comunidades y sociedad que cumplan con sus expectativas. </p>',
         ]);
     }
 }
