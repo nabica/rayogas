@@ -2,12 +2,13 @@
 @section('content')
 
 @component('rayogas.components.banner')
-@slot('id')banner-blog @endslot
-@isset($blogBanner->image)
-@slot('image'){{ $blogBanner->image_url }} @endslot
-@endisset
-@slot('title'){{ $blogBanner->title }} @endslot
-@slot('description'){{ $blogBanner->description }} @endslot
+@slot('id')banner-transparency @endslot
+
+@slot('image')/images/web/transparency/transparencia_banner_main.png @endslot
+
+@slot('title')Somos
+transparentes @endslot
+@slot('description')Accede a toda la información de carácter público sobre nuestra estructura, normatividad, atención al usuario, protección de datos personales y más. @endslot
 @endcomponent
 
 <section class="transparency">

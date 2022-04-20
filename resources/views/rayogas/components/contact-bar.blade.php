@@ -29,10 +29,10 @@
         <p class="contact-bar__text">Solicita tu
             cilindro</p>
     </button> --}}
-    <button class="contact-bar__button">
+    <a href="{{ route('rayogas.pqrs') }}" class="contact-bar__button">
 
         <img src="{{ asset('images/web/common/icn_sidebar_pqrs.png') }}" alt="" class="img-fluid">
 
         <p class="contact-bar__text">PQRS</p>
-    </button>
+    </a>
 </div>

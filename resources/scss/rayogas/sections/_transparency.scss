@@ -1,3 +1,9 @@
+#banner-transparency {
+    background-image: linear-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.0)),
+        url('/images/web/transparency/transparencia_banner_main.png'
+    );
+}
+
 .transparency {
     &__header-text {
         margin: 0 auto;
