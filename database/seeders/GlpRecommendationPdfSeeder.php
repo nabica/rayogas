@@ -18,15 +18,19 @@ class GlpRecommendationPdfSeeder extends Seeder
         ]);
 
         \App\Models\Glp\GlpRecommendationPdf::factory()->create([
-            'title' => 'Plegable montacarga'
+            'title' => 'Manejo seguro de montacarga'
         ]);
 
         \App\Models\Glp\GlpRecommendationPdf::factory()->create([
-            'title' => 'Plegable usuario'
+            'title' => 'Manejo seguro de GLP en casa'
         ]);
 
         \App\Models\Glp\GlpRecommendationPdf::factory()->create([
-            'title' => 'Plegable granel'
+            'title' => 'Manejo seguro'
+        ]);
+
+        \App\Models\Glp\GlpRecommendationPdf::factory()->create([
+            'title' => 'Tanques granel'
         ]);
     }
 }
