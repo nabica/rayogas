@@ -70,9 +70,9 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{{ route('rayogas.transparency')}}">Transparencia</a>
                     </li>
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Usuarios</a>
-                    </li>
+                    </li> --}}
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Política de datos personales</a>
                     </li>
