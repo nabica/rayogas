@@ -14,7 +14,7 @@
                     </div>
                     <form action="" class="form__general">
                         <div class="steps">
-                            <div class="step ">
+                            <div class="step active">
                                 <div class="row">
                                     <div class="col">
                                         <label for="">Nombre</label>
