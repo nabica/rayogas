@@ -78,6 +78,14 @@
                 outline: none;
             }
 
+            .container-business-name {
+                display: none;
+
+                &--show {
+                    display: block;
+                }
+            }
+
             .controls {
                 margin-top: 2.5rem;
 

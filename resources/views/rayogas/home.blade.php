@@ -224,7 +224,7 @@
                 </div>
 
                 <div class="container-button-interest">
-                        <a href="https://api.whatsapp.com/send?phone=57310%202388245&text=Hola,%20estoy%20interesado%20en%20un%20servicio" target="blank" class="btn btn-primary">Me interesa</a>
+                        <a href="https://api.whatsapp.com/send?phone=+573102388245&text=Gracias%20por%20comunicarte%20con%20RAYOGAS%20S.A%20E.S.P,%20%C2%BF%20C%C3%B3mo%20podemos%20ayudarte?" target="blank" class="btn btn-primary">Me interesa</a>
                     </div>
 
             </div>

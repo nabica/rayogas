@@ -12,40 +12,49 @@
                         <h4>Solicitar servicio</h4>
                         <h5>Cilindro o granel</h5>
                     </div>
-                    <form action="" class="form__general">
+                    <form id="form-request-service" class="form__general">
                         <div class="steps">
                             <div class="step active">
                                 <div class="row">
                                     <div class="col">
                                         <label for="">Nombre</label>
-                                        <input type="text" class="form-control" placeholder="Nombre"
+                                        <input type="text" name="name" class="form-control" placeholder="Nombre"
                                             aria-label="Nombre">
                                     </div>
                                     <div class="col">
                                         <label for="">Número de contacto</label>
-                                        <input type="text" class="form-control" placeholder="Número de contacto"
+                                        <input type="text" name="telephone" class="form-control" placeholder="Número de contacto"
                                             aria-label="Número de contacto">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col">
+                                        <label for="">Correo electrónico</label>
+                                        <input type="text" name="email" class="form-control" placeholder="Correo electrónico"
+                                            aria-label="Correo electrónico">
+                                    </div>
+                                    <div class="col">
                                         <label for="">Tipo de persona</label>
                                         <div class="select">
-                                            <select name="" id="" class="form-control">
+                                            <select name="person" class="form-control">
                                                 <option value="">Tipo de persona</option>
+                                                <option value="natural">Natural</option>
+                                                <option value="jurídica">Jurídica</option>
                                             </select>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="row container-business-name">
                                     <div class="col">
                                         <label for="">Razón social</label>
-                                        <input type="text" class="form-control" placeholder="Razón social"
+                                        <input type="text" name="business-name" class="form-control" placeholder="Razón social"
                                             aria-label="Razón social">
                                     </div>
                                 </div>
                                 <div class="row controls">
                                     <div class="col-md-12">
                                         <div class="buttons">
-                                            <button class="btn btn-primary">
+                                            <button class="btn btn-primary" id="btn-next-step">
                                                 >
                                             </button>
                                         </div>
@@ -53,7 +62,7 @@
                                 </div>
 
                             </div>
-                            <div class="step active">
+                            <div class="step">
                                 <div class="row">
                                     <div class="col">
                                         <label for="">Cilindro o granel</label>
@@ -118,12 +127,8 @@
                         </div>
                     </form>
                 </div>
-
-
-
             </div>
         </div>
-
     </div>
     </div>
 </section>

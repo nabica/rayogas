@@ -33,9 +33,7 @@
     <section class="section services">
         @component('rayogas.components.heading-title')
         @slot('title')Nuestros servicios @endslot
-        @slot('description')Contamos con un <strong>amplio portafolio de GLP en cilindros y a granel</strong> para
-        nuestros clientes residenciales, comerciales e industriales, <strong>adaptándonos a sus necesidades</strong>
-        específicas. @endslot
+        @slot('description') Contamos con diferentes referencias en nuestros producto GLP en cilindros y a granel para nuestros clientes residenciales, comerciales e industriales, adaptándonos a sus necesidades específicas. @endslot
         @endcomponent
 
         <div class="tabs">

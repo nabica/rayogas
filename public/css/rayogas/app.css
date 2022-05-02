@@ -12903,6 +12903,12 @@ select::-ms-expand {
   border-radius: 0.25rem;
   outline: none;
 }
+.request-service .content form .container-business-name {
+  display: none;
+}
+.request-service .content form .container-business-name--show {
+  display: block;
+}
 .request-service .content form .controls {
   margin-top: 2.5rem;
 }
