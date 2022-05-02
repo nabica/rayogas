@@ -99,11 +99,11 @@
                                 <div class="row controls">
                                     <div class="col-md-12">
                                         <div class="buttons">
-                                            <a href="" class="btn btn-primary--green">
+                                            <a href="https://api.whatsapp.com/send?phone=+573102388245&text=%C2%A1Hola!%20quiero%20solicitar%20el%20pago%20en%20efectivo%20por%20favor.%20Gracias" class="btn btn-primary--green">
                                                 Solicitar
                                                 <div>Pago en efectivo</div>
                                             </a>
-                                            <a href="" class="btn btn-primary">
+                                            <a href="https://api.whatsapp.com/send?phone=+573102388245&text=%C2%A1Hola!%20quiero%20solicitar%20el%20pago%20en%20l%C3%ADnea%20por%20favor.%20Gracias" class="btn btn-primary">
                                                 Solicitar
                                                 <div>Pago en línea</div>
                                             </a>
