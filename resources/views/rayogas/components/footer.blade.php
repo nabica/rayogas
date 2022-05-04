@@ -70,6 +70,12 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{{ route('rayogas.transparency')}}">Transparencia</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{ route('rayogas.rates')}}">Tarifas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Manual usuario GLP</a>
+                    </li>
                     {{-- <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Usuarios</a>
                     </li> --}}

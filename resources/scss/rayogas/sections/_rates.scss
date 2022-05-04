@@ -1,0 +1,52 @@
+.rates {
+    .download-card {
+        padding: rem(12px);
+        margin-bottom: rem(40px);
+
+        > .row > div:nth-child(even) {
+            background-color: #F0F9FE;
+        }
+
+        &__list {
+            padding: rem(20px);
+            li {
+                a {
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+}
+@include media-breakpoint-up(md) {
+    .rates {
+        .download-card {
+            padding: rem(12px);
+            > .row > div:nth-child(even) {
+                background-color: #F0F9FE;
+            }
+
+            &__list {
+                padding: rem(10px) rem(20px);
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .rates {
+        .download-card {
+            padding: rem(12px);
+            > .row > div:nth-child(even) {
+                background-color: transparent;
+            }
+
+            > .row:nth-child(even) {
+                background-color: #F0F9FE;
+            }
+
+            > .row > div:first-child {
+                border-right: 1px solid rgba(151,151,151,.12);
+            }
+        }
+    }
+}

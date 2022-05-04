@@ -15,7 +15,7 @@ class CreateHomeRatesTable extends Migration
     {
         Schema::create('home_rates', function (Blueprint $table) {
             $table->id();
-            $table->string('button_text')->nullable();
+            $table->string('button_text');
             $table->string('file')->nullable();
             $table->timestamps();
         });

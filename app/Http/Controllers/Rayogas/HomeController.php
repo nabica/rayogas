@@ -14,7 +14,7 @@ class HomeController extends Controller
     {
         $homeBanner = HomeBanner::first();
         $homeFeature = HomeFeature::first();
-        $homeRates = HomeRate::oldest('id')->get();
+        $homeRates = HomeRate::latest('id')->limit(2)->get();
 
         return view('rayogas.home', compact('homeBanner', 'homeFeature', 'homeRates'));
     }

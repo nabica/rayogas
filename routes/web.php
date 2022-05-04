@@ -31,7 +31,7 @@ Route::prefix('lotus')->group(function () {
 
             Route::resource('/home/feature', 'Home\HomeFeatureController', ['as' => 'admin.home'])->only(['edit', 'update']);
 
-            Route::resource('/home/rates', 'Home\HomeRateController', ['as' => 'admin.home'])->only(['index', 'edit', 'update']);
+            Route::resource('/home/rates', 'Home\HomeRateController', ['as' => 'admin.home']);
 
             // About
             Route::resource('/about/banner', 'About\AboutBannerController', ['as' => 'admin.about'])->only(['edit', 'update']);
@@ -58,8 +58,6 @@ Route::prefix('lotus')->group(function () {
             Route::resource('/blog/banner', 'Blog\BlogBannerController', ['as' => 'admin.blog'])->only(['edit', 'update']);
 
             Route::resource('/blog/posts', 'Blog\BlogPostController', ['as' => 'admin.blog']);
-            
-            
         });
     });
 });
@@ -80,4 +78,5 @@ Route::namespace("App\Http\Controllers\Rayogas")->group(function () {
     Route::get("/pqrs", "PqrsController@index")->name('rayogas.pqrs');
     Route::get("pqrs/thanks", "PqrsController@tanks")->name('rayogas.thanks');
     Route::get('/transparencia', 'TransparencyController@index')->name('rayogas.transparency');
+    Route::get('/tarifas', 'RatesController@index')->name('rayogas.rates');
 });
