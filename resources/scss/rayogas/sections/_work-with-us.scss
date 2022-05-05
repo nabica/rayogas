@@ -1,0 +1,68 @@
+.work-with-us {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding-top: 0;
+
+    &__banner {
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+            url("/images/web/work-with-us/img_trabaja_con_nosotros.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: rem(200px);
+        img {
+            display: none;
+        }
+    }
+    &__form {
+        padding-top: rem(40px);
+
+    }
+
+    .form__general  {
+        input, .custom-file-input {
+            border-radius: rem(12px);
+            font-style: italic;
+        }
+
+        .help-message {
+            font-style: italic;
+        }
+
+        &-button {
+            width: 100%;
+        }
+    }
+
+    form {
+        position: relative;
+        margin: 0;
+        top: rem(-40px);
+        padding: rem(63px) rem(17px) rem(45px) rem(17px);
+        border-radius: rem(12px);
+        background-color: var(--white-color);
+        box-shadow: 0 rem(2px) rem(8px) 0 rgba(0, 0, 0, 0.14);
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .work-with-us {
+        display: flex;
+        flex-direction: row;
+        &__banner {
+            width: 50%;
+            height: auto;
+
+            img {
+                display: block;
+            }
+        }
+        &__form {
+            display: flex;
+            align-items: center;
+            padding: 50px 120px 0px 40px;
+
+        }
+    }
+}

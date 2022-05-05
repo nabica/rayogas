@@ -79,4 +79,6 @@ Route::namespace("App\Http\Controllers\Rayogas")->group(function () {
     Route::get("pqrs/thanks", "PqrsController@tanks")->name('rayogas.thanks');
     Route::get('/transparencia', 'TransparencyController@index')->name('rayogas.transparency');
     Route::get('/tarifas', 'RatesController@index')->name('rayogas.rates');
+    Route::get("/trabaja-con-nosotros", "WorkWithUsController@index")->name('rayogas.work-with-us');
+    Route::post("/trabaja-con-nosotros", "WorkWithUsController@store");
 });

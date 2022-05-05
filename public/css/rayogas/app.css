@@ -11501,7 +11501,7 @@ body {
   display: inline-block;
 }
 .btn:focus {
-  box-shadow: 0 4px 16px 0 rgba(131, 147, 168, 0.75);
+  box-shadow: 0 0.25rem 1rem 0 rgba(131, 147, 168, 0.75);
 }
 
 .forms-select {
@@ -11512,7 +11512,7 @@ body {
   position: absolute;
   display: block;
   font-size: 0.75rem;
-  right: 10px;
+  right: 0.625rem;
   top: 0.625rem;
   pointer-events: none;
 }
@@ -11607,7 +11607,7 @@ h3.heading__primary, .heading__primary.h3 {
   line-height: 2rem;
   text-align: center;
   position: relative;
-  padding-bottom: 15px;
+  padding-bottom: 0.9375rem;
 }
 h3.heading__primary::before, .heading__primary.h3::before {
   content: "";
@@ -11683,9 +11683,9 @@ h3.heading__primary::before, .heading__primary.h3::before {
 }
 .form__general-button {
   display: block;
-  height: 49px;
+  height: 3.0625rem;
   width: 70%;
-  border-radius: 20px;
+  border-radius: 1.25rem;
   background-color: var(--primary-color);
   color: var(--white-color);
   outline: none;
@@ -11702,7 +11702,7 @@ h3.heading__primary::before, .heading__primary.h3::before {
   position: absolute;
   display: block;
   font-size: 0.75rem;
-  right: 10px;
+  right: 0.625rem;
   top: 0.5625rem;
   pointer-events: none;
 }
@@ -11717,14 +11717,14 @@ h3.heading__primary::before, .heading__primary.h3::before {
 }
 .form__general label {
   color: var(--primary-color-dark);
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold;
   letter-spacing: 0;
-  line-height: 18px;
+  line-height: 1.125rem;
 }
 .form__general input {
   border: 0.125rem solid var(--component-color);
-  border-radius: 4px;
+  border-radius: 0.25rem;
   padding: 0.6875rem;
   background-color: var(--white-color);
   height: 3.0625rem;
@@ -11738,7 +11738,7 @@ h3.heading__primary::before, .heading__primary.h3::before {
 }
 .form__general textarea {
   border: 0.125rem solid var(--component-color);
-  border-radius: 4px;
+  border-radius: 0.25rem;
   background-color: var(--white-color);
   color: var(--font-color-text);
   resize: none;
@@ -11757,7 +11757,7 @@ h3.heading__primary::before, .heading__primary.h3::before {
   position: absolute;
   display: block;
   font-size: 0.75rem;
-  right: 10px;
+  right: 0.625rem;
   top: 1rem;
   pointer-events: none;
 }
@@ -11774,6 +11774,46 @@ h3.heading__primary::before, .heading__primary.h3::before {
   box-shadow: none;
   border-color: var(--primary-color-dark);
   color: var(--font-color-text);
+}
+.form__general input[type=file] {
+  display: none;
+}
+.form__general .custom-file-input {
+  width: 100%;
+  cursor: pointer;
+  border: 0.125rem solid var(--component-color);
+  border-radius: 0.25rem;
+  padding: 0.6875rem;
+  background-color: var(--white-color);
+  height: 3.0625rem;
+  color: var(--font-color-text);
+  font-weight: 400;
+  line-height: 1.375rem !important;
+  font-style: italic;
+  position: relative;
+}
+.form__general .custom-file-input:after {
+  content: "";
+  position: absolute;
+  background-image: url("/images/web/common/icon_attachment.png");
+  width: 1rem;
+  height: 1rem;
+  display: block;
+  right: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.form__general .custom-file-input:active, .form__general .custom-file-input:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: var(--primary-color-dark);
+  color: var(--font-color-text);
+}
+.form__general .help-message {
+  font-size: 0.75rem;
+  letter-spacing: 0;
+  color: var(--font-color-text);
+  padding: 0.625rem;
 }
 
 .featured-black__icon-text {
@@ -14594,6 +14634,63 @@ select::-ms-expand {
 @media only screen and (max-width: 768px) {
   .thanks {
     height: 17.5rem;
+  }
+}
+.work-with-us {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding-top: 0;
+}
+.work-with-us__banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("/images/web/work-with-us/img_trabaja_con_nosotros.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 12.5rem;
+}
+.work-with-us__banner img {
+  display: none;
+}
+.work-with-us__form {
+  padding-top: 2.5rem;
+}
+.work-with-us .form__general input, .work-with-us .form__general .custom-file-input {
+  border-radius: 0.75rem;
+  font-style: italic;
+}
+.work-with-us .form__general .help-message {
+  font-style: italic;
+}
+.work-with-us .form__general-button {
+  width: 100%;
+}
+.work-with-us form {
+  position: relative;
+  margin: 0;
+  top: -2.5rem;
+  padding: 3.9375rem 1.0625rem 2.8125rem 1.0625rem;
+  border-radius: 0.75rem;
+  background-color: var(--white-color);
+  box-shadow: 0 0.125rem 0.5rem 0 rgba(0, 0, 0, 0.14);
+}
+
+@media (min-width: 992px) {
+  .work-with-us {
+    display: flex;
+    flex-direction: row;
+  }
+  .work-with-us__banner {
+    width: 50%;
+    height: auto;
+  }
+  .work-with-us__banner img {
+    display: block;
+  }
+  .work-with-us__form {
+    display: flex;
+    align-items: center;
+    padding: 50px 120px 0px 40px;
   }
 }
 #payment-modal .payment-modal__content {

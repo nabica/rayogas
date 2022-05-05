@@ -7,5 +7,8 @@ import "./components/formRequest";
 import "./components/footer";
 import "./components/form-validation";
 import "./components/transparency";
+
+import "./sections/workWithUs";
+
 import "./maps";
 import "./themeAndSize";

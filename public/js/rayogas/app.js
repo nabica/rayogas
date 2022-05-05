@@ -5839,7 +5839,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _googlemaps_js_api_loader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @googlemaps/js-api-loader */ "./node_modules/@googlemaps/js-api-loader/dist/index.esm.js");
 
 var loader = new _googlemaps_js_api_loader__WEBPACK_IMPORTED_MODULE_0__.Loader({
-  apiKey: "AIzaSyCbgpSh5aVeijK8jZoEVjO1ynkQylmbQvA",
+  apiKey: "AIzaSyDTZxLcyodI9u8RVM_8hJfUwlwpjt_Dnh8",
   version: "weekly"
 });
 loader.load().then(function () {
@@ -5854,6 +5854,47 @@ loader.load().then(function () {
       zoom: 8
     });
   }
+});
+
+/***/ }),
+
+/***/ "./resources/js/rayogas/sections/workWithUs.js":
+/*!*****************************************************!*\
+  !*** ./resources/js/rayogas/sections/workWithUs.js ***!
+  \*****************************************************/
+/***/ (() => {
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Selectors
+  var workWithUsSection = document.querySelector('.work-with-us');
+
+  if (!workWithUsSection) {
+    return;
+  }
+
+  var workWithUsForm = workWithUsSection.querySelector('form');
+  var inputFile = workWithUsForm.querySelector('#file');
+  var helpMessage = workWithUsForm.querySelector('.help-message'); // Events
+
+  workWithUsForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    var formData = new FormData(workWithUsForm);
+    console.log(formData.entries());
+    axios.post('/trabaja-con-nosotros', formData).then(function (response) {
+      console.log(response);
+    });
+
+    if (workWithUsForm.checkValidity()) {
+      var fileType = inputFile.files[0].type;
+      var fileSize = inputFile.files[0].size / 1048576;
+
+      if (fileType == 'application/pdf' && fileSize <= 5) {
+        helpMessage.classList.remove('text-danger');
+      } else {
+        helpMessage.classList.add('text-danger');
+      }
+    }
+  });
 });
 
 /***/ }),
@@ -11201,10 +11242,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_form_validation__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_form_validation__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _components_transparency__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/transparency */ "./resources/js/rayogas/components/transparency.js");
 /* harmony import */ var _components_transparency__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_transparency__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _maps__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./maps */ "./resources/js/rayogas/maps.js");
-/* harmony import */ var _themeAndSize__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./themeAndSize */ "./resources/js/rayogas/themeAndSize.js");
-/* harmony import */ var _themeAndSize__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_themeAndSize__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _sections_workWithUs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./sections/workWithUs */ "./resources/js/rayogas/sections/workWithUs.js");
+/* harmony import */ var _sections_workWithUs__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_sections_workWithUs__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _maps__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./maps */ "./resources/js/rayogas/maps.js");
+/* harmony import */ var _themeAndSize__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./themeAndSize */ "./resources/js/rayogas/themeAndSize.js");
+/* harmony import */ var _themeAndSize__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_themeAndSize__WEBPACK_IMPORTED_MODULE_9__);
  //import "bootstrap/dist/js/bootstrap.bundle.min";
+
 
 
 

@@ -34,6 +34,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#"><i class="icon-cheveron-right"></i> Autogestión</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('rayogas.work-with-us') }}"><i class="icon-cheveron-right"></i>Trabaja con nosotros</a>
+                    </li>
                 </ul>
             </div>
             <div class="col-12 col-md-3 footer__contact">
