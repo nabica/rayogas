@@ -40,7 +40,7 @@
                             <li>
                                 <a href="{{ $rateRow['firstCol']['file'] }}" target="blank">
                                     <div>
-                                        <img src="http://rayogas.test/images\web\common\icn_pdf_download.png" alt="download">
+                                        <img src="/images/web/common/icn_pdf_download.png" alt="download">
                                         <p>
                                             {{ $rateRow['firstCol']['title'] }}
                                         </p>
@@ -57,7 +57,7 @@
                             <li>
                                 <a href="{{ $rateRow['secondCol']['file'] }}" target="blank">
                                     <div>
-                                        <img src="http://rayogas.test/images\web\common\icn_pdf_download.png" alt="download">
+                                        <img src="/images/web/common/icn_pdf_download.png" alt="download">
                                         <p>
                                             {{ $rateRow['secondCol']['title'] }}
                                         </p>
