@@ -37,11 +37,11 @@ transparentes @endslot
                             data-bs-target="#transparency-content-4" type="button" role="tab"
                             aria-controls="transparency-content-4" aria-selected="false">Normatividad</button>
                     </li>
-                    <li class="nav-item d-none d-md-block" role="presentation">
+                    {{-- <li class="nav-item d-none d-md-block" role="presentation">
                         <button class="nav-link" id="transparency-tab-5" data-bs-toggle="tab"
                             data-bs-target="#transparency-content-5" type="button" role="tab"
                             aria-controls="transparency-content-5" aria-selected="false">Planeación</button>
-                    </li>
+                    </li> --}}
                     <li class="nav-item d-none d-md-block" role="presentation">
                         <button class="nav-link" id="transparency-tab-6" data-bs-toggle="tab"
                             data-bs-target="#transparency-content-6" type="button" role="tab"

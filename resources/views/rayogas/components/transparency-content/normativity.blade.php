@@ -15,6 +15,10 @@
             <div class="row">
                 <div class="col-12 col-md-6 mb-4 mb-md-0">
                     <div class="download-card">
+                        @component('rayogas.components.heading-title')
+                        @slot('title')Ley 142 @endslot
+                        @endcomponent
+
                         <ul class="download-card__list">
                             <li>
                                 <a href="" target="blank">
@@ -60,6 +64,9 @@
                 </div>
                 <div class="col-12 col-md-6">
                     <div class="download-card">
+                        @component('rayogas.components.heading-title')
+                        @slot('title')Subsidios @endslot
+                        @endcomponent
                         <ul class="download-card__list">
                             <li>
                                 <a href="" target="blank">
@@ -112,7 +119,7 @@
             @component('rayogas.components.heading-title')
             @slot('title')Reglamentos técnicos @endslot
             @endcomponent
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col-12 col-md-6 mb-4 mb-md-0">
                     <div class="download-card">
                         <ul class="download-card__list">
@@ -213,7 +220,7 @@
             @component('rayogas.components.heading-title')
             @slot('title')Resoluciones CREG @endslot
             @endcomponent
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col-12 col-md-6 mb-4 mb-md-0">
                     <div class="download-card">
                         <ul class="download-card__list">
@@ -261,7 +268,7 @@
                                     <div>
                                         <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
                                         <p>
-                                            Creg063 2016
+                                            Creg180 2009
                                         </p>
                                     </div>
                                     <div>
@@ -274,7 +281,7 @@
                                     <div>
                                         <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
                                         <p>
-                                            Creg053 2011
+                                            Creg023 2008
                                         </p>
                                     </div>
                                     <div>

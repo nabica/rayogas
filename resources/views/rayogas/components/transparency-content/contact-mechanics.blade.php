@@ -211,9 +211,12 @@
                 </div>
             </div>
             <div class="row politics__privacity">
-                <div class="col-12 politics__list-header">
+                {{-- <div class="col-12 politics__list-header">
                     <p class="bottomLine transparency__header-text">Política de privacidad </p>
-                </div>
+                </div> --}}
+                @component('rayogas.components.heading-title')
+                @slot('title')Política de privacidad @endslot
+                @endcomponent
                 <div class="col-12">
                     <img src="{{ asset('images/web/transparency/img_transparencia_mecanismos_2.png') }}"
                         alt="privacity">

@@ -13783,6 +13783,7 @@ select::-ms-expand {
 }
 .glp-about__list li {
   margin-bottom: 2.1875rem;
+  position: relative;
 }
 .glp-about__list li:last-child {
   margin-bottom: 0;
@@ -13792,18 +13793,21 @@ select::-ms-expand {
   margin-left: -1rem;
   width: 1.25rem;
   line-height: 1.25rem;
+  position: absolute;
 }
 .glp-about__list--m1 {
   max-width: 33.25rem;
 }
 .glp-about__list--m1 li {
   margin-bottom: 1.25rem;
+  position: relative;
 }
 .glp-about__list--m1 li::before {
   font-size: 1.875rem;
   margin-left: -1rem;
   width: 1.25rem;
   line-height: 1.25rem;
+  position: absolute;
 }
 
 .glp-information {

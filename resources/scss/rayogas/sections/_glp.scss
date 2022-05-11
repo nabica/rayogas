@@ -201,6 +201,7 @@
         max-width: rem(474px);
         & li {
             margin-bottom: rem(35px);
+            position: relative;
             &:last-child {
                 margin-bottom: 0;
             }
@@ -209,17 +210,21 @@
                 margin-left: rem(-16px);
                 width: rem(20px);
                 line-height: rem(20px);
+                position: absolute;
             }
         }
         &--m1 {
             max-width: rem(532px);
             & li {
                 margin-bottom: rem(20px);
+                position: relative;
+
                 &::before {
                     font-size: rem(30px);
                     margin-left: rem(-16px);
                     width: rem(20px);
                     line-height: rem(20px);
+                    position: absolute;
                 }
             }
         }

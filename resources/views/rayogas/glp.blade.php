@@ -33,9 +33,9 @@
 
         <div class="glp-properties__header">
             @component('rayogas.components.heading-title')
-            @slot('title')Personalidad y ventajas @endslot
+            @slot('title')Propiedades del GLP @endslot
             @endcomponent
-            <p> Su propiedad de licuado permite que el GLP sea almacenado y transportado como líquido y utilizado como gas combustible. De esta manera, se puede aprovechar el poco espacio que se requiere para su almacenamiento en estado líquido e igualmente aprovechar la calidad de combustión en su estado gaseoso. </p>
+            <p> El GLP al ser licuado permite que sea almacenado y transportado como líquido y utilizado como gas combustible. De esta manera, se puede aprovechar el poco espacio que se requiere para su almacenamiento en estado líquido e igualmente aprovechar la calidad de combustión en su estado gaseoso. </p>
         </div>
         <div class="glp-properties__body row">
             <div class="col-12 col-md-6">

@@ -76,7 +76,7 @@ Route::namespace("App\Http\Controllers\Rayogas")->group(function () {
     Route::get("/blog", "BlogController@index")->name('rayogas.blog');
     Route::get("/blog/{slug}", "BlogController@show")->name('rayogas.blog.show');
     Route::get("/pqrs", "PqrsController@index")->name('rayogas.pqrs');
-    Route::get("pqrs/thanks", "PqrsController@tanks")->name('rayogas.thanks');
+    Route::get("pqrs/gracias", "PqrsController@tanks")->name('rayogas.thanks');
     Route::get('/transparencia', 'TransparencyController@index')->name('rayogas.transparency');
     Route::get('/tarifas', 'RatesController@index')->name('rayogas.rates');
     Route::get("/trabaja-con-nosotros", "WorkWithUsController@index")->name('rayogas.work-with-us');

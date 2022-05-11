@@ -98,7 +98,7 @@
                                     <h5>Gas a granel</h5>
                                 </div>
                                 <div class="text-description">
-                                    <p class="F20">Desde 120 hasta con 30.000 galones te brindamos diferentes
+                                    <p class="F20">Desde 120 hasta con 30.000 galones te brindamos diferentes presentaciones de
                                         tanques según
                                         el requerimiento para tu negocio, local, empresa o industria. </p>
 
@@ -284,8 +284,8 @@
                         </div>
 
                         <div class="buttons">
-                            <a href="" class="btn btn-primary--green">Solicitar asesoría</a>
-                            <a href="" class="btn btn-primary">Solicitar servicio</a>
+                            <a href="https://api.whatsapp.com/send?phone=57310%202388245&text=%C2%A1Hola!%20Estoy%20interesado%20en%20hablar%20con%20un%20asesor" target="blank" class="btn btn-primary--green">Solicitar asesoría</a>
+                            <a href="https://api.whatsapp.com/send?phone=57310%202388245&text=%C2%A1Hola!%20Estoy%20interesado%20en%20solicitar%20un%20servicio" target="blank" class="btn btn-primary">Solicitar servicio</a>
                         </div>
 
                     </div>
