@@ -16,24 +16,24 @@
                         <div class="steps">
                             <div class="step active">
                                 <div class="row">
-                                    <div class="col">
+                                    <div class="col-md-6">
                                         <label for="">Nombre</label>
                                         <input type="text" name="name" class="form-control" placeholder="Nombre"
                                             aria-label="Nombre">
                                     </div>
-                                    <div class="col">
+                                    <div class="col-md-6">
                                         <label for="">Número de contacto</label>
                                         <input type="text" name="telephone" class="form-control" placeholder="Número de contacto"
                                             aria-label="Número de contacto">
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col">
+                                    <div class="col-md-6">
                                         <label for="">Correo electrónico</label>
                                         <input type="text" name="email" class="form-control" placeholder="Correo electrónico"
                                             aria-label="Correo electrónico">
                                     </div>
-                                    <div class="col">
+                                    <div class="col-md-6">
                                         <label for="">Tipo de persona</label>
                                         <div class="select">
                                             <select name="person" class="form-control">
@@ -45,7 +45,7 @@
                                     </div>
                                 </div>
                                 <div class="row container-business-name">
-                                    <div class="col">
+                                    <div class="col-md-6">
                                         <label for="">Razón social</label>
                                         <input type="text" name="business-name" class="form-control" placeholder="Razón social"
                                             aria-label="Razón social">
@@ -64,7 +64,7 @@
                             </div>
                             <div class="step">
                                 <div class="row">
-                                    <div class="col">
+                                    <div class="col-md-6">
                                         <label for="">Cilindro o granel</label>
                                         <div class="select">
                                             <select name="" id="" class="form-control">
@@ -74,7 +74,7 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col">
+                                    <div class="col-md-6">
                                         <label for="">Cantidad</label>
                                         <div class="select">
                                             <select name="" id="" class="form-control">
@@ -84,7 +84,7 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col">
+                                    <div class="col-md-6">
                                         <label for="">Presentación / Volumen</label>
                                         <div class="select">
                                             <select name="" id="" class="form-control">
@@ -92,7 +92,7 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col">
+                                    <div class="col-md-6">
 
                                     </div>
                                 </div>

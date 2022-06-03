@@ -76,7 +76,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="{{ Request::is('blog') ? 'nav-link active' : 'nav-link' }}"
-                        href="{{ route('rayogas.blog') }}">Blog</a>
+                        href="{{ route('rayogas.work-with-us') }}">Trabaje con nosotros</a>
                 </li>
             </ul>
             <hr class="d-lg-none">

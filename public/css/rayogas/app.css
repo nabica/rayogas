@@ -11765,8 +11765,8 @@ h3.heading__primary::before, .heading__primary.h3::before {
   border: 0.125rem solid var(--component-color);
   border-radius: 0.25rem;
   padding: 0.6875rem;
-  background-color: transparent;
   height: 3.0625rem;
+  background-color: transparent;
   color: var(--font-color-text);
 }
 .form__general select:active, .form__general select:focus {
@@ -11984,11 +11984,11 @@ select::-ms-expand {
   }
   .form__general .select:after {
     font-size: 0.625rem;
-    top: 0.75rem;
+    top: 1.0625rem;
   }
   .form__general select {
-    height: 2.125rem;
-    padding: 0.4375rem;
+    /* height: rem(34px);
+     padding: rem(7px);*/
   }
 
   .featured-black__icon-text > p {
@@ -12351,7 +12351,7 @@ select::-ms-expand {
 }
 @media only screen and (min-width: 1200px) {
   .navbar-collapse .navbar-nav {
-    width: 80%;
+    width: 90%;
   }
 }
 .banner {
@@ -12369,7 +12369,7 @@ select::-ms-expand {
 }
 .banner .banner-content {
   background-color: var(--primary-color-alfa-85);
-  width: 50%;
+  /*width: 50%;*/
   padding: 1.25rem;
   border-radius: 1.562rem;
 }
@@ -12404,6 +12404,7 @@ select::-ms-expand {
   }
   .banner .banner-content {
     padding: 1.25rem;
+    width: 50%;
   }
   .banner .banner-content h1, .banner .banner-content .h1 {
     color: var(--white-color);
@@ -12513,6 +12514,7 @@ select::-ms-expand {
   font-weight: 500;
   font-size: 0.75rem;
   line-height: 0.75rem;
+  border: 1px solid red;
 }
 .tabs-menu .nav-tabs .nav-link::after {
   content: "";

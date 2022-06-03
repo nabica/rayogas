@@ -17,7 +17,7 @@ class HomeBannerSeeder extends Seeder
             'title' => 'Somos energía que mueve un país',
             'description' => 'Empresa 100% colombiana que vive la diversidad de nuestro país en cada recorrido distribuyendo',
             'button_text' => 'Conocer más de Rayogas',
-            'button_link' => '#'
+            'button_link' => '/nosotros'
         ]);
     }
 }

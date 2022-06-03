@@ -303,8 +303,8 @@ h3.heading__primary {
         border: rem(2px) solid var(--component-color);
         border-radius: rem(4px);
         padding: rem(11px);
-        background-color: transparent;
         height: rem(49px);
+        background-color: transparent;
         color: var(--font-color-text);
         &:active,
         &:focus {
@@ -536,13 +536,12 @@ select::-ms-expand {
             position: relative;
             &:after {
                 font-size: rem(10px);
-
-                top: rem(12px);
+                top: rem(17px);
             }
         }
         & select {
-            height: rem(34px);
-            padding: rem(7px);
+           /* height: rem(34px);
+            padding: rem(7px);*/
         }
     }
     .featured-black__icon-text {

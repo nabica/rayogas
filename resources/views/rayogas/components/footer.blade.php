@@ -35,7 +35,7 @@
                         <a class="nav-link" href="#"><i class="icon-cheveron-right"></i> Autogestión</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('rayogas.work-with-us') }}"><i class="icon-cheveron-right"></i>Trabaja con nosotros</a>
+                        <a class="nav-link" href="{{ route('rayogas.blog') }}"><i class="icon-cheveron-right"></i>Blog</a>
                     </li>
                 </ul>
             </div>
@@ -91,10 +91,10 @@
             <div class="footer__social">
                 <h4>Síguenos</h4>
                 <div class="footer__social-icons">
-                    <a href="">
+                    <a href="https://www.facebook.com/RayogasSA" target="blank">
                         <img src="{{ asset('images/web/common/icn_footer_fb.png') }}" alt="facebook">
                     </a>
-                    <a href="">
+                    <a href="https://www.instagram.com/rayogassaesp/" target="blank">
                         <img src="{{ asset('images/web/common/icn_footer_ig.png') }}" alt="instagram">
                     </a>
                     {{-- <a href="">
