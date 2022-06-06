@@ -5655,9 +5655,9 @@ Array.prototype.slice.call(forms).forEach(function (form) {
   \********************************************************/
 /***/ (() => {
 
-window.addEventListener('DOMContentLoaded', function (event) {
+window.addEventListener("DOMContentLoaded", function (event) {
   // Selectors
-  var formRequest = document.querySelector('#form-request-service');
+  var formRequest = document.querySelector("#form-request-service");
 
   if (!formRequest) {
     return;
@@ -5668,40 +5668,69 @@ window.addEventListener('DOMContentLoaded', function (event) {
   var emailInput = formRequest.querySelector('[name="email"]');
   var personSelect = formRequest.querySelector('[name="person"]');
   var businessNameInput = formRequest.querySelector('[name="business-name"]');
-  var containerBusinessName = formRequest.querySelector('.container-business-name');
-  var btnNextStep = formRequest.querySelector('#btn-next-step');
-  var containerFirstStep = formRequest.querySelector('.steps .step:first-child');
-  var containerSecondStep = formRequest.querySelector('.steps .step:last-child');
-  console.log(nameInput, ' - ', telephoneInput, ' - ', emailInput, ' - ', personSelect, ' - ', businessNameInput); // Events
+  var containerBusinessName = formRequest.querySelector(".container-business-name");
+  var btnNextStep = formRequest.querySelector("#btn-next-step");
+  var containerFirstStep = formRequest.querySelector(".steps .step:first-child");
+  var containerSecondStep = formRequest.querySelector(".steps .step:last-child");
+  var requestTypeSelector = formRequest.querySelector("#form-request-service__type");
+  requestTypeSelector.addEventListener("change", function (event) {
+    var value = event.target.value;
+    console.log(value);
+    var cilinderInputs = document.querySelectorAll(".form-request-service__inputs--cilinder");
+    var instalationInputs = document.querySelectorAll(".form-request-service__inputs--installation");
+    var granelInputs = document.querySelectorAll(".form-request-service__inputs--granel");
 
-  personSelect.addEventListener('change', function (event) {
+    var showAndHideinputs = function showAndHideinputs(showinputs, hideInputs) {
+      showinputs.forEach(function (input) {
+        input.classList.add("show");
+      });
+      hideInputs.forEach(function (query) {
+        query.forEach(function (input) {
+          input.classList.remove("show");
+        });
+      });
+    };
+
+    var optionsFunctions = {
+      cilindro: function cilindro() {
+        return showAndHideinputs(cilinderInputs, [instalationInputs, granelInputs]);
+      },
+      granel: function granel() {
+        return showAndHideinputs(granelInputs, [instalationInputs, cilinderInputs]);
+      },
+      instalaciones: function instalaciones() {
+        return showAndHideinputs(instalationInputs, [granelInputs, cilinderInputs]);
+      }
+    };
+    optionsFunctions[value]();
+  }); // Events
+
+  personSelect.addEventListener("change", function (event) {
     var element = event.target;
     var person = element.value;
-    console.log('cambio persona ', person);
 
-    if (person == 'jurídica') {
-      containerBusinessName.classList.add('container-business-name--show');
+    if (person == "jurídica") {
+      containerBusinessName.classList.add("container-business-name--show");
     } else {
-      containerBusinessName.classList.remove('container-business-name--show');
+      containerBusinessName.classList.remove("container-business-name--show");
     }
   });
-  btnNextStep.addEventListener('click', function (event) {
+  btnNextStep.addEventListener("click", function (event) {
     event.preventDefault();
-    console.log('click siguiente');
+    console.log("click siguiente");
     var isFormValid = false;
 
-    if (nameInput.value.trim() != '' && telephoneInput.value.trim() != '' && personSelect.value.trim() != '') {
-      if (personSelect.value.trim() == 'jurídica' && businessNameInput.value.trim() != '') {
+    if (nameInput.value.trim() != "" && telephoneInput.value.trim() != "" && personSelect.value.trim() != "") {
+      if (personSelect.value.trim() == "jurídica" && businessNameInput.value.trim() != "") {
         isFormValid = true;
-      } else if (personSelect.value.trim() == 'natural') {
+      } else if (personSelect.value.trim() == "natural") {
         isFormValid = true;
       }
     }
 
     if (isFormValid) {
-      console.log('pasa');
-      containerFirstStep.classList.remove('active');
-      containerSecondStep.classList.add('active');
+      containerFirstStep.classList.remove("active");
+      containerSecondStep.classList.add("active");
     }
   });
 });
@@ -5838,6 +5867,76 @@ tabElements.forEach(function (tab) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _googlemaps_js_api_loader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @googlemaps/js-api-loader */ "./node_modules/@googlemaps/js-api-loader/dist/index.esm.js");
 
+var locations = {
+  boyaca: [{
+    position: {
+      lat: 5.5753333,
+      lng: -73.3317222
+    },
+    title: "Tunja",
+    address: "500 mts. adelante del barrio la arboleda",
+    phone: "(601)5140101"
+  }, {
+    position: {
+      lat: 5.9223114,
+      lng: -73.6069347
+    },
+    title: "Moniquira",
+    address: "Km 1.5 vía Barbosa",
+    phone: "(601)5140101"
+  }, {
+    position: {
+      lat: 5.7532222,
+      lng: -72.9094722
+    },
+    title: "Sogamoso",
+    address: "Calle 54 N° 11d - 189 Zona Insdustrial",
+    phone: "(601)5140101"
+  }],
+  cundinamarca: [{
+    position: {
+      lat: 4.5905,
+      lng: -74.1880833
+    },
+    title: "Cazucá",
+    address: "Cra 2da Nº 48-67",
+    phone: "(601)5140101"
+  }, {
+    position: {
+      lat: 4.9270568,
+      lng: -73.9522228
+    },
+    title: "Sopó",
+    address: "Km 2 vía Briceño",
+    phone: "(601)5140101"
+  }],
+  meta: [{
+    position: {
+      lat: 4.1620556,
+      lng: -73.6627778
+    },
+    title: "Villavicencio",
+    address: "Km 2 vía antigua a Bogotá",
+    phone: "(601)5140101"
+  }, {
+    position: {
+      lat: 3.5633056,
+      lng: -73.7142222
+    },
+    title: "Granada",
+    address: "Km 1.5 vía San Martín",
+    phone: "(601)5140101"
+  }],
+  tolima: [{
+    position: {
+      lat: 4.2360072,
+      lng: -74.8422766
+    },
+    title: "Flandes",
+    address: "Km 4 vía Flandes Espinal",
+    phone: "(601)5140101"
+  }]
+};
 var loader = new _googlemaps_js_api_loader__WEBPACK_IMPORTED_MODULE_0__.Loader({
   apiKey: "AIzaSyDTZxLcyodI9u8RVM_8hJfUwlwpjt_Dnh8",
   version: "weekly"
@@ -5848,13 +5947,98 @@ loader.load().then(function () {
   if (map) {
     var loadedMap = new google.maps.Map(map, {
       center: {
-        lat: -34.397,
-        lng: 150.644
+        lat: 4.6482975,
+        lng: -74.107807
       },
-      zoom: 8
+      zoom: 7
     });
+    setMapMarkers(loadedMap);
+    addListenners(loadedMap);
   }
 });
+
+var setMapMarkers = function setMapMarkers(map) {
+  var values = Object.values(locations);
+  values.forEach(function (state) {
+    state.forEach(function (city) {
+      new google.maps.Marker({
+        map: map,
+        position: city.position,
+        title: city.title
+      });
+    });
+  });
+};
+
+var addListenners = function addListenners(map) {
+  var stateInput = document.getElementById("map-state-control");
+  var cityInput = document.getElementById("map-city-control");
+  stateInput.addEventListener("change", function (e) {
+    var value = e.currentTarget.value;
+    addItems(value);
+    cityInput.disabled = false;
+    cityInput.innerHTML = "";
+    var location = {
+      boyaca: {
+        lat: 5.8554085,
+        lng: -73.306705
+      },
+      cundinamarca: {
+        lat: 4.7836367,
+        lng: -74.5311563
+      },
+      meta: {
+        lat: 3.2692918,
+        lng: -74.1164222
+      },
+      tolima: {
+        lat: 4.0952964,
+        lng: -75.8520973
+      }
+    };
+
+    if (value) {
+      map.setCenter(location[value]);
+      map.setZoom(9);
+      var state = locations[value];
+      cityInput.insertAdjacentHTML("beforeend", "<option value=\"\">Seleccione la ciudad</option>");
+      state.forEach(function (city) {
+        cityInput.insertAdjacentHTML("beforeend", "<option value=\"".concat(city.title, "\">").concat(city.title, "</option>"));
+      });
+    } else {
+      map.setCenter({
+        lat: 4.6482975,
+        lng: -74.107807
+      });
+      map.setZoom(7);
+      cityInput.disabled = true;
+    }
+  });
+  cityInput.addEventListener("change", function (e) {
+    var value = e.currentTarget.value;
+    var state = stateInput.value;
+
+    if (value) {
+      var foundedCity = locations[state].find(function (city) {
+        return city.title === value;
+      });
+      map.setCenter(foundedCity.position);
+      map.setZoom(15);
+    }
+  });
+};
+
+var addItems = function addItems(value) {
+  var container = document.getElementById("map__items-container");
+  container.innerHTML = "";
+
+  if (value) {
+    var state = locations[value];
+    state.forEach(function (city) {
+      container.insertAdjacentHTML("beforeend", "  <div class=\"col-6 col-md-12 locations-item\">\n                        <h4>RayoGas Planta ".concat(city.title, "</h4>\n                        <p>").concat(city.title, ", ").concat(value.charAt(0).toUpperCase() + value.slice(1), "</p>\n                        <p>").concat(city.address, "</p>\n                        <p><a href=\"\">").concat(city.phone, "</a></p>\n                    </div>"));
+    });
+  }
+};
 
 /***/ }),
 
@@ -11149,7 +11333,7 @@ process.umask = function() { return 0; };
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"_from":"axios@^0.21","_id":"axios@0.21.4","_inBundle":false,"_integrity":"sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==","_location":"/axios","_phantomChildren":{},"_requested":{"type":"range","registry":true,"raw":"axios@^0.21","name":"axios","escapedName":"axios","rawSpec":"^0.21","saveSpec":null,"fetchSpec":"^0.21"},"_requiredBy":["#DEV:/"],"_resolved":"https://registry.npmjs.org/axios/-/axios-0.21.4.tgz","_shasum":"c67b90dc0568e5c1cf2b0b858c43ba28e2eda575","_spec":"axios@^0.21","_where":"C:\\\\laragon\\\\www\\\\rayogas","author":{"name":"Matt Zabriskie"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"bugs":{"url":"https://github.com/axios/axios/issues"},"bundleDependencies":false,"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}],"dependencies":{"follow-redirects":"^1.14.0"},"deprecated":false,"description":"Promise based HTTP client for the browser and node.js","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"homepage":"https://axios-http.com","jsdelivr":"dist/axios.min.js","keywords":["xhr","http","ajax","promise","node"],"license":"MIT","main":"index.js","name":"axios","repository":{"type":"git","url":"git+https://github.com/axios/axios.git"},"scripts":{"build":"NODE_ENV=production grunt build","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","examples":"node ./examples/server.js","fix":"eslint --fix lib/**/*.js","postversion":"git push && git push --tags","preversion":"npm test","start":"node ./sandbox/server.js","test":"grunt test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json"},"typings":"./index.d.ts","unpkg":"dist/axios.min.js","version":"0.21.4"}');
+module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"Promise based HTTP client for the browser and node.js","main":"index.js","scripts":{"test":"grunt test","start":"node ./sandbox/server.js","build":"NODE_ENV=production grunt build","preversion":"npm test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json","postversion":"git push && git push --tags","examples":"node ./examples/server.js","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","fix":"eslint --fix lib/**/*.js"},"repository":{"type":"git","url":"https://github.com/axios/axios.git"},"keywords":["xhr","http","ajax","promise","node"],"author":"Matt Zabriskie","license":"MIT","bugs":{"url":"https://github.com/axios/axios/issues"},"homepage":"https://axios-http.com","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"jsdelivr":"dist/axios.min.js","unpkg":"dist/axios.min.js","typings":"./index.d.ts","dependencies":{"follow-redirects":"^1.14.0"},"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}]}');
 
 /***/ })
 

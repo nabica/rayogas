@@ -46,6 +46,18 @@
         justify-content: center;
         & .pagination {
             & .page-item {
+                &.active {
+                    & .page-link {
+                        color: var(--font-color-primary);
+                        border: none;
+                    }
+                }
+                &.disabled {
+                    & .page-link {
+                        color: var(--separator-color-alpha-8);
+                    }
+                }
+
                 & .page-link {
                     border: none;
                     font-size: rem(20px);
@@ -53,7 +65,9 @@
                     line-height: rem(36px);
                     color: var(--gray-color);
                     background-color: transparent;
-                    &.active {
+                    &:hover,
+                    &:focus {
+                        box-shadow: none;
                         color: var(--font-color-primary);
                     }
                 }

@@ -19,39 +19,26 @@
                         <form action="">
                             <label for="">Departamento</label>
                             <div class="forms-select">
-                                <select name="" id="" class="form-control">
+                                <select id="map-state-control" class="form-control">
                                     <option value="">Seleccionar departamento</option>
+                                    <option value="boyaca">Boyacá</option>
+                                    <option value="cundinamarca">Cundinamarca</option>
+                                    <option value="meta">Meta</option>
+                                    <option value="tolima">Tolima</option>
                                 </select>
                             </div>
 
                             <label for="">Municipio</label>
                             <div class="forms-select">
-                                <select name="" id="" class="form-control">
-                                    <option value="">Seleccionar municipio</option>
+                                <select name="" id="map-city-control" class="form-control" disabled>
+                                    <option value="">Seleccione el departamento</option>
                                 </select>
                             </div>
                         </form>
 
                         <div class="locations">
-                            <div class="row">
-                                <div class="col-6 col-md-12 locations-item">
-                                    <h4>RayoGas planta Soacha</h4>
-                                    <p>Soacha, Cundinamarca</p>
-                                    <p>Carrera 2 # 49-75</p>
-                                    <p><a href="">(1) 514 0101</a></p>
-                                </div>
-                                <div class="col-6 col-md-12 locations-item">
-                                    <h4>RayoGas planta Soacha</h4>
-                                    <p>Soacha, Cundinamarca</p>
-                                    <p>Carrera 2 # 49-75</p>
-                                    <p><a href="">(1) 514 0101</a></p>
-                                </div>
-                                <div class="col-6 col-md-12 locations-item">
-                                    <h4>RayoGas planta Soacha</h4>
-                                    <p>Soacha, Cundinamarca</p>
-                                    <p>Carrera 2 # 49-75</p>
-                                    <p><a href="">(1) 514 0101</a></p>
-                                </div>
+                            <div class="row" id='map__items-container'>
+
                             </div>
                         </div>
                     </div>

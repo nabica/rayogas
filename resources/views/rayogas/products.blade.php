@@ -1,20 +1,23 @@
 @extends('rayogas.layouts.master')
 @section('metatags_facebook')
-  <meta property="og:title" content="{{ config('app.name') }} | Productos y servicios sobre GLP a la medida de tu necesidad">
-  <meta property="og:site_name" content="{{ config('app.name') }}">
-  <meta property="og:url" content="{{ Request::url() }}">
-  <meta property="og:description" content="Te asosaremos desde el inicio para elegir la mejor opción de GLP, un gas con el mejor rendimiento. Úsalo en: hogares, industrias, agricultura, u horeca.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="{{ $productsBanner->image_url }}">
+<meta property="og:title"
+    content="{{ config('app.name') }} | Productos y servicios sobre GLP a la medida de tu necesidad">
+<meta property="og:site_name" content="{{ config('app.name') }}">
+<meta property="og:url" content="{{ Request::url() }}">
+<meta property="og:description"
+    content="Te asosaremos desde el inicio para elegir la mejor opción de GLP, un gas con el mejor rendimiento. Úsalo en: hogares, industrias, agricultura, u horeca.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="{{ $productsBanner->image_url }}">
 @endsection
 @section('metatags_seo')
-    <meta name="title" content="{{ config('app.name') }} | Productos y servicios sobre GLP a la medida de tu necesidad">
-    <meta name="description" content="Te asosaremos desde el inicio para elegir la mejor opción de GLP, un gas con el mejor rendimiento. Úsalo en: hogares, industrias, agricultura, u horeca.">
-    <meta name="robots" content="index, follow">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="language" content="Spanish">
-    <meta name="revisit-after" content="30 days">
-    <meta name="author" content="{{ config('app.name') }}">
+<meta name="title" content="{{ config('app.name') }} | Productos y servicios sobre GLP a la medida de tu necesidad">
+<meta name="description"
+    content="Te asosaremos desde el inicio para elegir la mejor opción de GLP, un gas con el mejor rendimiento. Úsalo en: hogares, industrias, agricultura, u horeca.">
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="Spanish">
+<meta name="revisit-after" content="30 days">
+<meta name="author" content="{{ config('app.name') }}">
 @endsection
 @section('title', config('app.name') . ' | Productos y servicios sobre GLP a la medida de tu necesidad')
 @section('content')
@@ -33,7 +36,9 @@
     <section class="section services">
         @component('rayogas.components.heading-title')
         @slot('title')Nuestros servicios @endslot
-        @slot('description') Contamos con diferentes referencias en nuestros producto GLP en cilindros y a granel para nuestros clientes residenciales, comerciales e industriales, adaptándonos a sus necesidades específicas. @endslot
+        @slot('description') Contamos con diferentes referencias en nuestros producto GLP en cilindros y a granel para
+        nuestros clientes residenciales, comerciales e industriales, adaptándonos a sus necesidades específicas.
+        @endslot
         @endcomponent
 
         <div class="tabs">
@@ -60,9 +65,9 @@
             <div class="tabs-content tab-content" id="servicesTabContent">
                 <div class="tab-pane fade show active" id="service-content-1" role="tabpanel"
                     aria-labelledby="services-1">
-                    <div class="service-design">
+                    <div class="service-design L340">
                         <div class="content">
-                            <div class="image H253">
+                            <div class="image">
                                 <img src="{{ asset('images/web/products/services/servicios_img_cilindros.png') }}"
                                     class="img-fluid" alt="cilindros">
                             </div>
@@ -74,7 +79,8 @@
                                 <div class="text-description">
                                     <p>Acompañamos los mejores momentos en el hogar con GLP versátil para usar
                                         en
-                                        diferentes presentaciones de tanques: <strong>10Lb, 14Lb, 20Lb, 30Lb, 40Lb, 100 Lb.</strong></p>
+                                        diferentes presentaciones de tanques: <strong>10Lb, 14Lb, 20Lb, 30Lb, 40Lb, 100
+                                            Lb.</strong></p>
 
                                     <p>También puedes acceder a <strong>cilindros especializados
                                             montacarga</strong>
@@ -86,7 +92,7 @@
                 </div>
                 <div class="tab-pane fade" id="service-content-2" role="tabpanel" aria-labelledby="services-2">
 
-                    <div class="service-design">
+                    <div class="service-design L433">
                         <div class="content">
                             <div class="image">
                                 <img src="{{ asset('images/web/products/services/servicios_img_granel.png') }}"
@@ -98,7 +104,8 @@
                                     <h5>Gas a granel</h5>
                                 </div>
                                 <div class="text-description">
-                                    <p class="F20">Desde 120 hasta con 30.000 galones te brindamos diferentes presentaciones de
+                                    <p class="F20">Desde 120 hasta con 30.000 galones te brindamos diferentes
+                                        presentaciones de
                                         tanques según
                                         el requerimiento para tu negocio, local, empresa o industria. </p>
 
@@ -112,9 +119,9 @@
                 </div>
                 <div class="tab-pane fade" id="service-content-3" role="tabpanel" aria-labelledby="services-3">
 
-                    <div class="service-design">
+                    <div class="service-design L480">
                         <div class="content">
-                            <div class="image L500">
+                            <div class="image">
                                 <img src="{{ asset('images/web/products/services/servicios_img_soporte.png') }}"
                                     class="img-fluid" alt="cilindros">
                             </div>
@@ -238,7 +245,10 @@
                                     <img src="{{ asset('images/web/products/products/icons/icn_servicios_hogar_calefactor.png') }}"
                                         class="img-fluid" alt="">
                                     <h3>Calentadores de ambiente</h3>
-                                    <p>Una excelente alternativa para la calefacción, ya que se convierte en una opción económica y factible aún fuera de la ciudad. Disfruta de una cómoda temperatura al exterior de tu casa con tu familia y amigos al utilizar el GLP en tus calefactores de terrazas. </p>
+                                    <p>Una excelente alternativa para la calefacción, ya que se convierte en una opción
+                                        económica y factible aún fuera de la ciudad. Disfruta de una cómoda temperatura
+                                        al exterior de tu casa con tu familia y amigos al utilizar el GLP en tus
+                                        calefactores de terrazas. </p>
                                 </div>
                                 <div class="col-md-4 text-left">
                                     <img src="{{ asset('images/web/products/products/icons/icn_servicios_hogar_calentador.png') }}"
@@ -284,8 +294,10 @@
                         </div>
 
                         <div class="buttons">
-                            <a href="https://api.whatsapp.com/send?phone=57310%202388245&text=%C2%A1Hola!%20Estoy%20interesado%20en%20hablar%20con%20un%20asesor" target="blank" class="btn btn-primary--green">Solicitar asesoría</a>
-                            <a href="https://api.whatsapp.com/send?phone=57310%202388245&text=%C2%A1Hola!%20Estoy%20interesado%20en%20solicitar%20un%20servicio" target="blank" class="btn btn-primary">Solicitar servicio</a>
+                            <a href="https://api.whatsapp.com/send?phone=57310%202388245&text=%C2%A1Hola!%20Estoy%20interesado%20en%20hablar%20con%20un%20asesor"
+                                target="blank" class="btn btn-primary--green">Solicitar asesoría</a>
+                            <a href="https://api.whatsapp.com/send?phone=57310%202388245&text=%C2%A1Hola!%20Estoy%20interesado%20en%20solicitar%20un%20servicio"
+                                target="blank" class="btn btn-primary">Solicitar servicio</a>
                         </div>
 
                     </div>
@@ -428,7 +440,10 @@
                                     <img src="{{ asset('images/web/products/products/icons/icn_servicios_agro_granjas.png') }}"
                                         class="img-fluid" alt="">
                                     <h3>Granjas y criaderos</h3>
-                                    <p>Con el fin de cuidar de la mejor manera a tus animales, el GLP es la opción indicada para el levante de aves de corral, cerdos y peces. Con nuestro gas creas la temperatura, humedad y energía adecuada para que estén cómodos con los cuidados necesarios día y noche.</p>
+                                    <p>Con el fin de cuidar de la mejor manera a tus animales, el GLP es la opción
+                                        indicada para el levante de aves de corral, cerdos y peces. Con nuestro gas
+                                        creas la temperatura, humedad y energía adecuada para que estén cómodos con los
+                                        cuidados necesarios día y noche.</p>
                                 </div>
                                 <div class="col-md-4 text-left">
                                     <img src="{{ asset('images/web/products/products/icons/icn_servicios_agro_invernaderos.png') }}"
@@ -478,7 +493,9 @@
                                         class="img-fluid" alt="">
                                     <h3>Estufas industriales</h3>
                                     <p>El consumo energético y la rapidez en la cocción de los alimentos son puntos
-                                        decisivos para la cocina de tu negocio. Por esa razón, GLP Rayogas te ofrece rapidez para obtener la temperatura adecuada, agiliza los tiempos de servicio para tus comensales, por lo tanto amplía tu capacidad.
+                                        decisivos para la cocina de tu negocio. Por esa razón, GLP Rayogas te ofrece
+                                        rapidez para obtener la temperatura adecuada, agiliza los tiempos de servicio
+                                        para tus comensales, por lo tanto amplía tu capacidad.
                                     </p>
 
                                 </div>
@@ -496,7 +513,11 @@
                                     <img src="{{ asset('images/web/products/products/icons/icn_servicios_hogar_piscina.png') }}"
                                         class="img-fluid" alt="">
                                     <h3>Climatización para piscinas</h3>
-                                    <p>Lograr la temperatura ideal de las piscinas, sean interiores o exteriores, es una realidad con GLP Rayogas, que además cuenta con su poder calorífico generando el calentamiento del agua de forma rápida, permitiéndole a tus huéspedes disfrutar de la piscina, obteniendo la mejor eficiencia energética, independientemente de su tamaño o localización.</p>
+                                    <p>Lograr la temperatura ideal de las piscinas, sean interiores o exteriores, es una
+                                        realidad con GLP Rayogas, que además cuenta con su poder calorífico generando el
+                                        calentamiento del agua de forma rápida, permitiéndole a tus huéspedes disfrutar
+                                        de la piscina, obteniendo la mejor eficiencia energética, independientemente de
+                                        su tamaño o localización.</p>
                                 </div>
                             </div>
                             <div class="row">
@@ -504,7 +525,10 @@
                                     <img src="{{ asset('images/web/products/products/icons/icn_servicios_agro_agroindustria.png') }}"
                                         class="img-fluid" alt="">
                                     <h3>Hornos para panaderías y calderas de agua caliente</h3>
-                                    <p>Usa en hornos para secado de harinas, secado de pastas, sémolas entre otros y panadería en general. También accede a una gran capacidad de reserva con una temperatura constante y con un caudal regular para alimentar a satisfacción habitaciones, zonas húmedas y cocinas con agua caliente.
+                                    <p>Usa en hornos para secado de harinas, secado de pastas, sémolas entre otros y
+                                        panadería en general. También accede a una gran capacidad de reserva con una
+                                        temperatura constante y con un caudal regular para alimentar a satisfacción
+                                        habitaciones, zonas húmedas y cocinas con agua caliente.
                                     </p>
 
                                 </div>

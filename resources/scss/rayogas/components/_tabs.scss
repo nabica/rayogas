@@ -17,6 +17,9 @@
         & .nav-item {
             height: inherit;
             flex-grow: 1;
+            &:nth-child(even) {
+                margin: 0 rem(1px);
+            }
             &:last-child .nav-link {
                 &::after {
                     display: none;
@@ -38,7 +41,7 @@
             font-weight: 500;
             font-size: rem(12px);
             line-height: rem(12px);
-            border: 1px solid red;
+            border: none;
             &::after {
                 content: "";
                 display: block;
@@ -54,9 +57,6 @@
             &:hover {
                 background-color: var(--hover-color-primary) !important;
                 color: var(--white-color);
-                &::after {
-                    display: none;
-                }
             }
         }
     }
@@ -123,12 +123,24 @@
         display: flex;
         justify-content: flex-end;
         flex-direction: column;
-        align-items: flex-end;
+        align-items: center;
     }
     .service-design {
         border-radius: rem(20px);
         box-shadow: 0 rem(2px) rem(8px) 0 rgba(0, 0, 0, 0.14);
         margin-top: rem(200px);
+
+        & .image {
+            position: absolute;
+            width: rem(351px);
+            height: rem(259px);
+            top: rem(-200px);
+            text-align: center;
+            & img {
+                height: 100%;
+            }
+        }
+
         .content {
             display: flex;
             flex-direction: column;
@@ -176,20 +188,6 @@
                     }
                 }
             }
-            .image {
-                position: absolute;
-                width: rem(351px);
-
-                top: rem(-200px);
-                &.H253 {
-                    height: rem(259px);
-                    text-align: center;
-                    width: 100%;
-                    & img {
-                        height: 100%;
-                    }
-                }
-            }
         }
     }
 }
@@ -201,6 +199,30 @@
             margin-top: 0;
             max-width: rem(784px);
             width: 70%;
+            & .image {
+                position: absolute;
+                top: initial;
+                width: initial;
+                height: initial;
+            }
+            &.L340 {
+                margin-left: rem(170px);
+                & .image {
+                    left: rem(-365px);
+                }
+            }
+            &.L433 {
+                margin-left: rem(215px);
+                & .image {
+                    left: rem(-465px);
+                }
+            }
+            &.L480 {
+                margin-left: rem(240px);
+                & .image {
+                    left: rem(-500px);
+                }
+            }
             .content {
                 flex-direction: row;
                 padding: 0;
@@ -228,22 +250,6 @@
                                 line-height: rem(30px);
                             }
                         }
-                    }
-                }
-                .image {
-                    position: absolute;
-                    width: initial;
-                    top: initial;
-                    left: rem(-470px);
-                    &.H253 {
-                        height: initial;
-
-                        & img {
-                            height: initial;
-                        }
-                    }
-                    &.L500 {
-                        left: rem(-500px);
                     }
                 }
             }

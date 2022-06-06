@@ -23,16 +23,11 @@
                                     </div>
                                     <div class="col-md-6">
                                         <label for="">Número de contacto</label>
-                                        <input type="text" name="telephone" class="form-control" placeholder="Número de contacto"
-                                            aria-label="Número de contacto">
+                                        <input type="text" name="telephone" class="form-control"
+                                            placeholder="Número de contacto" aria-label="Número de contacto">
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-6">
-                                        <label for="">Correo electrónico</label>
-                                        <input type="text" name="email" class="form-control" placeholder="Correo electrónico"
-                                            aria-label="Correo electrónico">
-                                    </div>
                                     <div class="col-md-6">
                                         <label for="">Tipo de persona</label>
                                         <div class="select">
@@ -43,12 +38,10 @@
                                             </select>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="row container-business-name">
-                                    <div class="col-md-6">
+                                    <div class="col-md-6  container-business-name">
                                         <label for="">Razón social</label>
-                                        <input type="text" name="business-name" class="form-control" placeholder="Razón social"
-                                            aria-label="Razón social">
+                                        <input type="text" name="business-name" class="form-control"
+                                            placeholder="Razón social" aria-label="Razón social">
                                     </div>
                                 </div>
                                 <div class="row controls">
@@ -65,48 +58,63 @@
                             <div class="step">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <label for="">Cilindro o granel</label>
+                                        <label for="">Cilindro, granel, instalaciones</label>
                                         <div class="select">
-                                            <select name="" id="" class="form-control">
+                                            <select name="" id="form-request-service__type" class="form-control">
                                                 <option value="cilindro">Cilindro</option>
                                                 <option value="granel">Granel</option>
                                                 <option value="instalaciones">Instalaciones</option>
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 form-request-service__inputs--cilinder show">
                                         <label for="">Cantidad</label>
-                                        <div class="select">
-                                            <select name="" id="" class="form-control">
-                                                <option value="">Unidad</option>
-                                            </select>
-                                        </div>
+                                        <input type="number" name="description" class="form-control"
+                                            placeholder="Numero de unidades">
+                                    </div>
+                                    <div class="col-md-6 form-request-service__inputs--installation">
+                                        <label for="">Uso o necesidad</label>
+                                        <input type="text" name="description" class="form-control"
+                                            placeholder="Describe el uso que necesitas">
+                                    </div>
+                                    <div class="col-md-6 form-request-service__inputs--granel">
+                                        <label for="">Kilos</label>
+                                        <input type="number" name="description" class="form-control"
+                                            placeholder="Numero de unidades">
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-6 form-request-service__inputs--cilinder show">
                                         <label for="">Presentación / Volumen</label>
                                         <div class="select">
                                             <select name="" id="" class="form-control">
                                                 <option value="">40 libras</option>
+                                                <option value="">20 libras</option>
+                                                <option value="">10 libras</option>
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
-
+                                    <div class="col-md-12 form-request-service__inputs--installation">
+                                        <label for="">Descripcion de la solicitud</label>
+                                        <input type="text" name="description" class="form-control"
+                                            placeholder="Describe que tipo de instalacion necesitas">
+                                    </div>
+                                    <div class="col-md-6 form-request-service__inputs--granel">
+                                        <label for="">Presentación / Volumen</label>
+                                        <div class="select">
+                                            <select name="" id="" class="form-control">
+                                                <option value="">40 libras</option>
+                                                <option value="">20 libras</option>
+                                                <option value="">10 libras</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row controls">
                                     <div class="col-md-12">
                                         <div class="buttons">
-                                            <a href="https://api.whatsapp.com/send?phone=+573102388245&text=%C2%A1Hola!%20quiero%20solicitar%20el%20pago%20en%20efectivo%20por%20favor.%20Gracias" target="blank" class="btn btn-primary--green">
-                                                Solicitar
-                                                <div>Pago en efectivo</div>
-                                            </a>
-                                            <a href="https://api.whatsapp.com/send?phone=+573102388245&text=%C2%A1Hola!%20quiero%20solicitar%20el%20pago%20en%20l%C3%ADnea%20por%20favor.%20Gracias" target="blank" class="btn btn-primary">
-                                                Solicitar
-                                                <div>Pago en línea</div>
-                                            </a>
+                                            <button type="submit" class="btn btn-primary request-service__button">
+                                                Enviar Solicitud
                                         </div>
                                     </div>
                                 </div>

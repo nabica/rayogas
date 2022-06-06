@@ -38,9 +38,8 @@
             font-size: rem(12px);
             font-weight: bold;
             letter-spacing: 0;
-            line-height: 0;
             text-decoration: none;
-            padding: rem(15px) rem(19px);
+            padding: rem(6px) rem(19px);
         }
     }
 }
@@ -69,7 +68,20 @@
             .btn {
                 margin-top: rem(10px);
                 font-size: rem(16px);
-                padding: rem(25px) rem(59px);
+                padding: rem(5px) rem(59px);
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .banner {
+        height: rem(600px);
+        .banner-content {
+            .btn {
+                margin-top: rem(10px);
+                font-size: rem(16px);
+                padding: rem(13px) rem(59px);
             }
         }
     }
