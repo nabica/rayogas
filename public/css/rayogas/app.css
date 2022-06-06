@@ -12514,7 +12514,7 @@ select::-ms-expand {
   font-weight: 500;
   font-size: 0.75rem;
   line-height: 0.75rem;
-  border: 1px solid red;
+  /*border: 1px solid red;*/
 }
 .tabs-menu .nav-tabs .nav-link::after {
   content: "";
