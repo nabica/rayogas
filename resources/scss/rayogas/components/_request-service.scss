@@ -9,7 +9,7 @@
     align-items: center;
     justify-content: center;
     .image {
-        width: rem(333px);
+        width: rem(320px);
         position: absolute;
         top: rem(-250px);
     }
@@ -102,6 +102,16 @@
                         letter-spacing: 0;
                         line-height: 0;
                         text-align: center;
+                        &.request-service__button {
+                            font-size: rem(18px);
+                            padding: rem(10px) rem(55px);
+                            height: rem(50px);
+                        }
+                        &:hover {
+                            background-color: var(--white-color) !important;
+                            color: var(--font-color-primary) !important;
+                            border-color: var(--primary-color) !important;
+                        }
                     }
 
                     .btn {
@@ -142,6 +152,36 @@
                     }
                 }
             }
+        }
+    }
+    &__button {
+        font-size: rem(18px) !important;
+        padding: rem(10px) rem(55px) !important;
+        height: rem(50px) !important;
+        & :hover {
+            background-color: var(--white-color);
+            color: var(--font-color-primary);
+            border-color: var(--primary-color);
+        }
+    }
+}
+.form-request-service__inputs {
+    &--cilinder {
+        display: none;
+        &.show {
+            display: block;
+        }
+    }
+    &--installation {
+        display: none;
+        &.show {
+            display: block;
+        }
+    }
+    &--granel {
+        display: none;
+        &.show {
+            display: block;
         }
     }
 }

@@ -5655,9 +5655,9 @@ Array.prototype.slice.call(forms).forEach(function (form) {
   \********************************************************/
 /***/ (() => {
 
-window.addEventListener('DOMContentLoaded', function (event) {
+window.addEventListener("DOMContentLoaded", function (event) {
   // Selectors
-  var formRequest = document.querySelector('#form-request-service');
+  var formRequest = document.querySelector("#form-request-service");
 
   if (!formRequest) {
     return;
@@ -5668,40 +5668,69 @@ window.addEventListener('DOMContentLoaded', function (event) {
   var emailInput = formRequest.querySelector('[name="email"]');
   var personSelect = formRequest.querySelector('[name="person"]');
   var businessNameInput = formRequest.querySelector('[name="business-name"]');
-  var containerBusinessName = formRequest.querySelector('.container-business-name');
-  var btnNextStep = formRequest.querySelector('#btn-next-step');
-  var containerFirstStep = formRequest.querySelector('.steps .step:first-child');
-  var containerSecondStep = formRequest.querySelector('.steps .step:last-child');
-  console.log(nameInput, ' - ', telephoneInput, ' - ', emailInput, ' - ', personSelect, ' - ', businessNameInput); // Events
+  var containerBusinessName = formRequest.querySelector(".container-business-name");
+  var btnNextStep = formRequest.querySelector("#btn-next-step");
+  var containerFirstStep = formRequest.querySelector(".steps .step:first-child");
+  var containerSecondStep = formRequest.querySelector(".steps .step:last-child");
+  var requestTypeSelector = formRequest.querySelector("#form-request-service__type");
+  requestTypeSelector.addEventListener("change", function (event) {
+    var value = event.target.value;
+    console.log(value);
+    var cilinderInputs = document.querySelectorAll(".form-request-service__inputs--cilinder");
+    var instalationInputs = document.querySelectorAll(".form-request-service__inputs--installation");
+    var granelInputs = document.querySelectorAll(".form-request-service__inputs--granel");
 
-  personSelect.addEventListener('change', function (event) {
+    var showAndHideinputs = function showAndHideinputs(showinputs, hideInputs) {
+      showinputs.forEach(function (input) {
+        input.classList.add("show");
+      });
+      hideInputs.forEach(function (query) {
+        query.forEach(function (input) {
+          input.classList.remove("show");
+        });
+      });
+    };
+
+    var optionsFunctions = {
+      cilindro: function cilindro() {
+        return showAndHideinputs(cilinderInputs, [instalationInputs, granelInputs]);
+      },
+      granel: function granel() {
+        return showAndHideinputs(granelInputs, [instalationInputs, cilinderInputs]);
+      },
+      instalaciones: function instalaciones() {
+        return showAndHideinputs(instalationInputs, [granelInputs, cilinderInputs]);
+      }
+    };
+    optionsFunctions[value]();
+  }); // Events
+
+  personSelect.addEventListener("change", function (event) {
     var element = event.target;
     var person = element.value;
-    console.log('cambio persona ', person);
 
-    if (person == 'jurídica') {
-      containerBusinessName.classList.add('container-business-name--show');
+    if (person == "jurídica") {
+      containerBusinessName.classList.add("container-business-name--show");
     } else {
-      containerBusinessName.classList.remove('container-business-name--show');
+      containerBusinessName.classList.remove("container-business-name--show");
     }
   });
-  btnNextStep.addEventListener('click', function (event) {
+  btnNextStep.addEventListener("click", function (event) {
     event.preventDefault();
-    console.log('click siguiente');
+    console.log("click siguiente");
     var isFormValid = false;
 
-    if (nameInput.value.trim() != '' && telephoneInput.value.trim() != '' && personSelect.value.trim() != '') {
-      if (personSelect.value.trim() == 'jurídica' && businessNameInput.value.trim() != '') {
+    if (nameInput.value.trim() != "" && telephoneInput.value.trim() != "" && personSelect.value.trim() != "") {
+      if (personSelect.value.trim() == "jurídica" && businessNameInput.value.trim() != "") {
         isFormValid = true;
-      } else if (personSelect.value.trim() == 'natural') {
+      } else if (personSelect.value.trim() == "natural") {
         isFormValid = true;
       }
     }
 
     if (isFormValid) {
-      console.log('pasa');
-      containerFirstStep.classList.remove('active');
-      containerSecondStep.classList.add('active');
+      containerFirstStep.classList.remove("active");
+      containerSecondStep.classList.add("active");
     }
   });
 });
@@ -5838,6 +5867,76 @@ tabElements.forEach(function (tab) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _googlemaps_js_api_loader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @googlemaps/js-api-loader */ "./node_modules/@googlemaps/js-api-loader/dist/index.esm.js");
 
+var locations = {
+  boyaca: [{
+    position: {
+      lat: 5.5753333,
+      lng: -73.3317222
+    },
+    title: "Tunja",
+    address: "500 mts. adelante del barrio la arboleda",
+    phone: "(601)5140101"
+  }, {
+    position: {
+      lat: 5.9223114,
+      lng: -73.6069347
+    },
+    title: "Moniquira",
+    address: "Km 1.5 vía Barbosa",
+    phone: "(601)5140101"
+  }, {
+    position: {
+      lat: 5.7532222,
+      lng: -72.9094722
+    },
+    title: "Sogamoso",
+    address: "Calle 54 N° 11d - 189 Zona Insdustrial",
+    phone: "(601)5140101"
+  }],
+  cundinamarca: [{
+    position: {
+      lat: 4.5905,
+      lng: -74.1880833
+    },
+    title: "Cazucá",
+    address: "Cra 2da Nº 48-67",
+    phone: "(601)5140101"
+  }, {
+    position: {
+      lat: 4.9270568,
+      lng: -73.9522228
+    },
+    title: "Sopó",
+    address: "Km 2 vía Briceño",
+    phone: "(601)5140101"
+  }],
+  meta: [{
+    position: {
+      lat: 4.1620556,
+      lng: -73.6627778
+    },
+    title: "Villavicencio",
+    address: "Km 2 vía antigua a Bogotá",
+    phone: "(601)5140101"
+  }, {
+    position: {
+      lat: 3.5633056,
+      lng: -73.7142222
+    },
+    title: "Granada",
+    address: "Km 1.5 vía San Martín",
+    phone: "(601)5140101"
+  }],
+  tolima: [{
+    position: {
+      lat: 4.2360072,
+      lng: -74.8422766
+    },
+    title: "Flandes",
+    address: "Km 4 vía Flandes Espinal",
+    phone: "(601)5140101"
+  }]
+};
 var loader = new _googlemaps_js_api_loader__WEBPACK_IMPORTED_MODULE_0__.Loader({
   apiKey: "AIzaSyDTZxLcyodI9u8RVM_8hJfUwlwpjt_Dnh8",
   version: "weekly"
@@ -5848,13 +5947,98 @@ loader.load().then(function () {
   if (map) {
     var loadedMap = new google.maps.Map(map, {
       center: {
-        lat: -34.397,
-        lng: 150.644
+        lat: 4.6482975,
+        lng: -74.107807
       },
-      zoom: 8
+      zoom: 7
     });
+    setMapMarkers(loadedMap);
+    addListenners(loadedMap);
   }
 });
+
+var setMapMarkers = function setMapMarkers(map) {
+  var values = Object.values(locations);
+  values.forEach(function (state) {
+    state.forEach(function (city) {
+      new google.maps.Marker({
+        map: map,
+        position: city.position,
+        title: city.title
+      });
+    });
+  });
+};
+
+var addListenners = function addListenners(map) {
+  var stateInput = document.getElementById("map-state-control");
+  var cityInput = document.getElementById("map-city-control");
+  stateInput.addEventListener("change", function (e) {
+    var value = e.currentTarget.value;
+    addItems(value);
+    cityInput.disabled = false;
+    cityInput.innerHTML = "";
+    var location = {
+      boyaca: {
+        lat: 5.8554085,
+        lng: -73.306705
+      },
+      cundinamarca: {
+        lat: 4.7836367,
+        lng: -74.5311563
+      },
+      meta: {
+        lat: 3.2692918,
+        lng: -74.1164222
+      },
+      tolima: {
+        lat: 4.0952964,
+        lng: -75.8520973
+      }
+    };
+
+    if (value) {
+      map.setCenter(location[value]);
+      map.setZoom(9);
+      var state = locations[value];
+      cityInput.insertAdjacentHTML("beforeend", "<option value=\"\">Seleccione la ciudad</option>");
+      state.forEach(function (city) {
+        cityInput.insertAdjacentHTML("beforeend", "<option value=\"".concat(city.title, "\">").concat(city.title, "</option>"));
+      });
+    } else {
+      map.setCenter({
+        lat: 4.6482975,
+        lng: -74.107807
+      });
+      map.setZoom(7);
+      cityInput.disabled = true;
+    }
+  });
+  cityInput.addEventListener("change", function (e) {
+    var value = e.currentTarget.value;
+    var state = stateInput.value;
+
+    if (value) {
+      var foundedCity = locations[state].find(function (city) {
+        return city.title === value;
+      });
+      map.setCenter(foundedCity.position);
+      map.setZoom(15);
+    }
+  });
+};
+
+var addItems = function addItems(value) {
+  var container = document.getElementById("map__items-container");
+  container.innerHTML = "";
+
+  if (value) {
+    var state = locations[value];
+    state.forEach(function (city) {
+      container.insertAdjacentHTML("beforeend", "  <div class=\"col-6 col-md-12 locations-item\">\n                        <h4>RayoGas Planta ".concat(city.title, "</h4>\n                        <p>").concat(city.title, ", ").concat(value.charAt(0).toUpperCase() + value.slice(1), "</p>\n                        <p>").concat(city.address, "</p>\n                        <p><a href=\"\">").concat(city.phone, "</a></p>\n                    </div>"));
+    });
+  }
+};
 
 /***/ }),
 

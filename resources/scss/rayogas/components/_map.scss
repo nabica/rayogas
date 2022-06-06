@@ -79,6 +79,10 @@
 
 @include media-breakpoint-up(md) {
     .map {
+        height: rem(543px);
+        .row {
+            height: 100%;
+        }
         .map-controls {
             padding-right: 0;
 

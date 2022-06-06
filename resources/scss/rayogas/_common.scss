@@ -11,6 +11,7 @@ $html-font-size: 16px;
 }
 body {
     background-color: var(--body-color);
+    scroll-behavior: smooth;
 }
 .section {
     padding-top: rem(40px);
@@ -291,12 +292,23 @@ h3.heading__primary {
         position: relative;
         &:after {
             content: "▼";
+            color: var(--component-color);
             position: absolute;
             display: block;
             font-size: rem(12px);
-            right: rem(10px);
+            right: rem(11px);
             top: rem(16px);
             pointer-events: none;
+        }
+        &::before {
+            content: "";
+            background-color: var(--component-color);
+            position: absolute;
+            display: block;
+            height: 100%;
+            width: rem(2px);
+            right: rem(30px);
+            z-index: -1;
         }
     }
     & select {
@@ -312,6 +324,7 @@ h3.heading__primary {
             box-shadow: none;
             border-color: var(--primary-color-dark);
             color: var(--font-color-text);
+            background-color: transparent;
         }
     }
 
@@ -334,16 +347,15 @@ h3.heading__primary {
         position: relative;
 
         &:after {
-            content: '';
+            content: "";
             position: absolute;
-            background-image: url('/images/web/common/icon_attachment.png');
+            background-image: url("/images/web/common/icon_attachment.png");
             width: rem(16px);
             height: rem(16px);
             display: block;
             right: rem(20px);
             top: 50%;
             transform: translateY(-50%);
-
         }
 
         &:active,
@@ -540,7 +552,7 @@ select::-ms-expand {
             }
         }
         & select {
-           /* height: rem(34px);
+            /* height: rem(34px);
             padding: rem(7px);*/
         }
     }

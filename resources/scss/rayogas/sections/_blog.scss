@@ -1,7 +1,6 @@
 #banner-blog {
-    background-image: linear-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.0)),
-        url('/images/web/blog/blog_banner_main.png'
-    );
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+        url("/images/web/blog/blog_banner_main.png");
 }
 
 .blog {
@@ -9,6 +8,10 @@
     &__image {
         float: left;
         padding-bottom: rem(10px);
+    }
+    &__container {
+        max-width: rem(1200px);
+        margin: 0 auto;
     }
 }
 

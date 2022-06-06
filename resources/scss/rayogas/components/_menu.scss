@@ -107,6 +107,7 @@
             display: flex;
             justify-content: space-between;
             max-width: rem(320px);
+            padding: 0;
             & a {
                 color: var(--font-color-text);
                 text-decoration: none;
