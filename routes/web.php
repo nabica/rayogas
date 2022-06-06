@@ -70,13 +70,17 @@ Route::prefix('lotus')->group(function () {
 
 Route::namespace("App\Http\Controllers\Rayogas")->group(function () {
     Route::get("/", "HomeController@index")->name('rayogas.home');
+    Route::post("/solicitud-servicio", "HomeController@serviceRequest");
+
     Route::get("/nosotros", "AboutController@index")->name('rayogas.about');
     Route::get("/productos-y-servicios", "ProductsController@index")->name('rayogas.products');
     Route::get("/glp", "GlpController@index")->name('rayogas.glp');
     Route::get("/blog", "BlogController@index")->name('rayogas.blog');
     Route::get("/blog/{slug}", "BlogController@show")->name('rayogas.blog.show');
     Route::get("/pqrs", "PqrsController@index")->name('rayogas.pqrs');
+    Route::post("/pqrs", "PqrsController@store");
     Route::get("pqrs/gracias", "PqrsController@tanks")->name('rayogas.thanks');
+
     Route::get('/transparencia', 'TransparencyController@index')->name('rayogas.transparency');
     Route::get('/tarifas', 'RatesController@index')->name('rayogas.rates');
     Route::get("/trabaja-con-nosotros", "WorkWithUsController@index")->name('rayogas.work-with-us');
