@@ -35,7 +35,8 @@
                         <a class="nav-link" href="#"><i class="icon-cheveron-right"></i> Autogestión</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('rayogas.blog') }}"><i class="icon-cheveron-right"></i>Blog</a>
+                        <a class="nav-link" href="{{ route('rayogas.blog') }}"><i
+                                class="icon-cheveron-right"></i>Blog</a>
                     </li>
                 </ul>
             </div>
@@ -71,7 +72,8 @@
                 <hr>
                 <ul class="footer__normative-list">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{{ route('rayogas.transparency')}}">Transparencia</a>
+                        <a class="nav-link active" aria-current="page"
+                            href="{{ route('rayogas.transparency')}}">Transparencia</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{{ route('rayogas.rates')}}">Tarifas</a>
@@ -83,7 +85,8 @@
                         <a class="nav-link active" aria-current="page" href="#">Usuarios</a>
                     </li> --}}
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Política de datos personales</a>
+                        <a class="nav-link active" href="{{ asset('pdfs/politica_datos_personales.pdf') }}"
+                            aria-current="page" download>Política de datos personales</a>
                     </li>
 
                 </ul>

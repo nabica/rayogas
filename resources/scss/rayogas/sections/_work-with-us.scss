@@ -3,6 +3,7 @@
     flex-direction: column;
     background-color: white;
     padding-top: 0;
+    padding-bottom: 0;
 
     &__banner {
         background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
@@ -10,59 +11,47 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: rem(200px);
+        height: rem(570px);
         img {
             display: none;
         }
     }
     &__form {
-        padding-top: rem(40px);
-
-    }
-
-    .form__general  {
-        input, .custom-file-input {
+        padding-left: rem(30px);
+        padding-bottom: rem(48px);
+        .form__general {
+            padding: rem(48px) rem(27px) rem(28px) rem(27px);
             border-radius: rem(12px);
-            font-style: italic;
-        }
+            background-color: var(--white-color);
+            box-shadow: 0 rem(2px) rem(8px) 0 rgba(0, 0, 0, 0.14);
 
-        .help-message {
-            font-style: italic;
-        }
+            input,
+            .custom-file-input {
+                border-radius: rem(12px);
+                font-style: italic;
+            }
 
-        &-button {
-            width: 100%;
-        }
-    }
+            .help-message {
+                font-style: italic;
+            }
 
-    form {
-        position: relative;
-        margin: 0;
-        top: rem(-40px);
-        padding: rem(63px) rem(17px) rem(45px) rem(17px);
-        border-radius: rem(12px);
-        background-color: var(--white-color);
-        box-shadow: 0 rem(2px) rem(8px) 0 rgba(0, 0, 0, 0.14);
+            &-button {
+                width: 100%;
+            }
+        }
     }
 }
 
 @include media-breakpoint-up(lg) {
     .work-with-us {
-        display: flex;
-        flex-direction: row;
         &__banner {
-            width: 50%;
-            height: auto;
-
-            img {
-                display: block;
-            }
+            height: inherit;
         }
         &__form {
-            display: flex;
-            align-items: center;
-            padding: 50px 120px 0px 40px;
-
+            padding-left: rem(50px);
+            & .form__general {
+                width: 90%;
+            }
         }
     }
 }

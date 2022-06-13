@@ -231,7 +231,7 @@
                         </div>
                         <div class="features">
                             <div class="row">
-                                <div class="col-md-4 text-left">
+                                <div class="text-left features__item">
                                     <img src="{{ asset('images/web/products/products/icons/icn_servicios_hogar_cocina.png') }}"
                                         class="img-fluid" alt="">
                                     <h3>Cocina</h3>
@@ -241,7 +241,7 @@
 
                                     <p>Encuentra presentaciones que se adaptan a tu necesidad de uso.</p>
                                 </div>
-                                <div class="col-md-4 text-left">
+                                <div class="text-left features__item">
                                     <img src="{{ asset('images/web/products/products/icons/icn_servicios_hogar_calefactor.png') }}"
                                         class="img-fluid" alt="">
                                     <h3>Calentadores de ambiente</h3>
@@ -250,7 +250,7 @@
                                         al exterior de tu casa con tu familia y amigos al utilizar el GLP en tus
                                         calefactores de terrazas. </p>
                                 </div>
-                                <div class="col-md-4 text-left">
+                                <div class="text-left features__item">
                                     <img src="{{ asset('images/web/products/products/icons/icn_servicios_hogar_calentador.png') }}"
                                         class="img-fluid" alt="">
                                     <h3>Calentadores de agua</h3>
@@ -262,9 +262,9 @@
                                         varias
                                         horas para alcanzar la temperatura ideal.</p>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-4 text-left">
+
+
+                                <div class="text-left features__item">
                                     <img src="{{ asset('images/web/products/products/icons/icn_servicios_hogar_piscina.png') }}"
                                         class="img-fluid" alt="">
                                     <h3>Climatización para piscinas</h3>
@@ -274,7 +274,7 @@
                                         tu
                                         piscina obteniendo una excelente eficiencia energética.</p>
                                 </div>
-                                <div class="col-md-4 text-left">
+                                <div class="text-left features__item">
                                     <img src="{{ asset('images/web/products/products/icons/icn_servicios_hogar_bbq.png') }}"
                                         class="img-fluid" alt="">
                                     <h3>Cilindros para asadores</h3>
@@ -282,7 +282,7 @@
                                         impurezas y cuando se usa no libera partículas, olores o cenizas permitiéndote
                                         obtener resultados increíbles en tus preparaciones.</p>
                                 </div>
-                                <div class="col-md-4 text-left">
+                                <div class="text-left features__item">
                                     <img src="{{ asset('images/web/products/products/icons/icn_servicios_hogar_chimenea.png') }}"
                                         class="img-fluid" alt="">
                                     <h3>Chimeneas</h3>
@@ -326,7 +326,7 @@
                         </div>
                         <div class="features">
                             <div class="row">
-                                <div class="col-md-4 text-left">
+                                <div class="text-left features__item">
                                     <img src="{{ asset('images/web/products/products/icons/icn_servicios_industria_metalurgia.png') }}"
                                         class="img-fluid" alt="">
                                     <h3>Industria Metalurgíca</h3>
@@ -337,7 +337,7 @@
                                         • El calentamiento de moldes y los recipientes de colada.<br>
                                         • La regeneración de las arenas.</p><br>
                                 </div>
-                                <div class="col-md-4 text-left">
+                                <div class="text-left features__item">
                                     <img src="{{ asset('images/web/products/products/icons/icn_servicios_industria_superficie.png') }}"
                                         class="img-fluid" alt="">
                                     <h3>Industria Tratamientos de Superficie</h3>
@@ -349,7 +349,7 @@
                                         homogeneidad en las temperaturas, es una solución ideal en procesos y hornos de
                                         galvanización, galvanoplastía, esmaltado y cadenas de pintura.</p>
                                 </div>
-                                <div class="col-md-4 text-left">
+                                <div class="text-left features__item">
                                     <img src="{{ asset('images/web/products/products/icons/icn_servicios_hogar_calentador.png') }}"
                                         class="img-fluid" alt="">
                                     <h3>Papel</h3>
@@ -393,7 +393,7 @@
                         </div>
                         <div class="features">
                             <div class="row">
-                                <div class="col-md-4 text-left">
+                                <div class="text-left features__item">
                                     <img src="{{ asset('images/web/products/products/icons/icn_servicios_agro_alimentos.png') }}"
                                         class="img-fluid" alt="">
                                     <h3>Agroindustria de alimentos</h3>
@@ -405,7 +405,7 @@
                                     </p>
 
                                 </div>
-                                <div class="col-md-4 text-left">
+                                <div class="text-left features__item">
                                     <img src="{{ asset('images/web/products/products/icons/icn_servicios_agro_secado.png') }}"
                                         class="img-fluid" alt="">
                                     <h3>Secado</h3>
@@ -415,7 +415,7 @@
                                         GLP ocupa un lugar clave en esta actividad, dado que se puede ubicar lo más
                                         cerca posible de las zonas de producción.</p>
                                 </div>
-                                <div class="col-md-4 text-left">
+                                <div class="text-left features__item">
                                     <img src="{{ asset('images/web/products/products/icons/icn_servicios_agro_agroindustria.png') }}"
                                         class="img-fluid" alt="">
                                     <h3>Agroindustria Saladeros, molinos, bebidas</h3>
@@ -423,9 +423,7 @@
                                         excelente opción en energía y rendimiento. Potencia tus procesos de cocción,
                                         secado, ahumado, panadería, conserva, elaboración de bebidas. </p>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-4 text-left">
+                                <div class="text-left features__item">
                                     <img src="{{ asset('images/web/products/products/icons/icn_servicios_agro_frigorificos.png') }}"
                                         class="img-fluid" alt="">
                                     <h3>Frigoríficos</h3>
@@ -436,7 +434,7 @@
                                     </p>
 
                                 </div>
-                                <div class="col-md-4 text-left">
+                                <div class="text-left features__item">
                                     <img src="{{ asset('images/web/products/products/icons/icn_servicios_agro_granjas.png') }}"
                                         class="img-fluid" alt="">
                                     <h3>Granjas y criaderos</h3>
@@ -445,7 +443,7 @@
                                         creas la temperatura, humedad y energía adecuada para que estén cómodos con los
                                         cuidados necesarios día y noche.</p>
                                 </div>
-                                <div class="col-md-4 text-left">
+                                <div class="text-left features__item">
                                     <img src="{{ asset('images/web/products/products/icons/icn_servicios_agro_invernaderos.png') }}"
                                         class="img-fluid" alt="">
                                     <h3>Agroindustria Invernaderos, Tambores</h3>
@@ -488,7 +486,7 @@
                         </div>
                         <div class="features">
                             <div class="row">
-                                <div class="col-md-4 text-left">
+                                <div class="text-left features__item">
                                     <img src="{{ asset('images/web/products/products/icons/icn_servicios_horeca_estufas.png') }}"
                                         class="img-fluid" alt="">
                                     <h3>Estufas industriales</h3>
@@ -499,7 +497,7 @@
                                     </p>
 
                                 </div>
-                                <div class="col-md-4 text-left">
+                                <div class="text-left features__item">
                                     <img src="{{ asset('images/web/products/products/icons/icn_servicios_hogar_calefactor.png') }}"
                                         class="img-fluid" alt="">
                                     <h3>Calefactores de ambiente y chimeneas</h3>
@@ -509,7 +507,7 @@
                                         atractivo para quienes quieren pasar un rato agradable, con impacto ecológico
                                         positivo sin exponerse a daños y contaminaciones de ambiente.</p>
                                 </div>
-                                <div class="col-md-4 text-left">
+                                <div class="text-left features__item">
                                     <img src="{{ asset('images/web/products/products/icons/icn_servicios_hogar_piscina.png') }}"
                                         class="img-fluid" alt="">
                                     <h3>Climatización para piscinas</h3>
@@ -519,9 +517,9 @@
                                         de la piscina, obteniendo la mejor eficiencia energética, independientemente de
                                         su tamaño o localización.</p>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-4 text-left">
+
+
+                                <div class="text-left features__item">
                                     <img src="{{ asset('images/web/products/products/icons/icn_servicios_agro_agroindustria.png') }}"
                                         class="img-fluid" alt="">
                                     <h3>Hornos para panaderías y calderas de agua caliente</h3>
@@ -532,7 +530,7 @@
                                     </p>
 
                                 </div>
-                                <div class="col-md-4 text-left">
+                                <div class="text-left features__item">
                                     <img src="{{ asset('images/web/products/products/icons/icn_servicios_horeca_zonas.png') }}"
                                         class="img-fluid" alt="">
                                     <h3>Calentamiento de zonas húmedas</h3>
@@ -541,7 +539,7 @@
                                         infraestructura. Además su combustión limpia crea un menor impacto en el medio
                                         ambiente lo cual es importante para la responsabilidad social de tu negocio.</p>
                                 </div>
-                                <div class="col-md-4 text-left">
+                                <div class="text-left features__item">
                                     <img src="{{ asset('images/web/products/products/icons/icn_servicios_horeca_lavanderia.png') }}"
                                         class="img-fluid" alt="">
                                     <h3>Lavandería </h3>

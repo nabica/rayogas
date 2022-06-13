@@ -4,6 +4,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     if (!formRequest) {
         return;
     }
+    const data = {};
     const nameInput = formRequest.querySelector('[name="name"]');
     const telephoneInput = formRequest.querySelector('[name="telephone"]');
     const emailInput = formRequest.querySelector('[name="email"]');
@@ -28,8 +29,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
     requestTypeSelector.addEventListener("change", (event) => {
         const value = event.target.value;
-        console.log(value);
-
         const cilinderInputs = document.querySelectorAll(
             ".form-request-service__inputs--cilinder"
         );
@@ -71,6 +70,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
     // Events
     personSelect.addEventListener("change", (event) => {
+        personSelect.classList.remove("is-invalid");
         let element = event.target;
         let person = element.value;
         if (person == "jurídica") {
@@ -86,28 +86,101 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
     btnNextStep.addEventListener("click", (event) => {
         event.preventDefault();
-        console.log("click siguiente");
-
-        let isFormValid = false;
-
-        if (
-            nameInput.value.trim() != "" &&
-            telephoneInput.value.trim() != "" &&
-            personSelect.value.trim() != ""
-        ) {
-            if (
-                personSelect.value.trim() == "jurídica" &&
-                businessNameInput.value.trim() != ""
-            ) {
-                isFormValid = true;
-            } else if (personSelect.value.trim() == "natural") {
-                isFormValid = true;
-            }
+        const inputs = [nameInput, telephoneInput, personSelect];
+        if (inputs.some((input) => !input.value)) {
+            inputs.forEach((input) => {
+                if (!input.value) {
+                    input.classList.add("is-invalid");
+                } else {
+                    input.classList.remove("is-invalid");
+                }
+            });
+            return null;
         }
+        if (personSelect.value == "jurídica" && !businessNameInput.value) {
+            businessNameInput.classList.add("is-invalid");
+            return null;
+        }
+        containerFirstStep.classList.remove("active");
+        containerSecondStep.classList.add("active");
+    });
 
-        if (isFormValid) {
-            containerFirstStep.classList.remove("active");
-            containerSecondStep.classList.add("active");
+    formRequest.addEventListener("submit", async (e) => {
+        try {
+            e.preventDefault();
+            const type = requestTypeSelector.value;
+            const cilinderInputs = document.querySelectorAll(
+                ".form-request-service__inputs--cilinder"
+            );
+            const instalationInputs = document.querySelectorAll(
+                ".form-request-service__inputs--installation"
+            );
+            const granelInputs = document.querySelectorAll(
+                ".form-request-service__inputs--granel"
+            );
+            const validateOptions = {
+                cilindro: () => validateInputs(cilinderInputs),
+                granel: () => validateInputs(granelInputs),
+                instalaciones: () => validateInputs(instalationInputs),
+            };
+            const validateInputs = (inputs) => {
+                const selectedInputs = Array.from(inputs).map((input) => {
+                    return input.querySelectorAll("input, select")[0];
+                });
+                console.log(selectedInputs);
+                if (selectedInputs.some((input) => !input.value)) {
+                    selectedInputs.forEach((input) => {
+                        if (!input.value) {
+                            businessNameInput.classList.add("is-invalid");
+                        } else {
+                            businessNameInput.classList.remove("is-invalid");
+                        }
+                    });
+                    return false;
+                }
+                const data = {};
+                data["type"] = type;
+                selectedInputs.forEach(
+                    (input) => (data[input.name] = input.value)
+                );
+                const otherInputs = [
+                    nameInput,
+                    telephoneInput,
+                    personSelect,
+                    businessNameInput,
+                ];
+                otherInputs.forEach((input) => {
+                    if (input.value) {
+                        data[input.name] = input.value;
+                    }
+                });
+                return data;
+            };
+            const data = validateOptions[type]();
+
+            if (data) {
+                const token = formRequest.querySelector(
+                    "#form-request-service__token"
+                ).value;
+                const formData = new FormData();
+                formData.append("_token", token);
+                const dataKeys = Object.keys(data);
+                dataKeys.forEach((key) => {
+                    formData.append(key, data[key]);
+                });
+                const response = await fetch("/solicitud-servicio", {
+                    method: "POST",
+                    body: formData,
+                });
+                if (response.status === 200) {
+                    alert("Email enviado");
+                }
+            }
+        } catch (e) {
+            console.log(e);
+            alert(
+                "Tenemos algunos problemas ´por favor intente de nuevo mas tarde"
+            );
         }
     });
 });

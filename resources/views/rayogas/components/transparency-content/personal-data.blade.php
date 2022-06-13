@@ -14,7 +14,7 @@
                     <div class="download-card">
                         <ul class="download-card__list">
                             <li>
-                                <a href="" target="blank">
+                                <a href="{{ asset('pdfs/politica_datos_personales.pdf') }}" download>
                                     <div>
                                         <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
                                         <p>

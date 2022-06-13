@@ -1,20 +1,22 @@
 @extends('rayogas.layouts.master')
 @section('metatags_facebook')
-  <meta property="og:title" content="{{ config('app.name') }} | Comunícate con nosotros ante cualquier inquietud">
-  <meta property="og:site_name" content="{{ config('app.name') }}">
-  <meta property="og:url" content="{{ Request::url() }}">
-  <meta property="og:description" content="Escríbenos a través del siguiente formulario, uno de nuestros asesores se pondrá en contacto contigo lo más pronto para ayudarte.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="{{ asset('images/web/pqrs/pqrs_img_principal.png') }}">
+<meta property="og:title" content="{{ config('app.name') }} | Comunícate con nosotros ante cualquier inquietud">
+<meta property="og:site_name" content="{{ config('app.name') }}">
+<meta property="og:url" content="{{ Request::url() }}">
+<meta property="og:description"
+    content="Escríbenos a través del siguiente formulario, uno de nuestros asesores se pondrá en contacto contigo lo más pronto para ayudarte.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="{{ asset('images/web/pqrs/pqrs_img_principal.png') }}">
 @endsection
 @section('metatags_seo')
-    <meta name="title" content="{{ config('app.name') }} | Comunícate con nosotros ante cualquier inquietud">
-    <meta name="description" content="Escríbenos a través del siguiente formulario, uno de nuestros asesores se pondrá en contacto contigo lo más pronto para ayudarte.">
-    <meta name="robots" content="index, follow">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="language" content="Spanish">
-    <meta name="revisit-after" content="30 days">
-    <meta name="author" content="{{ config('app.name') }}">
+<meta name="title" content="{{ config('app.name') }} | Comunícate con nosotros ante cualquier inquietud">
+<meta name="description"
+    content="Escríbenos a través del siguiente formulario, uno de nuestros asesores se pondrá en contacto contigo lo más pronto para ayudarte.">
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="Spanish">
+<meta name="revisit-after" content="30 days">
+<meta name="author" content="{{ config('app.name') }}">
 @endsection
 @section('title', config('app.name') . ' | Comunícate con nosotros ante cualquier inquietud')
 @section('content')
@@ -31,53 +33,54 @@
                 </div>
                 <div class="pqrs__side-banner-image">
                     <img src="{{ asset('images/web/pqrs/pqrs_img_principal.png') }}" alt="principal image pqrs"
-                        class="img-fluid">
+                        class="w-100">
                 </div>
             </div>
             <div class="col-12 col-lg-7">
-                <form action="" class="form__general pqrs__form row g-3 needs-validation" novalidate>
+                <form action="/pqrs" class="form__general pqrs__form row g-3 needs-validation" novalidate method="POST">
+                    @csrf
                     <div class="form__general-header line col-12 p-0">
                         <h3>Peticiones, quejas y recursos</h3>
                         <p>Digita tus datos</p>
                     </div>
                     <div class="col-md-6 mt-0">
                         <label for="name" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="name" required>
+                        <input name="name" type="text" class="form-control" id="name" aria-label="Nombre" required>
                         <div class="invalid-feedback">
                             Este campo es requerido
                         </div>
                     </div>
                     <div class="col-md-6 mt-0">
                         <label for="document" class="form-label">Cédula</label>
-                        <input type="text" class="form-control" id="document" required>
+                        <input type="number" class="form-control" id="document" required name='document'>
                         <div class="invalid-feedback">
                             Este campo es requerido
                         </div>
                     </div>
                     <div class="col-md-6">
                         <label for="city" class="form-label">Ciudad</label>
-                        <input type="text" class="form-control" id="city" required>
+                        <input type="text" class="form-control" id="city" required name="city">
                         <div class="invalid-feedback">
                             Este campo es requerido
                         </div>
                     </div>
                     <div class="col-md-6">
                         <label for="phone" class="form-label">Teléfono</label>
-                        <input type="text" class="form-control" id="phone" required>
+                        <input type="text" class="form-control" id="phone" required name='phone' minlength=7>
                         <div class="invalid-feedback">
                             Este campo es requerido
                         </div>
                     </div>
                     <div class="col-12">
                         <label for="email" class="form-label">Correo electrónico</label>
-                        <input type="email" class="form-control" id="email" required>
+                        <input type="email" class="form-control" id="email" required name='email'>
                         <div class="invalid-feedback">
                             Este campo es requerido
                         </div>
                     </div>
                     <div class="col-12">
                         <label for="description" class="form-label">Descripción</label>
-                        <textarea class="form-control" rows="3" required></textarea>
+                        <textarea class="form-control" rows="3" required name='description'></textarea>
                         <div class="invalid-feedback">
                             Este campo es requerido
                         </div>
@@ -85,7 +88,7 @@
                     <div class="col-md-6">
                         <label for="object" class="form-label">Objeto solicitud</label>
                         <div class="select">
-                            <select type="text" class="form-control" id="object" required>
+                            <select type="text" class="form-control" id="object" required name='object'>
                                 <option disabled selected value="">Selecciona una opcion</option>
                                 <option value="1">Option 1</option>
                                 <option value="2">Option 2</option>
@@ -99,7 +102,7 @@
                     <div class="col-md-6 ">
                         <label for="type" class="form-label">Tipo de solicitud</label>
                         <div class="select">
-                            <select type="text" class="form-control" id="type" required>
+                            <select type="text" class="form-control" id="type" required name='type'>
                                 <option disabled selected value="">Selecciona una opcion</option>
                                 <option value="1">Option 1</option>
                                 <option value="2">Option 2</option>

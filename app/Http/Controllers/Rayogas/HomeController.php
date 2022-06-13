@@ -18,14 +18,13 @@ class HomeController extends Controller
         $homeBanner = HomeBanner::first();
         $homeFeature = HomeFeature::first();
         $homeRates = HomeRate::latest('id')->limit(2)->get();
-
         return view('rayogas.home', compact('homeBanner', 'homeFeature', 'homeRates'));
     }
 
     public function serviceRequest(ServiceRequest $request)
     {
         try {
-            $contacts = ['servicioalcliente@rayogas.com', 'sergio@nabica.co', 'alejandra@nabica.co', 'fabian@nabica.co'];
+            $contacts = ['lockdownlab@gmail.com'];
             Mail::to($contacts)->send(new ServiceRequestMail($request->all()));
             return response()->json([
                 'status' => 200,

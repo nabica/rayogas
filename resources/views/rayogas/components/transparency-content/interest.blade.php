@@ -372,7 +372,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="" target="blank">
+                                <a href="{{ asset('pdfs/ccu_granel_rayogas.pdf') }}" download>
                                     <div>
                                         <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
                                         <p>
@@ -386,7 +386,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="" target="blank">
+                                <a href="{{ asset('pdfs/ccu_envasado.pdf') }}" download>
                                     <div>
                                         <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
                                         <p>
@@ -405,7 +405,7 @@
                     <div class="download-card">
                         <ul class="download-card__list">
                             <li>
-                                <a href="" target="blank">
+                                <a href="{{ asset('pdfs/cambio_prestador.pdf') }}" download>
                                     <div>
                                         <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
                                         <p>
@@ -418,7 +418,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="" target="blank">
+                                <a href="{{ asset('pdfs/solicitud_servicio.pdf') }}" download>
                                     <div>
                                         <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
                                         <p>
@@ -431,7 +431,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="" target="blank">
+                                <a href="{{ asset('pdfs/proceso_pqr.pdf') }}" download>
                                     <div>
                                         <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
                                         <p>

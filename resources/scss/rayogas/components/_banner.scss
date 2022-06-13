@@ -52,17 +52,17 @@
             width: 50%;
             h1 {
                 color: var(--white-color);
-                font-size: 2.875rem;
+                font-size: 2.5rem;
                 font-weight: bold;
                 letter-spacing: 0;
-                line-height: 3.375rem;
+                line-height: 3rem;
             }
             p {
                 color: var(--white-color);
-                font-size: 1.25rem;
+                font-size: 1rem;
                 font-weight: 500;
                 letter-spacing: 0;
-                line-height: 1.75rem;
+                line-height: 1.25rem;
                 margin-bottom: rem(40px);
             }
             .btn {
@@ -78,6 +78,21 @@
     .banner {
         height: rem(600px);
         .banner-content {
+            h1 {
+                color: var(--white-color);
+                font-size: 2.875rem;
+                font-weight: bold;
+                letter-spacing: 0;
+                line-height: 3.375rem;
+            }
+            p {
+                color: var(--white-color);
+                font-size: 1.25rem;
+                font-weight: 500;
+                letter-spacing: 0;
+                line-height: 1.75rem;
+                margin-bottom: rem(40px);
+            }
             .btn {
                 margin-top: rem(10px);
                 font-size: rem(16px);

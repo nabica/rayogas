@@ -6,6 +6,36 @@
 .services {
     padding: rem(80px) 0 rem(150px);
 }
+
 .products {
     padding: rem(80px) 0;
+    & .features {
+        .row {
+            justify-content: center;
+        }
+        &__item {
+            max-width: 100%;
+        }
+    }
+}
+@include media-breakpoint-up(md) {
+    .products {
+        & .features {
+            .row {
+                justify-content: space-between;
+            }
+            &__item {
+                max-width: 45%;
+            }
+        }
+    }
+}
+@include media-breakpoint-up(lg) {
+    .products {
+        & .features {
+            &__item {
+                max-width: 30%;
+            }
+        }
+    }
 }

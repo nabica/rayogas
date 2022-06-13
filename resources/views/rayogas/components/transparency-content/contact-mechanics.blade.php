@@ -10,7 +10,7 @@
                     <p class="f20">Mecanismos de atención - Localización</p>
                     <p>Contamos con la línea de servicio al cliente <strong>(601) 5802323</strong>, línea
                         gratuita <strong>01 8000 95 95 95</strong>
-                         y en cada planta de RAYOGAS S.A. ESP se cuenta con una oficina de PQRS en donde se
+                        y en cada planta de RAYOGAS S.A. ESP se cuenta con una oficina de PQRS en donde se
                         atiende al usuario de manera personalizada:</p>
                     <div class="transparency__card-phones">
                         <h4>Planta Cazucá:</h4>
@@ -273,7 +273,7 @@
                     <div class="download-card">
                         <ul class="download-card__list">
                             <li>
-                                <a href="" target="blank">
+                                <a href="{{ asset('pdfs/politica_datos_personales.pdf') }}" download>
                                     <div>
                                         <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
                                         <p>

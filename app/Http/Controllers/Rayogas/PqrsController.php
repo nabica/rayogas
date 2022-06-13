@@ -20,10 +20,7 @@ class PqrsController extends Controller
         try {
             $contacts = ['servicioalcliente@rayogas.com', 'sergio@nabica.co', 'alejandra@nabica.co', 'fabian@nabica.co'];
             Mail::to($contacts)->send(new PqrsMail($request->all()));
-            return response()->json([
-                'status' => 200,
-                'message' => 'Mensaje enviado'
-            ]);
+            return redirect()->route('rayogas.thanks');
         } catch (\Exception $e) {
             return response()->json([
                 'status' => '535 5.7.0',
