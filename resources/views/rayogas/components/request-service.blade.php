@@ -27,7 +27,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <label for="">Número de contacto</label>
-                                        <input type="text" name="telephone" class="form-control"
+                                        <input type="number" name="telephone" class="form-control"
                                             placeholder="Número de contacto" aria-label="Número de contacto">
                                         <div class="invalid-feedback">
                                             Este campo es requerido

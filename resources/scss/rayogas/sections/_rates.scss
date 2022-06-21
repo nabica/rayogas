@@ -1,10 +1,10 @@
 .rates {
+    margin-bottom: rem(100px);
     .download-card {
         padding: rem(12px);
-        margin-bottom: rem(40px);
 
         > .row > div:nth-child(even) {
-            background-color: #F0F9FE;
+            background-color: #f0f9fe;
         }
 
         &__list {
@@ -22,7 +22,7 @@
         .download-card {
             padding: rem(12px);
             > .row > div:nth-child(even) {
-                background-color: #F0F9FE;
+                background-color: #f0f9fe;
             }
 
             &__list {
@@ -41,11 +41,11 @@
             }
 
             > .row:nth-child(even) {
-                background-color: #F0F9FE;
+                background-color: #f0f9fe;
             }
 
             > .row > div:first-child {
-                border-right: 1px solid rgba(151,151,151,.12);
+                border-right: 1px solid rgba(151, 151, 151, 0.12);
             }
         }
     }

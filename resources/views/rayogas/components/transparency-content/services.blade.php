@@ -74,7 +74,7 @@
                             <p>Contamos con la línea de servicio al cliente <strong>(601) 5802323</strong>,
                                 línea
                                 gratuita <strong>01 8000 95 95 95</strong>
-                                 y en cada planta de RAYOGAS S.A. ESP se cuenta con una oficina de PQRS en
+                                y en cada planta de RAYOGAS S.A. ESP se cuenta con una oficina de PQRS en
                                 donde se
                                 atiende al usuario de manera personalizada:</p>
                             <div class="transparency__card-phones">
@@ -317,7 +317,7 @@
                     casos:<br>
                     1. Por razones técnicas susceptibles de ser probadas que estén expresamente previstas
                     en el contrato y la regulación vigente.<br>
-                    2. Cuandolazonahayasidodeclaradacomodealtoriesgo,segúndecisióndela autoridad
+                    2. Cuando la zona haya sido declarada como de alto riesgo, según decisión de la autoridad
                     competente.<br>
                     3. Cuando el SUSCRIPTOR potencial no cumpla las condiciones establecidas por la
                     autoridad competente.<br>
@@ -330,7 +330,7 @@
                     6. Cuando no existan redes internas el inmueble del solicitante.<br>
                     7. Cuando no exista disponibilidad del sitio para ubicar el tanque estacionario, el
                     sistema de medición y regulación.<br>
-                    8. Siexistelaposibilidadderiesgoenlacalidaddelservicioaotrosusuarios.<br>
+                    8. Si existe la posibilidad de riesgo en la calidad del servicio a otros usuarios.<br>
                     La solicitud del servicio no tiene costo.</p>
             </div>
 

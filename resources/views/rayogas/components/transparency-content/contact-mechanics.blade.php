@@ -41,7 +41,7 @@
                         <h4>Correo de notificaciones judiciales:</h4>
                         <a href="">notificacion@rayogas.com</a>
                         <h4>Link PQR:</h4>
-                        <a href="">http://www.rayogas.co/pqr_clientes.aspx</a>
+                        <a href="{{ route('rayogas.pqrs') }}">http://www.rayogas.co/pqrs</a>
                         <h4>Correo notificaciones judiciales:</h4>
                         <a href="">notificacion@rayogas.com</a>
                     </div>

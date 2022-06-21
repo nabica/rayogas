@@ -93,7 +93,7 @@ const addListenners = (map) => {
     const cityInput = document.getElementById("map-city-control");
     stateInput.addEventListener("change", (e) => {
         const value = e.currentTarget.value;
-        addItems(value);
+        addAllItems(value);
         cityInput.disabled = false;
         cityInput.innerHTML = "";
         const location = {
@@ -129,13 +129,33 @@ const addListenners = (map) => {
             const foundedCity = locations[state].find(
                 (city) => city.title === value
             );
+            addItem(foundedCity, state);
             map.setCenter(foundedCity.position);
             map.setZoom(15);
+        } else {
+            addAllItems(state);
         }
     });
 };
 
-const addItems = (value) => {
+const addItem = (foundedCity, state) => {
+    const container = document.getElementById("map__items-container");
+    container.innerHTML = "";
+    if (foundedCity) {
+        container.insertAdjacentHTML(
+            "beforeend",
+            `  <div class="col-6 col-md-12 locations-item">
+                    <h4>Rayogas Planta ${foundedCity.title}</h4>
+                    <p>${foundedCity.title}, ${
+                state.charAt(0).toUpperCase() + state.slice(1)
+            }</p>
+                    <p>${foundedCity.address}</p>
+                    <p><a href="">${foundedCity.phone}</a></p>
+                </div>`
+        );
+    }
+};
+const addAllItems = (value) => {
     const container = document.getElementById("map__items-container");
     container.innerHTML = "";
     if (value) {
@@ -144,7 +164,7 @@ const addItems = (value) => {
             container.insertAdjacentHTML(
                 "beforeend",
                 `  <div class="col-6 col-md-12 locations-item">
-                        <h4>RayoGas Planta ${city.title}</h4>
+                        <h4>Rayogas Planta ${city.title}</h4>
                         <p>${city.title}, ${
                     value.charAt(0).toUpperCase() + value.slice(1)
                 }</p>

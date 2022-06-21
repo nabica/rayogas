@@ -1,20 +1,22 @@
 @extends('rayogas.layouts.master')
 @section('metatags_facebook')
-  <meta property="og:title" content="{{ config('app.name') }} | Somos energía que mueve a un país - GLP">
-  <meta property="og:site_name" content="{{ config('app.name') }}">
-  <meta property="og:url" content="{{ Request::url() }}">
-  <meta property="og:description" content="En Rayogas contamos con un amplio portafolio de gas LP en cilindros y a granel, para clientes residenciales, comerciales e industriales.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="{{ $homeBanner->image_url }}">
+<meta property="og:title" content="{{ config('app.name') }} | Somos energía que mueve a un país - GLP">
+<meta property="og:site_name" content="{{ config('app.name') }}">
+<meta property="og:url" content="{{ Request::url() }}">
+<meta property="og:description"
+    content="En Rayogas contamos con un amplio portafolio de gas LP en cilindros y a granel, para clientes residenciales, comerciales e industriales.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="{{ $homeBanner->image_url }}">
 @endsection
 @section('metatags_seo')
-    <meta name="title" content="{{ config('app.name') }} | Somos energía que mueve a un país - GLP">
-    <meta name="description" content="En Rayogas contamos con un amplio portafolio de gas LP en cilindros y a granel, para clientes residenciales, comerciales e industriales.">
-    <meta name="robots" content="index, follow">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="language" content="Spanish">
-    <meta name="revisit-after" content="30 days">
-    <meta name="author" content="{{ config('app.name') }}">
+<meta name="title" content="{{ config('app.name') }} | Somos energía que mueve a un país - GLP">
+<meta name="description"
+    content="En Rayogas contamos con un amplio portafolio de gas LP en cilindros y a granel, para clientes residenciales, comerciales e industriales.">
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="Spanish">
+<meta name="revisit-after" content="30 days">
+<meta name="author" content="{{ config('app.name') }}">
 @endsection
 @section('title', config('app.name') . ' | Somos energía que mueve a un país - GLP')
 
@@ -45,8 +47,7 @@
             <div class="col-md-6">
                 <div id="home-main-image">
                     @if(isset($homeFeature->image))
-                    <img src="{{ $homeFeature->image_url }}" class="img-fluid"
-                        alt="más de 50 años">
+                    <img src="{{ $homeFeature->image_url }}" class="img-fluid" alt="más de 50 años">
                     @else
                     <img src="{{ asset('images/web/home/home_img_principal.png') }}" class="img-fluid"
                         alt="más de 50 años">
@@ -129,7 +130,8 @@
                                 libre de plomo, azufre y otros productos contaminantes.</p>
 
                             <p>Miles de personas lo eligen al ser una alternativa energética limpia y altamente
-                                eficiente, que además mantiene los bosques libres de la deforestación ya que evita el uso de leña. </p>
+                                eficiente, que además mantiene los bosques libres de la deforestación ya que evita el
+                                uso de leña. </p>
                         </div>
                     </div>
                     {{-- <div class="container-button-interest">
@@ -142,10 +144,12 @@
                             <img src="{{ asset('images/web/home/services/home_servicios_industria_1.png') }}"
                                 class="w-100" alt="">
                             <h3>Un facilitador para tu crecimiento</h3>
-                            <p>"Energía flexible, limpia y segura es la que recibes con GLP Rayogas, una oportunidad de evolucionar en tu sector.
+                            <p>"Energía flexible, limpia y segura es la que recibes con GLP Rayogas, una oportunidad de
+                                evolucionar en tu sector.
                             </p>
                             <p>
-                                Puedes utilizarlo en: Corte industrial, carburación montacargas, calderas, fundición, calefacción, gasodomésticos y refrigeración industrial y generación de energía.</p>
+                                Puedes utilizarlo en: Corte industrial, carburación montacargas, calderas, fundición,
+                                calefacción, gasodomésticos y refrigeración industrial y generación de energía.</p>
                         </div>
                         <div class="col-md-4">
                             <img src="{{ asset('images/web/home/services/home_servicios_industria_2.png') }}"
@@ -158,7 +162,9 @@
                             <img src="{{ asset('images/web/home/services/home_servicios_industria_3.png') }}"
                                 class="w-100" alt="">
                             <h3>Te acompañamos en el proceso</h3>
-                            <p>De inicio a fin estamos contigo, desde la primera asesoría, hasta la instalación y mantenimiento del producto para hacer crecer tu industria. Puedes usarlo para: Construcción, impermeabilización, flamear y usos náuticos. </p>
+                            <p>De inicio a fin estamos contigo, desde la primera asesoría, hasta la instalación y
+                                mantenimiento del producto para hacer crecer tu industria. Puedes usarlo para:
+                                Construcción, impermeabilización, flamear y usos náuticos. </p>
                         </div>
                     </div>
                     {{-- <div class="container-button-interest">
@@ -180,7 +186,7 @@
                                 alt="">
                             <h3>Temperaturas ideales</h3>
                             <p>Logra la temperatura que necesitas en tu producción de manera estable y controlada. </p>
-                             <p>Asesoría en el manejo de temperatura adecuada para tu producción.</p>
+                            <p>Asesoría en el manejo de temperatura adecuada para tu producción.</p>
                         </div>
                         <div class="col-md-4">
                             <img src="{{ asset('images/web/home/services/home_servicios_agro_3.png') }}" class="w-100"
@@ -224,8 +230,8 @@
                 </div>
 
                 <div class="container-button-interest">
-                        <a href="{{ route('rayogas.products') }}" class="btn btn-primary">Me interesa</a>
-                    </div>
+                    <a href="{{ route('rayogas.products') }}" class="btn btn-primary">Me interesa</a>
+                </div>
 
             </div>
 
@@ -246,7 +252,8 @@
             </div>
             <div class="col-lg-6 text-center mt-1">
                 @foreach($homeRates as $homeRate)
-                <a href="{{ $homeRate->file_url }}" target="blank" class="btn btn-primary">{{ $homeRate->button_text }}</a>
+                <a href="{{ $homeRate->file_url }}" target="blank"
+                    class="btn btn-primary">{{ $homeRate->button_text }}</a>
                 @endforeach
             </div>
         </div>

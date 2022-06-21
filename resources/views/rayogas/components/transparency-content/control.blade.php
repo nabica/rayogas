@@ -20,26 +20,26 @@
                         indicadores sobre el servicio, reportes comerciales, financiero, administrativos y
                         técnico operativos , acceso a la bodega de datos y recursos de aprendizaje sobre el
                         servicio de Gas Licuado de Petróleo.</p>
-                    <a href="http://www.sui.gov.co/web/glp">http://www.sui.gov.co/web/glp </a>
+                    <a target='_blank' href="https://www.sui.gov.co/web/glp">https://www.sui.gov.co/web/glp </a>
                 </div>
                 <div class="col-12 col-lg-6 mb-3 mb-lg-0">
                     <h2 class="sideLine mb-4">Entes control y mecanismos supervisión</h2>
                     <p>Las entidades de control que vigilan a RAYOGAS SA ESP son:</p>
                     <div class="mb-4">
                         <p class="mb-0"><strong class="gray">Ministerio de Minas y Energía </strong></p>
-                        <a href="www.minenergia.gov.co">www.minenergia.gov.co</a>
+                        <a target='_blank' href="https://www.minenergia.gov.co">www.minenergia.gov.co</a>
                     </div>
                     <div class="mb-4">
                         <p class="mb-0"><strong class="gray">Superintendencia de Servicios Públicos
                                 Domiciliarios</strong>
                         </p>
-                        <a href="www.superservicios.gov.co">www.superservicios.gov.co</a>
+                        <a target='_blank' href="https://www.superservicios.gov.co">www.superservicios.gov.co</a>
                     </div>
                     <div class="mb-4">
                         <p class="mb-0"><strong class="gray">Superintendencia de Industria y Comercio
                             </strong>
                         </p>
-                        <a href="www.sic.gov.co">www.sic.gov.co</a>
+                        <a target='_blank' href="https://www.sic.gov.co">www.sic.gov.co</a>
                     </div>
                     <p>RAYOGAS SA ESP está comprometido en garantizar el cumplimiento de sus procesos,
                         planes y programas dirigidos a los usuarios de nuestro servicio.</p>
@@ -49,11 +49,13 @@
         <div class="row">
             <div class="col-12 col-md-6">
                 <h3 class="heading__primary">MECANISMOS INTERNOS DE CONTROL</h3>
-                <img src="{{ asset('images/web/transparency/img_transparencia_control_2.png') }}" alt="">
+                <img src="{{ asset('images/web/transparency/img_transparencia_control_2.png') }}" alt=""
+                    class="img-fluid">
             </div>
             <div class="col-12 col-md-6">
                 <h3 class="heading__primary">MECANISMOS EXTERNOS DE CONTROL</h3>
-                <img src="{{ asset('images/web/transparency/img_transparencia_control_2-1.png') }}" alt="">
+                <img src="{{ asset('images/web/transparency/img_transparencia_control_2-1.png') }}" alt=""
+                    class="img-fluid">
             </div>
         </div>
     </div>

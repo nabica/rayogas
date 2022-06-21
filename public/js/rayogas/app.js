@@ -6112,7 +6112,7 @@ var addListenners = function addListenners(map) {
   var cityInput = document.getElementById("map-city-control");
   stateInput.addEventListener("change", function (e) {
     var value = e.currentTarget.value;
-    addItems(value);
+    addAllItems(value);
     cityInput.disabled = false;
     cityInput.innerHTML = "";
     var location = {
@@ -6159,20 +6159,32 @@ var addListenners = function addListenners(map) {
       var foundedCity = locations[state].find(function (city) {
         return city.title === value;
       });
+      addItem(foundedCity, state);
       map.setCenter(foundedCity.position);
       map.setZoom(15);
+    } else {
+      addAllItems(state);
     }
   });
 };
 
-var addItems = function addItems(value) {
+var addItem = function addItem(foundedCity, state) {
+  var container = document.getElementById("map__items-container");
+  container.innerHTML = "";
+
+  if (foundedCity) {
+    container.insertAdjacentHTML("beforeend", "  <div class=\"col-6 col-md-12 locations-item\">\n                    <h4>Rayogas Planta ".concat(foundedCity.title, "</h4>\n                    <p>").concat(foundedCity.title, ", ").concat(state.charAt(0).toUpperCase() + state.slice(1), "</p>\n                    <p>").concat(foundedCity.address, "</p>\n                    <p><a href=\"\">").concat(foundedCity.phone, "</a></p>\n                </div>"));
+  }
+};
+
+var addAllItems = function addAllItems(value) {
   var container = document.getElementById("map__items-container");
   container.innerHTML = "";
 
   if (value) {
     var state = locations[value];
     state.forEach(function (city) {
-      container.insertAdjacentHTML("beforeend", "  <div class=\"col-6 col-md-12 locations-item\">\n                        <h4>RayoGas Planta ".concat(city.title, "</h4>\n                        <p>").concat(city.title, ", ").concat(value.charAt(0).toUpperCase() + value.slice(1), "</p>\n                        <p>").concat(city.address, "</p>\n                        <p><a href=\"\">").concat(city.phone, "</a></p>\n                    </div>"));
+      container.insertAdjacentHTML("beforeend", "  <div class=\"col-6 col-md-12 locations-item\">\n                        <h4>Rayogas Planta ".concat(city.title, "</h4>\n                        <p>").concat(city.title, ", ").concat(value.charAt(0).toUpperCase() + value.slice(1), "</p>\n                        <p>").concat(city.address, "</p>\n                        <p><a href=\"\">").concat(city.phone, "</a></p>\n                    </div>"));
     });
   }
 };

@@ -16,7 +16,9 @@
                             <img class="img-fluid" src="{{asset('images/web/paymentModal/modal_pago_tarjeta.png')}}"
                                 alt="">
                         </div>
-                        <a href="" class='btn btn-primary payment-modal__method-button'>Tarjeta de crédito y débito</a>
+                        <a href="https://rayogas.epayco.me/recaudo/clientescredito"
+                            class='btn btn-primary payment-modal__method-button' target="_blank">Tarjeta de crédito y
+                            débito</a>
                         <div>
 
                             <img class="img-fluid" src="{{asset('images/web/paymentModal/logos_tarjeta.png')}}" alt="">
@@ -28,7 +30,8 @@
                             <img class="img-fluid" src="{{asset('images/web/paymentModal/modal_pago_efectivo.png')}}"
                                 alt="">
                         </div>
-                        <a href="" class='btn btn-primary payment-modal__method-button'>Efectivo</a>
+                        <a href="https://rayogaspagocredito.epayco.me/recaudo/clientescreditoefectivo"
+                            class='btn btn-primary payment-modal__method-button' target="_blank">Efectivo</a>
                         <div>
                             <img class="img-fluid" src="{{asset('images/web/paymentModal/logos_efectivo.png')}}" alt="">
                         </div>

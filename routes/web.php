@@ -85,4 +85,5 @@ Route::namespace("App\Http\Controllers\Rayogas")->group(function () {
     Route::get('/tarifas', 'RatesController@index')->name('rayogas.rates');
     Route::get("/trabaja-con-nosotros", "WorkWithUsController@index")->name('rayogas.work-with-us');
     Route::post("/trabaja-con-nosotros", "WorkWithUsController@store");
+    Route::get("/terminosycondiciones", "TermsController@index")->name('rayogas.terms');
 });

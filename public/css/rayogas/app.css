@@ -12125,11 +12125,11 @@ select::-ms-expand {
 
 .navbar {
   padding-top: 0;
-  position: relative;
   box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.5);
 }
 .navbar .mobile-container {
   background-color: var(--background-color-2);
+  position: relative;
   height: 0;
   overflow: hidden;
   transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
@@ -12137,12 +12137,16 @@ select::-ms-expand {
 .navbar .mobile-container.show {
   height: 78px;
 }
+.navbar .container {
+  position: relative;
+}
 .navbar-buttons {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.125rem 0;
+  gap: 1.25rem;
 }
 .navbar-buttons .btn-accessibility {
   display: flex;
@@ -12269,10 +12273,10 @@ select::-ms-expand {
   border-radius: 0.6875rem;
   background-color: var(--body-color);
   box-shadow: 0 0.25rem 1 0.5rem 0 rgba(0, 0, 0, 0.1);
-  padding: 2rem;
+  padding: 1.5rem;
   position: absolute;
-  top: 75%;
-  left: 1.5625rem;
+  top: 112%;
+  right: 0;
 }
 .navbar .accessibility-menu.show {
   display: block;
@@ -12285,7 +12289,7 @@ select::-ms-expand {
   background-color: var(--body-color);
   position: absolute;
   top: -1.5rem;
-  left: 1.25rem;
+  right: 5.625rem;
 }
 .navbar .accessibility-menu__triangle .arrow-up {
   width: 1.4375rem;
@@ -12359,22 +12363,21 @@ select::-ms-expand {
     height: 2rem;
     width: 3.1875rem;
   }
-  .navbar .accessibility-container {
-    position: relative;
-  }
   .navbar .accessibility-menu {
-    top: 3.75rem;
-    left: -17.25rem;
+    top: 120%;
+    right: 6.6875rem;
   }
   .navbar .accessibility-menu__triangle {
-    top: -1.5rem;
-    right: 1.25rem;
-    left: initial;
+    right: 4.375rem;
   }
 }
 @media only screen and (min-width: 1200px) {
   .navbar-collapse .navbar-nav {
     width: 90%;
+  }
+  .navbar .accessibility-menu {
+    top: 120%;
+    right: 7.5rem;
   }
 }
 .banner {
@@ -13387,9 +13390,9 @@ select::-ms-expand {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 2.9375rem;
-  padding: 1.40625rem 0.1875rem 1.71875rem;
-  height: 13.75rem;
+  width: 3.4375rem;
+  padding: 1.40625rem 0.3125rem 1.71875rem;
+  height: 15rem;
   flex-shrink: 0;
 }
 .contact-bar.fixed {
@@ -13406,6 +13409,10 @@ select::-ms-expand {
   background-color: transparent;
   outline: none;
   text-decoration: none;
+  width: 3.125rem;
+}
+.contact-bar__button.fixed-padding {
+  padding: 0.4375rem 0;
 }
 .contact-bar__text {
   display: none;
@@ -13429,6 +13436,9 @@ select::-ms-expand {
     letter-spacing: 0;
     line-height: 1rem;
     text-align: center;
+  }
+  .contact-bar__button {
+    width: initial;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -13580,10 +13590,10 @@ select::-ms-expand {
   border-radius: 1.25rem;
   box-shadow: 0 0.125rem 0.5rem 0 rgba(0, 0, 0, 0.14);
   /*border: 1px solid blue;*/
-  margin-top: 10rem;
+  margin-top: 14rem;
   padding: 0 1.25rem 2.5rem 1.25rem;
-  /*padding-top: rem(60px);
-  padding-bottom: rem(60px);*/
+  /*   padding-top: rem(90px);
+  padding-bottom: rem(125px); */
 }
 #about-services .content {
   display: flex;
@@ -13617,9 +13627,14 @@ select::-ms-expand {
 #about-services .content .image {
   position: relative;
   height: 5rem;
-  top: -11.875rem;
+  width: 100%;
+  padding-bottom: 0.9375rem;
 }
-#about-services .content .image img {
+#about-services .content .image > div {
+  position: absolute;
+  bottom: 0;
+}
+#about-services .content .image > div img {
   width: 100%;
   height: auto;
 }
@@ -13627,8 +13642,9 @@ select::-ms-expand {
 @media (min-width: 768px) {
   #about-services {
     padding: 0;
-    padding-left: 5rem;
-    height: 25rem;
+    padding-left: 2.5rem;
+    padding-top: 2.5rem;
+    padding-bottom: 3.75rem;
     margin-top: 0;
   }
   #about-services .content {
@@ -13643,12 +13659,26 @@ select::-ms-expand {
   }
   #about-services .content .image {
     width: 30%;
-    height: auto;
-    position: initial;
-    top: 0;
+    height: 100%;
   }
-  #about-services .content .image img {
-    width: auto;
+  #about-services .content .image > div {
+    top: calc(50% - 5.075rem);
+  }
+  #about-services .content .image > div img {
+    width: 19.375rem;
+  }
+}
+@media (min-width: 992px) {
+  #about-services {
+    padding-left: 5rem;
+    padding-top: 5.625rem;
+    padding-bottom: 7.8125rem;
+  }
+  #about-services .content .image > div {
+    top: calc(50% - 10.65625rem);
+  }
+  #about-services .content .image > div img {
+    width: initial;
   }
 }
 #about-our-values h3, #about-our-values .h3 {
@@ -14590,12 +14620,14 @@ select::-ms-expand {
     margin: 0;
   }
 }
+.rates {
+  margin-bottom: 6.25rem;
+}
 .rates .download-card {
   padding: 0.75rem;
-  margin-bottom: 2.5rem;
 }
 .rates .download-card > .row > div:nth-child(even) {
-  background-color: #F0F9FE;
+  background-color: #f0f9fe;
 }
 .rates .download-card__list {
   padding: 1.25rem;
@@ -14609,7 +14641,7 @@ select::-ms-expand {
     padding: 0.75rem;
   }
   .rates .download-card > .row > div:nth-child(even) {
-    background-color: #F0F9FE;
+    background-color: #f0f9fe;
   }
   .rates .download-card__list {
     padding: 0.625rem 1.25rem;
@@ -14623,7 +14655,7 @@ select::-ms-expand {
     background-color: transparent;
   }
   .rates .download-card > .row:nth-child(even) {
-    background-color: #F0F9FE;
+    background-color: #f0f9fe;
   }
   .rates .download-card > .row > div:first-child {
     border-right: 1px solid rgba(151, 151, 151, 0.12);
@@ -14780,6 +14812,22 @@ select::-ms-expand {
     height: 17.5rem;
   }
 }
+.terms {
+  margin-top: 3.4375rem;
+  margin-bottom: 11.875rem;
+}
+.terms__content {
+  max-width: 62.25rem;
+  margin: 0 auto;
+  margin-top: 3.125rem;
+}
+.terms__content h3, .terms__content .h3 {
+  color: var(--font-color-text);
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  margin: 2.1875rem 0;
+}
+
 .work-with-us {
   display: flex;
   flex-direction: column;

@@ -66,7 +66,7 @@
                     </div>
                     <div class="col-md-6">
                         <label for="phone" class="form-label">Teléfono</label>
-                        <input type="text" class="form-control" id="phone" required name='phone' minlength=7>
+                        <input type="number" class="form-control" id="phone" required name='phone' minlength=7>
                         <div class="invalid-feedback">
                             Este campo es requerido
                         </div>
@@ -90,9 +90,14 @@
                         <div class="select">
                             <select type="text" class="form-control" id="object" required name='object'>
                                 <option disabled selected value="">Selecciona una opcion</option>
-                                <option value="1">Option 1</option>
-                                <option value="2">Option 2</option>
-                                <option value="3">Option 3</option>
+                                <option value="Calidad del gas">Calidad del gas</option>
+                                <option value="Duración del gas">Duración del gas</option>
+                                <option value="Servicio técnico"> Servicio técnico</option>
+                                <option value="Demora del pedido">Demora del pedido</option>
+                                <option value="Novedad del contrato">Novedad del contrato</option>
+                                <option value="Escape de gas">Escape de gas</option>
+                                <option value="Subsidios">Subsidios</option>
+                                <option value="Reclamación o beneficio 12x1">Reclamación o beneficio 12x1</option>
                             </select>
                             <div class="invalid-feedback">
                                 Este campo es requerido
@@ -104,9 +109,10 @@
                         <div class="select">
                             <select type="text" class="form-control" id="type" required name='type'>
                                 <option disabled selected value="">Selecciona una opcion</option>
-                                <option value="1">Option 1</option>
-                                <option value="2">Option 2</option>
-                                <option value="3">Option 3</option>
+                                <option value="Petición">Petición</option>
+                                <option value="Queja">Queja</option>
+                                <option value="Reclamación">Reclamación</option>
+                                <option value="Sugerencia">Sugerencia</option>
                             </select>
                             <div class="invalid-feedback">
                                 Este campo es requerido

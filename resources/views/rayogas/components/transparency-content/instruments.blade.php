@@ -34,16 +34,17 @@
                     <p><strong class="gray">4. Presentación de PQRS:</strong> Si su interés es radicar una
                         PQR, lo invitamos a acceder a
                         nuestro portal de usuarios en nuestra página web o la remitada por correo
-                        electrónico al <a href="http://www.rayogas.co/pqr_clientes.aspx">
-                            http://www.rayogas.co/pqr_clientes.aspx
+                        electrónico al <a href="{{ route('rayogas.pqrs') }}">
+                            http://www.rayogas.co/pqrs
                         </a>
                         o al Correo físico: Cra 2da nº 48-98 Cazucá, Soacha, Cundinamarca.</p>
 
-                    <p><strong class="gray">5. Buzón anónimo:</strong> <a href="">Preguntas, quejas y
+                    <p><strong class="gray">5. Buzón anónimo:</strong> <a href="{{ route('rayogas.pqrs') }}">Preguntas,
+                            quejas y
                             reclamos.</a> </p>
 
                     <p><strong class="gray">6. LINK para PQR:</strong> <a
-                            href="http://www.rayogas.co/pqr_clientes.aspx">http://www.rayogas.co/pqr_clientes.aspx</a>
+                            href="{{ route('rayogas.pqrs') }}">http://www.rayogas.co/pqrs</a>
                     </p>
                 </div>
                 <div class="col-12 ">
@@ -57,7 +58,7 @@
                         reportes comerciales, financiero, administrativos y técnico operativos , acceso a la
                         bodega de datos y recursos de aprendizaje sobre el servicio de Gas Licuado de
                         Petróleo.</p>
-                    <a href="www.sui.gov.co"> www.sui.gov.co</a>
+                    <a href="https://www.sui.gov.co" target="_blank"> www.sui.gov.co</a>
                 </div>
             </div>
         </div>

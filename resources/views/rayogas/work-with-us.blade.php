@@ -55,14 +55,14 @@
 
                     <div class="col-12 mb-3">
                         <label for="phone" class="form-label">Teléfono</label>
-                        <input type="text" class="form-control" id="phone" name="phone" required>
+                        <input type="number" class="form-control" id="phone" name="phone" required>
                         <div class="invalid-feedback">
                             Este campo es requerido
                         </div>
                     </div>
 
                     <div class="col-12 mb-3">
-                        <label for="file" class="custom-file-input">Cargar archivo</label>
+                        <label for="file" class="custom-file-input" id="file-label">Cargar archivo</label>
                         <input type="file" class="form-control" id="file" name="file" required>
                         <div class="invalid-feedback">
                             Este campo es requerido

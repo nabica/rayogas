@@ -71,7 +71,7 @@
 
                         <div class="image">
                             <div>
-                                <img src="{{ isset($aboutFeatures[1]->image) ? $aboutFeatures[1]->image_url :  asset('images/web/products/services/servicios_img_cilindros.png') }}"
+                                <img src="{{ isset($aboutFeatures[1]->image) ? $aboutFeatures[1]->image_url :  asset('images/web/about/nosotros_img_cilindros.png') }}"
                                     class="img-flui" alt="cilindros">
                             </div>
 

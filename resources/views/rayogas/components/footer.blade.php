@@ -24,10 +24,6 @@
                             GLP</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('rayogas.blog') }}"><i class="icon-cheveron-right"></i>
-                            Blog</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="{{ route('rayogas.pqrs') }}"><i class="icon-cheveron-right"></i>
                             PQRS</a>
                     </li>

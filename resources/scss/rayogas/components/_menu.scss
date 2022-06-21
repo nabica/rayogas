@@ -1,9 +1,9 @@
 .navbar {
     padding-top: 0;
-    position: relative;
     box-shadow: 0 rem(2px) rem(4px) 0 rgba(0, 0, 0, 0.5);
     & .mobile-container {
         background-color: var(--background-color-2);
+        position: relative;
         height: 0;
         overflow: hidden;
         transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
@@ -11,12 +11,16 @@
             height: 78px;
         }
     }
+    & .container {
+        position: relative;
+    }
     &-buttons {
         width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: rem(18px) 0;
+        gap: rem(20px);
         & .btn-accessibility {
             display: flex;
             justify-content: center;
@@ -154,10 +158,10 @@
             border-radius: rem(11px);
             background-color: var(--body-color);
             box-shadow: 0 rem(4px) 1 rem(8px) 0 rgba(0, 0, 0, 0.1);
-            padding: rem(32px);
+            padding: rem(24px);
             position: absolute;
-            top: 75%;
-            left: rem(25px);
+            top: 112%;
+            right: 0;
             &.show {
                 display: block;
                 z-index: 10001;
@@ -169,7 +173,7 @@
                 background-color: var(--body-color);
                 position: absolute;
                 top: rem(-24px);
-                left: rem(20px);
+                right: rem(90px);
                 .arrow-up {
                     width: rem(23px);
                     height: rem(29px);
@@ -211,6 +215,7 @@
         }
     }
 }
+
 @media only screen and (min-width: 992px) {
     .navbar {
         display: flex;
@@ -247,27 +252,28 @@
             }
         }
         & .accessibility {
-            &-container {
-                position: relative;
-            }
             &-menu {
-                top: rem(60px);
-                left: rem(-276px);
-
+                top: 120%;
+                right: rem(107px);
                 &__triangle {
-                    top: rem(-24px);
-                    right: rem(20px);
-                    left: initial;
+                    right: rem(70px);
                 }
             }
         }
     }
 }
+
 @media only screen and (min-width: 1200px) {
     .navbar {
         &-collapse {
             & .navbar-nav {
                 width: 90%;
+            }
+        }
+        & .accessibility {
+            &-menu {
+                top: 120%;
+                right: rem(120px);
             }
         }
     }

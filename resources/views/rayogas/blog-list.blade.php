@@ -40,7 +40,7 @@
                     alt="" class="w-100">
                 <div class="blog-list__item-description">
                     <div class="blog-list__item-title">
-                        <h3>{{ $blogPost->title }}</h3>
+                        <h3>{{ Str::limit($blogPost->title, 100, $end = '...') }}</h3>
                         <hr>
                     </div>
                     <p class="blog-list__item-text">{{ $blogPost->excerpt_description }}</p>

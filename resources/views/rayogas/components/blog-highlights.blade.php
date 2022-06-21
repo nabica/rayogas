@@ -11,7 +11,7 @@
                     alt="" class="w-100">
                 <div class="blog-list__item-description">
                     <div class="blog-list__item-title">
-                        <h3>{{ $randomBlogPost->title }}</h3>
+                        <h3>{{ Str::limit($randomBlogPost->title, 80, $end = '...') }}</h3>
                         <hr>
                     </div>
                     <p class="blog-list__item-text">{{ $randomBlogPost->excerpt_description }}</p>
