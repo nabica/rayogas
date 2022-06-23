@@ -30,8 +30,16 @@ document.addEventListener("DOMContentLoaded", function () {
                         "/trabaja-con-nosotros",
                         formData
                     );
+                    console.log(response.status);
                     if (response.status === 200) {
-                        alert("Su mensaje ha sido enviado");
+                        const popupModal = new bootstrap.Modal(
+                            document.getElementById("popup"),
+                            {}
+                        );
+                        popupModal.show();
+                        workWithUsForm.classList.remove("was-validated");
+                        labelFile.textContent = "";
+                        workWithUsForm.reset();
                     }
                 } else {
                     helpMessage.classList.add("text-danger");

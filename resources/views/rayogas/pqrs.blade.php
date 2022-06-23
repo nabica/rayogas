@@ -32,12 +32,12 @@
                         queja, reclamo o sugerencia que tengas y poder evaluarla.</p>
                 </div>
                 <div class="pqrs__side-banner-image">
-                    <img src="{{ asset('images/web/pqrs/pqrs_img_principal.png') }}" alt="principal image pqrs"
-                        class="w-100">
+                    <img src="{{ asset('images/web/pqrs/pqrs_img_principal.png') }}"
+                        alt="Rayogas-gas-glp-escribenos-para-cualquier-inquetud" class="w-100">
                 </div>
             </div>
             <div class="col-12 col-lg-7">
-                <form action="/pqrs" class="form__general pqrs__form row g-3 needs-validation" novalidate method="POST">
+                <form class="form__general pqrs__form row g-3 needs-validation" novalidate id='pqrs__form'>
                     @csrf
                     <div class="form__general-header line col-12 p-0">
                         <h3>Peticiones, quejas y recursos</h3>
@@ -120,7 +120,7 @@
                         </div>
                     </div>
                     <div class="col-12">
-                        <button class="form__general-button" type="submit">Enviar</button>
+                        <button class="btn btn-primary form__general-button" type="submit">Enviar</button>
                     </div>
                 </form>
             </div>

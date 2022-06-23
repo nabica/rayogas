@@ -9,8 +9,8 @@
             </div>
             <div class="row">
                 <div class="col-12 col-md-6 mb-3 mb-md-0">
-                    <img src="{{ asset('images/web/transparency/img_transparencia_estructura_1.png') }}" alt=""
-                        class="img-fluid mb-3 mb-md-5">
+                    <img src="{{ asset('images/web/transparency/img_transparencia_estructura_1.png') }}"
+                        alt="Rayogas-gas-glp-estructura-organica-y-th" class="img-fluid mb-3 mb-md-5">
                     <p>RAYOGAS, un equipo humano profesional dedicado a satisfacer las necesidades de nuestros
                         clientes, comercializando y distribuyendo GLP Gas Licuado de Petróleo como solución
                         energética para usuarios residenciales, comerciales e industriales, siempre enfocados en

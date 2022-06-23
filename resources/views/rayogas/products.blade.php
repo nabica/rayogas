@@ -69,7 +69,7 @@
                         <div class="content">
                             <div class="image">
                                 <img src="{{ asset('images/web/products/services/servicios_img_cilindros.png') }}"
-                                    class="img-fluid" alt="cilindros">
+                                    class="img-fluid" alt="Rayogas-gas-glp-envasado-en-cilindros">
                             </div>
                             <div class="text">
                                 <div class="title">
@@ -96,7 +96,7 @@
                         <div class="content">
                             <div class="image">
                                 <img src="{{ asset('images/web/products/services/servicios_img_granel.png') }}"
-                                    class="img-fluid" alt="cilindros">
+                                    class="img-fluid" alt="Rayogas-gas-glp-envasado-en-tanques-a-granel">
                             </div>
                             <div class="text">
                                 <div class="title">
@@ -123,7 +123,7 @@
                         <div class="content">
                             <div class="image">
                                 <img src="{{ asset('images/web/products/services/servicios_img_soporte.png') }}"
-                                    class="img-fluid" alt="cilindros">
+                                    class="img-fluid" alt="Rayogas-gas-glp-soporte-tecnico">
                             </div>
                             <div class="text">
                                 <div class="title">

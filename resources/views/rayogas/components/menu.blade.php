@@ -85,8 +85,9 @@
             <hr class="d-lg-none">
             <div class="mobile__options container d-lg-none">
                 <a href="{{ route('rayogas.transparency')}}">Transparencia</a>
-                <a href="">Usuarios</a>
-                <a href="">Privacidad</a>
+                <a href="{{ route('rayogas.rates')}}">Tarifas</a>
+                <a href="{{ asset('pdfs/politica_datos_personales.pdf') }}" target="_blank">Política de datos
+                    personales</a>
             </div>
         </div>
         <div class="navbar-buttons d-none d-lg-flex">

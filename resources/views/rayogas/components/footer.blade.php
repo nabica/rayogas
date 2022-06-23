@@ -75,14 +75,15 @@
                         <a class="nav-link active" aria-current="page" href="{{ route('rayogas.rates')}}">Tarifas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Manual usuario GLP</a>
+                        <a class="nav-link active" aria-current="page"
+                            href="https://rayogas.com/Catalogo/index.html#page/6" target="_blank">Manual usuario GLP</a>
                     </li>
                     {{-- <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Usuarios</a>
                     </li> --}}
                     <li class="nav-item">
                         <a class="nav-link active" href="{{ asset('pdfs/politica_datos_personales.pdf') }}"
-                            aria-current="page" download>Política de datos personales</a>
+                            aria-current="page" target="_blank">Política de datos personales</a>
                     </li>
 
                 </ul>

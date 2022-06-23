@@ -49,13 +49,13 @@
         <div class="row">
             <div class="col-12 col-md-6">
                 <h3 class="heading__primary">MECANISMOS INTERNOS DE CONTROL</h3>
-                <img src="{{ asset('images/web/transparency/img_transparencia_control_2.png') }}" alt=""
-                    class="img-fluid">
+                <img src="{{ asset('images/web/transparency/img_transparencia_control_2.png') }}"
+                    alt="Rayogas-gas-glp-mecanismos-internos-de-control" class="img-fluid">
             </div>
             <div class="col-12 col-md-6">
                 <h3 class="heading__primary">MECANISMOS EXTERNOS DE CONTROL</h3>
-                <img src="{{ asset('images/web/transparency/img_transparencia_control_2-1.png') }}" alt=""
-                    class="img-fluid">
+                <img src="{{ asset('images/web/transparency/img_transparencia_control_2-1.png') }}"
+                    alt="Rayogas-gas-glp-mecanismos-externos-de-control" class="img-fluid">
             </div>
         </div>
     </div>

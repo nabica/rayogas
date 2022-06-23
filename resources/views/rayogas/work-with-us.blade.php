@@ -22,9 +22,12 @@
 @section('content')
 
 <section class="section work-with-us">
+    <div class="d-lg-none col-lg-6 work-with-us__banner">
+
+    </div>
     <div class="container">
         <div class="row">
-            <div class="col-12 col-lg-6 work-with-us__banner">
+            <div class="d-none d-lg-block col-lg-6 work-with-us__banner">
                 <!-- <img
                         src="/assets/images/work-with-us/img_work-with-us_main.jpg"
                         class="img-fluid"

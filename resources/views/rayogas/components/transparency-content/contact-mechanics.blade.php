@@ -55,8 +55,8 @@
                 <div class="col-12 col-lg-6">
                     <h2 class="sideLine web-politics__title">POLÍTICA DE SEGURIDAD DE LA INFORMACIÓN EN EL SITIO
                         WEB</h2>
-                    <img src="{{ asset('images/web/transparency/img_transparencia_mecanismos_1.png') }}" alt=""
-                        class="web-politics__image d-lg-none">
+                    <img src="{{ asset('images/web/transparency/img_transparencia_mecanismos_1.png') }}"
+                        alt="Rayogas-gas-glp-politica-de-seguridad-web" class="web-politics__image d-lg-none">
                     <p>La Política de Seguridad y Privacidad de la Información es la declaración general que
                         representa la posición de la administración de RAYOGAS S.A. ESP con respecto a la
                         protección de los activos de información (los empleados, contratistas, terceros, la
@@ -219,7 +219,7 @@
                 @endcomponent
                 <div class="col-12">
                     <img src="{{ asset('images/web/transparency/img_transparencia_mecanismos_2.png') }}"
-                        alt="privacity">
+                        alt="Rayogas-gas-glp-politica-de-privacidad-web">
                     <p>El Sitio Web www.rayogas.com.co y el contenido incluido en el mismo son propiedad de
                         Rayogas S.A. E.S.P. y están protegidos por las normas jurídicas de derechos de autor de
                         la República de Colombia y la Comunidad Andina de Naciones, así como por las
@@ -273,7 +273,7 @@
                     <div class="download-card">
                         <ul class="download-card__list">
                             <li>
-                                <a href="{{ asset('pdfs/politica_datos_personales.pdf') }}" download>
+                                <a href="{{ asset('pdfs/politica_datos_personales.pdf') }}" target="_blank">
                                     <div>
                                         <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
                                         <p>

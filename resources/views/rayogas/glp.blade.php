@@ -1,20 +1,22 @@
 @extends('rayogas.layouts.master')
 @section('metatags_facebook')
-  <meta property="og:title" content="{{ config('app.name') }} | Qué es el GLP, usos, eficiencia y ¡más! ">
-  <meta property="og:site_name" content="{{ config('app.name') }}">
-  <meta property="og:url" content="{{ Request::url() }}">
-  <meta property="og:description" content="El GLP es un combustible nacido de una mezcla de hidrocarburos. Un gas limpio ya que no deja residuos, ni olor, por estar libre de agentes contaminantes.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="{{ $glpBanner->image_url }}">
+<meta property="og:title" content="{{ config('app.name') }} | Qué es el GLP, usos, eficiencia y ¡más! ">
+<meta property="og:site_name" content="{{ config('app.name') }}">
+<meta property="og:url" content="{{ Request::url() }}">
+<meta property="og:description"
+    content="El GLP es un combustible nacido de una mezcla de hidrocarburos. Un gas limpio ya que no deja residuos, ni olor, por estar libre de agentes contaminantes.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="{{ $glpBanner->image_url }}">
 @endsection
 @section('metatags_seo')
-    <meta name="title" content="{{ config('app.name') }} | Qué es el GLP, usos, eficiencia y ¡más! ">
-    <meta name="description" content="El GLP es un combustible nacido de una mezcla de hidrocarburos. Un gas limpio ya que no deja residuos, ni olor, por estar libre de agentes contaminantes.">
-    <meta name="robots" content="index, follow">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="language" content="Spanish">
-    <meta name="revisit-after" content="30 days">
-    <meta name="author" content="{{ config('app.name') }}">
+<meta name="title" content="{{ config('app.name') }} | Qué es el GLP, usos, eficiencia y ¡más! ">
+<meta name="description"
+    content="El GLP es un combustible nacido de una mezcla de hidrocarburos. Un gas limpio ya que no deja residuos, ni olor, por estar libre de agentes contaminantes.">
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="Spanish">
+<meta name="revisit-after" content="30 days">
+<meta name="author" content="{{ config('app.name') }}">
 @endsection
 @section('title', config('app.name') . ' | Qué es el GLP, usos, eficiencia y ¡más! ')
 @section('content')
@@ -35,11 +37,14 @@
             @component('rayogas.components.heading-title')
             @slot('title')Propiedades del GLP @endslot
             @endcomponent
-            <p> El GLP al ser licuado permite que sea almacenado y transportado como líquido y utilizado como gas combustible. De esta manera, se puede aprovechar el poco espacio que se requiere para su almacenamiento en estado líquido e igualmente aprovechar la calidad de combustión en su estado gaseoso. </p>
+            <p> El GLP al ser licuado permite que sea almacenado y transportado como líquido y utilizado como gas
+                combustible. De esta manera, se puede aprovechar el poco espacio que se requiere para su almacenamiento
+                en estado líquido e igualmente aprovechar la calidad de combustión en su estado gaseoso. </p>
         </div>
         <div class="glp-properties__body row">
             <div class="col-12 col-md-6">
-                <img src="{{ asset('images/web/glp/glp_img_principal.png') }}" alt="glp properties" class="w-100">
+                <img src="{{ asset('images/web/glp/glp_img_principal.png') }}"
+                    alt="Rayogas-gas-glp-es-un-combustible-limpio-sin-productos-contaminantes" class="w-100">
             </div>
             <div class="col-12 col-md-6 glp-properties__body-description">
                 <h3 class="glp-properties__body-description-title">
@@ -150,10 +155,16 @@
         <div class="row glp-information__container">
             <div class="col-12 col-md-6">
                 <h3>Instalación y almacenamiento</h3>
-                <p>Rayogas suministra e instala la totalidad de recipientes de almacenamiento de GLP, incluyendo tanques y accesorios requeridos, de manera que usted esté tranquilo de la seguridad del procedimiento. De manera responsable nuestra empresa realiza diseño, instalación, prueba y puesta en servicio de plantas de almacenamiento y envasado de GLP. Así mismo, Rayogas se encarga del diseño y ejecución de las obras civiles complementarias, tales como vías de acceso, plataformas de llenado, bases para tanques o cualquier otro montaje específico que se requiera para cada caso de almacenamiento.</p>
+                <p>Rayogas suministra e instala la totalidad de recipientes de almacenamiento de GLP, incluyendo tanques
+                    y accesorios requeridos, de manera que usted esté tranquilo de la seguridad del procedimiento. De
+                    manera responsable nuestra empresa realiza diseño, instalación, prueba y puesta en servicio de
+                    plantas de almacenamiento y envasado de GLP. Así mismo, Rayogas se encarga del diseño y ejecución de
+                    las obras civiles complementarias, tales como vías de acceso, plataformas de llenado, bases para
+                    tanques o cualquier otro montaje específico que se requiera para cada caso de almacenamiento.</p>
             </div>
             <div class="col-12 col-md-6">
-                <img src="{{asset('images\web\glp\glp_img_instalacion.png')}}" alt="" class="w-100">
+                <img src="{{asset('images\web\glp\glp_img_instalacion.png')}}"
+                    alt="Rayogas-gas-glp-garantizamos-instalacion-y-almacenamiento-seguro" class="w-100">
             </div>
 
         </div>

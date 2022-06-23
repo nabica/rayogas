@@ -1,4 +1,25 @@
 @extends('rayogas.layouts.master')
+@section('metatags_facebook')
+<meta property="og:title" content="{{ config('app.name') }} | Conoce toda nuestra información publica">
+<meta property="og:site_name" content="{{ config('app.name') }}">
+<meta property="og:url" content="{{ Request::url() }}">
+<meta property="og:description"
+    content="Infórmate sobre nuestra normatividad, transparencia, mecanismos de contacto, instrumentos de gestión y más.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/images/web/transparency/transparencia_banner_main.png">
+@endsection
+@section('metatags_seo')
+<meta name="title" content="{{ config('app.name') }} | Conoce toda nuestra información publica">
+<meta name="description"
+    content="Infórmate sobre nuestra normatividad, transparencia, mecanismos de contacto, instrumentos de gestión y más.">
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="Spanish">
+<meta name="revisit-after" content="30 days">
+<meta name="author" content="{{ config('app.name') }}">
+@endsection
+@section('title', config('app.name') . ' | Conoce toda nuestra información publica')
+
 @section('content')
 
 @component('rayogas.components.banner')
@@ -8,7 +29,8 @@
 
 @slot('title')Somos
 transparentes @endslot
-@slot('description')Accede a toda la información de carácter público sobre nuestra estructura, normatividad, atención al usuario, protección de datos personales y más. @endslot
+@slot('description')Accede a toda la información de carácter público sobre nuestra estructura, normatividad, atención al
+usuario, protección de datos personales y más. @endslot
 @endcomponent
 
 <section class="transparency">
@@ -56,11 +78,11 @@ transparentes @endslot
                             data-bs-target="#transparency-content-4" type="button" role="tab"
                             aria-controls="transparency-content-4" aria-selected="false">Normatividad</button>
                     </li>
-                    <li class="nav-item" role="presentation">
+                    {{-- <li class="nav-item" role="presentation">
                         <button class="nav-link" id="transparency-tab-5-mobile" data-bs-toggle="tab"
                             data-bs-target="#transparency-content-5" type="button" role="tab"
                             aria-controls="transparency-content-5" aria-selected="false">Planeación</button>
-                    </li>
+                    </li> --}}
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="transparency-tab-6-mobile" data-bs-toggle="tab"
                             data-bs-target="#transparency-content-6" type="button" role="tab"

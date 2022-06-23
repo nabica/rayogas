@@ -40,7 +40,7 @@
         <div class="row">
             <div class="col-md-6">
                 <img src="{{ isset($aboutFeatures[0]->image) ? $aboutFeatures[0]->image_url : asset('images/web/about/nosotros_img_principal.png') }}"
-                    class="img-fluid" alt="nuestro equipo">
+                    class="img-fluid" alt="Rayogas-gas-glp-equipo-capacitado-y-experto">
             </div>
             <div class="col-md-6">
                 <div class="description">
@@ -72,7 +72,7 @@
                         <div class="image">
                             <div>
                                 <img src="{{ isset($aboutFeatures[1]->image) ? $aboutFeatures[1]->image_url :  asset('images/web/about/nosotros_img_cilindros.png') }}"
-                                    class="img-flui" alt="cilindros">
+                                    class="img-flui" alt="Rayogas-gas-glp-cilindros-y-tanques-a-granel">
                             </div>
 
                         </div>
@@ -97,7 +97,7 @@
             @foreach($aboutValues as $aboutValue)
             <div class="col-md-4 text-center">
                 <img src="{{ isset($aboutValue->image) ? $aboutValue->image_url : asset('images/web/about/values/icn_nosotros_valores_liderazgo.png') }}"
-                    class="img-fluid" alt="">
+                    class="img-fluid" alt="Rayogas-gas-glp-valores">
                 <h3>{{ $aboutValue->title }}</h3>
                 <p>{{ $aboutValue->description }}</p>
             </div>
@@ -177,19 +177,19 @@
         <div class="row">
             <div class="col-md-4">
                 <img src="{{ isset($aboutWhyChooseFeature[0]->image) ? $aboutWhyChooseFeature[0]->image_url : asset('images/web/about/choosing/nosotros_glprayogas_abastecimiento.png') }}"
-                    class="w-100" alt="">
+                    class="w-100" alt="Rayogas-gas-glp-abastecimiento-seguro-en-el-pais">
                 <h3>{{ $aboutWhyChooseFeature[0]->title }}</h3>
                 <p>{!! $aboutWhyChooseFeature[0]->description !!}</p>
             </div>
             <div class="col-md-4">
                 <img src="{{ isset($aboutWhyChooseFeature[1]->image) ? $aboutWhyChooseFeature[1]->image_url : asset('images/web/about/choosing/nosotros_glprayogas_carrotanques.png') }}"
-                    class="w-100" alt="">
+                    class="w-100" alt="Rayogas-gas-glp-carro-tanques-y-cisternas-con-alta-tecnologia">
                 <h3>{{ $aboutWhyChooseFeature[1]->title }}</h3>
                 <p>{!! $aboutWhyChooseFeature[1]->description !!}</p>
             </div>
             <div class="col-md-4">
                 <img src="{{ isset($aboutWhyChooseFeature[2]->image) ? $aboutWhyChooseFeature[2]->image_url : asset('images/web/about/choosing/nosotros_glprayogas_sustancias.png') }}"
-                    class="w-100" alt="">
+                    class="w-100" alt="Rayogas-gas-glp-seguridad-en-manejo-de-sustancias">
                 <h3>{{ $aboutWhyChooseFeature[2]->title }}</h3>
                 <p>{!! $aboutWhyChooseFeature[2]->description !!}</p>
             </div>
@@ -197,4 +197,5 @@
     </div>
 </section>
 <!-- End About Choosing -->
+@component('rayogas.components.accreditations') @endcomponent
 @endsection

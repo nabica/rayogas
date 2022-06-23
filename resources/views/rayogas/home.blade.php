@@ -47,10 +47,11 @@
             <div class="col-md-6">
                 <div id="home-main-image">
                     @if(isset($homeFeature->image))
-                    <img src="{{ $homeFeature->image_url }}" class="img-fluid" alt="más de 50 años">
+                    <img src="{{ $homeFeature->image_url }}" class="img-fluid"
+                        alt="Rayogas-glp-colombiano-para-el-hogar">
                     @else
                     <img src="{{ asset('images/web/home/home_img_principal.png') }}" class="img-fluid"
-                        alt="más de 50 años">
+                        alt="Rayogas-glp-colombiano-para-el-hogar">
                     @endif
                     <div class="content">
                         <p>{{ $homeFeature->image_description }}</p>
@@ -105,7 +106,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <img src="{{ asset('images/web/home/services/home_servicios_hogar_1.png') }}" class="w-100"
-                                alt="">
+                                alt="Rayogas-gas-glp-en-el-hogar-para-calentadores">
                             <h3>Energía para tu hogar</h3>
                             <p>Con el <strong>GLP</strong> tienes una alternativa de <strong>producción de
                                     calor</strong> muy versátil, de manera
@@ -116,7 +117,7 @@
                         </div>
                         <div class="col-md-4">
                             <img src="{{ asset('images/web/home/services/home_servicios_hogar_2.png') }}" class="w-100"
-                                alt="">
+                                alt="Rayogas-gas-glp-como-energia">
                             <h3>Diferentes usos</h3>
                             <p>El gran poder calorífico del GLP permite su uso en diferentes lugares del hogar, como:
                                 cocina, calefactores de ambiente, calentadores de agua, climatización para piscina,
@@ -124,7 +125,7 @@
                         </div>
                         <div class="col-md-4">
                             <img src="{{ asset('images/web/home/services/home_servicios_hogar_3.png') }}" class="w-100"
-                                alt="">
+                                alt="Rayogas-gas-glp-combustible-limpio-para-el-hogar">
                             <h3>Cuida tu ambiente</h3>
                             <p>El GLP es un combustible limpio ya que no deja residuos, cenizas, ni olor, por estar
                                 libre de plomo, azufre y otros productos contaminantes.</p>
@@ -142,7 +143,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <img src="{{ asset('images/web/home/services/home_servicios_industria_1.png') }}"
-                                class="w-100" alt="">
+                                class="w-100" alt="Rayogas-gas-glp-para-las-industrias-como-energia-flexible">
                             <h3>Un facilitador para tu crecimiento</h3>
                             <p>"Energía flexible, limpia y segura es la que recibes con GLP Rayogas, una oportunidad de
                                 evolucionar en tu sector.
@@ -153,14 +154,14 @@
                         </div>
                         <div class="col-md-4">
                             <img src="{{ asset('images/web/home/services/home_servicios_industria_2.png') }}"
-                                class="w-100" alt="">
+                                class="w-100" alt="Rayogas-glp-con-poder-calorifico-mayor-que-el-gas-natural">
                             <h3>Optimiza tus resultados</h3>
                             <p>Usa GLP, un gas con poder aproximadamente 2,5 veces mayor que el gas natural para
                                 alcanzar el rendimiento que deseas.</p>
                         </div>
                         <div class="col-md-4">
                             <img src="{{ asset('images/web/home/services/home_servicios_industria_3.png') }}"
-                                class="w-100" alt="">
+                                class="w-100" alt="Rayogas-glp-con-poder-calorifico-mayor-que-el-gas-natural">
                             <h3>Te acompañamos en el proceso</h3>
                             <p>De inicio a fin estamos contigo, desde la primera asesoría, hasta la instalación y
                                 mantenimiento del producto para hacer crecer tu industria. Puedes usarlo para:
@@ -175,7 +176,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <img src="{{ asset('images/web/home/services/home_servicios_agro_1.png') }}" class="w-100"
-                                alt="">
+                                alt="Rayogas-gas-glp-para-procesos-de-produccion">
                             <h3>Cuida tus procesos</h3>
                             <p>El detalle en tus procesos de producción puede marcar la diferencia. Usa el poder del GLP
                                 desde el primer hasta el último proceso. </p>
@@ -183,14 +184,14 @@
                         </div>
                         <div class="col-md-4">
                             <img src="{{ asset('images/web/home/services/home_servicios_agro_2.png') }}" class="w-100"
-                                alt="">
+                                alt="Rayogas-gas-glp-para-crear-temperaturas-en-agricultura">
                             <h3>Temperaturas ideales</h3>
                             <p>Logra la temperatura que necesitas en tu producción de manera estable y controlada. </p>
                             <p>Asesoría en el manejo de temperatura adecuada para tu producción.</p>
                         </div>
                         <div class="col-md-4">
                             <img src="{{ asset('images/web/home/services/home_servicios_agro_3.png') }}" class="w-100"
-                                alt="">
+                                alt="Rayogas-gas-glp-para-todo-tipo-de-industrias">
                             <h3>Para todo tipo de agroindustria</h3>
                             <p>Accede al rendimiento y potencia del GLP en procesos de esterilización, pasteurización,
                                 calderas, cocción, secado, conserva, granjas, criaderos y más. </p>
@@ -204,21 +205,21 @@
                     <div class="row">
                         <div class="col-md-4">
                             <img src="{{ asset('images/web/home/services/home_servicios_horeca_1.png') }}" class="w-100"
-                                alt="">
+                                alt="Rayogas-gas-glp-para-restaurantes-hoteles-spas">
                             <h3>Espacios acogedores</h3>
                             <p>Ambienta cada espacio de tu hotel, restaurante, spa, entre otros, con temperaturas
                                 ideales que agradarán a tus clientes.</p>
                         </div>
                         <div class="col-md-4">
                             <img src="{{ asset('images/web/home/services/home_servicios_horeca_2.png') }}" class="w-100"
-                                alt="">
+                                alt="Rayogas-gas-glp-combustible-limpio-para-la-empresa">
                             <h3>Sin contaminación</h3>
                             <p>El GLP es un combustible limpio que no deja residuos y está libre de plomo, azufre y
                                 otros productos contaminantes.</p>
                         </div>
                         <div class="col-md-4">
                             <img src="{{ asset('images/web/home/services/home_servicios_horeca_3.png') }}" class="w-100"
-                                alt="">
+                                alt="Rayogas-gas-glp-util-en-hornos-calentadores-zonas-humedas">
                             <h3>Funcional para tu negocio</h3>
                             <p>Úsalo en estufas industriales, calefactores, chimeneas, climatización de piscinas,
                                 hornos, calderas, lavanderías, zonas húmedas ¡y más! </p>

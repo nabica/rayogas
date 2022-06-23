@@ -23,8 +23,11 @@
         top: -40px;
         padding: rem(63px) rem(17px) rem(45px) rem(17px);
         border-radius: rem(12px);
-        background-color: var(--white-color);
+        background-color: var(--body-color);
         box-shadow: 0 rem(2px) rem(8px) 0 rgba(0, 0, 0, 0.14);
+        & button {
+            padding: 0;
+        }
     }
     &__container {
         position: relative;

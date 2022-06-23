@@ -17,8 +17,8 @@
                     </p>
                 </div>
                 <div class="col-12 col-lg-6 mb-3 mb-lg-0">
-                    <img src="{{ asset('images/web/transparency/img_transparencia_tramites_1.png') }}" alt=""
-                        class="img-fluid">
+                    <img src="{{ asset('images/web/transparency/img_transparencia_tramites_1.png') }}"
+                        alt="Rayogas-gas-glp-tramites-y-servicios" class="img-fluid">
                 </div>
             </div>
         </div>
@@ -130,30 +130,30 @@
             </div>
             <div class=" col-12 col-md-4 mt-2">
                 <h2 class="sideLine mb-4">1. Peticiones:</h2>
-                <ol type='a'>
-                    <li> Escape gas </li>
-                    <li> Cancelación de contrato </li>
-                    <li> Servicio técnico </li>
-                    <li> Siniestro </li>
-                    <li> Subsidio </li>
-                    <li> Solicitud de información. </li>
-                </ol>
+                <ul >
+                    <li> a. Escape gas </li>
+                    <li> b. Cancelación de contrato </li>
+                    <li> c. Servicio técnico </li>
+                    <li> d. Siniestro </li>
+                    <li> e. Subsidio </li>
+                    <li> f. Solicitud de información. </li>
+                </ul>
             </div>
             <div class=" col-12 col-md-4 mt-2">
                 <h2 class="sideLine mb-4">2. Quejas: </h2>
-                <ol type='a'>
-                    <li> Reclamación por atención del conductor </li>
-                    <li> Reclamación por la atención del funcionario </li>
-                </ol>
+                <ul >
+                    <li> a. Reclamación por atención del conductor </li>
+                    <li> b. Reclamación por la atención del funcionario </li>
+                </ul>
             </div>
             <div class=" col-12 col-md-4 mt-2">
                 <h2 class="sideLine mb-4">3. Reclamos: </h2>
-                <ol type='a'>
-                    <li> Calidad del gas </li>
-                    <li> Demora en la entrega </li>
-                    <li> Duración gas </li>
-                    <li> Tarifa cobrada </li>
-                </ol>
+                <ul >
+                    <li> a. Calidad del gas </li>
+                    <li> b. Demora en la entrega </li>
+                    <li> c. Duración gas </li>
+                    <li> d. Tarifa cobrada </li>
+                </ul>
             </div>
         </div>
         <div class="row pt-2 ">

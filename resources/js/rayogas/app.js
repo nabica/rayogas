@@ -1,3 +1,4 @@
+import "./themeAndSize";
 import "./bootstrap";
 //import "bootstrap/dist/js/bootstrap.bundle.min";
 import "bootstrap";
@@ -9,6 +10,6 @@ import "./components/form-validation";
 import "./components/transparency";
 
 import "./sections/workWithUs";
+import "./sections/pqrs";
 
 import "./maps";
-import "./themeAndSize";

@@ -1,0 +1,41 @@
+.accreditations {
+    text-align: center;
+    padding-bottom: rem(50px);
+    padding-top: rem(40px);
+    background-color: var(--background-color);
+    margin-bottom: rem(60px);
+    & h2 {
+        color: var(--font-color-primary);
+        font-size: rem(20px);
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: rem(19px);
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: rem(25px);
+    }
+    &__item {
+        margin-bottom: rem(20px);
+        &:last-child {
+            margin-bottom: 0;
+        }
+        & p {
+            color: var(--font-color-text);
+            font-size: rem(16px);
+            margin-top: rem(15px);
+            font-weight: 500;
+            line-height: rem(24px);
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .accreditations {
+        text-align: center;
+        & h2 {
+            margin-bottom: rem(45px);
+            font-size: rem(36px);
+            line-height: rem(44px);
+        }
+    }
+}

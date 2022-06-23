@@ -112,9 +112,10 @@
         & .mobile__options {
             width: 100%;
             display: flex;
+            flex-direction: column;
             justify-content: space-between;
-            max-width: rem(320px);
             padding: 0;
+            gap: rem(15px);
             & a {
                 color: var(--font-color-text);
                 text-decoration: none;
@@ -216,6 +217,17 @@
     }
 }
 
+@media only screen and (min-width: 576px) {
+    .navbar {
+        &-collapse {
+            & .mobile__options {
+                width: 90%;
+                display: flex;
+                flex-direction: row;
+            }
+        }
+    }
+}
 @media only screen and (min-width: 992px) {
     .navbar {
         display: flex;

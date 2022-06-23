@@ -11330,7 +11330,6 @@ textarea.form-control-lg {
   src: url("/fonts/gotham/Gotham-Bold.eot?#iefix") format("embedded-opentype"), url("/fonts/gotham/Gotham-Bold.woff2") format("woff2"), url("/fonts/gotham/Gotham-Bold.woff") format("woff"), url("/fonts/gotham/Gotham-Bold.ttf") format("truetype"), url("/fonts/gotham/Gotham-Bold.svg#Gotham-Bold") format("svg");
   font-weight: bold;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "Gotham";
@@ -11338,7 +11337,6 @@ textarea.form-control-lg {
   src: url("/fonts/gotham/Gotham-Medium.eot?#iefix") format("embedded-opentype"), url("/fonts/gotham/Gotham-Medium.woff2") format("woff2"), url("/fonts/gotham/Gotham-Medium.woff") format("woff"), url("/fonts/gotham/Gotham-Medium.ttf") format("truetype"), url("/fonts/gotham/Gotham-Medium.svg#Gotham-Medium") format("svg");
   font-weight: 500;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "Gotham";
@@ -11346,7 +11344,6 @@ textarea.form-control-lg {
   src: url("/fonts/gotham/Gotham-Light.eot?#iefix") format("embedded-opentype"), url("/fonts/gotham/Gotham-Light.woff2") format("woff2"), url("/fonts/gotham/Gotham-Light.woff") format("woff"), url("/fonts/gotham/Gotham-Light.ttf") format("truetype"), url("/fonts/gotham/Gotham-Light.svg#Gotham-Light") format("svg");
   font-weight: 300;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "Gotham";
@@ -11354,7 +11351,6 @@ textarea.form-control-lg {
   src: url("/fonts/gotham/Gotham-Book.eot?#iefix") format("embedded-opentype"), url("/fonts/gotham/Gotham-Book.woff2") format("woff2"), url("/fonts/gotham/Gotham-Book.woff") format("woff"), url("/fonts/gotham/Gotham-Book.ttf") format("truetype"), url("/fonts/gotham/Gotham-Book.svg#Gotham-Book") format("svg");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
 html[data-theme=light] {
   --primary-color: #009ee3;
@@ -11448,8 +11444,12 @@ html[data-theme=text] {
 html[data-theme=text] img {
   opacity: 0;
 }
-html[data-theme=text] #bg-home-rates, html[data-theme=text] .banner {
+html[data-theme=text] #bg-home-rates, html[data-theme=text] .banner,
+html[data-theme=text] .work-with-us__banner {
   box-shadow: inset 0 0 0 1000px white;
+}
+html[data-theme=text] .contact-bar__button img {
+  opacity: 0;
 }
 html[data-theme=text] button > img {
   opacity: 1;
@@ -11469,6 +11469,7 @@ html[data-size=large] {
 
 * {
   font-family: "Gotham";
+  text-rendering: optimizeLegibility;
 }
 
 body {
@@ -12232,9 +12233,10 @@ select::-ms-expand {
 .navbar-collapse .mobile__options {
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  max-width: 20rem;
   padding: 0;
+  gap: 0.9375rem;
 }
 .navbar-collapse .mobile__options a {
   color: var(--font-color-text);
@@ -12328,6 +12330,13 @@ select::-ms-expand {
   background-color: var(--white-color);
 }
 
+@media only screen and (min-width: 576px) {
+  .navbar-collapse .mobile__options {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+  }
+}
 @media only screen and (min-width: 992px) {
   .navbar {
     display: flex;
@@ -13495,6 +13504,97 @@ select::-ms-expand {
     max-width: 22.875rem;
   }
 }
+.accreditations {
+  text-align: center;
+  padding-bottom: 3.125rem;
+  padding-top: 2.5rem;
+  background-color: var(--background-color);
+  margin-bottom: 3.75rem;
+}
+.accreditations h2, .accreditations .h2 {
+  color: var(--font-color-primary);
+  font-size: 1.25rem;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 1.1875rem;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 1.5625rem;
+}
+.accreditations__item {
+  margin-bottom: 1.25rem;
+}
+.accreditations__item:last-child {
+  margin-bottom: 0;
+}
+.accreditations__item p {
+  color: var(--font-color-text);
+  font-size: 1rem;
+  margin-top: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .accreditations {
+    text-align: center;
+  }
+  .accreditations h2, .accreditations .h2 {
+    margin-bottom: 2.8125rem;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
+}
+#popup .modal-content {
+  padding: 3.875rem 2rem 1.25rem 2rem;
+  border-radius: 0.5rem;
+  border: 0.0625rem solid var(--primary-color);
+  position: relative;
+}
+#popup .modal-content img {
+  position: absolute;
+  height: 6rem;
+  top: -48px;
+  left: calc(50% - 3rem);
+}
+#popup .modal-dialog {
+  max-width: 26.375rem;
+}
+#popup .modal-body {
+  text-align: center;
+  padding: 0;
+}
+#popup .modal-body .heading-title {
+  margin-bottom: 25px;
+}
+#popup .modal-body .heading-title h2, #popup .modal-body .heading-title .h2 {
+  font-size: 1.75rem;
+  color: var(--font-color-secondary);
+  line-height: 2.125rem;
+  width: 100%;
+  margin-bottom: 1.25rem;
+}
+#popup .modal-body .heading-title h2::after, #popup .modal-body .heading-title .h2::after {
+  margin-top: 0.3125rem;
+  height: 0.3125rem;
+  width: 4.25rem;
+  border-radius: 0.1875rem;
+  background-color: var(--font-color-queaternary);
+}
+#popup .modal-body p {
+  margin: 0 auto;
+  max-width: 17.375rem;
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.875rem;
+  color: var(--font-color-text);
+}
+#popup .modal-body > .btn-primary {
+  width: 80%;
+  margin-top: 1.25rem;
+  margin-bottom: 0;
+}
+
 #banner-home {
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("/images/web/home/home_banner_main.png");
 }
@@ -14332,6 +14432,10 @@ select::-ms-expand {
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("/images/web/transparency/transparencia_banner_main.png");
 }
 
+.transparency ul {
+  list-style: none;
+  color: var(--font-color-text);
+}
 .transparency__header-text {
   margin: 0 auto;
   margin-bottom: 4.625rem;
@@ -14687,8 +14791,11 @@ select::-ms-expand {
   top: -40px;
   padding: 3.9375rem 1.0625rem 2.8125rem 1.0625rem;
   border-radius: 0.75rem;
-  background-color: var(--white-color);
+  background-color: var(--body-color);
   box-shadow: 0 0.125rem 0.5rem 0 rgba(0, 0, 0, 0.14);
+}
+.pqrs__form button {
+  padding: 0;
 }
 .pqrs__container {
   position: relative;
@@ -14837,10 +14944,10 @@ select::-ms-expand {
 }
 .work-with-us__banner {
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("/images/web/work-with-us/img_trabaja_con_nosotros.png");
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 35.625rem;
+  height: 15.625rem;
 }
 .work-with-us__banner img {
   display: none;
@@ -14852,7 +14959,7 @@ select::-ms-expand {
 .work-with-us__form .form__general {
   padding: 3rem 1.6875rem 1.75rem 1.6875rem;
   border-radius: 0.75rem;
-  background-color: var(--white-color);
+  background-color: var(--body-color);
   box-shadow: 0 0.125rem 0.5rem 0 rgba(0, 0, 0, 0.14);
 }
 .work-with-us__form .form__general input,
@@ -14867,6 +14974,11 @@ select::-ms-expand {
   width: 100%;
 }
 
+@media (min-width: 576px) {
+  .work-with-us__banner {
+    height: 21.875rem;
+  }
+}
 @media (min-width: 992px) {
   .work-with-us__banner {
     height: inherit;

@@ -127,13 +127,12 @@ window.addEventListener("DOMContentLoaded", (event) => {
                 const selectedInputs = Array.from(inputs).map((input) => {
                     return input.querySelectorAll("input, select")[0];
                 });
-                console.log(selectedInputs);
                 if (selectedInputs.some((input) => !input.value)) {
                     selectedInputs.forEach((input) => {
                         if (!input.value) {
-                            businessNameInput.classList.add("is-invalid");
+                            input.classList.add("is-invalid");
                         } else {
-                            businessNameInput.classList.remove("is-invalid");
+                            input.classList.remove("is-invalid");
                         }
                     });
                     return false;
@@ -173,7 +172,19 @@ window.addEventListener("DOMContentLoaded", (event) => {
                     body: formData,
                 });
                 if (response.status === 200) {
-                    alert("Email enviado");
+                    const popupModal = new bootstrap.Modal(
+                        document.getElementById("popup"),
+                        {}
+                    );
+                    popupModal.show();
+                    const allInputs =
+                        formRequest.querySelectorAll("input, select");
+                    allInputs.forEach((input) => {
+                        input.classList.remove("is-invalid");
+                    });
+                    formRequest.reset();
+                    containerFirstStep.classList.add("active");
+                    containerSecondStep.classList.remove("active");
                 }
             }
         } catch (e) {

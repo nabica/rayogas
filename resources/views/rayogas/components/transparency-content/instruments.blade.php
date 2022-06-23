@@ -39,7 +39,9 @@
                         </a>
                         o al Correo físico: Cra 2da nº 48-98 Cazucá, Soacha, Cundinamarca.</p>
 
-                    <p><strong class="gray">5. Buzón anónimo:</strong> <a href="{{ route('rayogas.pqrs') }}">Preguntas,
+                    <p><strong class="gray">5. Buzón anónimo:</strong> <a
+                            href="https://forms.office.com/Pages/ResponsePage.aspx?id=YJfrrD0v1Ey0uRzeHH_tgEoqwoOccBNNpt6iKmhlaPJUQUlaU0VFRjVERkc4UDVZNjQ1QVVINDJPOC4u"
+                            target="_blank">Preguntas,
                             quejas y
                             reclamos.</a> </p>
 
