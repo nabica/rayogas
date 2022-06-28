@@ -75,10 +75,6 @@
 </section>
 <section class="glp glp-recommendations">
     <div class="container">
-        @component('rayogas.components.heading-title')
-        @slot('title')Recomendaciones para su uso seguro @endslot
-        @endcomponent
-
         <div class="glp-recommendations__container row">
             <div class="col-12 col-md-6">
                 <ul class="glp-recommendations__list">

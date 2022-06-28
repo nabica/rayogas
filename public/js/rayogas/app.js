@@ -5632,12 +5632,15 @@ window.axios.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
 /***/ (() => {
 
 var footerButton = document.getElementById("footer__button");
-footerButton.addEventListener("click", function () {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
+
+if (footerButton) {
+  footerButton.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
   });
-});
+}
 
 /***/ }),
 
@@ -5650,8 +5653,6 @@ footerButton.addEventListener("click", function () {
 var forms = document.querySelectorAll(".needs-validation");
 Array.prototype.slice.call(forms).forEach(function (form) {
   form.addEventListener("submit", function (event) {
-    console.log(form.checkValidity());
-
     if (!form.checkValidity()) {
       event.preventDefault();
       event.stopPropagation();
@@ -5890,87 +5891,91 @@ window.addEventListener("DOMContentLoaded", function (event) {
   \***************************************************/
 /***/ (() => {
 
-var html = document.getElementsByTagName("html")[0];
-var navbarButton = document.getElementById("navbar_button");
-var navbarMobileButtons = document.getElementById("mobile-buttons");
-var buttonMenuAccess = document.getElementById("btnAccessibility");
-var buttonMenuAccessMobile = document.getElementById("btnAccessibilityMobile");
-var buttonsIncreaseText = document.querySelectorAll(".increaseText");
-var buttonsDecreaseText = document.querySelectorAll(".decreaseText");
-var buttonsContrast = document.querySelectorAll(".contrast-btn");
-var buttonsOnlyText = document.querySelectorAll(".only-text-btn");
-navbarButton.addEventListener("click", function () {
-  navbarButton.classList.toggle("open");
-  navbarMobileButtons.classList.toggle("show");
-});
-buttonMenuAccess.addEventListener("click", function (e) {
-  e.preventDefault();
-  var menu = document.getElementById("accessibility-menu");
-  menu.classList.toggle("show");
-});
-buttonMenuAccessMobile.addEventListener("click", function (e) {
-  e.preventDefault();
-  var menu = document.getElementById("accessibility-menu-mobile");
-  menu.classList.toggle("show");
-});
-buttonsIncreaseText.forEach(function (button) {
-  button.addEventListener("click", function () {
-    var sizes = ["small", "medium", "large"];
-    var index = sizes.findIndex(function (size) {
-      return size === html.dataset.size;
-    });
+var path = window.location.pathname;
 
-    if (sizes[index + 1]) {
-      html.dataset.size = sizes[index + 1];
-      window.localStorage.setItem("size", sizes[index + 1]);
-    }
+if (path !== "/pqrs/gracias") {
+  var html = document.getElementsByTagName("html")[0];
+  var navbarButton = document.getElementById("navbar_button");
+  var navbarMobileButtons = document.getElementById("mobile-buttons");
+  var buttonMenuAccess = document.getElementById("btnAccessibility");
+  var buttonMenuAccessMobile = document.getElementById("btnAccessibilityMobile");
+  var buttonsIncreaseText = document.querySelectorAll(".increaseText");
+  var buttonsDecreaseText = document.querySelectorAll(".decreaseText");
+  var buttonsContrast = document.querySelectorAll(".contrast-btn");
+  var buttonsOnlyText = document.querySelectorAll(".only-text-btn");
+  navbarButton.addEventListener("click", function () {
+    navbarButton.classList.toggle("open");
+    navbarMobileButtons.classList.toggle("show");
   });
-});
-buttonsDecreaseText.forEach(function (button) {
-  button.addEventListener("click", function () {
-    var sizes = ["small", "medium", "large"];
-    var index = sizes.findIndex(function (size) {
-      return size === html.dataset.size;
-    });
+  buttonMenuAccess.addEventListener("click", function (e) {
+    e.preventDefault();
+    var menu = document.getElementById("accessibility-menu");
+    menu.classList.toggle("show");
+  });
+  buttonMenuAccessMobile.addEventListener("click", function (e) {
+    e.preventDefault();
+    var menu = document.getElementById("accessibility-menu-mobile");
+    menu.classList.toggle("show");
+  });
+  buttonsIncreaseText.forEach(function (button) {
+    button.addEventListener("click", function () {
+      var sizes = ["small", "medium", "large"];
+      var index = sizes.findIndex(function (size) {
+        return size === html.dataset.size;
+      });
 
-    if (sizes[index - 1]) {
-      html.dataset.size = sizes[index - 1];
-      window.localStorage.setItem("size", sizes[index - 1]);
-    }
-  });
-});
-buttonsContrast.forEach(function (button) {
-  button.addEventListener("click", function () {
-    var themes = ["light", "dark"];
-    var nextTheme = themes.filter(function (theme) {
-      return theme !== html.dataset.theme;
+      if (sizes[index + 1]) {
+        html.dataset.size = sizes[index + 1];
+        window.localStorage.setItem("size", sizes[index + 1]);
+      }
     });
-
-    if (nextTheme.length === 1) {
-      html.dataset.theme = nextTheme[0];
-      window.localStorage.setItem("theme", nextTheme[0]);
-    } else {
-      html.dataset.theme = themes[1];
-      window.localStorage.setItem("theme", themes[1]);
-    }
   });
-});
-buttonsOnlyText.forEach(function (button) {
-  button.addEventListener("click", function () {
-    var themes = ["light", "text"];
-    var nextTheme = themes.filter(function (theme) {
-      return theme !== html.dataset.theme;
+  buttonsDecreaseText.forEach(function (button) {
+    button.addEventListener("click", function () {
+      var sizes = ["small", "medium", "large"];
+      var index = sizes.findIndex(function (size) {
+        return size === html.dataset.size;
+      });
+
+      if (sizes[index - 1]) {
+        html.dataset.size = sizes[index - 1];
+        window.localStorage.setItem("size", sizes[index - 1]);
+      }
     });
-
-    if (nextTheme.length === 1) {
-      html.dataset.theme = nextTheme[0];
-      window.localStorage.setItem("theme", nextTheme[0]);
-    } else {
-      html.dataset.theme = themes[1];
-      window.localStorage.setItem("theme", themes[1]);
-    }
   });
-});
+  buttonsContrast.forEach(function (button) {
+    button.addEventListener("click", function () {
+      var themes = ["light", "dark"];
+      var nextTheme = themes.filter(function (theme) {
+        return theme !== html.dataset.theme;
+      });
+
+      if (nextTheme.length === 1) {
+        html.dataset.theme = nextTheme[0];
+        window.localStorage.setItem("theme", nextTheme[0]);
+      } else {
+        html.dataset.theme = themes[1];
+        window.localStorage.setItem("theme", themes[1]);
+      }
+    });
+  });
+  buttonsOnlyText.forEach(function (button) {
+    button.addEventListener("click", function () {
+      var themes = ["light", "text"];
+      var nextTheme = themes.filter(function (theme) {
+        return theme !== html.dataset.theme;
+      });
+
+      if (nextTheme.length === 1) {
+        html.dataset.theme = nextTheme[0];
+        window.localStorage.setItem("theme", nextTheme[0]);
+      } else {
+        html.dataset.theme = themes[1];
+        window.localStorage.setItem("theme", themes[1]);
+      }
+    });
+  });
+}
 
 /***/ }),
 
@@ -6218,42 +6223,43 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
 var formPqrs = document.getElementById("pqrs__form");
-formPqrs.addEventListener("submit", /*#__PURE__*/function () {
-  var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee(e) {
-    var formData, response;
-    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            console.log("entro");
-            e.preventDefault();
-            formData = new FormData(formPqrs);
-            _context.next = 5;
-            return axios.post("/pqrs", formData);
 
-          case 5:
-            response = _context.sent;
-            console.log(response.status);
+if (formPqrs) {
+  formPqrs.addEventListener("submit", /*#__PURE__*/function () {
+    var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee(e) {
+      var formData, response;
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              e.preventDefault();
+              formData = new FormData(formPqrs);
+              _context.next = 4;
+              return axios.post("/pqrs", formData);
 
-            if (!(response.status === 200)) {
-              _context.next = 9;
-              break;
-            }
+            case 4:
+              response = _context.sent;
 
-            return _context.abrupt("return", window.location.href = "/pqrs/gracias");
+              if (!(response.status === 200)) {
+                _context.next = 7;
+                break;
+              }
 
-          case 9:
-          case "end":
-            return _context.stop();
+              return _context.abrupt("return", window.location.href = "/pqrs/gracias");
+
+            case 7:
+            case "end":
+              return _context.stop();
+          }
         }
-      }
-    }, _callee);
-  }));
+      }, _callee);
+    }));
 
-  return function (_x) {
-    return _ref.apply(this, arguments);
-  };
-}());
+    return function (_x) {
+      return _ref.apply(this, arguments);
+    };
+  }());
+}
 
 /***/ }),
 
@@ -6301,7 +6307,7 @@ document.addEventListener("DOMContentLoaded", function () {
               formData = new FormData(workWithUsForm);
 
               if (!workWithUsForm.checkValidity()) {
-                _context.next = 16;
+                _context.next = 15;
                 break;
               }
 
@@ -6309,7 +6315,7 @@ document.addEventListener("DOMContentLoaded", function () {
               fileSize = inputFile.files[0].size / 1048576;
 
               if (!(fileType == "application/pdf" && fileSize <= 5)) {
-                _context.next = 15;
+                _context.next = 14;
                 break;
               }
 
@@ -6319,7 +6325,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
             case 10:
               response = _context.sent;
-              console.log(response.status);
 
               if (response.status === 200) {
                 popupModal = new bootstrap.Modal(document.getElementById("popup"), {});
@@ -6329,27 +6334,27 @@ document.addEventListener("DOMContentLoaded", function () {
                 workWithUsForm.reset();
               }
 
-              _context.next = 16;
+              _context.next = 15;
               break;
 
-            case 15:
+            case 14:
               helpMessage.classList.add("text-danger");
 
-            case 16:
-              _context.next = 21;
+            case 15:
+              _context.next = 20;
               break;
 
-            case 18:
-              _context.prev = 18;
+            case 17:
+              _context.prev = 17;
               _context.t0 = _context["catch"](0);
               alert("El mensaje no pudo ser enviado, intente de nuevo mas tarde");
 
-            case 21:
+            case 20:
             case "end":
               return _context.stop();
           }
         }
-      }, _callee, null, [[0, 18]]);
+      }, _callee, null, [[0, 17]]);
     }));
 
     return function (_x) {
@@ -6370,8 +6375,6 @@ document.addEventListener("DOMContentLoaded", function () {
   var savedTheme = window.localStorage.getItem("theme");
   var savedSize = window.localStorage.getItem("size");
   var html = document.getElementsByTagName("html")[0];
-  console.log(savedSize);
-  console.log(savedTheme);
 
   if (savedTheme) {
     html.dataset.theme = savedTheme;

@@ -1,24 +1,24 @@
 @extends('rayogas.layouts.master')
 @section('metatags_facebook')
-<meta property="og:title" content="{{ config('app.name') }} | Comunícate con nosotros ante cualquier inquietud">
+<meta property="og:title" content="{{ config('app.name') }} | Trabaja en Rayogas">
 <meta property="og:site_name" content="{{ config('app.name') }}">
 <meta property="og:url" content="{{ Request::url() }}">
 <meta property="og:description"
-    content="Escríbenos a través del siguiente formulario, uno de nuestros asesores se pondrá en contacto contigo lo más pronto para ayudarte.">
+    content="Entérate de las ofertas de empleo que tenemos para ti y aplica a ellas. Revisaremos tu perfil y podrás hacer parte del equipo Rayogas">
 <meta property="og:type" content="website">
 <meta property="og:image" content="{{ asset('images/web/pqrs/pqrs_img_principal.png') }}">
 @endsection
 @section('metatags_seo')
-<meta name="title" content="{{ config('app.name') }} | Comunícate con nosotros ante cualquier inquietud">
+<meta name="title" content="{{ config('app.name') }} | Trabaja en Rayogas">
 <meta name="description"
-    content="Escríbenos a través del siguiente formulario, uno de nuestros asesores se pondrá en contacto contigo lo más pronto para ayudarte.">
+    content="Entérate de las ofertas de empleo que tenemos para ti y aplica a ellas. Revisaremos tu perfil y podrás hacer parte del equipo Rayogas">
 <meta name="robots" content="index, follow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="language" content="Spanish">
 <meta name="revisit-after" content="30 days">
 <meta name="author" content="{{ config('app.name') }}">
 @endsection
-@section('title', config('app.name') . ' | Trabaja con nosotros')
+@section('title', config('app.name') . ' | Trabaja en Rayogas')
 @section('content')
 
 <section class="section work-with-us">
@@ -76,6 +76,11 @@
                     <div class="col-12">
                         <button class="form__general-button" type="submit">Enviar</button>
                     </div>
+                    <p class="form__general__disclaimer mt-3">Esta información esta bajo la <a
+                            href="{{ asset('pdfs/politica_datos_personales.pdf') }}" target="blank">política de
+                            datos
+                            personales.</a>
+                    </p>
                 </form>
             </div>
         </div>

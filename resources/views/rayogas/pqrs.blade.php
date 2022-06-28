@@ -122,6 +122,11 @@
                     <div class="col-12">
                         <button class="btn btn-primary form__general-button" type="submit">Enviar</button>
                     </div>
+                    <p class="form__general__disclaimer">Esta información esta bajo la <a
+                            href="{{ asset('pdfs/politica_datos_personales.pdf') }}" target="blank">política de
+                            datos
+                            personales.</a>
+                    </p>
                 </form>
             </div>
             @include('rayogas.components.contact-bar', ['fixed'=>'true'])

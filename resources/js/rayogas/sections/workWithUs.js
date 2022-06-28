@@ -30,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
                         "/trabaja-con-nosotros",
                         formData
                     );
-                    console.log(response.status);
                     if (response.status === 200) {
                         const popupModal = new bootstrap.Modal(
                             document.getElementById("popup"),

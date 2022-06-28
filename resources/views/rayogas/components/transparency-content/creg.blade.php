@@ -14,7 +14,7 @@
                     <div class="download-card">
                         <ul class="download-card__list">
                             <li>
-                                <a href="" target="blank">
+                                <a src="{{ asset('images\web\common\icn_pdf_download.png') }}" target="blank">
                                     <div>
                                         <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
                                         <p>

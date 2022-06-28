@@ -21,7 +21,7 @@
 
                         <ul class="download-card__list">
                             <li>
-                                <a href="" target="blank">
+                                <a href="{{asset('/pdfs/Resolucion_40873_2019.pdf')}}" target="_blank">
                                     <div>
                                         <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
                                         <p>
@@ -34,7 +34,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="" target="blank">
+                                <a href="{{asset('/pdfs/Resolucion_40079_2017.pdf')}}" target="_blank">
                                     <div>
                                         <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
                                         <p>
@@ -47,7 +47,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="" target="blank">
+                                <a href="{{asset('/pdfs/Resolucion_40720_2016.pdf')}}" target="_blank">
                                     <div>
                                         <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
                                         <p>
@@ -69,7 +69,7 @@
                         @endcomponent
                         <ul class="download-card__list">
                             <li>
-                                <a href="" target="blank">
+                                <a href="{{asset('/pdfs/Resolucion_90502_2014.pdf')}}" target="_blank">
                                     <div>
                                         <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
                                         <p>
@@ -82,7 +82,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="" target="blank">
+                                <a href="{{asset('pdfs/Decreto_2195_2013.pdf')}}" target="_blank">
                                     <div>
                                         <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
                                         <p>
@@ -95,7 +95,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="" target="blank">
+                                <a href="{{asset('/pdfs/LEY142DE1994.pdf')}}" target="_blank">
                                     <div>
                                         <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
                                         <p>
@@ -124,7 +124,7 @@
                     <div class="download-card">
                         <ul class="download-card__list">
                             <li>
-                                <a href="" target="blank">
+                                <a href="{{asset('/pdfs/Resolucion_40248_2016.pdf')}}" target="_blank">
                                     <div>
                                         <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
                                         <p>
@@ -138,7 +138,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="" target="blank">
+                                <a href="{{asset('/pdfs/Resolucion_40245_2016.pdf')}}" target="_blank">
                                     <div>
                                         <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
                                         <p>
@@ -151,7 +151,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="" target="blank">
+                                <a href="{{asset('/pdfs/Resolucion_40246_2016.pdf')}}" target="_blank">
                                     <div>
                                         <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
                                         <p>
@@ -170,50 +170,51 @@
                     <div class="download-card">
                         <ul class="download-card__list">
                             <li>
-                                <a href="" target="blank">
+                                <a href="" target="_blank">
                                     <div>
-                                        <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
-                                        <p>
-                                            Resolución No. 90502 de 2014
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <i class="icon-download"></i>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="" target="blank">
-                                    <div>
-                                        <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
-                                        <p>
-                                            DECRETO No. 2195 de 2013
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <i class="icon-download"></i>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="" target="blank">
-                                    <div>
-                                        <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
-                                        <p>
-                                            LEY 142 DE 1994
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <i class="icon-download"></i>
-                                    </div>
-                                </a>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div> --}}
+                                        <img src="{{ asset('images\web\common\icn_pdf_download.png') }}"
+                alt="download">
+                <p>
+                    Resolución No. 90502 de 2014
+                </p>
             </div>
+            <div>
+                <i class="icon-download"></i>
+            </div>
+            </a>
+            </li>
+            <li>
+                <a href="" target="_blank">
+                    <div>
+                        <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
+                        <p>
+                            DECRETO No. 2195 de 2013
+                        </p>
+                    </div>
+                    <div>
+                        <i class="icon-download"></i>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="" target="_blank">
+                    <div>
+                        <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
+                        <p>
+                            LEY 142 DE 1994
+                        </p>
+                    </div>
+                    <div>
+                        <i class="icon-download"></i>
+                    </div>
+                </a>
+            </li>
+
+            </ul>
         </div>
+    </div> --}}
+    </div>
+    </div>
     </div>
     <div class="download  bg-section">
         <div class="container">
@@ -225,7 +226,7 @@
                     <div class="download-card">
                         <ul class="download-card__list">
                             <li>
-                                <a href="" target="blank">
+                                <a href="{{asset('/pdfs/Creg080-2019.pdf')}}" target="_blank">
                                     <div>
                                         <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
                                         <p>
@@ -238,7 +239,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="" target="blank">
+                                <a href="{{asset('/pdfs/Creg063-2016.pdf')}}" target="_blank">
                                     <div>
                                         <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
                                         <p>
@@ -251,7 +252,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="" target="blank">
+                                <a href="{{asset('/pdfs/Creg053-2011.pdf')}}" target="_blank">
                                     <div>
                                         <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
                                         <p>
@@ -264,7 +265,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="" target="blank">
+                                <a href="{{asset('/pdfs/Creg180-2009.pdf')}}" target="_blank">
                                     <div>
                                         <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
                                         <p>
@@ -277,7 +278,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="" target="blank">
+                                <a href="{{asset('/pdfs/Creg023-2008.pdf')}}" target="_blank">
                                     <div>
                                         <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
                                         <p>
@@ -296,49 +297,50 @@
                     <div class="download-card">
                         <ul class="download-card__list">
                             <li>
-                                <a href="" target="blank">
+                                <a href="" target="_blank">
                                     <div>
-                                        <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
-                                        <p>
-                                            Resolución No. 90502 de 2014
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <i class="icon-download"></i>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="" target="blank">
-                                    <div>
-                                        <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
-                                        <p>
-                                            DECRETO No. 2195 de 2013
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <i class="icon-download"></i>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="" target="blank">
-                                    <div>
-                                        <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
-                                        <p>
-                                            LEY 142 DE 1994
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <i class="icon-download"></i>
-                                    </div>
-                                </a>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div> --}}
+                                        <img src="{{ asset('images\web\common\icn_pdf_download.png') }}"
+                alt="download">
+                <p>
+                    Resolución No. 90502 de 2014
+                </p>
             </div>
+            <div>
+                <i class="icon-download"></i>
+            </div>
+            </a>
+            </li>
+            <li>
+                <a href="" target="_blank">
+                    <div>
+                        <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
+                        <p>
+                            DECRETO No. 2195 de 2013
+                        </p>
+                    </div>
+                    <div>
+                        <i class="icon-download"></i>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="" target="_blank">
+                    <div>
+                        <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
+                        <p>
+                            LEY 142 DE 1994
+                        </p>
+                    </div>
+                    <div>
+                        <i class="icon-download"></i>
+                    </div>
+                </a>
+            </li>
+
+            </ul>
         </div>
+    </div> --}}
+    </div>
+    </div>
     </div>
 </section>
