@@ -54,6 +54,7 @@
                                 </li>
                             </ul>
                         </div>
+                        @if(isset($rateRow['secondCol']))
                         <div class="col-lg-6">
                             <ul class="download-card__list">
                                 <li>
@@ -71,6 +72,7 @@
                                 </li>
                             </ul>
                         </div>
+                        @endif
                     </div>
                     @endforeach
                 </div>
