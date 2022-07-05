@@ -11383,6 +11383,7 @@ html[data-theme=light] {
   --font-color-secondary: #003b7f;
   --font-color-tertiary: #fff;
   --font-color-queaternary: #009ee3;
+  --font-color-five: #fff;
   --hover-color-primary: #009ee3;
   --body-color: #fff;
   --component-color: #c9d3dd;
@@ -11390,6 +11391,7 @@ html[data-theme=light] {
   --wap-color: #00bb2d;
   --white-color: #fff;
   --gray-color: #3b4754;
+  --dark-blue: #003b7f;
   /*Variables que manuel aún no le ha puesto nombre*/
   --separator-color-alpha-25: rgba(151, 151, 151, 0.25);
   --separator-color-alpha-8: rgba(201, 211, 221, 0.8);
@@ -11410,6 +11412,7 @@ html[data-theme=dark] {
   --font-color-secondary: #000;
   --font-color-tertiary: #000;
   --font-color-queaternary: #000;
+  --font-color-five: #000;
   --hover-color-primary: #000;
   --body-color: #000;
   --component-color: #fff;
@@ -11417,6 +11420,7 @@ html[data-theme=dark] {
   --wap-color: #000;
   --white-color: #fff;
   --gray-color: #fff;
+  --dark-blue: #003b7f;
   /*Variables que manuel aún no le ha puesto nombre*/
   --separator-color-alpha-25: rgba(151, 151, 151, 0.25);
   --separator-color-alpha-8: rgba(201, 211, 221, 0.8);
@@ -11445,6 +11449,7 @@ html[data-theme=text] {
   --font-color-secondary: #000;
   --font-color-tertiary: #fff;
   --font-color-queaternary: #000;
+  --font-color-five: #000;
   --hover-color-primary: #000;
   --body-color: #fff;
   --component-color: #c9d3dd;
@@ -14766,6 +14771,16 @@ select::-ms-expand {
 }
 .rates .download-card__list li a {
   justify-content: space-between;
+}
+.rates .download-card__list-pill {
+  padding: 0.125rem 1.25rem;
+  background-color: var(--dark-blue);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.14);
+  color: var(--font-color-five);
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  font-weight: bold;
 }
 
 @media (min-width: 768px) {

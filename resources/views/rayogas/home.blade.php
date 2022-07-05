@@ -252,10 +252,7 @@
                 <h3>Nuestras tarifas</h3>
             </div>
             <div class="col-lg-6 text-center mt-1">
-                @foreach($homeRates as $homeRate)
-                <a href="{{ $homeRate->file_url }}" target="blank"
-                    class="btn btn-primary">{{ $homeRate->button_text }}</a>
-                @endforeach
+                <a href="{{ route('rayogas.rates') }}" target="blank" class="btn btn-primary">Conócelas aquí </a>
             </div>
         </div>
     </div>

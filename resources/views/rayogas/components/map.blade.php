@@ -2,7 +2,7 @@
 <section class="section {{ isset($backgroundSectionActive) ? 'bg-section': '' }} ">
     <div class="container">
         @component('rayogas.components.heading-title')
-        @slot('title')Nuestra Coberturas @endslot
+        @slot('title')Nuestra Cobertura @endslot
         @slot('description')Encuentra nuestro servicio en las principales ciudades del país. ¡Pregúntanos por la tuya!
         @endslot
         @endcomponent
