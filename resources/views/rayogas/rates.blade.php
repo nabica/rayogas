@@ -48,6 +48,9 @@
                                             </p>
                                         </div>
                                         <div>
+                                            <span class="download-card__list-pill">Zona centro</span>
+                                        </div>
+                                        <div>
                                             <i class="icon-download"></i>
                                         </div>
                                     </a>
