@@ -12,6 +12,8 @@
     <!-- Styles -->
     <link rel="stylesheet" href="{{ mix('css/rayogas/app.css') }}">
 
+    <link rel="shortcut icon" href="{{ asset('images/web/common/favicon_32.png') }}">
+
     <!-- Google Tag Manager -->
     <script>
     (function(w, d, s, l, i) {

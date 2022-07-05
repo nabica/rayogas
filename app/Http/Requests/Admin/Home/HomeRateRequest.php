@@ -29,6 +29,7 @@ class HomeRateRequest extends FormRequest
             case 'POST':
                 return [
                     'button_text' => 'required',
+                    'zone' => 'required'
                 ];
                 break;
 
@@ -36,6 +37,7 @@ class HomeRateRequest extends FormRequest
             case 'PATCH':
                 return [
                     'button_text' => 'required',
+                    'zone' => 'required'
                 ];
                 break;
         }
