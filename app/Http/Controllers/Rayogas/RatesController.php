@@ -20,10 +20,18 @@ class RatesController extends Controller
         foreach ($rates as $key => $rate) {
             if ($columnCount == 0) {
                 $ratesRow[$rowCount] = [];
-                $ratesRow[$rowCount][$columnTitle] = ['title' => $rate->button_text, 'file' => $rate->file_url];
+                $ratesRow[$rowCount][$columnTitle] = [
+                    'title' => $rate->button_text,
+                    'zone' => $rate->zone,
+                    'file' => $rate->file_url
+                ];
             } else {
                 $columnTitle = 'secondCol';
-                $ratesRow[$rowCount][$columnTitle] = ['title' => $rate->button_text, 'file' => $rate->file_url];
+                $ratesRow[$rowCount][$columnTitle] = [
+                    'title' => $rate->button_text,
+                    'zone' => $rate->zone,
+                    'file' => $rate->file_url
+                ];
             }
 
             $columnCount++;
@@ -33,7 +41,7 @@ class RatesController extends Controller
                 $rowCount++;
             }
         }
-
+//return $ratesRow;
         return view('rayogas.rates', compact('ratesRow'));
     }
 }

@@ -47,9 +47,11 @@
                                                 {{ $rateRow['firstCol']['title'] }}
                                             </p>
                                         </div>
+                                        @if($rateRow['firstCol']['zone'] != '')
                                         <div>
-                                            <span class="download-card__list-pill">Zona centro</span>
+                                            <span class="download-card__list-pill">{{ $rateRow['firstCol']['zone'] }}</span>
                                         </div>
+                                        @endif
                                         <div>
                                             <i class="icon-download"></i>
                                         </div>
@@ -68,6 +70,11 @@
                                                 {{ $rateRow['secondCol']['title'] }}
                                             </p>
                                         </div>
+                                        @if($rateRow['secondCol']['zone'] != '')
+                                        <div>
+                                            <span class="download-card__list-pill">{{ $rateRow['secondCol']['zone'] }}</span>
+                                        </div>
+                                        @endif
                                         <div>
                                             <i class="icon-download"></i>
                                         </div>
