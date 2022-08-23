@@ -34,7 +34,7 @@ class HomeController extends Controller
             return response()->json([
                 'status' => '535 5.7.0',
                 'message' => 'Ocurrio un error al enviar el mensaje',
-                //'description' => $e->getMessage()
+                'description' => $e->getMessage()
             ], 535);
         }
     }
