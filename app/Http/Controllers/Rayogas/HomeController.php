@@ -24,7 +24,7 @@ class HomeController extends Controller
     public function serviceRequest(ServiceRequest $request)
     {
         try {
-            $contacts = ['servicioalcliente@rayogas.com', 'sergio@nabica.co', 'alejandra@nabica.co', 'fabian@nabica.co' ];
+            $contacts = ['servicioalcliente@rayogas.com'];
             Mail::to($contacts)->send(new ServiceRequestMail($request->all()));
             return response()->json([
                 'status' => 200,

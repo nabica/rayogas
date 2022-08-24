@@ -18,7 +18,7 @@ class PqrsController extends Controller
     public function store(PqrsRequest $request)
     {
         try {
-            $contacts = ['servicioalcliente@rayogas.com', 'sergio@nabica.co', 'alejandra@nabica.co', 'fabian@nabica.co'];
+            $contacts = ['servicioalcliente@rayogas.com'];
             Mail::to($contacts)->send(new PqrsMail($request->all()));
             return response()->json([
                 'status' => 200,
@@ -28,7 +28,7 @@ class PqrsController extends Controller
             return response()->json([
                 'status' => '535 5.7.0',
                 'message' => 'Ocurrio un error al enviar el mensaje',
-                'description' => $e->getMessage()
+                //'description' => $e->getMessage()
             ], 535);
         }
     }
