@@ -75,7 +75,7 @@
                     <li class="nav-item">
                         <a class="{{ Request::is('/') ? 'nav-link active' : 'nav-link' }}"
                            aria-current=" page"
-                           href="{{ route('rayogas.home') }}">Home</a>
+                           href="{{ route('rayogas.home') }}">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a class="{{ Request::is('nosotros') ? 'nav-link active' : 'nav-link' }}"
@@ -149,11 +149,11 @@
                         </div>
                     </div>
                 </div>
-                <a href="" id="login-button">
+                {{-- <a href="" id="login-button">
                     <img src="{{ asset('images/web/common/icn_login_autogestion.png') }}"
                          class="img-fluid" alt="icono inicio sesión rayogas">
                     Iniciar sesión
-                </a>
+                </a> --}}
             </div>
         @endif
     </div>
