@@ -32,7 +32,6 @@ class AboutValue extends Model
 
     public function getImageUrlAttribute()
     {
-        return $this->uploadsFolder . '/' . $this->featuresFolder ;
         return asset($this->uploadsFolder . '/' . $this->featuresFolder . '/' . $this->getFolderId() . '/' . $this->image);
     }
 }
