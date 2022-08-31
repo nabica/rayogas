@@ -2,17 +2,19 @@
 
 namespace App\Http\Controllers\Rayogas;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
 use App\Mail\PqrsMail;
+use Illuminate\Http\Request;
+use App\Models\Pqrs\PqrsObject;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Mail;
 use App\Http\Requests\Rayogas\PqrsRequest;
 
 class PqrsController extends Controller
 {
     public function index()
     {
-        return view('rayogas.pqrs');
+        $pqrs = PqrsObject::all();
+        return view('rayogas.pqrs', compact('pqrs'));
     }
 
     public function store(PqrsRequest $request)

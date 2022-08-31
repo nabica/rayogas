@@ -2,10 +2,11 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\ServiceProvider;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\View;
-use App\Models\Blog\BlogPost;
+use Illuminate\Support\ServiceProvider;
+use App\View\Composers\FloatingBarComposer;
+use App\View\Composers\RandomBlogPostComposer;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -28,10 +29,13 @@ class AppServiceProvider extends ServiceProvider
     {
         Paginator::useBootstrap();
 
-        //Blog Highlights
-        View::composer(['rayogas.components.blog-highlights'], function ($view) {
-            $view->with('randomBlogPosts', BlogPost::latest()->limit(3)->get());
-           /* $view->with('randomBlogPosts', BlogPost::inRandomOrder()->limit(3)->get());*/
-        });
+        // Blog Highlights
+        View::composer(['rayogas.components.blog-highlights'], RandomBlogPostComposer::class);
+
+        // Floating bar
+        View::composer([
+            'rayogas.components.contact-bar',
+            'rayogas.components.payment-modal',
+        ], FloatingBarComposer::class);
     }
 }
