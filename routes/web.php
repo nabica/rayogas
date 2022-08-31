@@ -33,6 +33,8 @@ Route::prefix('lotus')->group(function () {
 
             Route::resource('/home/rates', 'Home\HomeRateController', ['as' => 'admin.home']);
 
+            Route::resource('/home/floating-bar', 'Home\HomeFloatingBarController', ['as' => 'admin.home'])->only(['edit', 'update']);
+
             // About
             Route::resource('/about/banner', 'About\AboutBannerController', ['as' => 'admin.about'])->only(['edit', 'update']);
 
@@ -45,6 +47,8 @@ Route::prefix('lotus')->group(function () {
             // Products
             Route::resource('/products/banner', 'Products\ProductsBannerController', ['as' => 'admin.products'])->only(['edit', 'update']);
 
+            Route::resource('/products/wapp-buttons', 'Products\ProductsWappButtonController', ['as' => 'admin.products'])->only(['edit', 'update']);
+
             // Glp
             Route::resource('/glp/banner', 'Glp\GlpBannerController', ['as' => 'admin.glp'])->only(['edit', 'update']);
 
@@ -53,6 +57,9 @@ Route::prefix('lotus')->group(function () {
             Route::resource('/glp/recommendation-pdfs', 'Glp\GlpRecommendationPdfController', ['as' => 'admin.glp']);
 
             Route::resource('/glp/faqs', 'Glp\GlpFaqController', ['as' => 'admin.glp']);
+
+            // Pqrs
+            Route::resource('/pqrs/objects', 'Pqrs\PqrsObjectController', ['as' => 'admin.pqrs']);
 
             // Blog
             Route::resource('/blog/banner', 'Blog\BlogBannerController', ['as' => 'admin.blog'])->only(['edit', 'update']);

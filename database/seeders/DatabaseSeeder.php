@@ -27,6 +27,7 @@ class DatabaseSeeder extends Seeder
         $this->call(HomeBannerSeeder::class);
         $this->call(HomeFeatureSeeder::class);
         $this->call(HomeRateSeeder::class);
+        $this->call(HomeFloatingBarSeeder::class);
 
         /*
         |----------------------------------------------------------------------
@@ -44,6 +45,7 @@ class DatabaseSeeder extends Seeder
         |----------------------------------------------------------------------
         */
         $this->call(ProductsBannerSeeder::class);
+        $this->call(ProductsWappButtonSeeder::class);
 
         /*
         |----------------------------------------------------------------------
@@ -54,6 +56,13 @@ class DatabaseSeeder extends Seeder
         $this->call(GlpRecommendationTipSeeder::class);
         $this->call(GlpRecommendationPdfSeeder::class);
         $this->call(GlpFaqSeeder::class);
+
+        /*
+        |----------------------------------------------------------------------
+        | Pqrs seeders
+        |----------------------------------------------------------------------
+        */
+        $this->call(PqrsObjectSeeder::class);
 
         /*
         |----------------------------------------------------------------------
