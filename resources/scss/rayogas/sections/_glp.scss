@@ -323,6 +323,10 @@
         max-height: rem(524px);
         padding: rem(30px);
         overflow-y: scroll;
+        & li {
+            color: var(--font-color-text);
+            font-weight: 300;
+        }
     }
 }
 

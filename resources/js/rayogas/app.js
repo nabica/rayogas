@@ -11,5 +11,6 @@ import "./components/transparency";
 
 import "./sections/workWithUs";
 import "./sections/pqrs";
+import "./sections/transparency";
 
 import "./maps";

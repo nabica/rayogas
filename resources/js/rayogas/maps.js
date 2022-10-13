@@ -9,7 +9,7 @@ const locations = {
         },
         {
             position: { lat: 5.9223114, lng: -73.6069347 },
-            title: "Moniquira",
+            title: "Moniquirá",
             address: "Km 1.5 vía Barbosa",
             phone: "(601)5140101",
         },
@@ -142,10 +142,13 @@ const addItem = (foundedCity, state) => {
     const container = document.getElementById("map__items-container");
     container.innerHTML = "";
     if (foundedCity) {
+        const title = !["Granada", "Sogamoso"].includes(foundedCity.title)
+            ? `Rayogas Planta ${foundedCity.title}`
+            : `Rayogas Depósito ${foundedCity.title}`;
         container.insertAdjacentHTML(
             "beforeend",
             `  <div class="col-6 col-md-12 locations-item">
-                    <h4>Rayogas Planta ${foundedCity.title}</h4>
+                    <h4>${title}</h4>
                     <p>${foundedCity.title}, ${
                 state.charAt(0).toUpperCase() + state.slice(1)
             }</p>
@@ -161,10 +164,13 @@ const addAllItems = (value) => {
     if (value) {
         const state = locations[value];
         state.forEach((city) => {
+            const title = !["Granada", "Sogamoso"].includes(city.title)
+                ? `Rayogas Planta ${city.title}`
+                : `Rayogas Depósito ${city.title}`;
             container.insertAdjacentHTML(
                 "beforeend",
                 `  <div class="col-6 col-md-12 locations-item">
-                        <h4>Rayogas Planta ${city.title}</h4>
+                        <h4>${title}</h4>
                         <p>${city.title}, ${
                     value.charAt(0).toUpperCase() + value.slice(1)
                 }</p>

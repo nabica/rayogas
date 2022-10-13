@@ -14,12 +14,34 @@
             @endcomponent
             <div class="row">
                 <div class="col-12 col-md-6 mb-4 mb-md-0">
-                    <div class="download-card">
+                    <div class="download-card h-100">
                         @component('rayogas.components.heading-title')
                         @slot('title')Ley 142 @endslot
                         @endcomponent
-
                         <ul class="download-card__list">
+                            <li>
+                                <a href="{{asset('/pdfs/LEY142DE1994.pdf')}}" target="_blank">
+                                    <div>
+                                        <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
+                                        <p>
+                                            LEY 142 DE 1994
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <i class="icon-download"></i>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="download-card">
+                        @component('rayogas.components.heading-title')
+                        @slot('title')Subsidios @endslot
+                        @endcomponent
+                        <ul class="download-card__list">
+
                             <li>
                                 <a href="{{asset('/pdfs/Resolucion_40873_2019.pdf')}}" target="_blank">
                                     <div>
@@ -38,7 +60,7 @@
                                     <div>
                                         <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
                                         <p>
-                                            Resolucion No. 40079 de 2017
+                                            Resolución No. 40079 de 2017
                                         </p>
                                     </div>
                                     <div>
@@ -51,7 +73,7 @@
                                     <div>
                                         <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
                                         <p>
-                                            Resolucion No. 40720 de 2016
+                                            Resolución No. 40720 de 2016
                                         </p>
                                     </div>
                                     <div>
@@ -59,15 +81,6 @@
                                     </div>
                                 </a>
                             </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6">
-                    <div class="download-card">
-                        @component('rayogas.components.heading-title')
-                        @slot('title')Subsidios @endslot
-                        @endcomponent
-                        <ul class="download-card__list">
                             <li>
                                 <a href="{{asset('/pdfs/Resolucion_90502_2014.pdf')}}" target="_blank">
                                     <div>
@@ -94,20 +107,6 @@
                                     </div>
                                 </a>
                             </li>
-                            <li>
-                                <a href="{{asset('/pdfs/LEY142DE1994.pdf')}}" target="_blank">
-                                    <div>
-                                        <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
-                                        <p>
-                                            LEY 142 DE 1994
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <i class="icon-download"></i>
-                                    </div>
-                                </a>
-                            </li>
-
                         </ul>
                     </div>
                 </div>
@@ -128,7 +127,7 @@
                                     <div>
                                         <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
                                         <p>
-                                            Resolucion No. 40248 de 2016 Puntos de venta, depósitos y
+                                            Resolución No. 40248 de 2016 Puntos de venta, depósitos y
                                             expendios
                                         </p>
                                     </div>
@@ -142,7 +141,7 @@
                                     <div>
                                         <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
                                         <p>
-                                            Resolucion No. 40245 de 2016 Tanques y cilindros
+                                            Resolución No. 40245 de 2016 Tanques y cilindros
                                         </p>
                                     </div>
                                     <div>
@@ -155,7 +154,7 @@
                                     <div>
                                         <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
                                         <p>
-                                            Resolucion No. 40246 de 2016 Almacenamiento y distribución
+                                            Resolución No. 40246 de 2016 Almacenamiento y distribución
                                         </p>
                                     </div>
                                     <div>

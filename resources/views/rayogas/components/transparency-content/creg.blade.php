@@ -26,11 +26,64 @@
                                     </div>
                                 </a>
                             </li>
+                            <li>
+                                <a href="{{ asset('pdfs/ccu_granel_rayogas.pdf') }}" target="_blank">
+                                    <div>
+                                        <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
+                                        <p>
+                                            Contrato de condiciones uniformes individual con clausulas
+                                            especiales
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <i class="icon-download"></i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ asset('pdfs/ccu_envasado.pdf') }}" target="_blank">
+                                    <div>
+                                        <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
+                                        <p>
+                                            Contrato de condiciones uniformes envasado
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <i class="icon-download"></i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ asset('pdfs/cambio_prestador.pdf') }}" target="_blank">
+                                    <div>
+                                        <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
+                                        <p>
+                                            RAYOGAS - Cambio de prestador
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <i class="icon-download"></i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ asset('pdfs/solicitud_servicio.pdf') }}" target="_blank">
+                                    <div>
+                                        <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
+                                        <p>
+                                            RAYOGAS - Solicitud del servicio
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <i class="icon-download"></i>
+                                    </div>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-12 mb-4 mb-md-0 col-md-6">
-                    <div class="download-card">
+                    <div class="download-card h-100">
                         <ul class="download-card__list">
                             <li>
                                 <a href="" target="blank">

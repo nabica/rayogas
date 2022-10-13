@@ -37,9 +37,12 @@
                     @foreach($ratesRow as $rateRow)
 
                     <div class="row">
-                        <div class="col-lg-6">
+                        <div class="col-xl-6">
                             <ul class="download-card__list">
-                                <li>
+                                <li class="position-relative">
+                                    @if($rateRow['secondCol']['zone'] != '')
+                                    <span class="download-card__list-pill">{{ $rateRow['secondCol']['zone'] }}</span>
+                                    @endif
                                     <a href="{{ $rateRow['firstCol']['file'] }}" target="blank">
                                         <div>
                                             <img src="/images/web/common/icn_pdf_download.png" alt="download">
@@ -47,11 +50,6 @@
                                                 {{ $rateRow['firstCol']['title'] }}
                                             </p>
                                         </div>
-                                        @if($rateRow['firstCol']['zone'] != '')
-                                        <div>
-                                            <span class="download-card__list-pill">{{ $rateRow['firstCol']['zone'] }}</span>
-                                        </div>
-                                        @endif
                                         <div>
                                             <i class="icon-download"></i>
                                         </div>
@@ -60,9 +58,12 @@
                             </ul>
                         </div>
                         @if(isset($rateRow['secondCol']))
-                        <div class="col-lg-6">
+                        <div class="col-xl-6">
                             <ul class="download-card__list">
-                                <li>
+                                <li class="position-relative">
+                                    @if($rateRow['secondCol']['zone'] != '')
+                                    <span class="download-card__list-pill">{{ $rateRow['secondCol']['zone'] }}</span>
+                                    @endif
                                     <a href="{{ $rateRow['secondCol']['file'] }}" target="blank">
                                         <div>
                                             <img src="/images/web/common/icn_pdf_download.png" alt="download">
@@ -70,11 +71,6 @@
                                                 {{ $rateRow['secondCol']['title'] }}
                                             </p>
                                         </div>
-                                        @if($rateRow['secondCol']['zone'] != '')
-                                        <div>
-                                            <span class="download-card__list-pill">{{ $rateRow['secondCol']['zone'] }}</span>
-                                        </div>
-                                        @endif
                                         <div>
                                             <i class="icon-download"></i>
                                         </div>

@@ -27,12 +27,12 @@
                         <a class="nav-link" href="{{ route('rayogas.pqrs') }}"><i class="icon-cheveron-right"></i>
                             PQRS</a>
                     </li>
-                    <li class="nav-item">
+                    <!--               <li class="nav-item">
                         <a class="nav-link" href="#"><i class="icon-cheveron-right"></i> Autogestión</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('rayogas.blog') }}"><i
-                                class="icon-cheveron-right"></i>Blog</a>
+                                class="icon-cheveron-right"></i>Noticias</a>
                     </li>
                 </ul>
             </div>
@@ -54,7 +54,7 @@
                     01 8000 95 95 95
                 </p>
                 <p>
-                    Línea gratuita servicio al cliente, PQR´S y emergencia
+                    Línea gratuita servicio al cliente,<br>PQR´S y emergencias
                 </p>
                 <h4>
                     Línea de emergencias:
@@ -72,11 +72,15 @@
                             href="{{ route('rayogas.transparency')}}">Transparencia</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link active" aria-current="page"
+                            href="{{ route('rayogas.transparency',['tab' => 11])}}">Resolución CREG 080 </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{{ route('rayogas.rates')}}">Tarifas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page"
-                            href="https://rayogas.com/Catalogo/index.html#page/6" target="_blank">Manual usuario GLP</a>
+                        <a class="nav-link active" aria-current="page" href="{{ route('rayogas.catalog')}}"
+                            target="_blank">Manual usuario GLP</a>
                     </li>
                     {{-- <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Usuarios</a>
