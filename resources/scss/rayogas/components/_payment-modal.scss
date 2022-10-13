@@ -1,0 +1,57 @@
+#payment-modal {
+    & .payment-modal {
+        &__content {
+            position: relative;
+            padding: rem(25px) rem(32px) rem(50px);
+        }
+        &__close-button {
+            position: absolute;
+            background-color: transparent;
+            border: none;
+            right: rem(32px);
+            top: rem(25px);
+        }
+        &__header {
+            border: none;
+            justify-content: center;
+            margin-top: rem(32px);
+            & .heading-title {
+                margin-bottom: 0;
+                & h2 {
+                    width: 100%;
+                    color: var(--font-color-secondary);
+                    font-size: rem(28px);
+                    line-height: rem(34px);
+                    &::after {
+                        background-color: var(--font-color-queaternary);
+                        height: rem(5px);
+                        width: rem(68px);
+                        border-radius: rem(3px);
+                        margin-top: rem(7px);
+                    }
+                }
+            }
+        }
+        &__method {
+            text-align: center;
+            &-image {
+                margin-bottom: rem(33px);
+            }
+            &-button {
+                width: 90%;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    #payment-modal {
+        & .payment-modal {
+            &__method {
+                &:first-child {
+                    border-right: 2px solid var(--separator-color-2);
+                }
+            }
+        }
+    }
+}

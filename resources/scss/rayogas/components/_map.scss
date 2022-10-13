@@ -22,7 +22,7 @@
             margin-bottom: 1.25rem;
 
             label {
-                color: var(--primary-color);
+                color: var(--font-color-primary);
                 font-size: 1rem;
                 font-weight: bold;
                 letter-spacing: 0;
@@ -52,7 +52,7 @@
             .locations-item {
                 margin-bottom: 1.25rem;
                 h4 {
-                    color: var(--primary-color);
+                    color: var(--font-color-primary);
                     font-size: rem(12px);
                     font-weight: bold;
                     letter-spacing: 0;
@@ -79,6 +79,10 @@
 
 @include media-breakpoint-up(md) {
     .map {
+        height: rem(543px);
+        .row {
+            height: 100%;
+        }
         .map-controls {
             padding-right: 0;
 

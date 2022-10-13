@@ -1,6 +1,5 @@
 .request-service {
     border-radius: 1.5rem;
-    background-color: #ffffff;
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.14);
     position: relative;
     padding: rem(77px) rem(18px) rem(32px);
@@ -10,7 +9,7 @@
     align-items: center;
     justify-content: center;
     .image {
-        width: rem(333px);
+        width: rem(320px);
         position: absolute;
         top: rem(-250px);
     }
@@ -76,8 +75,15 @@
                 height: 3.062rem;
                 border: 0.125rem solid #c9d3dd;
                 border-radius: 0.25rem;
-                background-color: #ffffff;
                 outline: none;
+            }
+
+            .container-business-name {
+                display: none;
+
+                &--show {
+                    display: block;
+                }
             }
 
             .controls {
@@ -96,6 +102,16 @@
                         letter-spacing: 0;
                         line-height: 0;
                         text-align: center;
+                        &.request-service__button {
+                            font-size: rem(18px);
+                            padding: rem(10px) rem(55px);
+                            height: rem(50px);
+                        }
+                        &:hover {
+                            background-color: var(--white-color) !important;
+                            color: var(--font-color-primary) !important;
+                            border-color: var(--primary-color) !important;
+                        }
                     }
 
                     .btn {
@@ -136,6 +152,36 @@
                     }
                 }
             }
+        }
+    }
+    &__button {
+        font-size: rem(18px) !important;
+        padding: rem(10px) rem(55px) !important;
+        height: rem(50px) !important;
+        & :hover {
+            background-color: var(--white-color);
+            color: var(--font-color-primary);
+            border-color: var(--primary-color);
+        }
+    }
+}
+.form-request-service__inputs {
+    &--cilinder {
+        display: none;
+        &.show {
+            display: block;
+        }
+    }
+    &--installation {
+        display: none;
+        &.show {
+            display: block;
+        }
+    }
+    &--granel {
+        display: none;
+        &.show {
+            display: block;
         }
     }
 }

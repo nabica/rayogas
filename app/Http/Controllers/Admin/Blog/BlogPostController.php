@@ -22,7 +22,7 @@ class BlogPostController extends Controller
 
     public function index()
     {
-        $posts = BlogPost::latest('id')->paginate(10);
+        $posts = BlogPost::latest('id')->paginate(6);
         return view('admin.sections.blog.posts.index', compact('posts'));
     }
 

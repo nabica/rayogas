@@ -1,42 +1,44 @@
 @extends('rayogas.layouts.master')
+@section('metatags_facebook')
+<meta property="og:title" content="{{ config('app.name') }} | {{ $blogPost->title }}">
+<meta property="og:site_name" content="{{ config('app.name') }}">
+<meta property="og:url" content="{{ Request::url() }}">
+<meta property="og:description" content="{{ $blogPost->excerpt_description }}">
+<meta property="og:type" content="website">
+<meta property="og:image" content="{{ $blogPost->image_url }}">
+@endsection
+@section('metatags_seo')
+<meta name="title" content="{{ config('app.name') }} | {{ $blogPost->title }}">
+<meta name="description" content="{{ $blogPost->excerpt_description }}">
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="Spanish">
+<meta name="revisit-after" content="30 days">
+<meta name="author" content="{{ config('app.name') }}">
+@endsection
+@section('title', config('app.name') . ' | ' . $blogPost->title)
 @section('content')
-@include('rayogas.components.banner-general', ['title' => "El GLP es la clave en los procesos de generación", 'text' =>
-"Para el proceso de formalización del gas propano, el sector ha realizado una reingeniería de su distribución con una
-estructura empresarial sólida.", 'image'=> '/images/web/blog/blog_banner_main.png'])
+
+@component('rayogas.components.banner')
+@slot('id')banner-blog @endslot
+@isset($blogPost->image)
+@slot('image'){{ $blogPost->image_url }} @endslot
+@endisset
+@slot('title'){{ $blogPost->title }} @endslot
+@slot('description'){{ $blogPost->excerpt_description }} @endslot
+@endcomponent
+
 <section class="blog">
     <div class="container">
-        <div class="blog__image">
-
-            <img src="{{asset('images/web/placeholders/612X351.png')}}" alt="" class="img-fluid">
-        </div>
+        <div class="blog__container">
+            {{--  <div class="blog__image">
+     
+                 <img src="{{asset('images/web/placeholders/612X351.png')}}" alt="" class="img-fluid">
+        </div> --}}
         <div class="blog__text">
-            <p>Desde enero del 2010 el sector del Gas Licuado de Petróleo (GLP), más conocido como gas propano está en
-                un proceso de formalización. Así mismo, durante los últimos seis meses (enero-junio 2016) estuvo en un
-                proceso de regulación para su actividad.
-
-                <br>
-                Las empresas colombianas que operan con socios extranjeros en la distribución del gas propano están
-                reunidas en el gremio Gasnova, que preside Nicolás Botero-Páramo Gaviria
-
-                <br>
-                Gasnova no solo afirma que en el negocio hay mucho camino por recorrer, sino que, además, para el corto
-                y mediano plazo será tan rentable como el de la gasolina o el gas natural.
-
-                ¿Cuáles son los beneficios que traerá para el sector el proceso de regulación del GLP?
-
-                <br>
-                La regulación terminará por abrir la válvula para fortalecer la penetración del gas propano en el
-                segmento residencial, y de paso llevar el negocio a otros niveles como el del transporte de carga o de
-                pasajeros, el transporte náutico, actividades agroindustriales, incluso para la generación de energía en
-                zonas no interconectadas.
-
-                <br>
-                Desde el 2010 el negocio del GLP entró en un proceso de formalización, ¿cuál ha sido el aporte de las
-                empresas extranjeras al sector?
-
-
-            </p>
+            {!! $blogPost->description !!}
         </div>
+    </div>
 
     </div>
 </section>

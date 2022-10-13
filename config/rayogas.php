@@ -7,8 +7,7 @@ return [
         'feature' => env('HOME_FEATURE_FOLDER', null),
         'rates' => env('HOME_RATES_FOLDER', null),
     ],
-    'about
-    ' => [
+    'about' => [
         'banner' => env('ABOUT_BANNER_FOLDER', null),
         'features' => env('ABOUT_FEATURES_FOLDER', null),
         'values' => env('ABOUT_VALUES_FOLDER', null),

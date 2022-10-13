@@ -10,12 +10,12 @@
         display: flex;
         flex-direction: column;
         padding: rem(21px) 0;
+        justify-content: space-between;
     }
     &__item-title {
-        flex-grow: 1;
         position: relative;
         padding-bottom: rem(10px);
-        max-height: rem(100px);
+        max-height: rem(95px);
         & h3 {
             color: var(--primary-color-dark);
             font-size: rem(22px);
@@ -46,14 +46,29 @@
         justify-content: center;
         & .pagination {
             & .page-item {
+                &.active {
+                    & .page-link {
+                        color: var(--font-color-primary);
+                        border: none;
+                    }
+                }
+                &.disabled {
+                    & .page-link {
+                        color: var(--separator-color-alpha-8);
+                    }
+                }
+
                 & .page-link {
                     border: none;
                     font-size: rem(20px);
                     font-weight: bold;
                     line-height: rem(36px);
                     color: var(--gray-color);
-                    &.active {
-                        color: var(--primary-color);
+                    background-color: transparent;
+                    &:hover,
+                    &:focus {
+                        box-shadow: none;
+                        color: var(--font-color-primary);
                     }
                 }
             }

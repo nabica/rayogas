@@ -7,13 +7,13 @@
             margin-bottom: rem(20px);
             max-width: 90%;
             & h3 {
-                color: var(--primary-color);
+                color: var(--font-color-primary);
                 font-size: rem(28px);
                 line-height: rem(34px);
             }
         }
         &-image {
-            max-width: 90%;
+            max-width: 85%;
             margin: 0 auto;
         }
     }
@@ -23,8 +23,11 @@
         top: -40px;
         padding: rem(63px) rem(17px) rem(45px) rem(17px);
         border-radius: rem(12px);
-        background-color: var(--white-color);
+        background-color: var(--body-color);
         box-shadow: 0 rem(2px) rem(8px) 0 rgba(0, 0, 0, 0.14);
+        & button {
+            padding: 0;
+        }
     }
     &__container {
         position: relative;
@@ -45,22 +48,20 @@
                 margin-bottom: rem(20px);
                 max-width: 70%;
                 & h3 {
-                    color: var(--primary-color);
+                    color: var(--font-color-primary);
                     font-size: rem(46px);
                     line-height: rem(54px);
                 }
             }
             &-image {
-                max-width: 100%;
+                max-width: 80%;
             }
         }
         &__form {
             position: relative;
-            margin: 0;
-            left: rem(-70px);
-            top: 0;
+            top: rem(-50px);
             padding: rem(44px) rem(80px) rem(37px) rem(80px);
-            width: 110%;
+            width: 100%;
         }
         &__container {
             position: relative;
@@ -68,17 +69,26 @@
         }
     }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
     .pqrs {
+        &__side-banner {
+            &-image {
+                max-width: 115%;
+            }
+        }
+        &__form {
+            top: 0;
+            right: rem(75px);
+            width: 110%;
+        }
         &__container {
-            position: relative;
-            margin: 0 auto;
             & .contact-bar {
                 right: rem(24px);
             }
         }
     }
 }
+
 @media only screen and (min-width: 1400px) {
     .pqrs {
         &__container {

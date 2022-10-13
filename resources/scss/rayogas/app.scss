@@ -6,6 +6,7 @@
 // Themes
 @import "./themes/light";
 @import "./themes/dark";
+@import "./themes/text";
 
 // Sizes
 @import "./sizes";
@@ -25,6 +26,8 @@
 @import "./components/footer";
 @import "./components/contact-bar";
 @import "./components/blog-highlights";
+@import "./components/accreditations";
+@import "./components/popup";
 
 // Sections
 @import "./sections/home";
@@ -33,5 +36,10 @@
 @import "./sections/glp";
 @import "./sections/blog-list";
 @import "./sections/blog";
+@import "./sections/transparency";
+@import "./sections/rates";
 @import "./sections/pqrs";
 @import "./sections/thanks";
+@import "./sections/terms";
+@import "./sections/work-with-us";
+@import "./components/payment-modal";

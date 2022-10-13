@@ -1,0 +1,322 @@
+#banner-transparency {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+        url("/images/web/transparency/transparencia_banner_main.png");
+}
+
+.transparency {
+    & ul {
+        list-style: none;
+        color: var(--font-color-text);
+    }
+    &__header-text {
+        margin: 0 auto;
+        margin-bottom: rem(74px);
+        max-width: rem(912px);
+        text-align: center;
+    }
+    & h4 {
+        color: var(--font-color-primary);
+        font-size: rem(16px);
+        font-weight: bold;
+        letter-spacing: 0;
+        line-height: rem(16px);
+        margin-bottom: rem(9px);
+    }
+    & h2 {
+        color: var(--font-color-primary);
+        margin-top: rem(15px);
+        font-size: rem(28px);
+        line-height: rem(34px);
+        letter-spacing: 0;
+    }
+    &__header {
+        & > h2 {
+            margin: 0;
+        }
+        &-subtitle {
+            margin-top: rem(20px);
+            margin-bottom: rem(54px);
+            & p {
+                text-align: center;
+                margin: 0;
+            }
+        }
+    }
+    & .tabs {
+        margin-top: rem(45px);
+        &-menu {
+            margin-bottom: rem(16px);
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        &-content {
+            margin: rem(60px) 0;
+            & .tab-pane.active {
+                align-items: initial;
+            }
+        }
+    }
+    &__card {
+        width: 100%;
+        border-radius: rem(24px);
+        box-shadow: 0 rem(2px) rem(8px) 0 rgba(0, 0, 0, 0.14);
+        padding: rem(21px) rem(15px) rem(40px) rem(15px);
+        & a {
+            color: var(--font-color-primary);
+        }
+        &-header {
+            margin-bottom: rem(10px);
+        }
+        &-phones {
+            & h4 {
+                font-size: rem(12px);
+                color: var(--font-color-primary);
+                margin-bottom: 0;
+            }
+            & p {
+                font-size: rem(12px);
+                margin-bottom: 0;
+            }
+        }
+        &-times {
+            margin-top: rem(15px);
+            & h4 {
+                font-size: rem(12px);
+                color: var(--primary-color-dark);
+                margin-bottom: 0;
+            }
+            & p {
+                font-size: rem(12px);
+                margin-bottom: 0;
+            }
+            & a {
+                font-size: rem(12px);
+                color: var(--font-color-primary);
+            }
+        }
+    }
+    & .web-politics {
+        padding-top: rem(55px);
+        padding-bottom: rem(48px);
+        &__image {
+            margin-bottom: rem(33px);
+            margin-top: rem(23px);
+            width: 100%;
+        }
+    }
+    & .security {
+        padding: rem(40px);
+        &__list {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+            & li {
+                display: flex;
+                align-items: flex-start;
+                margin-bottom: rem(16px);
+                & img {
+                    width: rem(30px);
+                }
+                & p {
+                    font-size: rem(12px);
+                    line-height: rem(16px);
+                    margin-left: rem(18px);
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    & .politics {
+        padding: rem(50px) rem(0) rem(40px);
+        &__scope {
+            margin-bottom: rem(35px);
+            & div {
+                margin-bottom: rem(35px);
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+            & p {
+                margin-bottom: 0;
+            }
+            & h2 {
+                margin: 0;
+            }
+        }
+        &__list {
+            margin-bottom: rem(62px);
+            &-header {
+                margin-bottom: rem(40px);
+            }
+        }
+        &__privacity {
+            & img {
+                max-width: 100%;
+                float: right;
+                margin-bottom: rem(34px);
+            }
+        }
+    }
+    & .download {
+        padding: rem(45px);
+    }
+    & .glosary {
+        & p {
+            margin-bottom: rem(12px);
+        }
+    }
+}
+@include media-breakpoint-up(md) {
+    .transparency {
+        & .tabs {
+            &-content {
+                margin: rem(70px) 0 rem(100px);
+            }
+        }
+        & h4 {
+            font-size: rem(20px);
+            line-height: rem(24px);
+            margin-bottom: rem(5px);
+        }
+        & h2 {
+            font-size: rem(36px);
+            line-height: rem(46px);
+            &.sideLine {
+                font-size: rem(28px);
+                line-height: rem(34px);
+            }
+        }
+        &__header {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            margin-left: rem(19px);
+            & h2 {
+                margin-left: rem(24px);
+            }
+        }
+        &__card {
+            padding: rem(43px) rem(70px) rem(56px) rem(70px);
+            &-header {
+                margin-bottom: rem(52px);
+                display: flex;
+                align-items: center;
+                max-width: 80%;
+                & h2 {
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    margin-left: rem(22px);
+                }
+            }
+            &-phones {
+                & h4 {
+                    font-size: rem(16px);
+                    color: var(--font-color-primary);
+                    line-height: rem(22px);
+                }
+                & p {
+                    font-size: rem(16px);
+                    line-height: rem(22px);
+                }
+            }
+            &-times {
+                margin-top: 0;
+                padding-left: rem(70px);
+                & h4 {
+                    font-size: rem(16px);
+                    color: var(--primary-color-dark);
+                    line-height: rem(22px);
+                }
+                & p {
+                    font-size: rem(16px);
+                    line-height: rem(22px);
+                }
+                & a {
+                    font-size: rem(16px);
+                    color: var(--font-color-primary);
+                    line-height: rem(22px);
+                }
+            }
+        }
+        & .security {
+            padding: rem(55px);
+            &__header {
+                & p {
+                    padding-bottom: rem(20px);
+                    &::after {
+                        width: rem(80px);
+                        height: rem(8px);
+                        background-color: var(--primary-color-dark);
+                        border-radius: rem(8px);
+                    }
+                }
+            }
+            &__list {
+                list-style: none;
+                padding-left: 0;
+                margin: 0;
+                & li {
+                    margin-bottom: rem(40px);
+                    & img {
+                        width: rem(38px);
+                    }
+                    & p {
+                        font-size: rem(18px);
+                        line-height: rem(24px);
+                        margin-left: rem(28px);
+                    }
+                }
+            }
+        }
+        & .politics {
+            padding: rem(66px) rem(0) rem(73px);
+            &__scope {
+                margin-bottom: rem(60px);
+                & div {
+                    margin-bottom: 0;
+                }
+            }
+            &__list {
+                margin-bottom: rem(30px);
+                &-header {
+                    margin-bottom: rem(65px);
+                }
+            }
+            &__privacity {
+                & img {
+                    margin-bottom: rem(40px);
+                    margin-left: (55px);
+                }
+            }
+        }
+        & .download {
+            padding: rem(35px);
+        }
+        & .glosary {
+            & p {
+                margin-bottom: rem(16px);
+            }
+        }
+    }
+}
+@include media-breakpoint-up(lg) {
+    .transparency {
+        & .tabs {
+            &-menu {
+                width: 90%;
+                max-width: rem(841px);
+            }
+        }
+        & .web-politics {
+            &__title {
+                margin-bottom: rem(45px);
+            }
+            padding: rem(55px) 0;
+            &__image {
+                margin: 0;
+            }
+        }
+    }
+}

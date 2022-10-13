@@ -2,13 +2,17 @@
 
 namespace App\Http\Controllers\Rayogas;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Models\Products\ProductsBanner;
+use App\Models\Products\ProductsWappButton;
 
 class ProductsController extends Controller
 {
     public function index()
     {
-        return view('rayogas.products');
+        $productsBanner = ProductsBanner::first();
+        $wappButtons = ProductsWappButton::findOrFail(1);
+        return view('rayogas.products', compact('productsBanner', 'wappButtons'));
     }
 }

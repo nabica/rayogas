@@ -1,0 +1,15 @@
+.terms {
+    margin-top: rem(55px);
+    margin-bottom: rem(190px);
+    &__content {
+        max-width: rem(996px);
+        margin: 0 auto;
+        margin-top: rem(50px);
+        & h3 {
+            color: var(--font-color-text);
+            font-size: rem(18px);
+            line-height: rem(24px);
+            margin: rem(35px) 0;
+        }
+    }
+}

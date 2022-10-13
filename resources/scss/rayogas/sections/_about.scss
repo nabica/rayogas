@@ -1,7 +1,6 @@
 #banner-about {
-    background-image: linear-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.0)),
-        url('/images/web/about/nosotros_banner_main.png'
-    );
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+        url("/images/web/about/nosotros_banner_main.png");
 }
 
 #about-team {
@@ -20,12 +19,12 @@
 
 #about-services {
     border-radius: rem(20px);
-    box-shadow: 0 rem(2px) rem(8px) 0 rgba(0,0,0,0.14);
+    box-shadow: 0 rem(2px) rem(8px) 0 rgba(0, 0, 0, 0.14);
     /*border: 1px solid blue;*/
-    margin-top: rem(160px);
+    margin-top: rem(224px);
     padding: 0 rem(20px) rem(40px) rem(20px);
-    /*padding-top: rem(60px);
-    padding-bottom: rem(60px);*/
+    /*   padding-top: rem(90px);
+    padding-bottom: rem(125px); */
 
     .content {
         display: flex;
@@ -34,7 +33,6 @@
         align-items: center;
 
         .text {
-
             .title {
                 margin-bottom: 1.875rem;
                 /*margin-left: 1rem;*/
@@ -52,7 +50,7 @@
                 }
 
                 h4 {
-                    color: var(--primary-color);
+                    color: var(--font-color-primary);
                     font-size: rem(36px);
                     font-weight: bold;
                     letter-spacing: 0;
@@ -61,16 +59,20 @@
                 }
             }
             .text-description {
-
             }
         }
         .image {
             position: relative;
             height: rem(80px);
-            top: rem(-190px);
-            img {
-                width: 100%;
-                height: auto;
+            width: 100%;
+            padding-bottom: rem(15px);
+            & > div {
+                position: absolute;
+                bottom: 0;
+                img {
+                    width: 100%;
+                    height: auto;
+                }
             }
         }
     }
@@ -78,8 +80,9 @@
 @include media-breakpoint-up(md) {
     #about-services {
         padding: 0;
-        padding-left: rem(80px);
-        height: rem(400px);
+        padding-left: rem(40px);
+        padding-top: rem(40px);
+        padding-bottom: rem(60px);
         margin-top: 0;
 
         .content {
@@ -88,24 +91,35 @@
 
             .text {
                 width: 70%;
-
-                .title {
-
-                    h4 {
-
-                    }
-                }
                 .text-description {
                     width: 70%;
                 }
             }
             .image {
                 width: 30%;
-                height: auto;
-                position: initial;
-                top: 0;
-                img {
-                    width: auto;
+                height: 100%;
+                & > div {
+                    top: calc(50% - rem(81.2px));
+                    img {
+                        width: rem(310px);
+                    }
+                }
+            }
+        }
+    }
+}
+@include media-breakpoint-up(lg) {
+    #about-services {
+        padding-left: rem(80px);
+        padding-top: rem(90px);
+        padding-bottom: rem(125px);
+        .content {
+            .image {
+                & > div {
+                    top: calc(50% - rem(170.5px));
+                    img {
+                        width: initial;
+                    }
                 }
             }
         }
@@ -138,14 +152,14 @@
     }
     p {
         margin-bottom: rem(20px);
+        strong {
+            color: var(--font-color-text);
+        }
     }
 }
 
 @include media-breakpoint-up(md) {
     #about-choosing {
-        h3 {
-
-        }
         p {
             margin-bottom: 0;
         }

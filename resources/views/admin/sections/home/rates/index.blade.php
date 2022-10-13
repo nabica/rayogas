@@ -16,6 +16,9 @@
 
         </div>
     </div>
+    <div class="col-12">
+        <a href="{{ route('admin.home.rates.create') }}" class="btn btn-primary">Crear</a><br><br>
+    </div>
 </div>
 <!-- end page title -->
 
@@ -40,7 +43,12 @@
                                 <td>{{ $rate->id }}</td>
                                 <td>{{ $rate->button_text }}</td>
                                 <td>
-                                  <a href="{{ route('admin.home.rates.edit', $rate->id) }}" class="btn btn-primary">Editar</a>
+                                    {!! Form::open(['route' => ['admin.home.rates.destroy', $rate->id], 'method' => 'delete', 'class' => 'form-delete-record']) !!}
+                                        <a href="{{ route('admin.home.rates.edit', $rate->id) }}" class="btn btn-primary">Editar</a>
+
+                                        <button type="submit" class="btn btn-danger delete-record">Eliminar</button>
+                                    {!! Form::close() !!}
+
                                </td>
                               </tr>
                             @endforeach

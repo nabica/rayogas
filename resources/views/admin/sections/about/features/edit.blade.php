@@ -33,10 +33,12 @@
                                 {!! Form::text('title', $feature->title , ['class' => 'form-control', 'maxlength' => '191']) !!}
                             </div>
                         </div>
+                    </div>
 
-                        <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-12">
                             <label class="form-label">Descripción</label>
-                            {!! Form::text('description', $feature->description , ['class' => 'form-control']) !!}
+                            {!! Form::textarea('description', $feature->description , ['class' => 'form-control editor']) !!}
                         </div>
                     </div>
 

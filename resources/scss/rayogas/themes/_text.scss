@@ -1,0 +1,46 @@
+html[data-theme="text"] {
+    --primary-color: #000;
+    --primary-color-dark: #000;
+    --primary-color-dark-2: #000;
+    --primary-color-alfa-85: rgba(0, 0, 0, 0.85);
+    --primary-color-dark-alfa-80: #000;
+    --font-color-text: #000;
+    --font-color-primary: #000;
+    --font-color-secondary: #000;
+    --font-color-tertiary: #fff;
+    --font-color-queaternary: #000;
+    --font-color-five: #000;
+    --hover-color-primary: #000;
+    --body-color: #fff;
+    --component-color: #c9d3dd;
+    --background-color: #fafafa;
+    --wap-color: #00bb2d;
+    --white-color: #fff;
+    --gray-color: #3b4754;
+
+    /*Variables que manuel aún no le ha puesto nombre*/
+    --separator-color-alpha-25: rgba(151, 151, 151, 0.25);
+    --separator-color-alpha-8: rgba(201, 211, 221, 0.8);
+    --separator-color-2: #ececef;
+    --background-color-2: #f0f9fe;
+    --success-color: #00c85a;
+    --alert-color: #f65a5a;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    & img {
+        opacity: 0;
+    }
+    & #bg-home-rates,
+    & .banner,
+    .work-with-us__banner {
+        box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 1);
+    }
+    .contact-bar__button {
+        & img {
+            opacity: 0;
+        }
+    }
+    & button > img {
+        opacity: 1;
+    }
+}

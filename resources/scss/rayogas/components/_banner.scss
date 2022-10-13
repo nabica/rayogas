@@ -14,7 +14,7 @@
     }
     .banner-content {
         background-color: var(--primary-color-alfa-85);
-        width: 70%;
+        /*width: 50%;*/
         padding: rem(20px);
         border-radius: 1.562rem;
 
@@ -34,12 +34,12 @@
         }
         .btn {
             margin-top: rem(20px);
+            margin-bottom: 0;
             font-size: rem(12px);
             font-weight: bold;
             letter-spacing: 0;
-            line-height: 0;
             text-decoration: none;
-            padding: rem(15px) rem(19px);
+            padding: rem(6px) rem(19px);
         }
     }
 }
@@ -48,7 +48,36 @@
     .banner {
         height: rem(600px);
         .banner-content {
-            padding: rem(60px);
+            padding: rem(20px);
+            width: 50%;
+            h1 {
+                color: var(--white-color);
+                font-size: 2.5rem;
+                font-weight: bold;
+                letter-spacing: 0;
+                line-height: 3rem;
+            }
+            p {
+                color: var(--white-color);
+                font-size: 1rem;
+                font-weight: 500;
+                letter-spacing: 0;
+                line-height: 1.25rem;
+                margin-bottom: rem(40px);
+            }
+            .btn {
+                margin-top: rem(10px);
+                font-size: rem(16px);
+                padding: rem(5px) rem(59px);
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .banner {
+        height: rem(600px);
+        .banner-content {
             h1 {
                 color: var(--white-color);
                 font-size: 2.875rem;
@@ -62,12 +91,12 @@
                 font-weight: 500;
                 letter-spacing: 0;
                 line-height: 1.75rem;
-                margin-bottom: 40px;
+                margin-bottom: rem(40px);
             }
             .btn {
-                margin-top: rem(40px);
+                margin-top: rem(10px);
                 font-size: rem(16px);
-                padding: rem(25px) rem(59px);
+                padding: rem(13px) rem(59px);
             }
         }
     }

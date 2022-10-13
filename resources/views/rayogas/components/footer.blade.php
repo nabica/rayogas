@@ -24,15 +24,15 @@
                             GLP</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('rayogas.blog') }}"><i class="icon-cheveron-right"></i>
-                            Blog</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="{{ route('rayogas.pqrs') }}"><i class="icon-cheveron-right"></i>
                             PQRS</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"><i class="icon-cheveron-right"></i> Autogestión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('rayogas.blog') }}"><i
+                                class="icon-cheveron-right"></i>Blog</a>
                     </li>
                 </ul>
             </div>
@@ -68,13 +68,22 @@
                 <hr>
                 <ul class="footer__normative-list">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Transparencia</a>
+                        <a class="nav-link active" aria-current="page"
+                            href="{{ route('rayogas.transparency')}}">Transparencia</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{ route('rayogas.rates')}}">Tarifas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page"
+                            href="https://rayogas.com/Catalogo/index.html#page/6" target="_blank">Manual usuario GLP</a>
+                    </li>
+                    {{-- <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Usuarios</a>
-                    </li>
+                    </li> --}}
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Política de datos personales</a>
+                        <a class="nav-link active" href="{{ asset('pdfs/politica_datos_personales.pdf') }}"
+                            aria-current="page" target="_blank">Política de datos personales</a>
                     </li>
 
                 </ul>
@@ -82,15 +91,15 @@
             <div class="footer__social">
                 <h4>Síguenos</h4>
                 <div class="footer__social-icons">
-                    <a href="">
+                    <a href="https://www.facebook.com/RayogasSA" target="blank">
                         <img src="{{ asset('images/web/common/icn_footer_fb.png') }}" alt="facebook">
                     </a>
-                    <a href="">
+                    <a href="https://www.instagram.com/rayogassaesp/" target="blank">
                         <img src="{{ asset('images/web/common/icn_footer_ig.png') }}" alt="instagram">
                     </a>
-                    <a href="">
+                    {{-- <a href="">
                         <img src="{{ asset('images/web/common/icn_footer_tw.png') }}" alt="twitter">
-                    </a>
+                    </a> --}}
                 </div>
             </div>
         </div>

@@ -31,7 +31,9 @@ Route::prefix('lotus')->group(function () {
 
             Route::resource('/home/feature', 'Home\HomeFeatureController', ['as' => 'admin.home'])->only(['edit', 'update']);
 
-            Route::resource('/home/rates', 'Home\HomeRateController', ['as' => 'admin.home'])->only(['index', 'edit', 'update']);
+            Route::resource('/home/rates', 'Home\HomeRateController', ['as' => 'admin.home']);
+
+            Route::resource('/home/floating-bar', 'Home\HomeFloatingBarController', ['as' => 'admin.home'])->only(['edit', 'update']);
 
             // About
             Route::resource('/about/banner', 'About\AboutBannerController', ['as' => 'admin.about'])->only(['edit', 'update']);
@@ -45,14 +47,19 @@ Route::prefix('lotus')->group(function () {
             // Products
             Route::resource('/products/banner', 'Products\ProductsBannerController', ['as' => 'admin.products'])->only(['edit', 'update']);
 
+            Route::resource('/products/wapp-buttons', 'Products\ProductsWappButtonController', ['as' => 'admin.products'])->only(['edit', 'update']);
+
             // Glp
             Route::resource('/glp/banner', 'Glp\GlpBannerController', ['as' => 'admin.glp'])->only(['edit', 'update']);
 
             Route::resource('/glp/recommendation-tips', 'Glp\GlpRecommendationTipController', ['as' => 'admin.glp'])->only(['index','edit', 'update']);
 
-            Route::resource('/glp/recommendation-pdfs', 'Glp\GlpRecommendationPdfController', ['as' => 'admin.glp'])->only(['index','edit', 'update']);
+            Route::resource('/glp/recommendation-pdfs', 'Glp\GlpRecommendationPdfController', ['as' => 'admin.glp']);
 
             Route::resource('/glp/faqs', 'Glp\GlpFaqController', ['as' => 'admin.glp']);
+
+            // Pqrs
+            Route::resource('/pqrs/objects', 'Pqrs\PqrsObjectController', ['as' => 'admin.pqrs']);
 
             // Blog
             Route::resource('/blog/banner', 'Blog\BlogBannerController', ['as' => 'admin.blog'])->only(['edit', 'update']);
@@ -70,11 +77,20 @@ Route::prefix('lotus')->group(function () {
 
 Route::namespace("App\Http\Controllers\Rayogas")->group(function () {
     Route::get("/", "HomeController@index")->name('rayogas.home');
+    Route::post("/solicitud-servicio", "HomeController@serviceRequest");
+
     Route::get("/nosotros", "AboutController@index")->name('rayogas.about');
     Route::get("/productos-y-servicios", "ProductsController@index")->name('rayogas.products');
     Route::get("/glp", "GlpController@index")->name('rayogas.glp');
     Route::get("/blog", "BlogController@index")->name('rayogas.blog');
-    Route::get("/blog/show", "BlogController@show")->name('rayogas.blog.show');
+    Route::get("/blog/{slug}", "BlogController@show")->name('rayogas.blog.show');
     Route::get("/pqrs", "PqrsController@index")->name('rayogas.pqrs');
-    Route::get("pqrs/thanks", "PqrsController@tanks")->name('rayogas.thanks');
+    Route::post("/pqrs", "PqrsController@store");
+    Route::get("pqrs/gracias", "PqrsController@tanks")->name('rayogas.thanks');
+
+    Route::get('/transparencia', 'TransparencyController@index')->name('rayogas.transparency');
+    Route::get('/tarifas', 'RatesController@index')->name('rayogas.rates');
+    Route::get("/trabaja-con-nosotros", "WorkWithUsController@index")->name('rayogas.work-with-us');
+    Route::post("/trabaja-con-nosotros", "WorkWithUsController@store");
+    Route::get("/terminosycondiciones", "TermsController@index")->name('rayogas.terms');
 });
