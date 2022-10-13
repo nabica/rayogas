@@ -1,5 +1,5 @@
 <!-- Banner -->
-<section>
+<section class="position-relative">
     @if(isset($image))
     <div class="banner" style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
         url({{ $image }});">
@@ -17,5 +17,8 @@
                 @include('rayogas.components.contact-bar',['fixed'=>'true'])
             </div>
         </div>
+        @if(isset($logo))
+        <img src="{{asset('images/web/common/heart.png')}}" alt="" class="banner__logo">
+        @endif
 </section>
 <!-- End Banner -->

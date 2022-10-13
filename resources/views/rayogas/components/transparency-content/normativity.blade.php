@@ -14,7 +14,7 @@
             @endcomponent
             <div class="row">
                 <div class="col-12 col-md-6 mb-4 mb-md-0">
-                    <div class="download-card h-100">
+                    <div class="download-card">
                         @component('rayogas.components.heading-title')
                         @slot('title')Ley 142 @endslot
                         @endcomponent

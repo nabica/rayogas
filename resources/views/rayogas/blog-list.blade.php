@@ -35,7 +35,6 @@
         <div class="row">
             @foreach($blogPosts as $blogPost)
             <a href="{{$blogPost->link}}" class="col-lg-4 col-md-6 col-12 blog-list__item">
-                {{$blogPost->thumb_image_url}}
                 <img src="{{ isset($blogPost->thumb_image) ? asset($blogPost->thumb_image_url) : asset('images/web/blog/img_blog_preview_1.png') }}"
                     alt="" class="w-100">
                 <div class="blog-list__item-description">

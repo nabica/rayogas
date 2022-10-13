@@ -12460,6 +12460,7 @@ select::-ms-expand {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
 }
 .banner .container {
   display: flex;
@@ -12495,7 +12496,18 @@ select::-ms-expand {
   text-decoration: none;
   padding: 0.375rem 1.1875rem;
 }
+.banner__logo {
+  width: 45px;
+  position: absolute;
+  bottom: 0.375rem;
+  left: 0.75rem;
+}
 
+@media (min-width: 576px) {
+  .banner__logo {
+    width: 3.4375rem;
+  }
+}
 @media (min-width: 768px) {
   .banner {
     height: 37.5rem;
@@ -12523,6 +12535,11 @@ select::-ms-expand {
     margin-top: 0.625rem;
     font-size: 1rem;
     padding: 0.3125rem 3.6875rem;
+  }
+  .banner__logo {
+    width: 5.25rem;
+    bottom: 0.75rem;
+    left: 1.5rem;
   }
 }
 @media (min-width: 992px) {
