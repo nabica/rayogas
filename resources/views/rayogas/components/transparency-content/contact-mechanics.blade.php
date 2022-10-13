@@ -35,15 +35,13 @@
                         <h4>Línea gratuita:</h4>
                         <p>Tel. 01 8000 95 95 95</p>
                         <h4>Correo institucional:</h4>
-                        <a href="">rayogas@rayogas.com</a>
+                        <a href="mailto:rayogas@rayogas.com">rayogas@rayogas.com</a>
                         <h4>Correo físico o postal:</h4>
                         <p>Cra 2da nº 48-98 Cazucá, Soacha, Cundinamarca</p>
                         <h4>Correo de notificaciones judiciales:</h4>
-                        <a href="">notificacion@rayogas.com</a>
+                        <a href="mailto:notificaciones@rayogas.com">notificaciones@rayogas.com</a>
                         <h4>Link PQR:</h4>
-                        <a href="{{ route('rayogas.pqrs') }}">http://www.rayogas.co/pqrs</a>
-                        <h4>Correo notificaciones judiciales:</h4>
-                        <a href="">notificacion@rayogas.com</a>
+                        <a href="{{ route('rayogas.pqrs') }}">www.rayogas.co/pqrs</a>
                     </div>
                 </div>
             </div>
@@ -260,8 +258,10 @@
                         en este sitio pertenecen a sus respectivos propietarios.</p>
                     <p>El Usuario deberá denunciar cualquier violación a la Politica de Privacidad del sitio web
                         por parte de otros Usuarios, para lo cual debe dirigir un correo electrónico a
-                        comercial@rayogas.com.co con el fin de que Rayogas S.A. E.S.P. tome las medidas
-                        respectivas que estén a su alcance en relación con la utilización del Sitio Web.</p>
+                        <a href="mailto:comercial@rayogas.com.co">comercial@rayogas.com.co</a> con el fin de que Rayogas
+                        S.A. E.S.P. tome las medidas
+                        respectivas que estén a su alcance en relación con la utilización del Sitio Web.
+                    </p>
                 </div>
             </div>
         </div>

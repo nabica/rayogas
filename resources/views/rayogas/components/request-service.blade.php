@@ -19,15 +19,15 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label for="">Nombre</label>
-                                        <input type="text" name="name" class="form-control" placeholder="Nombre"
-                                            aria-label="Nombre">
+                                        <input type="text" autocomplete="off" name="name" class="form-control"
+                                            placeholder="Nombre" aria-label="Nombre">
                                         <div class="invalid-feedback">
                                             Este campo es requerido
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="">Número de contacto</label>
-                                        <input type="number" name="telephone" class="form-control"
+                                        <input type="number" autocomplete="off" name="telephone" class="form-control"
                                             placeholder="Número de contacto" aria-label="Número de contacto">
                                         <div class="invalid-feedback">
                                             Este campo es requerido
@@ -50,7 +50,7 @@
                                     </div>
                                     <div class="col-md-6  container-business-name">
                                         <label for="">Razón social</label>
-                                        <input type="text" name="business-name" class="form-control"
+                                        <input type="text" autocomplete="off" name="business-name" class="form-control"
                                             placeholder="Razón social" aria-label="Razón social">
                                         <div class="invalid-feedback">
                                             Este campo es requerido
@@ -93,7 +93,7 @@
                                     </div>
                                     <div class="col-md-6 form-request-service__inputs--installation">
                                         <label for="">Uso o necesidad</label>
-                                        <input type="text" name="use" class="form-control"
+                                        <input type="text" autocomplete="off" name="use" class="form-control"
                                             placeholder="Describe el uso que necesitas">
                                     </div>
                                     <div class="col-md-6 form-request-service__inputs--granel">
@@ -121,7 +121,7 @@
                                     </div>
                                     <div class="col-md-12 form-request-service__inputs--installation">
                                         <label for="">Descripcion de la solicitud</label>
-                                        <input type="text" name="description" class="form-control"
+                                        <input type="text" autocomplete="off" name="description" class="form-control"
                                             placeholder="Describe que tipo de instalacion necesitas">
                                         <div class="invalid-feedback">
                                             Este campo es requerido

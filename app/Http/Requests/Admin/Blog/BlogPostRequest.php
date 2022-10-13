@@ -30,7 +30,8 @@ class BlogPostRequest extends FormRequest
                 return [
                     'title' => 'required|unique:blog_posts',
                     'excerpt_description' => 'required',
-                    'description' => 'required'
+                    'link' => 'required',
+                    /* 'description' => 'required' */
                 ];
                 break;
 
@@ -39,7 +40,8 @@ class BlogPostRequest extends FormRequest
                 return [
                     'title' => 'required|unique:blog_posts,title,' . $this->post,
                     'excerpt_description' => 'required',
-                    'description' => 'required'
+                    'link' => 'required',
+                    /* 'description' => 'required' */
                 ];
                 break;
         }

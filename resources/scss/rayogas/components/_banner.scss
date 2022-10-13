@@ -6,6 +6,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
 
     .container {
         display: flex;
@@ -42,8 +43,21 @@
             padding: rem(6px) rem(19px);
         }
     }
+    &__logo {
+        width: 45px;
+        position: absolute;
+        bottom: rem(6px);
+        left: rem(12px);
+    }
 }
 
+@include media-breakpoint-up(sm) {
+    .banner {
+        &__logo {
+            width: rem(55px);
+        }
+    }
+}
 @include media-breakpoint-up(md) {
     .banner {
         height: rem(600px);
@@ -70,6 +84,11 @@
                 font-size: rem(16px);
                 padding: rem(5px) rem(59px);
             }
+        }
+        &__logo {
+            width: rem(84px);
+            bottom: rem(12px);
+            left: rem(24px);
         }
     }
 }

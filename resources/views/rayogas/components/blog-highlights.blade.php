@@ -6,7 +6,7 @@
     <div class="container">
         <div class="row">
             @foreach($randomBlogPosts as $randomBlogPost)
-            <a href="{{ route('rayogas.blog.show', $randomBlogPost->slug) }}" class="highlights__item">
+            <a href="}" class="highlights__item">
                 <img src="{{ isset($randomBlogPost->thumb_image) ? $randomBlogPost->thumb_image_url : asset('images/web/blog/img_blog_preview_1.png') }}"
                     alt="" class="w-100">
                 <div class="blog-list__item-description">
