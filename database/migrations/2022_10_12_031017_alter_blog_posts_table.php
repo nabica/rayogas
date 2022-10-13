@@ -26,7 +26,7 @@ class AlterBlogPostsTable extends Migration
     public function down()
     {
         Schema::table('blog_posts', function (Blueprint $table) {
-            $table->dropColumn('blog_posts');
+            $table->dropColumn('link');
         });
     }
 }
