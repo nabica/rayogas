@@ -1,6 +1,6 @@
 import { Loader } from "@googlemaps/js-api-loader";
 const locations = {
-    boyaca: [
+    boyacá: [
         {
             position: { lat: 5.5753333, lng: -73.3317222 },
             title: "Tunja",

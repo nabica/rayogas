@@ -6020,7 +6020,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _googlemaps_js_api_loader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @googlemaps/js-api-loader */ "./node_modules/@googlemaps/js-api-loader/dist/index.esm.js");
 
 var locations = {
-  boyaca: [{
+  boyacá: [{
     position: {
       lat: 5.5753333,
       lng: -73.3317222
