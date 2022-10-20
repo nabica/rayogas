@@ -34,9 +34,8 @@
     <div class="container">
         <div class="row">
             @foreach($blogPosts as $blogPost)
-            <a href="{{ route('rayogas.blog.show', $blogPost->slug) }}"
-                class="col-lg-4 col-md-6 col-12 blog-list__item">
-                <img src="{{ isset($blogPost->thumb_image) ? $blogPost->thumb_image_url : asset('images/web/blog/img_blog_preview_1.png') }}"
+            <a href="{{$blogPost->link}}" class="col-lg-4 col-md-6 col-12 blog-list__item">
+                <img src="{{ isset($blogPost->thumb_image) ? asset($blogPost->thumb_image_url) : asset('images/web/blog/img_blog_preview_1.png') }}"
                     alt="" class="w-100">
                 <div class="blog-list__item-description">
                     <div class="blog-list__item-title">

@@ -12,6 +12,9 @@
             li {
                 a {
                     justify-content: space-between;
+                    & div:first-child {
+                        margin-bottom: rem(52px);
+                    }
                 }
             }
             &-pill {
@@ -22,7 +25,10 @@
                 color: var(--font-color-five);
                 font-size: rem(12px);
                 line-height: rem(18px);
-                font-weight: bold;
+                font-weight: 500;
+                position: absolute;
+                top: 56%;
+                left: calc(50% - rem(76.4px));
             }
         }
     }
@@ -37,6 +43,17 @@
 
             &__list {
                 padding: rem(10px) rem(20px);
+                li {
+                    a {
+                        & div:first-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+                &-pill {
+                    top: calc(50% - rem(11px));
+                    left: auto;
+                }
             }
         }
     }

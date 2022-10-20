@@ -6020,7 +6020,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _googlemaps_js_api_loader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @googlemaps/js-api-loader */ "./node_modules/@googlemaps/js-api-loader/dist/index.esm.js");
 
 var locations = {
-  boyaca: [{
+  boyacá: [{
     position: {
       lat: 5.5753333,
       lng: -73.3317222
@@ -6033,7 +6033,7 @@ var locations = {
       lat: 5.9223114,
       lng: -73.6069347
     },
-    title: "Moniquira",
+    title: "Moniquirá",
     address: "Km 1.5 vía Barbosa",
     phone: "(601)5140101"
   }, {
@@ -6188,7 +6188,8 @@ var addItem = function addItem(foundedCity, state) {
   container.innerHTML = "";
 
   if (foundedCity) {
-    container.insertAdjacentHTML("beforeend", "  <div class=\"col-6 col-md-12 locations-item\">\n                    <h4>Rayogas Planta ".concat(foundedCity.title, "</h4>\n                    <p>").concat(foundedCity.title, ", ").concat(state.charAt(0).toUpperCase() + state.slice(1), "</p>\n                    <p>").concat(foundedCity.address, "</p>\n                    <p><a href=\"\">").concat(foundedCity.phone, "</a></p>\n                </div>"));
+    var title = !["Granada", "Sogamoso"].includes(foundedCity.title) ? "Rayogas Planta ".concat(foundedCity.title) : "Rayogas Dep\xF3sito ".concat(foundedCity.title);
+    container.insertAdjacentHTML("beforeend", "  <div class=\"col-6 col-md-12 locations-item\">\n                    <h4>".concat(title, "</h4>\n                    <p>").concat(foundedCity.title, ", ").concat(state.charAt(0).toUpperCase() + state.slice(1), "</p>\n                    <p>").concat(foundedCity.address, "</p>\n                    <p><a href=\"\">").concat(foundedCity.phone, "</a></p>\n                </div>"));
   }
 };
 
@@ -6199,7 +6200,8 @@ var addAllItems = function addAllItems(value) {
   if (value) {
     var state = locations[value];
     state.forEach(function (city) {
-      container.insertAdjacentHTML("beforeend", "  <div class=\"col-6 col-md-12 locations-item\">\n                        <h4>Rayogas Planta ".concat(city.title, "</h4>\n                        <p>").concat(city.title, ", ").concat(value.charAt(0).toUpperCase() + value.slice(1), "</p>\n                        <p>").concat(city.address, "</p>\n                        <p><a href=\"\">").concat(city.phone, "</a></p>\n                    </div>"));
+      var title = !["Granada", "Sogamoso"].includes(city.title) ? "Rayogas Planta ".concat(city.title) : "Rayogas Dep\xF3sito ".concat(city.title);
+      container.insertAdjacentHTML("beforeend", "  <div class=\"col-6 col-md-12 locations-item\">\n                        <h4>".concat(title, "</h4>\n                        <p>").concat(city.title, ", ").concat(value.charAt(0).toUpperCase() + value.slice(1), "</p>\n                        <p>").concat(city.address, "</p>\n                        <p><a href=\"\">").concat(city.phone, "</a></p>\n                    </div>"));
     });
   }
 };
@@ -6260,6 +6262,24 @@ if (formPqrs) {
     };
   }());
 }
+
+/***/ }),
+
+/***/ "./resources/js/rayogas/sections/transparency.js":
+/*!*******************************************************!*\
+  !*** ./resources/js/rayogas/sections/transparency.js ***!
+  \*******************************************************/
+/***/ (() => {
+
+document.addEventListener("DOMContentLoaded", function () {
+  var url = new URL(window.location.href);
+  var selectedTab = url.searchParams.get("tab");
+
+  if (selectedTab) {
+    var tab = document.getElementById("transparency-tab-".concat(selectedTab));
+    tab.click();
+  }
+});
 
 /***/ }),
 
@@ -12475,9 +12495,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_transparency__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_components_transparency__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _sections_workWithUs__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./sections/workWithUs */ "./resources/js/rayogas/sections/workWithUs.js");
 /* harmony import */ var _sections_pqrs__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./sections/pqrs */ "./resources/js/rayogas/sections/pqrs.js");
-/* harmony import */ var _maps__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./maps */ "./resources/js/rayogas/maps.js");
+/* harmony import */ var _sections_transparency__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./sections/transparency */ "./resources/js/rayogas/sections/transparency.js");
+/* harmony import */ var _sections_transparency__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_sections_transparency__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _maps__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./maps */ "./resources/js/rayogas/maps.js");
 
  //import "bootstrap/dist/js/bootstrap.bundle.min";
+
 
 
 

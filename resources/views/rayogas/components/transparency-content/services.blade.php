@@ -106,11 +106,9 @@
                                 <h4>Correo físico o postal:</h4>
                                 <p>Cra 2da nº 48-98 Cazucá, Soacha, Cundinamarca</p>
                                 <h4>Correo de notificaciones judiciales:</h4>
-                                <a href="">notificacion@rayogas.com</a>
+                                <a href="">notificaciones@rayogas.com</a>
                                 <h4>Link PQR:</h4>
-                                <a href="">http://www.rayogas.co/pqr_clientes.aspx</a>
-                                <h4>Correo notificaciones judiciales:</h4>
-                                <a href="">notificacion@rayogas.com</a>
+                                <a href="{{ route('rayogas.pqrs') }}">www.rayogas.co/pqrs</a>
                             </div>
                         </div>
                     </div>
@@ -130,7 +128,7 @@
             </div>
             <div class=" col-12 col-md-4 mt-2">
                 <h2 class="sideLine mb-4">1. Peticiones:</h2>
-                <ul >
+                <ul>
                     <li> a. Escape gas </li>
                     <li> b. Cancelación de contrato </li>
                     <li> c. Servicio técnico </li>
@@ -141,14 +139,14 @@
             </div>
             <div class=" col-12 col-md-4 mt-2">
                 <h2 class="sideLine mb-4">2. Quejas: </h2>
-                <ul >
+                <ul>
                     <li> a. Reclamación por atención del conductor </li>
                     <li> b. Reclamación por la atención del funcionario </li>
                 </ul>
             </div>
             <div class=" col-12 col-md-4 mt-2">
                 <h2 class="sideLine mb-4">3. Reclamos: </h2>
-                <ul >
+                <ul>
                     <li> a. Calidad del gas </li>
                     <li> b. Demora en la entrega </li>
                     <li> c. Duración gas </li>

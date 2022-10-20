@@ -21,7 +21,7 @@
                             <div class="forms-select">
                                 <select id="map-state-control" class="form-control">
                                     <option value="">Seleccionar departamento</option>
-                                    <option value="boyaca">Boyacá</option>
+                                    <option value="boyacá">Boyacá</option>
                                     <option value="cundinamarca">Cundinamarca</option>
                                     <option value="meta">Meta</option>
                                     <option value="tolima">Tolima</option>
