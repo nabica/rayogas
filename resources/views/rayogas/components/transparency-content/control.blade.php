@@ -20,7 +20,7 @@
                         indicadores sobre el servicio, reportes comerciales, financiero, administrativos y
                         técnico operativos , acceso a la bodega de datos y recursos de aprendizaje sobre el
                         servicio de Gas Licuado de Petróleo.</p>
-                    <a target='_blank' href="https://www.sui.gov.co">www.sui.gov.co </a>
+                    <a target='_blank' href="https://sui.superservicios.gov.co/">sui.superservicios.gov.co</a>
                 </div>
                 <div class="col-12 col-lg-6 mb-3 mb-lg-0">
                     <h2 class="sideLine mb-4">Entes control y mecanismos supervisión</h2>

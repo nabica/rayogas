@@ -274,12 +274,10 @@
                         <ul class="download-card__list">
                             <li>
                                 <a href="{{ asset('pdfs/politica_datos_personales.pdf') }}" target="_blank">
-                                    <div>
-                                        <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
-                                        <p>
-                                            Política de datos personales
-                                        </p>
-                                    </div>
+                                    <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
+                                    <p>
+                                        Política de datos personales
+                                    </p>
                                     <div>
                                         <i class="icon-download"></i>
                                     </div>

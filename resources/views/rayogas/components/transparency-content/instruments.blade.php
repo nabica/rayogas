@@ -26,7 +26,7 @@
                         Soacha,
                         Cundinamarca. </p>
                     <p>
-                        El horario de trabajo es de lunes a viernes de 7.30 a.m. a 12.30 y de 1.30 pm a 6:00
+                        El horario de trabajo es de lunes a viernes de 7:30 a.m. a 12:30 y de 1:30 pm a 6:00
                         p.m.
                     </p>
                 </div>
@@ -54,7 +54,7 @@
                         reportes comerciales, financiero, administrativos y técnico operativos , acceso a la
                         bodega de datos y recursos de aprendizaje sobre el servicio de Gas Licuado de
                         Petróleo.</p>
-                    <a href="https://www.sui.gov.co" target="_blank">www.sui.gov.co </a>
+                    <a target='_blank' href="https://sui.superservicios.gov.co/">sui.superservicios.gov.co</a>
                 </div>
             </div>
         </div>

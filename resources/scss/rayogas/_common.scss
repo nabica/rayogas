@@ -436,6 +436,14 @@ h3.heading__primary {
             }
             & a {
                 text-decoration: none;
+                & > p {
+                    font-size: rem(16px);
+                    font-weight: 500;
+                    letter-spacing: 0;
+                    line-height: rem(26px);
+                    text-decoration: underline;
+                    margin-bottom: 0;
+                }
                 & div {
                     &:first-child {
                         & > p {
@@ -602,8 +610,14 @@ select::-ms-expand {
             & li {
                 & a {
                     display: flex;
-                    justify-content: center;
+                    justify-content: space-between;
                     align-items: center;
+                    & > p {
+                        font-size: rem(20px);
+                        margin-left: rem(18px);
+
+                        margin-right: 40px;
+                    }
                     & div {
                         &:first-child {
                             display: flex;

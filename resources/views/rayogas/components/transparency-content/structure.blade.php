@@ -80,12 +80,12 @@
                         <ul class="download-card__list">
                             <li>
                                 <a href="{{asset('/pdfs/Mapa-de-procesos.pdf')}}" target="blank">
-                                    <div>
-                                        <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
-                                        <p>
-                                            Mapa de procesos
-                                        </p>
-                                    </div>
+
+                                    <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
+                                    <p>
+                                        Mapa de procesos
+                                    </p>
+
                                     <div>
                                         <i class="icon-download"></i>
                                     </div>
@@ -100,12 +100,10 @@
                             <li>
                                 <a href="{{asset('pdfs/Estructura-Organizacional-RAYOGAS-16102020.pdf')}}"
                                     target="blank">
-                                    <div>
-                                        <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
-                                        <p>
-                                            Estructura Organizacional - RAYOGAS1
-                                        </p>
-                                    </div>
+                                    <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
+                                    <p>
+                                        Estructura Organizacional - RAYOGAS1
+                                    </p>
                                     <div>
                                         <i class="icon-download"></i>
                                     </div>
