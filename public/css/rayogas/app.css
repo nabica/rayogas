@@ -11342,16 +11342,16 @@ textarea.form-control-lg {
 }
 @font-face {
   font-family: "Gotham";
-  src: url("/fonts/gotham/Gotham-Bold.eot");
-  src: url("/fonts/gotham/Gotham-Bold.eot?#iefix") format("embedded-opentype"), url("/fonts/gotham/Gotham-Bold.woff2") format("woff2"), url("/fonts/gotham/Gotham-Bold.woff") format("woff"), url("/fonts/gotham/Gotham-Bold.ttf") format("truetype"), url("/fonts/gotham/Gotham-Bold.svg#Gotham-Bold") format("svg");
+  src: url("/fonts/gotham/Gotham-Black.eot");
+  src: url("/fonts/gotham/Gotham-Black.eot?#iefix") format("embedded-opentype"), url("/fonts/gotham/Gotham-Black.woff2") format("woff2"), url("/fonts/gotham/Gotham-Black.woff") format("woff"), url("/fonts/gotham/Gotham-Black.ttf") format("truetype"), url("/fonts/gotham/Gotham-Black.svg#Gotham-Black") format("svg");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Gotham";
-  src: url("/fonts/gotham/Gotham-Bold.eot");
-  src: url("/fonts/gotham/Gotham-Bold.eot?#iefix") format("embedded-opentype"), url("/fonts/gotham/Gotham-Bold.woff2") format("woff2"), url("/fonts/gotham/Gotham-Bold.woff") format("woff"), url("/fonts/gotham/Gotham-Bold.ttf") format("truetype"), url("/fonts/gotham/Gotham-Bold.svg#Gotham-Bold") format("svg");
+  src: url("/fonts/gotham/Gotham-Black.eot");
+  src: url("/fonts/gotham/Gotham-Black.eot?#iefix") format("embedded-opentype"), url("/fonts/gotham/Gotham-Black.woff2") format("woff2"), url("/fonts/gotham/Gotham-Black.woff") format("woff"), url("/fonts/gotham/Gotham-Black.ttf") format("truetype"), url("/fonts/gotham/Gotham-Black.svg#Gotham-Black") format("svg");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -11935,6 +11935,14 @@ h3.heading__primary::before, .heading__primary.h3::before {
 .download-card__list li a {
   text-decoration: none;
 }
+.download-card__list li a > p {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.625rem;
+  text-decoration: underline;
+  margin-bottom: 0;
+}
 .download-card__list li a div:first-child > p {
   font-size: 1rem;
   font-weight: 500;
@@ -12089,8 +12097,13 @@ select::-ms-expand {
   }
   .download-card__list li a {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+  }
+  .download-card__list li a > p {
+    font-size: 1.25rem;
+    margin-left: 1.125rem;
+    margin-right: 40px;
   }
   .download-card__list li a div:first-child {
     display: flex;

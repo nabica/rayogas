@@ -261,12 +261,12 @@
                         <ul class="download-card__list">
                             <li>
                                 <a href="" target="blank">
-                                    <div>
-                                        <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
-                                        <p>
-                                            Código de ética Rayogas
-                                        </p>
-                                    </div>
+
+                                    <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
+                                    <p>
+                                        Código de ética Rayogas
+                                    </p>
+
                                     <div>
                                         <i class="icon-download"></i>
                                     </div>
@@ -280,12 +280,12 @@
                         <ul class="download-card__list">
                             <li>
                                 <a href="" target="blank">
-                                    <div>
-                                        <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
-                                        <p>
-                                            Política de datos personales
-                                        </p>
-                                    </div>
+
+                                    <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
+                                    <p>
+                                        Política de datos personales
+                                    </p>
+
                                     <div>
                                         <i class="icon-download"></i>
                                     </div>
