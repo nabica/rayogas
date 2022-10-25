@@ -142,7 +142,9 @@ const addItem = (foundedCity, state) => {
     const container = document.getElementById("map__items-container");
     container.innerHTML = "";
     if (foundedCity) {
-        const title = !["Granada", "Sogamoso"].includes(foundedCity.title)
+        const title = !["Granada", "Sogamoso", "Moniquirá"].includes(
+            foundedCity.title
+        )
             ? `Rayogas Planta ${foundedCity.title}`
             : `Rayogas Depósito ${foundedCity.title}`;
         container.insertAdjacentHTML(
@@ -164,7 +166,9 @@ const addAllItems = (value) => {
     if (value) {
         const state = locations[value];
         state.forEach((city) => {
-            const title = !["Granada", "Sogamoso"].includes(city.title)
+            const title = !["Granada", "Sogamoso", "Moniquirá"].includes(
+                city.title
+            )
                 ? `Rayogas Planta ${city.title}`
                 : `Rayogas Depósito ${city.title}`;
             container.insertAdjacentHTML(

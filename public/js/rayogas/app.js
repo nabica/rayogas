@@ -6188,7 +6188,7 @@ var addItem = function addItem(foundedCity, state) {
   container.innerHTML = "";
 
   if (foundedCity) {
-    var title = !["Granada", "Sogamoso"].includes(foundedCity.title) ? "Rayogas Planta ".concat(foundedCity.title) : "Rayogas Dep\xF3sito ".concat(foundedCity.title);
+    var title = !["Granada", "Sogamoso", "Moniquirá"].includes(foundedCity.title) ? "Rayogas Planta ".concat(foundedCity.title) : "Rayogas Dep\xF3sito ".concat(foundedCity.title);
     container.insertAdjacentHTML("beforeend", "  <div class=\"col-6 col-md-12 locations-item\">\n                    <h4>".concat(title, "</h4>\n                    <p>").concat(foundedCity.title, ", ").concat(state.charAt(0).toUpperCase() + state.slice(1), "</p>\n                    <p>").concat(foundedCity.address, "</p>\n                    <p><a href=\"\">").concat(foundedCity.phone, "</a></p>\n                </div>"));
   }
 };
@@ -6200,7 +6200,7 @@ var addAllItems = function addAllItems(value) {
   if (value) {
     var state = locations[value];
     state.forEach(function (city) {
-      var title = !["Granada", "Sogamoso"].includes(city.title) ? "Rayogas Planta ".concat(city.title) : "Rayogas Dep\xF3sito ".concat(city.title);
+      var title = !["Granada", "Sogamoso", "Moniquirá"].includes(city.title) ? "Rayogas Planta ".concat(city.title) : "Rayogas Dep\xF3sito ".concat(city.title);
       container.insertAdjacentHTML("beforeend", "  <div class=\"col-6 col-md-12 locations-item\">\n                        <h4>".concat(title, "</h4>\n                        <p>").concat(city.title, ", ").concat(value.charAt(0).toUpperCase() + value.slice(1), "</p>\n                        <p>").concat(city.address, "</p>\n                        <p><a href=\"\">").concat(city.phone, "</a></p>\n                    </div>"));
     });
   }
