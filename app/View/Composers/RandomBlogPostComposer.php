@@ -15,6 +15,6 @@ class RandomBlogPostComposer
      */
     public function compose(View $view)
     {
-        $view->with('randomBlogPosts', BlogPost::latest()->limit(3)->get());
+        $view->with('randomBlogPosts', BlogPost::latest('id')->limit(3)->get());
     }
 }
