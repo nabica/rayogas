@@ -18,7 +18,7 @@ class WorkWithUsController extends Controller
     public function store(WorkWithUsRequest $request)
     {
         try {
-            $contacts = ['servicioalcliente@rayogas.com'];
+            $contacts = ['servicioalcliente@rayogas.com', 'fabian.ramirez@rayogas.com', 'seleccionrg19@gmail.com'];
             Mail::to($contacts)->send(new WorkWithUsMail($request->all()));
             return response()->json([
                 'status' => 200,
