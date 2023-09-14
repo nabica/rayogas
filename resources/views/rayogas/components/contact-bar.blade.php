@@ -37,4 +37,13 @@
 
         <p class="contact-bar__text">PQRS</p>
     </a>
+
+    <a href="https://portal.recaudo.rayogas.com/" target="_blank" class="contact-bar__button">
+
+        <img src="{{ asset('images/web/common/invoice-rayogas.png') }}"
+             alt="" class="img-fluid">
+
+        <p class="contact-bar__text">Estados de Cuenta</p>
+    </a>
+
 </div>
