@@ -8,9 +8,12 @@ import "./components/formRequest";
 import "./components/footer";
 import "./components/form-validation";
 import "./components/transparency";
+import "./components/communicationsPopup";
 
 import "./sections/workWithUs";
 import "./sections/pqrs";
 import "./sections/transparency";
 
 import "./maps";
+
+

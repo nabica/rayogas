@@ -45,6 +45,7 @@
     @include('rayogas.components.footer',['upButton'=> 'true'])
     @include('rayogas.components.payment-modal')
     @component('rayogas.components.popup') @endcomponent
+    @component('rayogas.components.communications-popup') @endcomponent
     <script src="{{ mix('js/rayogas/app.js') }}"></script>
 </body>
 
