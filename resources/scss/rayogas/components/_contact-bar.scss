@@ -10,12 +10,15 @@
     align-items: center;
     width: rem(55px);
     padding: rem(22.5px) rem(5px) rem(27.5px);
-    height: rem(240px);
+    height: rem(290px);
     flex-shrink: 0;
+
     &.fixed {
         position: fixed;
         right: 0;
         z-index: 1000;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     &__button {

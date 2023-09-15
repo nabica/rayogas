@@ -13495,13 +13495,15 @@ select::-ms-expand {
   align-items: center;
   width: 3.4375rem;
   padding: 1.40625rem 0.3125rem 1.71875rem;
-  height: 15rem;
+  height: 18.125rem;
   flex-shrink: 0;
 }
 .contact-bar.fixed {
   position: fixed;
   right: 0;
   z-index: 1000;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .contact-bar__button {
   display: flex;
