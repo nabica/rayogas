@@ -41,7 +41,7 @@ class RatesController extends Controller
                 $rowCount++;
             }
         }
-//return $ratesRow;
+        //return $ratesRow;
         return view('rayogas.rates', compact('ratesRow'));
     }
 }

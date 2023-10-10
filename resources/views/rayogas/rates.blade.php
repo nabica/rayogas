@@ -40,7 +40,7 @@
                         <div class="col-xl-6">
                             <ul class="download-card__list">
                                 <li class="position-relative">
-                                    @if($rateRow['secondCol']['zone'] != '')
+                                    @if(isset($rateRow['secondCol']) && $rateRow['secondCol']['zone'] != '')
                                     <span class="download-card__list-pill">{{ $rateRow['secondCol']['zone'] }}</span>
                                     @endif
                                     <a href="{{ $rateRow['firstCol']['file'] }}" target="blank">
