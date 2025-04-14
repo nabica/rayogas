@@ -60,8 +60,9 @@ const locations = {
 };
 
 const loader = new Loader({
-    apiKey: "AIzaSyDTZxLcyodI9u8RVM_8hJfUwlwpjt_Dnh8",
+    apiKey: "AIzaSyBsfp7zbM7lbwHhzJF1ZlaErCfROKdno6k",
     version: "weekly",
+    
 });
 
 loader.load().then(() => {

@@ -48,14 +48,8 @@
                                 </a>
                             </li>
 
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-12 mb-4 mb-md-0 col-md-6">
-                    <div class="download-card h-100">
-                        <ul class="download-card__list">
                             <li>
-                                <a href="" target="blank">
+                                <a href="{{ asset('pdfs/carta-adhesion.pdf') }}" target="blank">
                                     <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
                                     <p>
                                         Declaración de adhesión
@@ -69,7 +63,25 @@
                                 <a href="{{ asset('pdfs/cambio_prestador.pdf') }}" target="_blank">
                                     <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
                                     <p>
-                                        RAYOGAS - Cambio de prestador
+                                        Cambio de prestador
+                                    </p>
+                                    <div>
+                                        <i class="icon-download"></i>
+                                    </div>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 mb-4 mb-md-0 col-md-6">
+                    <div class="download-card h-100">
+                        <ul class="download-card__list">
+                            <li>
+                                <a href="{{ asset('pdfs/solicitud_servicio.pdf') }}" target="_blank">
+                                    <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
+                                    <p>
+                                        Solicitud del servicio
                                     </p>
                                     <div>
                                         <i class="icon-download"></i>
@@ -77,10 +89,32 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="{{ asset('pdfs/solicitud_servicio.pdf') }}" target="_blank">
+                                <a href="{{ asset('pdfs/cartatratodignousuariorayogas.pdf') }}" target="_blank">
                                     <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
                                     <p>
-                                        RAYOGAS - Solicitud del servicio
+                                        Carta del trato digno al usuario
+                                    </p>
+                                    <div>
+                                        <i class="icon-download"></i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ asset('pdfs/procedimientoaccesopuerto.pdf') }}" target="_blank">
+                                    <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
+                                    <p>
+                                        Procedimiento acceso puerto de importación
+                                    </p>
+                                    <div>
+                                        <i class="icon-download"></i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ asset('pdfs/comunicadocambiorazonsocial.pdf') }}" target="_blank">
+                                    <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
+                                    <p>
+                                        Comunicado cambio de Razón Social
                                     </p>
                                     <div>
                                         <i class="icon-download"></i>

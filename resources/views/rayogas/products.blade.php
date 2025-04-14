@@ -264,6 +264,14 @@
                                     aria-controls="products-content-4"
                                     aria-selected="false">Horeca</button>
                         </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="products-5"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#products-content-5"
+                                    type="button" role="tab"
+                                    aria-controls="products-content-5"
+                                    aria-selected="false">Petroquímica</button>
+                        </li>
                     </ul>
                 </div>
                 <div class="tab-content tabs-content" id="productsTabContent">
@@ -755,6 +763,62 @@
                                             secadores rotativos y de las
                                             planchadoras. </p>
                                     </div>
+                                </div>
+
+                            </div>
+
+                            <div class="buttons">
+                                <a href="{{ $wappButtons->consultancy_url }}"
+                                   target="blank"
+                                   class="btn btn-primary--green">Solicitar
+                                    asesoría</a>
+                                <a href="{{ $wappButtons->service_url }}"
+                                   target="blank"
+                                   class="btn btn-primary">Solicitar servicio</a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="products-content-5"
+                         role="tabpanel" aria-labelledby="products-5">
+                        <div class="product-design">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="{{ asset('images/web/products/products/images/petroquimica-photo.png') }}"
+                                         class="img-fluid" alt="cilindros">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="content">
+                                        <div class="text-content">
+                                            <h4>Petroquímica</h4>
+                                            <p>Proveemos gases licuados de petróleo para uso como materia prima en los siguientes procesos industriales
+                                            </p>
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="features">
+                                <div class="row">
+                                    <div class="text-left features__item">
+                                        <img src="{{ asset('images/web/products/products/icons/aerosol.png') }}"
+                                             class="img-fluid" alt="">
+                                        <h3>Propelente hidrocarburo para aerosoles</h3>
+
+                                    </div>
+                                    <div class="text-left features__item">
+                                        <img src="{{ asset('images/web/products/products/icons/plastic.png') }}"
+                                             class="img-fluid" alt="">
+                                        <h3>Expansión de polipropileno y poliestireno</h3>
+
+                                    </div>
+                                    <div class="text-left features__item">
+                                        <img src="{{ asset('images/web/products/products/icons/oil.png') }}"
+                                             class="img-fluid" alt="">
+                                        <h3>Dilusión de hidrocarburos</h3>
+
+                                    </div>
+
                                 </div>
 
                             </div>

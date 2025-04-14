@@ -17,7 +17,7 @@
                         </div>
 
                         <form action="">
-                            <label for="">Departamento</label>
+                            <label for="">Plantas</label>
                             <div class="forms-select">
                                 <select id="map-state-control" class="form-control">
                                     <option value="">Seleccionar departamento</option>
@@ -28,7 +28,7 @@
                                 </select>
                             </div>
 
-                            <label for="">Municipio</label>
+                            <label for="">Depositos</label>
                             <div class="forms-select">
                                 <select name="" id="map-city-control" class="form-control" disabled>
                                     <option value="">Seleccione el departamento</option>

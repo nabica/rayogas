@@ -10,7 +10,7 @@
                     <p class="f20">Mecanismos de atención - Localización</p>
                     <p>Contamos con la línea de servicio al cliente <strong>(601) 5802323</strong>, línea
                         gratuita <strong>01 8000 95 95 95</strong>
-                        y en cada planta de RAYOGAS S.A. ESP se cuenta con una oficina de PQRS en donde se
+                        y en cada planta de RAYOGAS S.A.S ESP se cuenta con una oficina de PQRS en donde se
                         atiende al usuario de manera personalizada:</p>
                     <div class="transparency__card-phones">
                         <h4>Planta Cazucá:</h4>
@@ -39,7 +39,7 @@
                         <h4>Correo físico o postal:</h4>
                         <p>Cra 2da nº 48-98 Cazucá, Soacha, Cundinamarca</p>
                         <h4>Correo de notificaciones judiciales:</h4>
-                        <a href="mailto:notificaciones@rayogas.com">notificaciones@rayogas.com</a>
+                        <a href="mailto:recepcion@rayogas.com">recepcion@rayogas.com</a>
                         <h4>Link PQR:</h4>
                         <a href="{{ route('rayogas.pqrs') }}">www.rayogas.co/pqrs</a>
                     </div>
@@ -56,7 +56,7 @@
                     <img src="{{ asset('images/web/transparency/img_transparencia_mecanismos_1.png') }}"
                         alt="Rayogas-gas-glp-politica-de-seguridad-web" class="web-politics__image d-lg-none">
                     <p>La Política de Seguridad y Privacidad de la Información es la declaración general que
-                        representa la posición de la administración de RAYOGAS S.A. ESP con respecto a la
+                        representa la posición de la administración de RAYOGAS S.A.S ESP con respecto a la
                         protección de los activos de información (los empleados, contratistas, terceros, la
                         información, los procesos, las tecnologías de información incluido el hardware y el
                         software), que soportan los procesos de la Empresa y apoyan la implementación del
@@ -77,7 +77,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 transparency__header-text">
-                    <p class="bottomLine "><strong class="gray">RAYOGAS S.A. ESP,</strong> para
+                    <p class="bottomLine "><strong class="gray">RAYOGAS S.A.S ESP,</strong> para
                         asegurar la
                         dirección
                         estratégica de la
@@ -118,7 +118,7 @@
                         </li>
                         <li><img src="{{ asset('images\web\common\icn_glp_bullet.png') }}" alt="bullet">
                             <p>Fortalecer la cultura de seguridad de la información en los funcionarios,
-                                terceros, aprendices, practicantes y clientes de RAYOGAS S.A. ESP.</p>
+                                terceros, aprendices, practicantes y clientes de RAYOGAS S.A.S ESP.</p>
                         </li>
                         <li><img src="{{ asset('images\web\common\icn_glp_bullet.png') }}" alt="bullet">
                             <p>Garantizar la continuidad del negocio frente a incidentes.</p>
@@ -133,8 +133,8 @@
             <div class="row politics__scope">
                 <div class="col-12 col-md-6">
                     <h2 class="sideLine ">Alcance/Aplicabilidad:</h2>
-                    <p>Esta política aplica a toda RAYOGAS S.A. ESP, sus funcionarios, contratistas y terceros
-                        de RAYOGAS S.A. ESP y la ciudadanía en general.</p>
+                    <p>Esta política aplica a toda RAYOGAS S.A.S ESP, sus funcionarios, contratistas y terceros
+                        de RAYOGAS S.A.S ESP y la ciudadanía en general.</p>
                 </div>
                 <div class="col-12 col-md-6">
                     <h2 class="sideLine ">Nivel de cumplimiento:</h2>
@@ -147,12 +147,12 @@
                     <p class="bottomLine transparency__header-text">A continuación se establecen las políticas
                         de
                         seguridad que <br class="d-none d-md-block">
-                        soportan el <strong>SGSI de RAYOGAS S.A. ESP</strong>:</p>
+                        soportan el <strong>SGSI de RAYOGAS S.A.S ESP</strong>:</p>
                 </div>
                 <div class="col-12 politics__list-body">
                     <div class="row">
                         <div class="col-12 col-md-6">
-                            <p><strong class="gray">a)</strong> RAYOGAS S.A. ESP decidido definir, implementar,
+                            <p><strong class="gray">a)</strong> RAYOGAS S.A.S ESP decidido definir, implementar,
                                 operar y mejorar de forma
                                 continua un Sistema de Gestión de Seguridad de la Información, soportado en
                                 lineamientos claros alineados a las necesidades del negocio, y a los
@@ -161,42 +161,42 @@
                                 la información serán definidas,
                                 compartidas, publicadas y aceptadas por cada uno de los empleados, contratistas
                                 o terceros.</p>
-                            <p><strong class="gray">c)</strong> RAYOGAS S.A. ESP protegerá la información
+                            <p><strong class="gray">c)</strong> RAYOGAS S.A.S ESP protegerá la información
                                 generada, procesada o resguardada
                                 por los procesos de negocio y activos de información que hacen parte de los
                                 mismos.</p>
-                            <p><strong class="gray">d)</strong> RAYOGAS S.A. ESP protegerá la información
+                            <p><strong class="gray">d)</strong> RAYOGAS S.A.S ESP protegerá la información
                                 creada, procesada, transmitida o
                                 resguardada por sus procesos de negocio, con el fin de minimizar impactos
                                 financieros, operativos o legales debido a un uso incorrecto de esta. Para ello
                                 es fundamental la aplicación de controles de acuerdo con la clasificación de la
                                 información de su propiedad o en custodia.</p>
-                            <p><strong class="gray">e)</strong> RAYOGAS S.A. ESP protegerá su información de las
+                            <p><strong class="gray">e)</strong> RAYOGAS S.A.S ESP protegerá su información de las
                                 amenazas originadas por parte
                                 del personal.</p>
-                            <p><strong class="gray">f)</strong> RAYOGAS S.A. ESP protegerá las instalaciones de
+                            <p><strong class="gray">f)</strong> RAYOGAS S.A.S ESP protegerá las instalaciones de
                                 procesamiento y la
                                 infraestructura tecnológica que soporta sus procesos críticos.</p>
                         </div>
                         <div class="col-12 col-md-6">
-                            <p><strong class="gray">g)</strong> RAYOGAS S.A. ESP controlará la operación de sus
+                            <p><strong class="gray">g)</strong> RAYOGAS S.A.S ESP controlará la operación de sus
                                 procesos de negocio
                                 garantizando la seguridad de los recursos tecnológicos y las redes de datos.</p>
-                            <p><strong class="gray">h)</strong> RAYOGAS S.A. ESP implementará control de acceso
+                            <p><strong class="gray">h)</strong> RAYOGAS S.A.S ESP implementará control de acceso
                                 a la información, sistemas y
                                 recursos de red.</p>
-                            <p><strong class="gray">i)</strong> RAYOGAS S.A. ESP garantizará que la seguridad
+                            <p><strong class="gray">i)</strong> RAYOGAS S.A.S ESP garantizará que la seguridad
                                 sea parte integral del ciclo de
                                 vida de los sistemas de información.</p>
-                            <p><strong class="gray">j)</strong> RAYOGAS S.A. ESP garantizará a través de una
+                            <p><strong class="gray">j)</strong> RAYOGAS S.A.S ESP garantizará a través de una
                                 adecuada gestión de los eventos
                                 de seguridad y las debilidades asociadas con los sistemas de información una
                                 mejora efectiva de su modelo de seguridad.</p>
-                            <p><strong class="gray">k)</strong> RAYOGAS S.A. ESP garantizará la disponibilidad
+                            <p><strong class="gray">k)</strong> RAYOGAS S.A.S ESP garantizará la disponibilidad
                                 de sus procesos de negocio y la
                                 continuidad de su operación basado en el impacto que pueden generar los eventos.
                             </p>
-                            <p><strong class="gray">l)</strong> RAYOGAS S.A. ESP garantizará el cumplimiento de
+                            <p><strong class="gray">l)</strong> RAYOGAS S.A.S ESP garantizará el cumplimiento de
                                 las obligaciones legales,
                                 regulatorias y contractuales establecidas. <br><br>
 

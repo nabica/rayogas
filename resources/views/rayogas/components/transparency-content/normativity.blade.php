@@ -99,6 +99,19 @@
                                     </div>
                                 </a>
                             </li>
+                            <li>
+                                <a href="{{asset('pdfs/RESOLUCION_40247_2016.pdf')}}" target="_blank">
+
+                                    <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
+                                    <p>
+                                        RESOLUCIÓN 40247 de 2016 
+                                    </p>
+
+                                    <div>
+                                        <i class="icon-download"></i>
+                                    </div>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>

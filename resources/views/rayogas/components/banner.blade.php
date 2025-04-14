@@ -15,7 +15,7 @@
                     @endisset
                 </div>
                 @include('rayogas.components.contact-bar',['fixed'=>'true'])
-            </div>
+            </div> 
         </div>
         @if(isset($logo))
         <img src="{{asset('images/web/common/heart.png')}}" alt="" class="banner__logo">

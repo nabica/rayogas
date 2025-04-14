@@ -1,5 +1,5 @@
 <div class="heading-title">
-    <h2>{{ $title }}</h2>
+    <h1>{{ $title }}</h1>
     @isset($description)
     <p>{!! $description !!}</p>
     @endisset

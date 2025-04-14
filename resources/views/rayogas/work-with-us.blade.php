@@ -37,7 +37,7 @@
             <div class="col-12 col-lg-6 work-with-us__form">
                 <form class="form__general needs-validation" novalidate>
                     <div class="form__general-header line col-12 p-0">
-                        <h3>Trabaja con nosotros</h3>
+                        <h1 style="color: #009ee3;">Trabaja con nosotros</h1>
                     </div>
                     <div class="col-12 mt-4 mb-3">
                         <label for="name" class="form-label">Nombre</label>

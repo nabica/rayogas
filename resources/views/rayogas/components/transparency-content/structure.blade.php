@@ -26,24 +26,13 @@
                     <div>
 
                         <h4>Misión</h4>
-                        <p>RAYOGAS S.A. E.S.P se dedica a la comercialización y distribución de Gas Licuado de
-                            Petróleo
-                            (GLP), abasteciendo el mercado a través del suministro continuo del producto en
-                            cilindros y
-                            a granel a usuarios en los domicilios residenciales, comerciales e industriales,
-                            enfocándose
-                            en la prestación de un servicio seguro, con calidad, minimizando los impactos
-                            ambientales
-                            con cumplimiento y compromiso.</p>
+                        <p>Rayogas se dedica a la comercialización y distribución de Gas Licuado de Petróleo (GLP), abasteciendo el mercado a través del suministro continuo del producto en cilindros y a granel a usuarios en los domicilios residenciales, comerciales e industriales, enfocándose en la prestación de un servicio seguro, con calidad, minimizando los impactos ambientales con cumplimiento y compromiso.
+                        </p>
                     </div>
                     <div>
                         <h4>Visión</h4>
-                        <p>RAYOGAS S.A. E.S.P se dedica a la comercialización y distribución de Gas Licuado de
-                            Petróleo (GLP), abasteciendo el mercado a través del suministro continuo del
-                            producto en
-                            cilindros y a granel a usuarios en los domicilios residenciales, comerciales e
-                            industriales, enfocándose en la prestación de un servicio seguro, con calidad,
-                            minimizando los impactos ambientales con cumplimiento y compromiso.</p>
+                        <p>Rayogas enfocará su trabajo hacia la optimización de sus servicios para consolidarse como la marca número uno por los consumidores de GLP y ser reconocidos por los clientes industriales como el mejor proveedor, una empresa competitiva, en permanente disposición y actuación para satisfacer las necesidades de los usuarios. Será una empresa enfocada en el mejoramiento continuo de sus procesos, formación del equipo humano e incorporación de tecnología, orientada a lograr un desarrollo empresarial organizado y sostenible.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -79,7 +68,7 @@
                     <div class="download-card">
                         <ul class="download-card__list">
                             <li>
-                                <a href="{{asset('/pdfs/Mapa-de-procesos.pdf')}}" target="blank">
+                                <a href="{{asset('/pdfs/mapa-procesos.pdf')}}" target="blank">
 
                                     <img src="{{ asset('images\web\common\icn_pdf_download.png') }}" alt="download">
                                     <p>

@@ -1,6 +1,7 @@
 .heading-title {
     margin-bottom: 3.75rem;
-    h2 {
+
+    h1, h2 {
         color: var(--font-color-primary);
         font-size: rem(16px);
         font-weight: bold;
@@ -23,6 +24,7 @@
             margin-top: 1.25rem;
         }
     }
+
     p {
         margin: 0 auto;
         text-align: center;
@@ -31,7 +33,7 @@
 
 @include media-breakpoint-up(md) {
     .heading-title {
-        h2 {
+        h1, h2 {
             width: 90%;
             font-size: rem(36px);
             line-height: rem(44px);
@@ -44,7 +46,7 @@
 
 @include media-breakpoint-up(lg) {
     .heading-title {
-        h2 {
+        h1, h2 {
             width: 70%;
         }
         p {

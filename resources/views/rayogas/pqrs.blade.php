@@ -50,7 +50,7 @@
                           novalidate id='pqrs__form'>
                         @csrf
                         <div class="form__general-header line col-12 p-0">
-                            <h3>Peticiones, quejas y recursos</h3>
+                            <h1>Peticiones, quejas y recursos</h1>
                             <p>Digita tus datos</p>
                         </div>
                         <div class="col-md-6 mt-0">
