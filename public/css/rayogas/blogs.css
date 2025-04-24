@@ -1,0 +1,23 @@
+.btn-custom {
+    width: 105px; /* Ancho ajustado */
+    height: 30px; /* Altura ajustada */
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco con opacidad del 70% */
+    color: #8393A8; /* Texto negro */
+    border: none; /* Sin bordes */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 14px; /* Tamaño de fuente */
+    font-weight: bold; /* Texto en negrita */
+    text-align: center; /* Centrar texto */
+    line-height: 30px; /* Alinear verticalmente el texto */
+    cursor: pointer; /* Cambiar cursor al pasar el mouse */
+    transition: all 0.3s ease; /* Animación suave */
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16); /* Sombra */
+    padding: 0 10px; /* Espaciado interno */
+  }
+  
+  /* Efecto hover */
+  .btn-custom:hover {
+    background-color: rgba(255, 255, 255, 1); /* Fondo blanco sólido */
+    color: #333; /* Texto ligeramente más oscuro */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+  }
