@@ -12426,7 +12426,7 @@ select::-ms-expand {
     padding: 0 1.25rem;
   }
   .navbar-collapse .navbar-nav {
-    max-width: 37.5rem;
+    max-width: 40.5rem;
     width: 90%;
     justify-content: space-between;
     align-items: center;
@@ -15168,3 +15168,6 @@ select::-ms-expand {
     width: 90%;
   }
 }
+
+
+/* Botón personalizado */

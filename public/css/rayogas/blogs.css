@@ -1,23 +1,86 @@
-.btn-custom {
-    width: 105px; /* Ancho ajustado */
-    height: 30px; /* Altura ajustada */
-    background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco con opacidad del 70% */
-    color: #8393A8; /* Texto negro */
-    border: none; /* Sin bordes */
-    border-radius: 8px; /* Bordes redondeados */
-    font-size: 14px; /* Tamaño de fuente */
-    font-weight: bold; /* Texto en negrita */
-    text-align: center; /* Centrar texto */
-    line-height: 30px; /* Alinear verticalmente el texto */
-    cursor: pointer; /* Cambiar cursor al pasar el mouse */
-    transition: all 0.3s ease; /* Animación suave */
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16); /* Sombra */
-    padding: 0 10px; /* Espaciado interno */
-  }
-  
-  /* Efecto hover */
-  .btn-custom:hover {
-    background-color: rgba(255, 255, 255, 1); /* Fondo blanco sólido */
-    color: #333; /* Texto ligeramente más oscuro */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
-  }
+.blog-list .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    padding: 40px 20px;
+}
+
+.card-blog {
+    width: 330.54px;
+    height: 477px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card-blog:hover {
+    transform: translateY(-4px);
+}
+
+.img-blog {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.card-title {
+    font-family: "Gotham", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #003366;
+    margin: 0;
+}
+
+.btn-ver-mas {
+    align-self: flex-start;
+    padding: 6px 16px;
+    font-size: 14px;
+    background-color: #00aeef;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.btn-ver-mas:hover {
+    background-color: #008fcc;
+}
+
+.tittle-content {
+    text-align: center;
+    padding: 60px 20px 40px;
+}
+
+.tittle-principal {
+    font-family: "Gotham", sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 1.2;
+    color: #003366;
+    margin: 0 0 16px 0;
+}
+
+.tittle-subtext {
+    font-size: 16px;
+    color: #6c757d;
+    max-width: 600px;
+    margin: 0 auto;
+    font-weight: 400;
+}
