@@ -1,4 +1,5 @@
 @extends('rayogas.layouts.master')
+<link rel="stylesheet" href="{{ asset('css/rayogas/blogs.css') }}">
 @section('metatags_facebook')
 <meta property="og:title" content="{{ config('app.name') }} | Blog - ¡Artículos que te interesan sobre el GLP!">
 <meta property="og:site_name" content="{{ config('app.name') }}">
@@ -21,71 +22,37 @@
 @section('content')
 <link rel="stylesheet" href="{{ asset('css/rayogas/blogs.css') }}">
 
+<div class="tittle-content">
+    <h2 class="tittle-principal">Lorem commodo dui.<br>volutpat id lacus Ut</h2>
+    <p class="tittle-subtext">Morbi ultrices quam Quisque vel vel orci quis ex luctus viverra turpis porta.</p>
+</div>
 
-<section class="blog-header text-center py-5">
-    <div class="container">
-        <h1 class="display-4">Lorem commodo dui. <br> volutpat id lacus Ut</h1>
-        <p class="lead">Morbi ultrices quam Quisque vel vel orci quis ex luctus viverra turpis porta.</p>
-    </div>
-</section>
 <section class="blog-list">
     <div class="container">
-        <div class="row">
-            @foreach ($blogs as $blog)
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    {{-- Imagen del blog (asegúrate de que $blog->image tenga la URL de la imagen) --}}
-                    <img src="{{ $blog->card_image }}" class="card-img-top" alt="Imagen del blog">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ $blog->title }}</h5> {{-- Título del blog --}}
-                        <a href="" class="btn btn-primary">Ver más</a>
-                    </div>
-                </div>
+        @foreach ($blogs as $blog)
+        <div class="card-blog">
+            <img src="{{ $blog->card_image }}" class="img-blog" alt="Imagen del blog">
+            <div class="card-body">
+                <h4 class="card-title">{{ $blog->title }}</h4>
+                <a href="" class="btn-ver-mas">Ver más</a>
             </div>
-            @endforeach
-            <nav aria-label="Page navigation" class="blog-list__pagination text-center">
-                <button id="load-more" class="btn btn-custom" data-page="2">Ver más</button>
-            </nav>
         </div>
+        @endforeach
 
+
+    </div>
+    <div class="load-more-container">
+        <button id="loadMore" class="btn-load-more">Ver más</button>
     </div>
 </section>
 
+<section class="container footer-blog">
+    <div class="logo">
+        <img src="{{ asset('images/web/common/img_logo_flame_map.png') }}" class="img-fluid logo-blog"
+            alt="logo flama rayogas">
+    </div>
+    <h2 class="tittle-footer">Lorem commodo dui.<br>volutpat id lacus Ut</h2>
+    </div>
+</section>
 
 @endsection
-
-
-<!-- <body>
-    <div class="container mt-5">
-        <h1 class="mb-4">Lista de Blogs</h1>
-
-        {{-- Verifica si hay blogs disponibles --}}
-        @if ($blogs->count() > 0)
-        <div class="row">
-            {{-- Itera sobre cada blog --}}
-            @foreach ($blogs as $blog)
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    {{-- Imagen del blog (asegúrate de que $blog->image tenga la URL de la imagen) --}}
-                    <img src="{{ $blog->card_image }}" class="card-img-top" alt="Imagen del blog">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ $blog->title }}</h5> {{-- Título del blog --}}
-
-                    </div>
-                </div>
-            </div>
-            @endforeach
-        </div>
-
-        {{-- Paginación --}}
-        <div class="d-flex justify-content-center">
-            {{ $blogs->links() }}
-        </div>
-        @else
-        <p>No hay blogs disponibles.</p>
-        @endif
-    </div>
-
-    {{-- Incluye Bootstrap JS (opcional) --}}
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body> -->

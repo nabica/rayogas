@@ -107,3 +107,29 @@
     background-color: #dce0e3;
     color: #6c757d;
 }
+
+.tittle-footer {
+    text-align: center;
+    position: relative;
+    font-family: "Gotham", sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 1.2;
+    color: #003366;
+    margin: 0 0 16px 0;
+}
+
+.footer-blog {
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+
+.logo-blog {
+    width: 34px;
+    height: 61.93px;
+}
+.logo-blog {
+    display: block; /* Asegúrate de que sea un elemento de bloque */
+    margin: 0 auto; /* Centra horizontalmente */
+}
+
