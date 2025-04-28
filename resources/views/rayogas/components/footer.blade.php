@@ -4,7 +4,7 @@
             <!-- Logo Section -->
             <div class="col-12 col-md-3">
                 <img src="{{ asset('images/web/common/img_logo_azul_footer.png') }}" alt="RayoGas" class="img-fluid mb-2">
-                <img src="{{ asset('images/web/common/logo-superervicios.png') }}"  alt="SuperServicios" class="img-fluid mt-2">
+                <img src="{{ asset('images/web/common/logo-superervicios.png') }}" alt="SuperServicios" class="img-fluid mt-2">
             </div>
 
             <!-- Sitemap Section -->
@@ -35,9 +35,14 @@
                             <i class="icon-cheveron-right"></i> PQRS
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="{{ route('rayogas.blog') }}">
                             <i class="icon-cheveron-right"></i> Noticias
+                        </a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('rayogas.blog') }}">
+                            <i class="icon-cheveron-right"></i> Blog
                         </a>
                     </li>
                 </ul>
