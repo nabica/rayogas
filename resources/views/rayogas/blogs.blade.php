@@ -40,7 +40,6 @@
             </div>
             @endforeach
 
-
         </div>
         <div class="load-more-container">
             <button id="loadMore" class="btn-load-more">Ver más</button>
@@ -54,6 +53,48 @@
         </div>
         <h2 class="tittle-footer">Lorem commodo dui.<br>volutpat id lacus Ut</h2>
         </div>
+    </section>
+    <section class="container form-blog">
+        <form action="#" class="blog-contact-form">
+            <div class="content-form-tittle">
+                <h2 class="tittle-form">Contáctanos ahora mismo</h2>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="first_name" class="form-label">Primer apellido</label>
+                    <input type="text" class="form-control" id="first_name" name="first_name" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="last_name" class="form-label">Segundo apellido</label>
+                    <input type="text" class="form-control" id="last_name" name="last_name" required>
+                </div>
+            </div>
+            <div class="col-12 mt-4 mb-3">
+                <label for="company" class="form-label">Empresa u organización</label>
+                <input type="text" class="form-control" id="company" name="company" required>
+            </div>
+            <div class="col-12 mt-4 mb-3">
+                <label for="email" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="col-12 mt-4 mb-3">
+                <label for="phone" class="form-label">Teléfono</label>
+                <input type="tel" class="form-control" id="phone" name="phone" required>
+            </div>
+            <div class="col-12 mt-4 mb-3">
+                <label for="subject" class="form-label">Cómo podemos ayudarte</label>
+                <input type="text" class="form-control" id="subject" name="subject" required>
+            </div>
+            <div class="col-12 mt-4 mb-3">
+                <label for="message" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+            </div>
+            <div class="col-12">
+                <button class="form__general-button" type="submit">Enviar</button>
+            </div>
+        </form>
+
     </section>
 </body>
 @endsection
