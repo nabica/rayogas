@@ -140,9 +140,8 @@
 
 .blog-contact-form {
     width: 435px;
-    height: 726;
-    top: 2479px;
-    left: 765px;
+    height: 726px;
+
     border-radius: 7px;
 }
 
@@ -177,6 +176,35 @@ hr {
 }
 
 .form-control {
+    margin: auto;
     border-radius: 7px;
     border-width: 2px;
+}
+#first_name,
+#last_name {
+    width: 171px;
+    height: 45px;
+}
+
+#company,
+#email,
+#phone,
+#subject {
+    text-align: center;
+    width: 370px;
+    height: 45px;
+}
+
+#message {
+    width: 370px;
+    height: 112px;
+}
+
+.full-names {
+    gap: 10px;
+    justify-content: center;
+}
+
+.info {
+    margin-left: 32px;
 }
