@@ -15,17 +15,4 @@ class BlogController extends Controller
         $blogs =  Blog::latest('id')->paginate(6);
         return view('rayogas.blogs', compact('blogs'));
     }
-    // public function index()
-    // {
-
-    //     $blogBanner = BlogBanner::first();
-    //     $blogPosts = BlogPost::latest('id')->paginate(6);
-    //     return view('rayogas.blog-list', compact('blogBanner', 'blogPosts'));
-    // }
-
-    // public function show($slug)
-    // {
-    //     $blogPost = BlogPost::where('slug', $slug)->first();
-    //     return view('rayogas.blog', compact('blogPost'));
-    // }
 }
