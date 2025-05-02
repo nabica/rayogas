@@ -132,6 +132,7 @@
 }
 
 .form-blog {
+    align-items: center;
     width: 1442px;
     height: 964px;
     top: 2325px;
@@ -147,15 +148,21 @@
 
 .tittle-form {
     font-family: Gotham;
-    font-weight: 400;
+    font-weight: 550;
     font-size: 25px;
     line-height: 100%;
     letter-spacing: 0%;
     text-align: center;
     color: #009ee3;
+    width: 370px;
+    height: 28px;
 }
 
 .content-form-tittle {
+    margin-left: 18px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
     width: 370px;
     height: 28px;
     top: 2502px;
@@ -207,4 +214,155 @@ hr {
 
 .info {
     margin-left: 32px;
+}
+.form-container {
+    width: 1024px;
+    height: 818px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin: auto;
+}
+
+.form-left {
+    flex: 1;
+    max-width: 45%; /* Ajusta el ancho de la columna izquierda */
+}
+
+.form-right {
+    width: 435px;
+    height: 726px;
+
+    flex: 1;
+    max-width: 45%; /* Ajusta el ancho de la columna derecha */
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        flex-direction: column;
+    }
+
+    .form-left,
+    .form-right {
+        max-width: 100%;
+    }
+}
+.lets-talk {
+    font-family: Gotham;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    width: 456px;
+    height: 108px;
+    top: 3225px;
+    left: 240px;
+}
+
+.form-description {
+    font-family: Gotham;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    color: #003770;
+    width: 498px;
+    height: 100px;
+}
+.phone-number {
+    margin-top: 15px;
+    padding-left: 8px;
+    padding-top: 10px;
+    font-family: Gotham Bold;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #009ee3;
+    width: 452px;
+    height: 41px;
+    justify-content: center;
+}
+
+.list-contact {
+    width: 400px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+}
+
+.item {
+    width: 180px;
+    height: 42px;
+    font-family: Gotham Bold;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    color: #003770;
+    align-content: center;
+    padding-left: 5px;
+}
+.tittle-3 {
+    margin-top: 15px;
+    padding-left: 8px;
+    width: 397px;
+    height: 41px;
+    font-family: Gotham Bold;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #003770;
+}
+
+.stepbystep-contact {
+    gap: 10px;
+    display: flex;
+}
+.number-h3 {
+    width: 25px;
+    height: 28px;
+    top: 3138px;
+    left: 236px;
+    font-family: Gotham;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #009ee3;
+}
+.stepbystep-descr {
+    align-content: center;
+    width: 115px;
+    height: 38px;
+}
+.stepbystep-descrip {
+    width: 132px;
+    height: 38px;
+}
+
+.stepbystep-descr,
+.stepbystep-descrip {
+    font-family: Gotham Bold;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #009ee3;
+}
+.item-container {
+    width: 210px;
+    display: flex;
+    align-items: center;
+}
+
+.container-phone {
+    width: 476px;
+    display: flex;
+    align-items: center;
+}
+
+.write-to-us {
+    padding-bottom: 8px;
 }

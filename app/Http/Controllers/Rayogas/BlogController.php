@@ -12,8 +12,13 @@ class BlogController extends Controller
 {
     public function index()
     {
-        $blogs =  Blog::latest('id')->paginate(6);
+        $blogs =  Blog::latest('id')->paginate(9);
         return view('rayogas.blogs', compact('blogs'));
+    }
+    public function show($slug)
+    {
+        $blogPost = BlogPost::where('slug', $slug)->first();
+        return view('rayogas.blog', compact('blogPost'));
     }
     // public function index()
     // {
