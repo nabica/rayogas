@@ -42,6 +42,6 @@ class RatesController extends Controller
             }
         }
         //return $ratesRow;
-        return view('rayogas.rates', compact('ratesRow'));
+        return view('rayogas.rates_new', compact('ratesRow'));
     }
 }

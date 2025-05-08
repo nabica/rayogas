@@ -83,7 +83,6 @@ Route::namespace("App\Http\Controllers\Rayogas")->group(function () {
     Route::get("/productos-y-servicios", "ProductsController@index")->name('rayogas.products');
     Route::get("/glp", "GlpController@index")->name('rayogas.glp');
     Route::get("/noticias", "BlogController@index")->name('rayogas.blog');
-    /* Route::get("/blog/{slug}", "BlogController@show")->name('rayogas.blog.show'); */
     Route::get("/pqrs", "PqrsController@index")->name('rayogas.pqrs');
     Route::post("/pqrs", "PqrsController@store");
     Route::get("pqrs/gracias", "PqrsController@tanks")->name('rayogas.thanks');
