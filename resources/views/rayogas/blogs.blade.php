@@ -32,7 +32,7 @@
         <div class="container">
             @foreach ($blogs as $blog)
             <div class="card-blog">
-                <img src="{{ $blog->card_image }}" class="img-blog" alt="Imagen del blog">
+                <img src="{{ $blog->card_image }}" class="img-blog" alt="Img del blog">
                 <div class="card-body">
                     <h4 class="card-title">{{ $blog->title }}</h4>
                     <a href="" class="btn-ver-mas">Ver más</a>
@@ -56,7 +56,10 @@
     </section>
 
     <section class="container form-blog">
+        
+        </div>
         <div class="row form-container">
+        <div class="blackground-blue"></div>
             <div class="form-left">
                 <h1 class="lets-talk">¡Hablemos!</h1>
                 <p class="form-description">Estamos aquí para ayudarte a alcanzar tus objetivos energéticos.

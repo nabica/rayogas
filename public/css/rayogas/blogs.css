@@ -140,9 +140,11 @@
 }
 
 .blog-contact-form {
+    margin-top: 70px;
+    background-color: #ffffff;
+    margin-left: 60px;
     width: 435px;
     height: 726px;
-
     border-radius: 7px;
 }
 
@@ -216,6 +218,7 @@ hr {
     margin-left: 32px;
 }
 .form-container {
+    position: relative; /* Necesario para posicionar correctamente los hijos */
     width: 1024px;
     height: 818px;
     display: flex;
@@ -248,6 +251,7 @@ hr {
     }
 }
 .lets-talk {
+    color: #FFFFFF;
     font-family: Gotham;
     font-weight: 500;
     font-size: 60px;
@@ -255,8 +259,7 @@ hr {
     letter-spacing: 0%;
     width: 456px;
     height: 108px;
-    top: 3225px;
-    left: 240px;
+    margin-top: 50px;
 }
 
 .form-description {
@@ -268,6 +271,7 @@ hr {
     color: #003770;
     width: 498px;
     height: 100px;
+    margin-top: 15px;
 }
 .phone-number {
     margin-top: 15px;
@@ -303,7 +307,7 @@ hr {
     padding-left: 5px;
 }
 .tittle-3 {
-    margin-top: 15px;
+    margin-top: 30px;
     padding-left: 8px;
     width: 397px;
     height: 41px;
@@ -316,6 +320,7 @@ hr {
 }
 
 .stepbystep-contact {
+    margin-top: 25px;
     gap: 10px;
     display: flex;
 }
@@ -360,9 +365,24 @@ hr {
 .container-phone {
     width: 476px;
     display: flex;
-    align-items: center;
+    place-items: baseline;
 }
 
 .write-to-us {
     padding-bottom: 8px;
+}
+.mt-4 {
+    margin-top: 0.5rem !important;
+}
+
+.blackground-blue {
+    position: absolute; /* Asegura que pueda ser posicionado detrás */
+    z-index: -1; /* Coloca este elemento detrás de otros con z-index mayor */
+    width: 1024px;
+    height: 290px;
+    top: 0; /* Ajusta según sea necesario */
+    left: 0; /* Ajusta según sea necesario */
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    background-color: #003770;
 }
