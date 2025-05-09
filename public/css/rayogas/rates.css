@@ -1,0 +1,37 @@
+.tittle-rates {
+    text-align: left !important;
+    width: 865px !important;
+    height: 60px !important;
+    font-family: Gotham !important;
+    font-weight: 700 !important;
+    font-size: 50px !important;
+    line-height: 100% !important;
+    letter-spacing: 0% !important;
+    margin: 0px 0px 0px !important;
+}
+
+.description-rates {
+    margin: 0px 0px 6px !important;
+    width: 849px !important;
+    height: 106px !important;
+    text-align: left !important;
+    font-family: Gotham;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.heading-rates {
+    height: 250px;
+   
+    width: 1440px !important;
+    margin-top: 80px;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 158, 227, 0) 24%,
+        rgba(0, 158, 227, 0.8) 62%,
+        #009ee3 100%
+    );
+}
+
