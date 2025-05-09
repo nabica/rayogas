@@ -1,4 +1,5 @@
 @extends('rayogas.layouts.master')
+<link rel="stylesheet" href="{{ asset('css/rayogas/rates.css') }}">
 @section('metatags_facebook')
 <meta property="og:title" content="Rayogas | Infórmate sobre nuestras tarifas">
 <meta property="og:site_name" content="{{ config('app.name') }}">
@@ -20,70 +21,26 @@
 @endsection
 @section('title', config('app.name') . ' | Infórmate sobre nuestras tarifas')
 @section('content')
-
+<!-- Styles -->
 
 <section class="section rates">
-    <div class="container">
+    <div class="container heading-rates">
 
         @component('rayogas.components.heading-title')
-        @slot('title')Encuentra la información de las tarifas de los últimos meses.@endslot
-        @slot('description')Encuentra nuestro servicio en las principales ciudades del país. @endslot
+        @slot('title')Tarifas Rayogas @endslot
+        @slot('description')En Rayogas, reafirmamos nuestro compromiso con la transparencia y el acceso a la información. Podrás encontrar las tarifas vigentes para nuestros servicios de Gas Licuado de Petróleo (GLP), tanto en cilindros como a granel. @endslot
         @endcomponent
+        <div>
+            <div class="container">
+                @foreach ($rates as $rate)
+                $rate
+                @endforeach
 
 
-        <div class="glp-properties__body row">
-            <div class="col-12">
-                <div class="download-card">
-                    @foreach($ratesRow as $rateRow)
-
-                    <div class="row">
-                        <div class="col-xl-6">
-                            <ul class="download-card__list">
-                                <li class="position-relative">
-                                    @if(isset($rateRow['secondCol']) && $rateRow['secondCol']['zone'] != '')
-                                    <span class="download-card__list-pill">{{ $rateRow['secondCol']['zone'] }}</span>
-                                    @endif
-                                    <a href="{{ $rateRow['firstCol']['file'] }}" target="blank">
-                                        <div>
-                                            <img src="/images/web/common/icn_pdf_download.png" alt="download">
-                                            <p>
-                                                {{ $rateRow['firstCol']['title'] }}
-                                            </p>
-                                        </div>
-                                        <div>
-                                            <i class="icon-download"></i>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        @if(isset($rateRow['secondCol']))
-                        <div class="col-xl-6">
-                            <ul class="download-card__list">
-                                <li class="position-relative">
-                                    @if($rateRow['secondCol']['zone'] != '')
-                                    <span class="download-card__list-pill">{{ $rateRow['secondCol']['zone'] }}</span>
-                                    @endif
-                                    <a href="{{ $rateRow['secondCol']['file'] }}" target="blank">
-                                        <div>
-                                            <img src="/images/web/common/icn_pdf_download.png" alt="download">
-                                            <p>
-                                                {{ $rateRow['secondCol']['title'] }}
-                                            </p>
-                                        </div>
-                                        <div>
-                                            <i class="icon-download"></i>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        @endif
-                    </div>
-                    @endforeach
-                </div>
             </div>
         </div>
+
+
     </div>
 </section>
 @endsection
