@@ -1,13 +1,13 @@
 <?php
 
 namespace App\Http\Controllers\Admin\Home;
-
+use Illuminate\Support\Facades\Config;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Http\Requests\Admin\Home\HomeRateRequest;
-use App\Models\Home\HomeRate;
+use App\Http\Requests\Admin\Home\StoreRatesFileRequest;
+use App\Models\Home\RatesFile;
 use App\Services\Util\FileService;
-use Config;
+
 
 class HomeRateController extends Controller
 {
@@ -22,19 +22,19 @@ class HomeRateController extends Controller
 
     public function index()
     {
-        $rates = HomeRate::latest('id')->get();
-        return view('admin.sections.home.rates.index', compact('rates'));
+        $rates = RatesFile::latest('id')->get();
+        return view('admin.sections.home.rates-files.index', compact('rates'));
     }
 
     public function create()
     {
-        $rate = new HomeRate;
-        return view('admin.sections.home.rates.create', compact('rate'));
+        $rate = new RatesFile;
+        return view('admin.sections.home.rates-files.create', compact('rate'));
     }
 
-    public function store(HomeRateRequest $request)
+    public function store(StoreRatesFileRequest $request)
     {
-        $rate = HomeRate::create($request->except($this->inputFiles));
+        $rate = RatesFile::create($request->except($this->inputFiles));
 
         //Save Files
         $fileService = new FileService();
@@ -45,13 +45,13 @@ class HomeRateController extends Controller
 
     public function edit($id)
     {
-        $rate = HomeRate::findOrFail($id);
-        return view('admin.sections.home.rates.edit', compact('rate'));
+        $rate = RatesFile::findOrFail($id);
+        return view('admin.sections.home.rates-files.edit', compact('rate'));
     }
 
-    public function update(HomeRateRequest $request, $id)
+    public function update(StoreRatesFileRequest $request, $id)
     {
-        $rate = HomeRate::findOrFail($id);
+        $rate = RatesFile::findOrFail($id);
 
         //Update record
         $rate->update($request->except($this->inputFiles));
@@ -65,10 +65,10 @@ class HomeRateController extends Controller
 
     public function destroy($id)
     {
-        $rate = HomeRate::findOrFail($id);
+        $rate = RatesFile::findOrFail($id);
         $title = $rate->button_text;
         $fileService = new FileService();
-        $path = $this->mainFolder . '/'. $rate->getFolderId();
+        $path = $this->mainFolder . '/' . $rate->getFolderId();
         $fileService->deleteDirectory($path);
         $rate->delete();
 
