@@ -17,10 +17,10 @@ Route::prefix('lotus')->group(function () {
         });
 
         Route::post('login', 'LoginController@index')
-        ->name('admin.auth.login');
+            ->name('admin.auth.login');
 
         Route::post('logout', 'LogoutController@index')
-        ->name('admin.auth.logout');
+            ->name('admin.auth.logout');
 
         // Por hacer: Verificar que solo puedan ingresar usuarios de tipo administrador
         Route::middleware(['CheckAdminUserAuth'])->group(function () {
@@ -52,7 +52,7 @@ Route::prefix('lotus')->group(function () {
             // Glp
             Route::resource('/glp/banner', 'Glp\GlpBannerController', ['as' => 'admin.glp'])->only(['edit', 'update']);
 
-            Route::resource('/glp/recommendation-tips', 'Glp\GlpRecommendationTipController', ['as' => 'admin.glp'])->only(['index','edit', 'update']);
+            Route::resource('/glp/recommendation-tips', 'Glp\GlpRecommendationTipController', ['as' => 'admin.glp'])->only(['index', 'edit', 'update']);
 
             Route::resource('/glp/recommendation-pdfs', 'Glp\GlpRecommendationPdfController', ['as' => 'admin.glp']);
 
@@ -88,7 +88,7 @@ Route::namespace("App\Http\Controllers\Rayogas")->group(function () {
     Route::get("pqrs/gracias", "PqrsController@tanks")->name('rayogas.thanks');
 
     Route::get('/transparencia', 'TransparencyController@index')->name('rayogas.transparency');
-    Route::get('/tarifas', 'RatesController@index')->name('rayogas.rates');
+    Route::get('/tarifas', 'RatesFileController@index')->name('rayogas.rates');
     Route::get("/trabaja-con-nosotros", "WorkWithUsController@index")->name('rayogas.work-with-us');
     Route::post("/trabaja-con-nosotros", "WorkWithUsController@store");
     Route::get("/terminosycondiciones", "TermsController@index")->name('rayogas.terms');

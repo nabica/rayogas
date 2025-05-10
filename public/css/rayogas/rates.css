@@ -20,11 +20,12 @@
     font-size: 20px;
     line-height: 100%;
     letter-spacing: 0%;
+    color:#FFFFFF !important;
 }
 
 .heading-rates {
     height: 250px;
-   
+
     width: 1440px !important;
     margin-top: 80px;
     background: linear-gradient(
@@ -35,3 +36,105 @@
     );
 }
 
+.container-rates {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaciado entre las secciones de cada mes */
+}
+
+.month-section {
+    display: flex;
+    align-items: end;
+    padding: 15px;
+    padding-left: 0px;
+    border-radius: 5px;
+}
+
+.month-title {
+    width: 166px;
+    height: 24px;
+    font-family: Gotham;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #003770;
+}
+
+.rates-list {
+    width: 500px;
+    height: 40px;
+    top: 464px;
+    left: 372px;
+    display: flex;
+    gap: 10px; /* Espaciado entre las zonas */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten si no caben en una fila */
+}
+.rate-item {
+    
+    display: flex;
+    background-color: #e7ecef;
+    height: 40px;
+    align-items: center;
+    border-radius: 5px;
+}
+.guaviare{
+    gap: 20px;
+}
+.centro {
+    gap: 23px;
+    width: 117px;
+}
+.llanos_orientales {
+    gap: 30px;
+    width: 210px;
+}
+.rate-item.llanos_orientales .zone-name {
+    width: 143px;
+    height: 22px;
+    top: 9px;
+    left: 10px;
+    margin-left: 10px;
+}
+.rate-item.centro .zone-name {
+    width: 58px;
+    height: 22px;
+    margin-left: 10px;
+}
+
+.rate-item.guaviare .zone-name {
+    width: 75px;
+    height: 22px;
+    margin-left: 10px;
+}
+.guaviare {
+    width: 131px;
+    top: 464px;
+    left: 717px;
+}
+.centro:hover, .guaviare:hover, .llanos_orientales:hover {
+    background-color: #d0ebff;
+}
+
+.download-link {
+    color: #003366;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.download-link i {
+    margin-left: 5px;
+}
+
+.zone-name {
+    width: 58px;
+    height: 22px;
+    top: 9px;
+    left: 10px;
+    font-family: Gotham;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: 0%;
+}

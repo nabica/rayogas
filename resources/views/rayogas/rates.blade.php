@@ -25,22 +25,32 @@
 
 <section class="section rates">
     <div class="container heading-rates">
-
         @component('rayogas.components.heading-title')
         @slot('title')Tarifas Rayogas @endslot
         @slot('description')En Rayogas, reafirmamos nuestro compromiso con la transparencia y el acceso a la información. Podrás encontrar las tarifas vigentes para nuestros servicios de Gas Licuado de Petróleo (GLP), tanto en cilindros como a granel. @endslot
         @endcomponent
-        <div>
-            <div class="container">
+
+
+    </div>
+    <div class="container container-rates">
+        @foreach ($groupedRates as $month => $rates)
+        <div class="month-section">
+            <h3 class="month-title">Tarifas {{ $month }}</h3>
+            <div class="rates-list">
                 @foreach ($rates as $rate)
-                $rate
+                <div class="rate-item {{ str_replace(' ', '_', strtolower($rate['zone_name'])) }}">
+                    <p class="zone-name">
+                        {{ $rate['zone_name'] }}
+                    </p>
+                    <a href="{{ asset('storage/' . $rate['file_name']) }}" class="download-link" target="_blank">
+                        <img src="{{ asset('images/web/common/icn_download.png') }}" class="img-fluid logo-download"
+                            alt="logo download">
+                    </a>
+                </div>
                 @endforeach
-
-
             </div>
         </div>
-
-
+        @endforeach
     </div>
 </section>
 @endsection
