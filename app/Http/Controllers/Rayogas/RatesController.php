@@ -10,38 +10,47 @@ class RatesController extends Controller
 {
     public function index()
     {
-        $rates = HomeRate::latest('id')->get();
+      
+        $rates = HomeRate::latest('id')->take(6)->get();
+
         $ratesRow = [];
-        $rowCount = 0;
-        $columnCount = 0;
-        $currentRateRowIndex = null;
-        $columnTitle = 'firstCol';
-
         foreach ($rates as $key => $rate) {
-            if ($columnCount == 0) {
-                $ratesRow[$rowCount] = [];
-                $ratesRow[$rowCount][$columnTitle] = [
-                    'title' => $rate->button_text,
-                    'zone' => $rate->zone,
-                    'file' => $rate->file_url
-                ];
-            } else {
-                $columnTitle = 'secondCol';
-                $ratesRow[$rowCount][$columnTitle] = [
-                    'title' => $rate->button_text,
-                    'zone' => $rate->zone,
-                    'file' => $rate->file_url
-                ];
-            }
-
-            $columnCount++;
-            if ($columnCount > 1) {
-                $columnTitle = 'firstCol';
-                $columnCount = 0;
-                $rowCount++;
-            }
+         $ratesRow[] = [
+                'title' => $rate->button_text,
+                'zone' => $rate->zone,
+                'file' => $rate->file_url
+            ];
         }
-        //return $ratesRow;
-        return view('rayogas.rates_new', compact('ratesRow'));
+        // $ratesRow = [];
+        // $rowCount = 0;
+        // $columnCount = 0;
+        // $columnTitle = 'firstCol';
+
+        // foreach ($rates as $key => $rate) {
+        //     if ($columnCount == 0) {
+        //         $ratesRow[$rowCount] = [];
+        //         $ratesRow[$rowCount][$columnTitle] = [
+        //             'title' => $rate->button_text,
+        //             'zone' => $rate->zone,
+        //             'file' => $rate->file_url
+        //         ];
+        //     } else {
+        //         $columnTitle = 'secondCol';
+        //         $ratesRow[$rowCount][$columnTitle] = [
+        //             'title' => $rate->button_text,
+        //             'zone' => $rate->zone,
+        //             'file' => $rate->file_url
+        //         ];
+        //     }
+
+        //     $columnCount++;
+        //     if ($columnCount > 1) {
+        //         $columnTitle = 'firstCol';
+        //         $columnCount = 0;
+        //         $rowCount++;
+        //     }
+        // }
+    
+        return view('rayogas.rates', compact('ratesRow'));
     }
 }

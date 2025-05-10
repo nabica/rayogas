@@ -10,8 +10,7 @@ class RatesFile extends Model
     use HasFactory;
 
     public function zone()
-{
-    return $this->belongsTo(Zone::class);
-}
-
+    {
+        return $this->belongsTo(Zone::class, 'zone_id');
+    }
 }
