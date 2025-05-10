@@ -22,16 +22,14 @@
 @section('title', config('app.name') . ' | Infórmate sobre nuestras tarifas')
 @section('content')
 <!-- Styles -->
+@component('rayogas.components.heading-title')
+@slot('title')Tarifas Rayogas @endslot
+@slot('description')En Rayogas, reafirmamos nuestro compromiso con la transparencia y el acceso a la información. Podrás encontrar las tarifas vigentes para nuestros servicios de Gas Licuado de Petróleo (GLP), tanto en cilindros como a granel. @endslot
+@endcomponent
+
 
 <section class="section rates">
-    <div class="container heading-rates">
-        @component('rayogas.components.heading-title')
-        @slot('title')Tarifas Rayogas @endslot
-        @slot('description')En Rayogas, reafirmamos nuestro compromiso con la transparencia y el acceso a la información. Podrás encontrar las tarifas vigentes para nuestros servicios de Gas Licuado de Petróleo (GLP), tanto en cilindros como a granel. @endslot
-        @endcomponent
 
-
-    </div>
     <div class="container container-rates">
         @foreach ($groupedRates as $month => $rates)
         <div class="month-section">
@@ -42,7 +40,7 @@
                     <p class="zone-name">
                         {{ $rate['zone_name'] }}
                     </p>
-                    <a href="{{ asset('storage/' . $rate['file_name']) }}" class="download-link" target="_blank">
+                    <a href="{{ asset('uploads/home/rates/' . $rate['file_name']) }}" class="download-link" target="_blank">
                         <img src="{{ asset('images/web/common/icn_download.png') }}" class="img-fluid logo-download"
                             alt="logo download">
                     </a>

@@ -1,4 +1,27 @@
-.tittle-rates {
+.heading-title-rates {
+    background: linear-gradient(
+            180deg,
+            rgba(0, 158, 227, 0) 24%,
+            rgba(0, 158, 227, 0.8) 62%,
+            #009ee3 100%
+        ),
+        url("/images/web/home/rates/header_rates_img.jpg"); 
+    background-size: cover; /* La imagen cubrirá todo el contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    height: 400px; /* Ajusta la altura del contenedor para que coincida con el diseño */
+    display: flex; /* Usa Flexbox para centrar el contenido */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    text-align: center; /* Centra el texto dentro del contenedor */
+    color: #ffffff; /* Asegura que el texto sea visible sobre la imagen */
+    padding: 20px; /* Espaciado interno para un mejor diseño */
+    position: relative; /* Asegura que otros elementos no afecten el diseño */
+    z-index: 1; /* Garantiza que el gradiente y la imagen estén detrás del contenido */
+}
+
+.title-header-rates {
+    margin: auto;
     text-align: left !important;
     width: 865px !important;
     height: 60px !important;
@@ -10,30 +33,14 @@
     margin: 0px 0px 0px !important;
 }
 
-.description-rates {
-    margin: 0px 0px 6px !important;
-    width: 849px !important;
-    height: 106px !important;
-    text-align: left !important;
+.description-header-rates {
     font-family: Gotham;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 100%;
+    font-weight: 400 !important;
+    font-size: 20px !important;
+    line-height: 100% !important;
     letter-spacing: 0%;
-    color:#FFFFFF !important;
-}
-
-.heading-rates {
-    height: 250px;
-
-    width: 1440px !important;
-    margin-top: 80px;
-    background: linear-gradient(
-        180deg,
-        rgba(0, 158, 227, 0) 24%,
-        rgba(0, 158, 227, 0.8) 62%,
-        #009ee3 100%
-    );
+    margin-left: 0px !important;
+    text-align: left !important;
 }
 
 .container-rates {
@@ -72,14 +79,13 @@
     flex-wrap: wrap; /* Permite que los elementos se ajusten si no caben en una fila */
 }
 .rate-item {
-    
     display: flex;
     background-color: #e7ecef;
     height: 40px;
     align-items: center;
     border-radius: 5px;
 }
-.guaviare{
+.guaviare {
     gap: 20px;
 }
 .centro {
@@ -113,7 +119,9 @@
     top: 464px;
     left: 717px;
 }
-.centro:hover, .guaviare:hover, .llanos_orientales:hover {
+.centro:hover,
+.guaviare:hover,
+.llanos_orientales:hover {
     background-color: #d0ebff;
 }
 
