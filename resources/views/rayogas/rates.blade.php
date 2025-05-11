@@ -1,89 +1,78 @@
 @extends('rayogas.layouts.master')
+<link rel="stylesheet" href="{{ asset('css/rayogas/rates/grid.scss') }}">
 @section('metatags_facebook')
-<meta property="og:title" content="Rayogas | Infórmate sobre nuestras tarifas">
-<meta property="og:site_name" content="{{ config('app.name') }}">
-<meta property="og:url" content="{{ Request::url() }}">
-<meta property="og:description"
-    content="Encuentra el servicio que necesitas e infórmate sobre las tarifas para clientes residenciales, comerciales e industriales a nivel nacional">
-<meta property="og:type" content="website">
-<meta property="og:image" content="">
+    <meta property="og:title" content="Rayogas | Infórmate sobre nuestras tarifas">
+    <meta property="og:site_name" content="{{ config('app.name') }}">
+    <meta property="og:url" content="{{ Request::url() }}">
+    <meta property="og:description"
+        content="Encuentra el servicio que necesitas e infórmate sobre las tarifas para clientes residenciales, comerciales e industriales a nivel nacional">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="">
 @endsection
 @section('metatags_seo')
-<meta name="title" content="Rayogas | Infórmate sobre nuestras tarifas">
-<meta name="description"
-    content="Encuentra el servicio que necesitas e infórmate sobre las tarifas para clientes residenciales, comerciales e industriales a nivel nacional">
-<meta name="robots" content="index, follow">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="language" content="Spanish">
-<meta name="revisit-after" content="30 days">
-<meta name="author" content="{{ config('app.name') }}">
+    <meta name="title" content="Rayogas | Infórmate sobre nuestras tarifas">
+    <meta name="description"
+        content="Encuentra el servicio que necesitas e infórmate sobre las tarifas para clientes residenciales, comerciales e industriales a nivel nacional">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="Spanish">
+    <meta name="revisit-after" content="30 days">
+    <meta name="author" content="{{ config('app.name') }}">
 @endsection
 @section('title', config('app.name') . ' | Infórmate sobre nuestras tarifas')
 @section('content')
+    <!-- Styles -->
+    @component('rayogas.components.heading-title')
+        @slot('title')
+            Tarifas Rayogas
+        @endslot
+        @slot('description')
+            En Rayogas, reafirmamos nuestro compromiso con la transparencia y el acceso a la información. Podrás encontrar las
+            tarifas vigentes para nuestros servicios de Gas Licuado de Petróleo (GLP), tanto en cilindros como a granel.
+        @endslot
+    @endcomponent
 
 
-<section class="section rates">
-    <div class="container">
-
-        @component('rayogas.components.heading-title')
-        @slot('title')Encuentra la información de las tarifas de los últimos meses.@endslot
-        @slot('description')Encuentra nuestro servicio en las principales ciudades del país. @endslot
-        @endcomponent
-
-
-        <div class="glp-properties__body row">
-            <div class="col-12">
-                <div class="download-card">
-                    @foreach($ratesRow as $rateRow)
-
-                    <div class="row">
-                        <div class="col-xl-6">
-                            <ul class="download-card__list">
-                                <li class="position-relative">
-                                    @if(isset($rateRow['secondCol']) && $rateRow['secondCol']['zone'] != '')
-                                    <span class="download-card__list-pill">{{ $rateRow['secondCol']['zone'] }}</span>
-                                    @endif
-                                    <a href="{{ $rateRow['firstCol']['file'] }}" target="blank">
-                                        <div>
-                                            <img src="/images/web/common/icn_pdf_download.png" alt="download">
-                                            <p>
-                                                {{ $rateRow['firstCol']['title'] }}
-                                            </p>
-                                        </div>
-                                        <div>
-                                            <i class="icon-download"></i>
+    <section class="section container-rates">
+        @if(count($groupedRates) > 0)
+            <div class="rates-grid-container">
+                @foreach ($groupedRates as $month => $rates)
+                    <div class="rates-container">
+                        <h3 class="rates-title">Tarifas {{ $month }}</h3>
+                        <div class="rate-list">
+                            @foreach ($rates as $rate)
+                                @if($rate['has_file'])
+                                    <a href="{{ asset('uploads/home/rates/' . $rate['id'] . '/' . $rate['file_name']) }}"
+                                       class="rate-item {{ str_replace(' ', '_', strtolower($rate['zone_name'])) }}"
+                                       target="_blank">
+                                        <p class="zone-name">
+                                            {{ $rate['zone_name'] }}
+                                        </p>
+                                        <div class="download-link">
+                                            <img src="{{ asset('images/web/common/icn_download.png') }}"
+                                                class="img-fluid logo-download" alt="logo download">
                                         </div>
                                     </a>
-                                </li>
-                            </ul>
-                        </div>
-                        @if(isset($rateRow['secondCol']))
-                        <div class="col-xl-6">
-                            <ul class="download-card__list">
-                                <li class="position-relative">
-                                    @if($rateRow['secondCol']['zone'] != '')
-                                    <span class="download-card__list-pill">{{ $rateRow['secondCol']['zone'] }}</span>
-                                    @endif
-                                    <a href="{{ $rateRow['secondCol']['file'] }}" target="blank">
-                                        <div>
-                                            <img src="/images/web/common/icn_pdf_download.png" alt="download">
-                                            <p>
-                                                {{ $rateRow['secondCol']['title'] }}
-                                            </p>
+                                @else
+                                    <div class="rate-item {{ str_replace(' ', '_', strtolower($rate['zone_name'])) }} disabled">
+                                        <p class="zone-name">
+                                            {{ $rate['zone_name'] }}
+                                        </p>
+                                        <div class="download-link">
+                                            <img src="{{ asset('images/web/common/icn_download.png') }}"
+                                                class="img-fluid logo-download" alt="logo download">
                                         </div>
-                                        <div>
-                                            <i class="icon-download"></i>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
+                                    </div>
+                                @endif
+                            @endforeach
                         </div>
-                        @endif
                     </div>
-                    @endforeach
-                </div>
+                @endforeach
             </div>
-        </div>
-    </div>
-</section>
+        @else
+            <div class="no-rates-message">
+                <p>No hay tarifas disponibles en este momento. Por favor, vuelve a consultar más tarde.</p>
+            </div>
+        @endif
+    </section>
 @endsection

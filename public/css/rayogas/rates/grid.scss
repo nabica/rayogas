@@ -1,0 +1,135 @@
+.rates-grid-container {
+    display: grid;
+    grid-auto-flow: row;
+    width: 60%;
+    justify-self: left;
+    gap: 1.5rem;
+}
+
+.rates-container {
+    display: grid;
+    grid-template-columns: 0.4fr 1.6fr;
+    grid-template-rows: 1fr;
+    height: 48px;
+}
+
+
+.rate-list {
+    display: grid;
+    grid-template-columns: 0.4fr 01fr 0.4fr;
+    gap: 1rem;
+}
+
+.rate-item {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 1.5fr 0.5fr;
+    border-radius: 8px;
+    background-color: #E7ECEF;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    height: 48px;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover:not(.disabled) {
+        background-color: #d8dfe4;
+    }
+}
+
+.zone-name {
+    font-size: rem(12px);
+    font-weight: 300;
+    color: #003770;
+}
+
+.logo-download {
+    color: #1C274C;
+}
+
+
+.container-rates {
+    padding: 6rem;
+}
+
+.rates-title {
+    align-content: center;
+    font-size: rem(14px);
+    font-weight: 700;
+    color: #003770;
+}
+
+.rate-item.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.rate-item.disabled .download-link {
+    pointer-events: none;
+}
+
+.rate-item.disabled .logo-download {
+    filter: grayscale(100%);
+}
+
+.no-rates-message {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin: 2rem auto;
+    max-width: 600px;
+
+    p {
+        color: #003770;
+        font-size: 1.1rem;
+        margin: 0;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 600px) {
+    .rates-grid-container {
+        width: 100%;
+        gap: 1rem;
+        padding: 0 0.5rem;
+    }
+
+    .container-rates {
+        padding: 1.5rem 0.5rem;
+    }
+
+    .rates-container {
+        grid-template-columns: 1fr;
+        height: auto;
+        border: 1px solid #C9C9C9;
+        padding: 1rem;
+        border-radius: 8px;
+    }
+
+    .rate-list {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .rate-item {
+        grid-template-columns: 1fr 32px;
+        height: 40px;
+        font-size: 0.95rem;
+        padding: 0 0.5rem;
+    }
+
+    .rates-title {
+        font-size: 1rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .zone-name {
+        font-size: 0.95rem;
+    }
+}
