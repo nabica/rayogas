@@ -17,7 +17,7 @@ class HomeRateController extends Controller
     public function __construct()
     {
         $this->mainFolder = Config::get('rayogas.home.rates');
-        $this->inputFiles = ['file'];
+        $this->inputFiles = ['file_name'];
     }
 
     public function index()
@@ -35,7 +35,6 @@ class HomeRateController extends Controller
     public function store(StoreRatesFileRequest $request)
     {
         $rate = RatesFile::create($request->except($this->inputFiles));
-
         //Save Files
         $fileService = new FileService();
         $fileService->saveFiles($request, $this->inputFiles, $this->mainFolder, $rate);

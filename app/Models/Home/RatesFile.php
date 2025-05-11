@@ -37,6 +37,6 @@ class RatesFile extends Model
 
     public function getFileUrlAttribute()
     {
-        return asset($this->uploadsFolder . '/' . $this->ratesFolder . '/' . $this->getFolderId() . '/' . $this->file);
+        return asset($this->uploadsFolder . '/' . $this->ratesFolder . '/' . $this->getFolderId() . '/' . $this->file_name);
     }
 }

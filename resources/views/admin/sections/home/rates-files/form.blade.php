@@ -37,7 +37,7 @@
             <label class="form-label">Archivo</label><br>
             {!! Form::file('file_name') !!}
             @if($rate->file_name)
-            <a href="{{ $rate->file_name }}" target="blank">Ver archivo</a>
+            <a href="{{ $rate->file_url }}" target="blank">Ver archivo</a>
             @endif
         </div>
     </div>
