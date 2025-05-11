@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\Admin\Home\StoreRatesFileRequest;
 use App\Models\Home\RatesFile;
 use App\Services\Util\FileService;
-
+use App\Models\Home\Zone;
 
 class HomeRateController extends Controller
 {
@@ -28,8 +28,10 @@ class HomeRateController extends Controller
 
     public function create()
     {
+        $zones = Zone::all()->pluck('name', 'id')->toArray();
+
         $rate = new RatesFile;
-        return view('admin.sections.home.rates-files.create', compact('rate'));
+        return view('admin.sections.home.rates-files.create', compact('rate', 'zones'));
     }
 
     public function store(StoreRatesFileRequest $request)
@@ -44,8 +46,9 @@ class HomeRateController extends Controller
 
     public function edit($id)
     {
+        $zones = Zone::all()->pluck('name', 'id')->toArray();
         $rate = RatesFile::findOrFail($id);
-        return view('admin.sections.home.rates-files.edit', compact('rate'));
+        return view('admin.sections.home.rates-files.edit', compact('rate', 'zones'));
     }
 
     public function update(StoreRatesFileRequest $request, $id)

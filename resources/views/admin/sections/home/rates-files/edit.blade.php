@@ -27,7 +27,7 @@
             <div class="card-body">
                 {!! Form::open(['route' => ['admin.home.rates.update', $rate->id], 'method' => 'put', 'files' => true]) !!}
 
-                     @include('admin.sections.home.rates.form')
+                     @include('admin.sections.home.rates-files.form')
 
                 {!! Form::close() !!}
             </div>

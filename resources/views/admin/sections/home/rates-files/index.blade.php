@@ -7,12 +7,6 @@
         <div class="page-title-box d-flex align-items-center justify-content-between">
             <h4 class="mb-0">Tarifas</h4>
 
-            {{-- <div class="page-title-right">
-                <ol class="breadcrumb m-0">
-                    <li class="breadcrumb-item"><a href="javascript: void(0);">Forms</a></li>
-                    <li class="breadcrumb-item active">Basic Elements</li>
-                </ol>
-            </div> --}}
 
         </div>
     </div>
@@ -36,7 +30,8 @@
                                 <th scope="col">Nombre del archivo</th>
                                 <th scope="col">Descripcion</th>
                                 <th scope="col">Mes</th>
-                                <th scope="col">zona</th>
+                                <th scope="col">Zona</th>
+                                <th scope="col">Fecha de creacion</th>
                                 <th scope="col">Acciones</th>
                             </tr>
                         </thead>
@@ -48,6 +43,7 @@
                                 <td>{{ $rate->description }}</td>
                                 <td>{{ $rate->month }}</td>
                                 <td>{{ $rate->zone-> name }}</td>
+                                <td>{{ $rate->zone->created_at }}</td>
                                 <td>
                                     {!! Form::open(['route' => ['admin.home.rates.destroy', $rate->id], 'method' => 'delete', 'class' => 'form-delete-record']) !!}
                                     <a href="{{ route('admin.home.rates.edit', $rate->id) }}" class="btn btn-primary">Editar</a>
