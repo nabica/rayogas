@@ -15,7 +15,7 @@ class CreateRatesFilesTable extends Migration
     {
         Schema::create('rates_files', function (Blueprint $table) {
             $table->id();
-            $table->string('file_name');
+            $table->string('file_name')->nullable();
             $table->string('description');
             $table->string('month');
             $table->foreignId('zone_id')->constrained('zones')->cascadeOnDelete();
