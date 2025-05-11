@@ -17,10 +17,10 @@ Route::prefix('lotus')->group(function () {
         });
 
         Route::post('login', 'LoginController@index')
-        ->name('admin.auth.login');
+            ->name('admin.auth.login');
 
         Route::post('logout', 'LogoutController@index')
-        ->name('admin.auth.logout');
+            ->name('admin.auth.logout');
 
         // Por hacer: Verificar que solo puedan ingresar usuarios de tipo administrador
         Route::middleware(['CheckAdminUserAuth'])->group(function () {
@@ -52,7 +52,7 @@ Route::prefix('lotus')->group(function () {
             // Glp
             Route::resource('/glp/banner', 'Glp\GlpBannerController', ['as' => 'admin.glp'])->only(['edit', 'update']);
 
-            Route::resource('/glp/recommendation-tips', 'Glp\GlpRecommendationTipController', ['as' => 'admin.glp'])->only(['index','edit', 'update']);
+            Route::resource('/glp/recommendation-tips', 'Glp\GlpRecommendationTipController', ['as' => 'admin.glp'])->only(['index', 'edit', 'update']);
 
             Route::resource('/glp/recommendation-pdfs', 'Glp\GlpRecommendationPdfController', ['as' => 'admin.glp']);
 
@@ -83,7 +83,6 @@ Route::namespace("App\Http\Controllers\Rayogas")->group(function () {
     Route::get("/productos-y-servicios", "ProductsController@index")->name('rayogas.products');
     Route::get("/glp", "GlpController@index")->name('rayogas.glp');
     Route::get("/noticias", "BlogController@index")->name('rayogas.blog');
-    /* Route::get("/blog/{slug}", "BlogController@show")->name('rayogas.blog.show'); */
     Route::get("/pqrs", "PqrsController@index")->name('rayogas.pqrs');
     Route::post("/pqrs", "PqrsController@store");
     Route::get("pqrs/gracias", "PqrsController@tanks")->name('rayogas.thanks');
