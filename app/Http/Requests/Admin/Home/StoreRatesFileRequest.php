@@ -23,8 +23,44 @@ class StoreRatesFileRequest extends FormRequest
      */
     public function rules()
     {
+        //dd($this->post);
+
+        switch ($this->method()) {
+            case 'POST':
+                return [
+                    'description' => 'required',
+                    'zone_id' => 'required|exists:zones,id',
+                    'month' => 'required|string',
+                    'file_name' => 'required|file|mimes:pdf,doc,docx|max:2048',
+                ];
+                break;
+
+            case 'PUT':
+            case 'PATCH':
+                return [
+                    'description' => 'required',
+                    'zone_id' => 'required|exists:zones,id',
+                    'month' => 'required|string',
+                    'file_name' => 'required|file|mimes:pdf,doc,docx|max:2048',
+                ];
+                break;
+        }
+    }
+
+    public function messages()
+    {
         return [
-            //
+            'button_text.required' => 'El campo texto botón es obligatorio.',
+        ];
+    }
+
+    public function attributes()
+    {
+        return [
+            'description' => 'descripción',
+            'zone_id' => 'zona',
+            'month' => 'mes',
+            'file_name' => 'archivo',
         ];
     }
 }
