@@ -71,9 +71,6 @@
                         <a class="nav-link" href="{{ route('rayogas.rates') }}">Tarifas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ asset('pdfs/tarifas-gas-guaviare.pdf') }}" target="_blank">Tarifas Gas Guaviare</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="https://rayogas.com/catalog/manejo-seguro.html" target="_blank">Manual Granel</a>
                     </li>
                     <li class="nav-item">

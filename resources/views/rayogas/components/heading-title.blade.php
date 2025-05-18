@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{{ asset('css/rayogas/rates/title.css') }}">
+<link rel="stylesheet" href="{{ asset('css/rayogas/rates/title.scss') }}">
 <div class="heading-title-rates">
     <div class="title-rates-container">
         <h1 class="title-header-rates">{{ $title }}</h1>

@@ -27,11 +27,12 @@
 .description-header-rates {
     color: #FFFFFF;
     font-weight: 300;
-    font-size: medium;
+    font-size: clamp(1rem, 2vw + 0.8rem, 1.3rem);
+    line-height: normal;
 }
 
 .title-header-rates {
     color: #FFFFFF;
     font-weight: 800;
-    font-size: xx-large;
+    font-size: clamp(2rem, 2vw + 1rem, 3.2rem);
 }
