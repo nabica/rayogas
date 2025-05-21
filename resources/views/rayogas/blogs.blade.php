@@ -29,37 +29,38 @@
     </div>
 
     <section class="blog-list">
-        <div class="container">
+        <div class="parent-blog">
             @foreach ($blogs as $blog)
             <div class="card-blog">
                 <img src="{{ $blog->card_image }}" class="img-blog" alt="Img del blog">
                 <div class="card-body">
                     <h4 class="card-title">{{ $blog->title }}</h4>
-                    <a href="" class="btn-ver-mas">Ver más</a>
+                    <a href="" class="btn-see-more">Ver más</a>
                 </div>
             </div>
             @endforeach
 
         </div>
-        <div class="load-more-container">
-            <button id="loadMore" class="btn-load-more">Ver más</button>
-        </div>
-    </section>
 
-    <section class="container footer-blog">
+    </section>
+    <div class="load-more-container">
+        <button id="loadMore" class="btn-load-more">Ver más</button>
+    </div>
+
+    <div class="container footer-blog">
         <div class="logo">
             <img src="{{ asset('images/web/common/img_logo_flame_map.png') }}" class="img-fluid logo-blog"
                 alt="logo flama rayogas">
         </div>
         <h2 class="tittle-footer">Lorem commodo dui.<br>volutpat id lacus Ut</h2>
         </div>
-    </section>
+    </div>
 
     <section class="container form-blog">
-        
+
         </div>
         <div class="row form-container">
-        <div class="blackground-blue"></div>
+            <div class="blackground-blue"></div>
             <div class="form-left">
                 <h1 class="lets-talk">¡Hablemos!</h1>
                 <p class="form-description">Estamos aquí para ayudarte a alcanzar tus objetivos energéticos.
