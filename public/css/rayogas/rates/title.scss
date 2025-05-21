@@ -1,0 +1,38 @@
+.heading-title-rates {
+    background:
+        linear-gradient(to bottom,
+            rgba(0, 158, 227, 0) 1%,
+            rgba(0, 158, 227, 0.7) 20%,
+            rgba(0, 158, 227, 0.95) 50%),
+        url("/images/web/home/rates/header_rates_img.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 420px;
+    font-family: Gotham, sans-serif;
+}
+
+
+.title-rates-container {
+    display: grid;
+    width: 80%;
+    height: 100%;
+    align-content: center;
+    grid-template-columns: auto;
+    text-align: left;
+    justify-self: center;
+    color: #FFFFFF;
+}
+
+.description-header-rates {
+    color: #FFFFFF;
+    font-weight: 300;
+    font-size: clamp(1rem, 2vw + 0.8rem, 1.3rem);
+    line-height: normal;
+}
+
+.title-header-rates {
+    color: #FFFFFF;
+    font-weight: 800;
+    font-size: clamp(2rem, 2vw + 1rem, 3.2rem);
+}
