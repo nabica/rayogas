@@ -41,11 +41,11 @@
             @endforeach
 
         </div>
-
+        <div class="load-more-container">
+            <button id="loadMore" class="btn-load-more">Ver más</button>
+        </div>
     </section>
-    <div class="load-more-container">
-        <button id="loadMore" class="btn-load-more">Ver más</button>
-    </div>
+
 
     <div class="container footer-blog">
         <div class="logo">
