@@ -20,7 +20,7 @@
 @endsection
 @section('title', config('app.name') . ' | Blog - ¡Artículos que te interesan sobre el GLP!')
 @section('content')
-<link rel="stylesheet" href="{{ asset('css/rayogas/blogs.css') }}">
+<link rel="stylesheet" href="{{ asset('css/rayogas/blogs.scss') }}">
 
 <body class="body-blog">
     <div class="tittle-content">
@@ -53,14 +53,14 @@
                 alt="logo flama rayogas">
         </div>
         <h2 class="tittle-footer">Lorem commodo dui.<br>volutpat id lacus Ut</h2>
-        </div>
+    </div>
     </div>
 
     <section class="container form-blog">
 
         </div>
         <div class="row form-container">
-            <div class="blackground-blue"></div>
+
             <div class="form-left">
                 <h1 class="lets-talk">¡Hablemos!</h1>
                 <p class="form-description">Estamos aquí para ayudarte a alcanzar tus objetivos energéticos.
@@ -146,7 +146,7 @@
                         <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
                     </div>
                     <div class="col-12">
-                        <button class="form__general-button" type="submit">Enviar</button>
+                        <button class="form__general-button button_submit" type="submit">Enviar</button>
                     </div>
                 </form>
             </div>
