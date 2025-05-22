@@ -1,5 +1,5 @@
-<section class="container form-blog">
-    <div class="row form-container">
+<section class="form-blog">
+    <div class="form-container">
 
         <div class="form-left">
             <h1 class="lets-talk">¡Hablemos!</h1>
