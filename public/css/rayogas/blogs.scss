@@ -347,7 +347,9 @@ hr {
 .stepbystep-contact {
     margin-top: 25px;
     gap: 10px;
-    display: flex;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
 }
 .number-h3 {
     width: 20px;
@@ -383,14 +385,18 @@ hr {
 }
 .item-container {
     width: 210px;
-    display: flex;
+    display: grid;
+    grid-auto-flow: column;
     align-items: center;
+    gap: 8px; // Puedes ajustar el espacio entre el icono y el texto si lo necesitas
 }
 
 .container-phone {
     width: 476px;
-    display: flex;
-    place-items: baseline;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: baseline;
+    gap: 8px; // Puedes ajustar el espacio entre los elementos si lo necesitas
 }
 
 .write-to-us {
@@ -420,3 +426,43 @@ hr {
     margin-top: 25px;
     margin-left: 32px;
 }
+
+@media (max-width: 1046px) and (min-width: 701px) {
+    .blog-list {
+        width: 100%;
+        padding: 0 1rem;
+    }
+    .parent-blog {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+    .card-blog {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 700px) {
+    .blog-list {
+        width: 100%;
+        padding: 0 0.5rem;
+    }
+    .parent-blog {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 16px;
+    }
+    .card-blog {
+        width: 100%;
+        height: auto;
+        margin-top: 16px;
+    }
+    .tittle-principal {
+        font-size: 32px;
+    }
+    .tittle-footer {
+        font-size: 32px;
+    }
+ 
+}
+
