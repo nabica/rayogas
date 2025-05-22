@@ -54,7 +54,6 @@
         </div>
         <h2 class="tittle-footer">Lorem commodo dui.<br>volutpat id lacus Ut</h2>
     </div>
-    </div>
 
      @component('rayogas.components.form-blog')
         <!-- @slot('title')

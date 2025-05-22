@@ -1,6 +1,4 @@
 <section class="container form-blog">
-
-    </div>
     <div class="row form-container">
 
         <div class="form-left">
