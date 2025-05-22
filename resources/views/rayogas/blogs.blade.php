@@ -35,7 +35,7 @@
                 <img src="{{ $blog->card_image }}" class="img-blog" alt="Img del blog">
                 <div class="card-body">
                     <h4 class="card-title">{{ $blog->title }}</h4>
-                    <a href="" class="btn-see-more">Ver más</a>
+                    <a href="{{ route('rayogas.blog.show', $blog->id) }}" class="btn-see-more">Ver más</a>
                 </div>
             </div>
             @endforeach

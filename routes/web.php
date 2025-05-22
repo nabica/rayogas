@@ -87,7 +87,7 @@ Route::namespace("App\Http\Controllers\Rayogas")->group(function () {
     Route::get("/glp", "GlpController@index")->name('rayogas.glp');
     Route::get("/blog", "BlogController@index")->name('rayogas.blog');
     Route::get("/noticias", "NewsController@index")->name('rayogas.news-list');
-    /* Route::get("/blog/{slug}", "BlogController@show")->name('rayogas.blog.show'); */
+    Route::get("/blog/{id}", "BlogController@show")->name('rayogas.blog.show');
     Route::get("/pqrs", "PqrsController@index")->name('rayogas.pqrs');
     Route::post("/pqrs", "PqrsController@store");
     Route::get("pqrs/gracias", "PqrsController@tanks")->name('rayogas.thanks');

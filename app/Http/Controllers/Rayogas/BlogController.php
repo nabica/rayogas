@@ -15,22 +15,11 @@ class BlogController extends Controller
         $blogs =  Blog::latest('id')->paginate(9);
         return view('rayogas.blogs', compact('blogs'));
     }
-    public function show($slug)
-    {
-        $blogPost = BlogPost::where('slug', $slug)->first();
-        return view('rayogas.blog', compact('blogPost'));
-    }
-    // public function index()
-    // {
-
-    //     $blogBanner = BlogBanner::first();
-    //     $blogPosts = BlogPost::latest('id')->paginate(6);
-    //     return view('rayogas.blog-list', compact('blogBanner', 'blogPosts'));
-    // }
-
-    // public function show($slug)
-    // {
-    //     $blogPost = BlogPost::where('slug', $slug)->first();
-    //     return view('rayogas.blog', compact('blogPost'));
-    // }
+   public function show($id)
+{
+    $blog = Blog::findOrFail($id);
+    $date = $blog->created_at->locale('es')->isoFormat('DD [de] MMMM [de] YYYY');
+    return view('rayogas.blogs-detail', compact('blog', 'date'));
+}
+   
 }
