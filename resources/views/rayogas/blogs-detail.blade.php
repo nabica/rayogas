@@ -22,27 +22,15 @@
 @section('content')
 <link rel="stylesheet" href="{{ asset('css/rayogas/blogs-detail.scss') }}">
 
-<body class="body-blog">
-    <div class="tittle-content">
-        <h2 class="tittle-principal">Lorem commodo dui.<br>volutpat id lacus Ut</h2>
-        <p class="tittle-subtext">Morbi ultrices quam Quisque vel vel orci quis ex luctus viverra turpis porta.</p>
+<section class="section blog-content">
+    <h2 class="tittle-principal">Lorem commodo dui.<br>volutpat id lacus Ut</h2>
+    <div class="blog_detail">
+        <h6 class="blog_date">fecha {{ $date }}</h6>
+
+        <img src="{{ asset('uploads/blog/' . $blog->id . '/' . $blog->card_image) }}" class="img_blog" alt="Img del blog">
+        <p class="blog_description"> {{ $blog->description }} </p>
 
     </div>
-    <section class="blog-content">
+</section>
 
-        <div class="blog_detail">
-            <div class="date">
-                <p>fecha {{ $date }}</p>
-            </div>
-            <div class="blog_img">
-                <img src="{{ $blog->card_image }}" class="img-fluid" alt="Img del blog">
-            </div>
-            <div class="blog_description">
-                <p> {{ $blog->description }} </p>
-            </div>
-
-        </div>
-    </section>
-
-</body>
 @endsection
