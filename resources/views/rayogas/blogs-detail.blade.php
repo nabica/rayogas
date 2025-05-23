@@ -25,7 +25,9 @@
 <section class="section blog-content">
     <h2 class="tittle-principal">Lorem commodo dui.<br>volutpat id lacus Ut</h2>
     <div class="blog_detail">
-        <h6 class="blog_date">fecha {{ $date }}</h6>
+        <h6 class="blog_date">
+        <img src="{{ asset('images/web/blog/icn_calendar.png') }}" class="icn-calendar" alt="logo calendar">
+        {{ $date }}</h6>
 
         <img src="{{ asset('uploads/blog/' . $blog->id . '/' . $blog->card_image) }}" class="img_blog" alt="Img del blog">
         <p class="blog_description"> {{ $blog->description }} </p>
