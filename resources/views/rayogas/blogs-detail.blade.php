@@ -41,7 +41,7 @@
         <div class="next_blog">
             <img class="img_next" src="{{ asset('uploads/blog/' . $next_blog->id . '/' . $next_blog->card_image) }}" alt="Img card blog">
             <h3 class="title_next">{{ $next_blog->title }}</h3>
-            <a href="" class="btn">Ver más</a>
+            <a href="{{ route('rayogas.blog.show', $next_blog->id) }}" class="btn-see-more">Ver más</a>
         </div>
         @endforeach
     </div>
