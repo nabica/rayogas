@@ -61,9 +61,12 @@ Route::prefix('lotus')->group(function () {
             // Pqrs
             Route::resource('/pqrs/objects', 'Pqrs\PqrsObjectController', ['as' => 'admin.pqrs']);
 
-            // Blog
-            Route::resource('/blog/banner', 'Blog\BlogBannerController', ['as' => 'admin.blog'])->only(['edit', 'update']);
+            // News
+            Route::resource('/news/banner', 'News\NewsBannerController', ['as' => 'admin.news'])->only(['edit', 'update']);
 
+            Route::resource('/news/posts', 'News\NewsPostController', ['as' => 'admin.news']);
+            //Blog
+            Route::resource('/blog/banner', 'Blog\BlogBannerController', ['as' => 'admin.blog'])->only(['edit', 'update']);
             Route::resource('/blog/posts', 'Blog\BlogPostController', ['as' => 'admin.blog']);
         });
     });
@@ -82,7 +85,9 @@ Route::namespace("App\Http\Controllers\Rayogas")->group(function () {
     Route::get("/nosotros", "AboutController@index")->name('rayogas.about');
     Route::get("/productos-y-servicios", "ProductsController@index")->name('rayogas.products');
     Route::get("/glp", "GlpController@index")->name('rayogas.glp');
-    Route::get("/noticias", "BlogController@index")->name('rayogas.blog');
+    Route::get("/blog", "BlogController@index")->name('rayogas.blog');
+    Route::get("/noticias", "NewsController@index")->name('rayogas.news-list');
+    /* Route::get("/blog/{slug}", "BlogController@show")->name('rayogas.blog.show'); */
     Route::get("/pqrs", "PqrsController@index")->name('rayogas.pqrs');
     Route::post("/pqrs", "PqrsController@store");
     Route::get("pqrs/gracias", "PqrsController@tanks")->name('rayogas.thanks');
