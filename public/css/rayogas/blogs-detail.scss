@@ -12,10 +12,9 @@
     grid-template-columns: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-
     margin: auto;
-    justify-items: center; // Centra horizontalmente los hijos
-    align-items: center; // Centra verticalmente los hijos (si hay altura disponible)
+    justify-items: center;
+    align-items: center;
 }
 
 .blog_description {
@@ -43,4 +42,34 @@
     object-fit: cover;
     margin-bottom: 2.5rem;
     margin-top: 2.5rem;
+}
+
+.blog-cards-grid {
+    background-color: #f0f0f0;
+}
+
+.parent_next_blog {
+    max-width: 64rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-items: center;
+    margin: auto;
+}
+.next_blog {
+    background-color: #ffffff;
+    width: 20.659rem;
+    height: 29.813rem;
+}
+.img_next {
+    width: 18.426rem;
+    height: 10.5rem;
+    object-fit: cover;
+}
+.title_next {
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    width: 15.5rem;
 }
