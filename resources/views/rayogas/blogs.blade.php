@@ -32,7 +32,7 @@
         <div class="container">
             @foreach ($blogs as $blog)
             <div class="card-blog">
-                <img src="{{ $blog->card_image }}" class="img-blog" alt="Img del blog">
+                <img src="{{ asset('uploads/blog/' . $blog->id . '/' . $blog->card_image) }}" class="img-blog" alt="Img del blog">
                 <div class="card-body">
                     <h4 class="card-title">{{ $blog->title }}</h4>
                     <a href="" class="btn-ver-mas">Ver más</a>
