@@ -19,7 +19,8 @@ class BlogController extends Controller
 {
     $blog = Blog::findOrFail($id);
     $date = $blog->created_at->locale('es')->isoFormat('DD [de] MMMM [de] YYYY');
-    return view('rayogas.blogs-detail', compact('blog', 'date'));
+    $next_blogs = Blog::where('id', '!=', $id)->latest('id')->take(3)->get();
+    return view('rayogas.blogs-detail', compact('blog', 'date', 'next_blogs'));
 }
    
 }
