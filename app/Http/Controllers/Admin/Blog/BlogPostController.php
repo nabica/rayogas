@@ -5,9 +5,9 @@ namespace App\Http\Controllers\Admin\Blog;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests\Admin\Blog\BlogPostRequest;
-use App\Models\Blog\BlogPost;
+use App\Models\Blog\Blog;
 use App\Services\Util\FileService;
-use Config;
+use Illuminate\Support\Facades\Config;
 
 class BlogPostController extends Controller
 {
@@ -17,60 +17,58 @@ class BlogPostController extends Controller
     public function __construct()
     {
         $this->mainFolder = Config::get('rayogas.blog.posts');
-        $this->inputFiles = ['thumb_image', 'image'];
+        $this->inputFiles = ['card_image'];
     }
 
     public function index()
     {
-        $posts = BlogPost::latest('id')->paginate(6);
-        return view('admin.sections.blog.posts.index', compact('posts'));
+        $blogs = Blog::latest('id')->paginate(6);
+        return view('admin.sections.blog.blogs.index', compact('blogs'));
     }
 
     public function create()
     {
-        $post = new BlogPost;
-        return view('admin.sections.blog.posts.create', compact('post'));
+        $blog = new Blog();
+        return view('admin.sections.blog.blogs.create', compact('blog'));
     }
-
     public function store(BlogPostRequest $request)
     {
-        $post = BlogPost::create($request->except($this->inputFiles));
+        $blog = Blog::create($request->except($this->inputFiles));
 
         //Save Files
         $fileService = new FileService();
-        $fileService->saveFiles($request, $this->inputFiles, $this->mainFolder, $post);
+        $fileService->saveFiles($request, $this->inputFiles, $this->mainFolder, $blog);
 
-        return redirect()->route('admin.blog.posts.index')->withSuccess('Se ha creado el artículo ' . $post->title . '.');
+        return redirect()->route('admin.blog.posts.index')->withSuccess('Se ha creado el artículo ' . $blog->title . '.');
     }
-
     public function edit($id)
     {
-        $post = BlogPost::findOrFail($id);
-        return view('admin.sections.blog.posts.edit', compact('post'));
+        $blog = Blog::findOrFail($id);
+        return view('admin.sections.blog.blogs.edit', compact('blog'));
     }
 
     public function update(BlogPostRequest $request, $id)
     {
-        $post = BlogPost::findOrFail($id);
+        $blog = Blog::findOrFail($id);
 
         //Update record
-        $post->update($request->except($this->inputFiles));
+        $blog->update($request->except($this->inputFiles));
 
         //Save Files
         $fileService = new FileService();
-        $fileService->saveFiles($request, $this->inputFiles, $this->mainFolder, $post);
+        $fileService->saveFiles($request, $this->inputFiles, $this->mainFolder, $blog);
 
-        return redirect()->route('admin.blog.posts.edit', $post->id)->withSuccess('Se ha actualizado el artículo satisfactoriamente.');
+        return redirect()->route('admin.blog.posts.edit', $blog->id)->withSuccess('Se ha actualizado el artículo satisfactoriamente.');
     }
 
     public function destroy($id)
     {
-        $post = BlogPost::findOrFail($id);
-        $title = $post->title;
+        $blog = Blog::findOrFail($id);
+        $title = $blog->title;
         $fileService = new FileService();
-        $path = $this->mainFolder . '/'. $post->getFolderId();
+        $path = $this->mainFolder . '/' . $blog->getFolderId();
         $fileService->deleteDirectory($path);
-        $post->delete();
+        $blog->delete();
 
         return redirect()->route('admin.blog.posts.index')->withSuccess('El artículo ' . $title . ' ha sido eliminado satisfactoriamente.');
     }

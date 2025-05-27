@@ -29,25 +29,21 @@ class BlogPostRequest extends FormRequest
             case 'POST':
                 return [
                     'title' => 'required|unique:blog_posts',
-                    'body_blog' => 'required',
-                    'card_image' => 'required',
+                    'excerpt_description' => 'required',
+                    'link' => 'required',
+                    /* 'description' => 'required' */
                 ];
                 break;
 
             case 'PUT':
             case 'PATCH':
                 return [
-                    'title' => 'required' . $this->post,
-                    'body_blog' => 'required',
-                    'card_image' => 'required',
+                    'title' => 'required|unique:blog_posts,title,' . $this->post,
+                    'excerpt_description' => 'required',
+                    'link' => 'required',
+                    /* 'description' => 'required' */
                 ];
                 break;
         }
-    }
-    public function attributes()
-    {
-        return [
-            'body_blog' => 'contenido del blog',
-        ];
     }
 }
