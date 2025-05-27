@@ -15,7 +15,7 @@
             <label class="form-label">Imagen para tarjeta del blog</label><br>
             {!! Form::file('card_image') !!}
             @if($blog->card_image)
-            <img src="{{ $blog->card_image }}" width="50" alt="">
+            <a href="{{ $blog->image_url }}" target="_blank"><br>Ver imagen actual</a>
             @endif
         </div>
     </div>

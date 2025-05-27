@@ -28,7 +28,7 @@ class BlogPostRequest extends FormRequest
         switch ($this->method()) {
             case 'POST':
                 return [
-                    'title' => 'required|unique:blog_posts',
+                    'title' => 'required|unique:blogs',
                     'body_blog' => 'required',
                     'card_image' => 'required',
                 ];
@@ -37,7 +37,7 @@ class BlogPostRequest extends FormRequest
             case 'PUT':
             case 'PATCH':
                 return [
-                    'title' => 'required' . $this->post,
+                    'title' => 'required' . $this->blog,
                     'body_blog' => 'required',
                     'card_image' => 'required',
                 ];
