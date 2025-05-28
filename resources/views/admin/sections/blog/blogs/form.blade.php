@@ -15,7 +15,11 @@
             <label class="form-label">Imagen para tarjeta del blog</label><br>
             {!! Form::file('card_image') !!}
             @if($blog->card_image)
-            <a href="{{ $blog->image_url }}" target="_blank"><br>Ver imagen actual</a>
+            <div class="card-blog">
+                <p>Imagen actual</p>
+                <img src="{{ asset('uploads/blog/' . $blog->id . '/' . $blog->card_image) }}" class="img-blog img-fluid" alt="Img del blog">
+
+            </div>
             @endif
         </div>
     </div>
@@ -66,8 +70,11 @@
             });
             tinymce.init({
                 selector: '#myTextarea',
-                width: 600,
-                height: 300,
+                content_css: "{{ asset('css/admin/blog/blog_create.css') }}",
+                width: '1200',
+                height: 500,
+                max_width: 1200,
+                resize: 'both',
                 plugins: [
                     'advlist', 'autolink', 'link', 'image', 'lists', 'charmap', 'preview', 'anchor', 'pagebreak',
                     'searchreplace', 'wordcount', 'visualblocks', 'visualchars', 'code', 'fullscreen', 'insertdatetime',
@@ -88,8 +95,7 @@
             });
         </script>
 
-
-        <div class="col-md-6">
+        <div class="col-md-6 container_textarea">
             <div class="form-group">
                 <label class="form-label">Contenido</label>
                 {!! Form::textarea('body_blog', $blog->body_blog , ['class' => 'form-control', 'id' => 'myTextarea']) !!}

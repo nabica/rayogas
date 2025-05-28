@@ -67,6 +67,7 @@ Route::prefix('lotus')->group(function () {
             Route::resource('/news/posts', 'News\NewsPostController', ['as' => 'admin.news']);
             //Blog
             Route::resource('/blog/banner', 'Blog\BlogBannerController', ['as' => 'admin.blog'])->only(['edit', 'update']);
+            // Route::resource('/blog/posts', 'Blog\BlogPostController', ['as' => 'admin.blog']);
             Route::resource('/blog/posts', 'Blog\BlogPostController', ['as' => 'admin.blog']);
         });
     });
