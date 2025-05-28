@@ -8,16 +8,20 @@ use App\Http\Requests\Admin\Blog\BlogPostRequest;
 use App\Models\Blog\Blog;
 use App\Services\Util\FileService;
 use Illuminate\Support\Facades\Config;
+use App\Services\HtmlSanitizerService;
 
 class BlogPostController extends Controller
 {
     private $mainFolder;
     private $inputFiles;
 
-    public function __construct()
+    private $htmlSanitizer; // Agregar propiedad
+
+    public function __construct(HtmlSanitizerService $htmlSanitizer) // Inyectar servicio
     {
         $this->mainFolder = Config::get('rayogas.blog.posts');
         $this->inputFiles = ['card_image'];
+        $this->htmlSanitizer = $htmlSanitizer; // Asignar servicio
     }
 
     public function index()
@@ -28,8 +32,9 @@ class BlogPostController extends Controller
 
     public function create()
     {
+        $api = Config::get('rayogas.api.key');
         $blog = new Blog();
-        return view('admin.sections.blog.blogs.create', compact('blog'));
+        return view('admin.sections.blog.blogs.create', compact('blog', 'api'));
     }
     public function store(BlogPostRequest $request)
     {
@@ -43,8 +48,9 @@ class BlogPostController extends Controller
     }
     public function edit($id)
     {
+        $api = Config::get('rayogas.api.key');
         $blog = Blog::findOrFail($id);
-        return view('admin.sections.blog.blogs.edit', compact('blog'));
+        return view('admin.sections.blog.blogs.edit', compact('blog', 'api'));
     }
 
     public function update(BlogPostRequest $request, $id)

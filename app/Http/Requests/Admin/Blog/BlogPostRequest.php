@@ -30,7 +30,7 @@ class BlogPostRequest extends FormRequest
                 return [
                     'title' => 'required|unique:blogs',
                     'body_blog' => 'required',
-                    'card_image' => 'required',
+                    'card_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp',
                 ];
                 break;
 
@@ -39,7 +39,6 @@ class BlogPostRequest extends FormRequest
                 return [
                     'title' => 'required' . $this->blog,
                     'body_blog' => 'required',
-                    'card_image' => 'required',
                 ];
                 break;
         }

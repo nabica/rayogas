@@ -5,6 +5,7 @@ namespace App\Models\Blog;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Config;
+use App\Services\HtmlSanitizerService;
 
 class Blog extends Model
 {
@@ -26,6 +27,15 @@ class Blog extends Model
         'thumb_image_url',
         'image_url',
     ];
+    public function setBodyBlogAttribute($value)
+    {
+        if (!empty($value)) {
+            $sanitizer = app(HtmlSanitizerService::class);
+            $this->attributes['body_blog'] = $sanitizer->sanitizeBlogContent($value);
+        } else {
+            $this->attributes['body_blog'] = $value;
+        }
+    }
     public function getFolderId()
     {
         return ($this->id < 10) ? sprintf('%02d', $this->id) : $this->id;
