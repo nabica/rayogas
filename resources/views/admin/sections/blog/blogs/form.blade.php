@@ -70,19 +70,37 @@
             });
             tinymce.init({
                 selector: '#myTextarea',
-                content_css: "{{ asset('css/admin/blog/blog_create.css') }}",
+                content_css: "{{ asset('css/editor-content.css') }}",
                 width: '1200',
                 height: 500,
                 max_width: 1200,
                 resize: 'both',
                 plugins: [
-                    'advlist', 'autolink', 'link', 'image', 'lists', 'charmap', 'preview', 'anchor', 'pagebreak',
+                    'advlist', 'image code', 'autolink', 'link', 'image', 'lists', 'charmap', 'preview', 'anchor', 'pagebreak',
                     'searchreplace', 'wordcount', 'visualblocks', 'visualchars', 'code', 'fullscreen', 'insertdatetime',
                     'media', 'table', 'emoticons', 'help'
                 ],
-                toolbar: 'undo redo | styles | bold italic | alignleft aligncenter alignright alignjustify | ' +
+                toolbar: 'undo redo | styles | bold italic | alignleft aligncenter alignright alignjustify | image code ' +
                     'bullist numlist outdent indent | link image | print preview media fullscreen | ' +
                     'forecolor backcolor emoticons | help',
+                formats: {
+                    alignleft: {
+                        selector: 'p,h1,h2,h3,h4,h5,h6,td,th,div',
+                        classes: 'align-left'
+                    },
+                    aligncenter: {
+                        selector: 'p,h1,h2,h3,h4,h5,h6,td,th,div',
+                        classes: 'align-center'
+                    },
+                    alignright: {
+                        selector: 'p,h1,h2,h3,h4,h5,h6,td,th,div',
+                        classes: 'align-right'
+                    },
+                    alignjustify: {
+                        selector: 'p,h1,h2,h3,h4,h5,h6,td,th,div',
+                        classes: 'align-justify'
+                    }
+                },
                 menu: {
                     favs: {
                         title: 'My Favorites',
@@ -90,7 +108,8 @@
                     }
                 },
                 menubar: 'favs file edit view insert format tools table help',
-                automatic_uploads: true,
+                automatic_uploads: false,
+                images_upload_handler: null,
                 images_upload_handler: image_upload_handler
             });
         </script>
