@@ -12,7 +12,15 @@ class BlogController extends Controller
 {
     public function index()
     {
-        $blogs =  Blog::latest('id')->paginate(6);
+        $blogs =  Blog::latest('id')->paginate(9);
         return view('rayogas.blogs', compact('blogs'));
     }
+   public function show($id)
+{
+    $blog = Blog::findOrFail($id);
+    $date = $blog->created_at->locale('es')->isoFormat('DD [de] MMMM [de] YYYY');
+    $next_blogs = Blog::where('id', '!=', $id)->latest('id')->take(3)->get();
+    return view('rayogas.blogs-detail', compact('blog', 'date', 'next_blogs'));
+}
+   
 }
