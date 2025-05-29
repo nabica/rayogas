@@ -47,6 +47,7 @@ class BlogPostRequest extends FormRequest
     {
         return [
             'body_blog' => 'contenido del blog',
+            'card_image' => 'imagen de la tarjeta del blog',
         ];
     }
 }

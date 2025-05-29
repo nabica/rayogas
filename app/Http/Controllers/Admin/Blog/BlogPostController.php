@@ -36,9 +36,38 @@ class BlogPostController extends Controller
         $blog = new Blog();
         return view('admin.sections.blog.blogs.create', compact('blog', 'api'));
     }
+
+    private function saveImagesFromContent($content)
+    {
+        return preg_replace_callback(
+            '/<img[^>]+src="data:image\/([^;]+);base64,([^"]+)"[^>]*>/i',
+            function ($matches) {
+                $ext = $matches[1];
+                $data = base64_decode($matches[2]);
+                $filename = uniqid() . '.' . $ext;
+                $path = 'uploads/blog_posts/' . $filename;
+                file_put_contents(public_path($path), $data);
+                // Reemplaza solo el src, mantiene el resto del tag
+                return preg_replace(
+                    '/src="[^"]+"/',
+                    'src="/' . $path . '"',
+                    $matches[0]
+                );
+            },
+            $content
+        );
+    }
+
     public function store(BlogPostRequest $request)
     {
-        $blog = Blog::create($request->except($this->inputFiles));
+        $data = $request->except($this->inputFiles);
+
+        // Procesar imágenes base64 en el contenido
+        if (isset($data['body_blog'])) {
+            $data['body_blog'] = $this->saveImagesFromContent($data['body_blog']);
+        }
+
+        $blog = Blog::create($data);
 
         //Save Files
         $fileService = new FileService();
@@ -46,6 +75,7 @@ class BlogPostController extends Controller
 
         return redirect()->route('admin.blog.posts.index')->withSuccess('Se ha creado el artículo ' . $blog->title . '.');
     }
+
     public function edit($id)
     {
         $api = Config::get('rayogas.api.key');
@@ -56,15 +86,21 @@ class BlogPostController extends Controller
     public function update(BlogPostRequest $request, $id)
     {
         $blog = Blog::findOrFail($id);
+        $data = $request->except($this->inputFiles);
+
+        // Procesar imágenes base64 en el contenido
+        if (isset($data['body_blog'])) {
+            $data['body_blog'] = $this->saveImagesFromContent($data['body_blog']);
+        }
 
         //Update record
-        $blog->update($request->except($this->inputFiles));
+        $blog->update($data);
 
         //Save Files
         $fileService = new FileService();
         $fileService->saveFiles($request, $this->inputFiles, $this->mainFolder, $blog);
 
-        return redirect()->route('admin.blog.posts.edit', $blog->id)->withSuccess('Se ha actualizado el artículo satisfactoriamente.');
+        return redirect()->route('admin.blog.posts.index', $blog->id)->withSuccess('Se ha actualizado el artículo satisfactoriamente.');
     }
 
     public function destroy($id)
