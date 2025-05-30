@@ -19,10 +19,9 @@ class HtmlSanitizerService
             'p,b,strong,i,em,u,strike,ul,ol,li,br,img[src|alt|width|height|class|style],' .
                 'a[href|title|target|rel],h1,h2,h3,h4,h5,h6,blockquote,code,pre[class],' .
                 'table[class|style],thead,tbody,tr[class],td[class|style],th[class|style],' .
-                'div[class|style],span[class|style],hr,sub,sup,small'
+                'div[class|style],span[class|style],hr,sub,sup,small,p[class]'
         );
 
-        // CSS permitido para TinyMCE
         $config->set(
             'CSS.AllowedProperties',
             'font,font-size,font-weight,font-style,font-family,text-decoration,' .
@@ -30,26 +29,32 @@ class HtmlSanitizerService
                 'text-align,width,height,border,border-collapse,float,clear,' .
                 'line-height,vertical-align'
         );
-        
 
-        // Permitir valores específicos de display (más seguro)
         $config->set('CSS.ForbiddenProperties', '');
-
-        // Configurar enlaces externos
         $config->set('Attr.AllowedRel', 'nofollow,noopener,noreferrer');
         $config->set('HTML.TargetBlank', true);
 
-        // Cache directory - asegúrate de que existe
         $cacheDir = storage_path('app/htmlpurifier');
         if (!is_dir($cacheDir)) {
             mkdir($cacheDir, 0755, true);
         }
         $config->set('Cache.SerializerPath', $cacheDir);
 
-        // Configuración adicional para mejor compatibilidad
         $config->set('HTML.Doctype', 'HTML 4.01 Transitional');
         $config->set('CSS.MaxImgLength', '1200px');
         $config->set('CSS.Trusted', true);
+
+        // IMPORTANTE: Definir un DefinitionID para poder modificar el HTMLDefinition
+        $config->set('HTML.DefinitionID', 'rayogas_blog');
+        $config->set('HTML.DefinitionRev', 1);
+
+        // Ahora sí, obtener el HTMLDefinition (opcional, solo si quieres modificar otras cosas)
+        if ($def = $config->maybeGetRawHTMLDefinition()) {
+            if (!isset($def->info_global_attr['class'])) {
+                $def->info_global_attr['class'] = new \HTMLPurifier_AttrDef_HTML_Class();
+            }
+            // No agregues addValue aquí, no es necesario ni soportado
+        }
 
         $this->purifier = new HTMLPurifier($config);
     }
