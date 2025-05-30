@@ -1,5 +1,4 @@
 .blog-list {
-    width: 1320px;
     margin: auto;
     display: grid;
     grid-auto-flow: row;
@@ -8,6 +7,9 @@
     align-items: start;
     background: url("/images/web/blog/img_textura_blogs.png"),
         linear-gradient(to top, #f0f0f0 90%, #ffffff 10%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     padding-top: 0px;
 }
 .body-blog {
@@ -149,10 +151,11 @@
 }
 
 .form-blog {
+    margin: auto;
     margin-bottom: 50px;
     padding: 75px;
     align-items: center;
-    width: 1442px;
+
     height: 964px;
     top: 2325px;
     left: -1px;
@@ -163,6 +166,9 @@
             rgba(0, 158, 227, 0) 90.05%
         ),
         url("/images/web/blog/img_blogform_back.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .blog-contact-form {
@@ -264,7 +270,7 @@ hr {
 }
 .form-right {
     margin-top: 80px;
-    width: 435px;
+    width: 450px;
     height: 726px;
 }
 
@@ -350,7 +356,9 @@ hr {
 .stepbystep-contact {
     margin-top: 25px;
     gap: 10px;
-    display: flex;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
 }
 .number-h3 {
     width: 20px;
@@ -386,14 +394,18 @@ hr {
 }
 .item-container {
     width: 210px;
-    display: flex;
+    display: grid;
+    grid-auto-flow: column;
     align-items: center;
+    gap: 8px; // Puedes ajustar el espacio entre el icono y el texto si lo necesitas
 }
 
 .container-phone {
     width: 476px;
-    display: flex;
-    place-items: baseline;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: baseline;
+    gap: 8px; // Puedes ajustar el espacio entre los elementos si lo necesitas
 }
 
 .write-to-us {
