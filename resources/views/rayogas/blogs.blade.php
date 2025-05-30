@@ -1,5 +1,5 @@
 @extends('rayogas.layouts.master')
-<link rel="stylesheet" href="{{ asset('css/rayogas/blogs.css') }}">
+<link rel="stylesheet" href="{{ asset('css/rayogas/blogs.scss') }}">
 @section('metatags_facebook')
 <meta property="og:title" content="{{ config('app.name') }} | Blog - ¡Artículos que te interesan sobre el GLP!">
 <meta property="og:site_name" content="{{ config('app.name') }}">

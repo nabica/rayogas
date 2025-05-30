@@ -1,5 +1,6 @@
 @extends('rayogas.layouts.master')
 <link rel="stylesheet" href="{{ asset('css/rayogas/blogs-detail.scss') }}">
+<link rel="stylesheet" href="{{ asset('css/editor-content.css') }}">
 @section('metatags_facebook')
 <meta property="og:title" content="{{ config('app.name') }} | Blog - ¡Artículos que te interesan sobre el GLP!">
 <meta property="og:site_name" content="{{ config('app.name') }}">
@@ -32,7 +33,7 @@
 
         <img src="{{ asset('uploads/blog/' . $blog->id . '/' . $blog->card_image) }}" class="img_blog" alt="Img del blog">
 
-        <p class="blog_description"> {{ $blog->description }} </p>
+        <article class="blog_description"> {!! $body_blog !!} </article>
     </div>
 </section>
 <section class="section blog-cards-grid">
