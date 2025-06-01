@@ -56,7 +56,6 @@
     max-width: 64rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
     justify-items: center;
     margin: auto;
 }
@@ -67,22 +66,24 @@
     background-color: #ffffff;
     width: 20.659rem;
     height: 29.8125rem;
+    max-height: 477px;
     gap: 0.5rem;
     box-shadow: 0px 4px 15px 0px #00000012;
 }
 .img_next {
     width: 18.426rem;
-    height: 10.5rem;
+    height: 13.222rem;
     object-fit: cover;
+    border-radius: 0%;
 }
 .title_next {
-    font-weight: bold;
     font-size: 1.563rem;
     line-height: 100%;
-    letter-spacing: 0;
-    text-align: justify;
     width: 18.375rem;
+    font-weight: bold;
+    letter-spacing: 0%;
     color: #003770;
+    text-align: start;
 }
 
 .btn-see-more {
@@ -93,7 +94,9 @@
     background-color: #00aeef;
     color: #ffffff;
     border: none;
-    border-radius: 6px;
     text-decoration: none;
     transition: background-color 0.2s ease;
+    justify-self: flex-start;
+    margin-left: 1rem;
+    border-radius: 8px;
 }

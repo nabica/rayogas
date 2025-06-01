@@ -30,3 +30,6 @@ blockquote {
     color: #789;
     font-style: italic;
 }
+td {
+    color: var(--font-color-text);
+}

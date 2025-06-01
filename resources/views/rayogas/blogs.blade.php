@@ -42,7 +42,9 @@
 
         </div>
         <div class="load-more-container">
-            <button id="loadMore" class="btn-load-more">Ver más</button>
+            @if ($blogs->hasMorePages())
+            <a href="{{ $blogs->nextPageUrl() }}" class="btn-load-more" id="loadMore">Ver más</a>
+            @endif
         </div>
     </section>
 
@@ -55,17 +57,7 @@
         <h2 class="tittle-footer">Lorem commodo dui.<br>volutpat id lacus Ut</h2>
     </div>
 
-     @component('rayogas.components.form-blog')
-        <!-- @slot('title')
-            Contáctanos
-        @endslot
-        @slot('description')
-            Si tienes alguna pregunta o inquietud, no dudes en ponerte en contacto con nosotros. Estamos aquí para ayudarte.
-        @endslot
-        @slot('buttonText')
-            Enviar
-        @endslot -->
-       
-    @endcomponent
+    <!-- @component('rayogas.components.form-blog')
+    @endcomponent -->
 </body>
 @endsection
