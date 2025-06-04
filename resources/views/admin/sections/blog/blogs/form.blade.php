@@ -71,9 +71,9 @@
             tinymce.init({
                 selector: '#myTextarea',
                 content_css: "{{ asset('css/editor-content.css') }}",
-                width: '1200',
+                width: '1000',
                 height: 500,
-                max_width: 1200,
+                max_width: 1100,
                 resize: 'both',
                 plugins: [
                     'advlist', 'image code', 'autolink', 'link', 'image', 'lists', 'charmap', 'preview', 'anchor', 'pagebreak',
