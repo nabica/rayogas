@@ -23,7 +23,7 @@
 
         <div class="card">
             <div class="card-body">
-                {!! Form::open(['route' => ['admin.blog.posts.update', $blog->id], 'method' => 'put', 'files' => true]) !!}
+                {!! Form::open(['route' => ['admin.blog.posts.update', $blog->id], 'method' => 'put', 'files' => true,'id' => 'blogForm']) !!}
 
                 @include('admin.sections.blog.blogs.form')
 

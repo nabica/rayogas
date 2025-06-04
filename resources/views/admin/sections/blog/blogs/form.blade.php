@@ -127,3 +127,24 @@
 </div>
 
 <button type="submit" class="btn btn-primary">Guardar</button>
+
+
+
+
+<div id="formLoader" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(255,255,255,0.7);z-index:9999;justify-content:center;align-items:center;">
+    <div class="spinner-border text-primary" style="width: 4rem; height: 4rem;" role="status">
+        <span class="sr-only"></span>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('blogForm');
+        const loader = document.getElementById('formLoader');
+        if (form && loader) {
+            form.addEventListener('submit', function() {
+                loader.style.display = 'flex';
+            });
+        }
+    });
+</script>
