@@ -10,9 +10,3 @@
     transition: transform 0.2s ease-in-out;
     margin-top: 1rem;
 }
-
-.tox-edit-area img, .mce-content-body img {
-    object-fit: cover;
-    width: 240px !important;
-    height: 300px !important;
-}

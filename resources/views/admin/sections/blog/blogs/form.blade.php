@@ -26,7 +26,7 @@
     <div>
         <script
             type="text/javascript"
-            src='https://cdn.tiny.cloud/1/9mq9xnwdrg0l3mjg73aqswt09gc7sgy3yo3p1rktmaqtllhg/tinymce/7/tinymce.min.js'
+            src="{{$api}}" 
             referrerpolicy="origin">
         </script>
         <script type="text/javascript">
