@@ -2,57 +2,57 @@
 @section('content')
 
 <div class="row">
-    <div class="col-12">
-        <div class="page-title-box d-flex align-items-center justify-content-between">
-            <h4 class="mb-0">Blogs</h4>
+  <div class="col-12">
+    <div class="page-title-box d-flex align-items-center justify-content-between">
+      <h4 class="mb-0">Blogs</h4>
 
 
-        </div>
     </div>
-    <div class="col-12">
-        <a href="{{ route('admin.blog.posts.create') }}" class="btn btn-primary">Crear</a><br><br>
-    </div>
+  </div>
+  <div class="col-12">
+    <a href="{{ route('admin.blog.posts.create') }}" class="btn btn-primary">Crear</a><br><br>
+  </div>
 </div>
 
 <div class="row">
-    <div class="col-12">
-        <div class="card">
-            <div class="card-body">
-                    @include('admin.components.success-message')
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body">
+        @include('admin.components.success-message')
 
-                    <div class="table-responsive">
-                        <table class="table table-hover">
-                          <thead class="thead-dark">
-                            <tr>
-                              <th scope="col">#</th>
-                              <th scope="col">Titulo</th>
-                              <th scope="col">Fecha de creacion</th>
-                              <th scope="col">Acciones</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            @foreach($blogs as $blog)
-                              <tr>
-                                <td>{{ $blog->id }}</td>
-                                <td>{{ $blog->title }}</td>
-                                <td>{{ $blog->created_at }}</td>
-                                <td>
-                                    {!! Form::open(['route' => ['admin.blog.posts.destroy', $blog->id], 'method' => 'delete', 'class' => 'form-delete-record']) !!}
-                                        <a href="{{ route('admin.blog.posts.edit', $blog->id) }}" class="btn btn-primary">Editar</a>
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Titulo</th>
+                <th scope="col">Fecha de creacion</th>
+                <th scope="col">Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              @foreach($blogs as $blog)
+              <tr>
+                <td>{{ $blog->id }}</td>
+                <td>{{ $blog->title }}</td>
+                <td>{{ $blog->created_at }}</td>
+                <td>
+                  {!! Form::open(['route' => ['admin.blog.posts.destroy', $blog->id], 'method' => 'delete', 'class' => 'form-delete-record']) !!}
+                  <a href="{{ route('admin.blog.posts.edit', $blog->id) }}" class="btn btn-primary">Editar</a>
 
-                                        <button type="submit" class="btn btn-danger delete-record">Eliminar</button>
-                                    {!! Form::close() !!}
-                               </td>
-                              </tr>
-                            @endforeach
-                          </tbody>
-                        </table>
-                        <div>
-                            {{ $blogs->links() }}
-                        </div>
-                    </div>
-            </div>
+                  <button type="submit" class="btn btn-danger delete-record">Eliminar</button>
+                  {!! Form::close() !!}
+                </td>
+              </tr>
+              @endforeach
+            </tbody>
+          </table>
+          <div>
+            {{ $blogs->links() }}
+          </div>
         </div>
-    </div> 
+      </div>
+    </div>
+  </div>
 </div>
 @endsection

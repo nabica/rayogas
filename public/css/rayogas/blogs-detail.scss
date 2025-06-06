@@ -86,11 +86,11 @@
     color: #003770;
     text-align: start;
     display: -webkit-box;
-    -webkit-line-clamp: 3; /* Número máximo de líneas */
+    -webkit-line-clamp: 3; 
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-height: 4.5em; /* 3 líneas aprox, si el font-size es 1.5em */
+    max-height: 4.5em;
     line-height: 1.5em;
     height: auto;
 }

@@ -3,25 +3,21 @@
 namespace App\Http\Controllers\Admin\Blog;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use App\Http\Requests\Admin\Blog\BlogPostRequest;
 use App\Models\Blog\Blog;
 use App\Services\Util\FileService;
 use Illuminate\Support\Facades\Config;
-use App\Services\HtmlSanitizerService;
 
 class BlogPostController extends Controller
 {
     private $mainFolder;
     private $inputFiles;
 
-    private $htmlSanitizer; // Agregar propiedad
 
-    public function __construct(HtmlSanitizerService $htmlSanitizer) // Inyectar servicio
+    public function __construct() 
     {
         $this->mainFolder = Config::get('rayogas.blog.posts');
-        $this->inputFiles = ['card_image'];
-        $this->htmlSanitizer = $htmlSanitizer; // Asignar servicio
+        $this->inputFiles = ['card_image']; 
     }
 
     public function index()
@@ -62,14 +58,12 @@ class BlogPostController extends Controller
     {
         $data = $request->except($this->inputFiles);
 
-        // Procesar imágenes base64 en el contenido
         if (isset($data['body_blog'])) {
             $data['body_blog'] = $this->saveImagesFromContent($data['body_blog']);
         }
 
         $blog = Blog::create($data);
 
-        //Save Files
         $fileService = new FileService();
         $fileService->saveFiles($request, $this->inputFiles, $this->mainFolder, $blog);
 
@@ -88,15 +82,12 @@ class BlogPostController extends Controller
         $blog = Blog::findOrFail($id);
         $data = $request->except($this->inputFiles);
 
-        // Procesar imágenes base64 en el contenido
         if (isset($data['body_blog'])) {
             $data['body_blog'] = $this->saveImagesFromContent($data['body_blog']);
         }
 
-        //Update record
         $blog->update($data);
 
-        //Save Files
         $fileService = new FileService();
         $fileService->saveFiles($request, $this->inputFiles, $this->mainFolder, $blog);
 

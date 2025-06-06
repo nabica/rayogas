@@ -1,7 +1,6 @@
 @extends('admin.layouts.master')
 @section('content')
 
-<!-- start page title -->
 <div class="row">
     <div class="col-12">
         <div class="page-title-box d-flex align-items-center justify-content-between">
@@ -16,7 +15,6 @@
         </div>
     </div>
 </div>
-<!-- end page title -->
 
 <div class="row">
     <div class="col-12">
@@ -32,7 +30,7 @@
                 {!! Form::close() !!}
             </div>
         </div>
-    </div> <!-- end col -->
+    </div> 
 </div>
 
 @endsection
