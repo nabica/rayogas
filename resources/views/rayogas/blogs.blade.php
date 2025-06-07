@@ -24,8 +24,8 @@
 
 <body class="body-blog">
     <div class="tittle-content">
-        <h2 class="tittle-principal">Lorem commodo dui.<br>volutpat id lacus Ut</h2>
-        <p class="tittle-subtext">Morbi ultrices quam Quisque vel vel orci quis ex luctus viverra turpis porta.</p>
+        <h2 class="tittle-principal">Conexión Rayogas<br></h2>
+        <p class="tittle-subtext">Conéctate con la energía que mueve hogares, negocios y regiones de todo el país.</p>
     </div>
 
     <section class="blog-list">
@@ -54,7 +54,7 @@
             <img src="{{ asset('images/web/common/img_logo_flame_map.png') }}" class="img-fluid logo-blog"
                 alt="logo flama rayogas">
         </div>
-        <h2 class="tittle-footer">Lorem commodo dui.<br>volutpat id lacus Ut</h2>
+        <h2 class="tittle-footer">Conexión Rayogas<br></h2>
     </div>
 
     <!-- @component('rayogas.components.form-blog')

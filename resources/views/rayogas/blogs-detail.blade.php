@@ -23,7 +23,7 @@
 @section('content')
 
 <section class="section blog-content">
-    <h2 class="tittle-principal">Lorem commodo dui.<br>volutpat id lacus Ut</h2>
+    <h2 class="tittle-principal">Conexión Rayogas<br></h2>
 
     <div class="blog_detail">
         <h6 class="blog_date">
