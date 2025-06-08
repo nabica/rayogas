@@ -3,22 +3,22 @@
 namespace App\Http\Controllers\Rayogas;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use App\Models\Blog\BlogBanner;
-use App\Models\Blog\BlogPost;
+use App\Models\Blog\Blog;
+
 
 class BlogController extends Controller
 {
     public function index()
     {
-        $blogBanner = BlogBanner::first();
-        $blogPosts = BlogPost::latest('id')->paginate(6);
-        return view('rayogas.blog-list', compact('blogBanner', 'blogPosts'));
+        $blogs =  Blog::latest('id')->paginate(9);
+        return view('rayogas.blogs', compact('blogs'));
     }
-
-    public function show($slug)
+    public function show($id)
     {
-        $blogPost = BlogPost::where('slug', $slug)->first();
-        return view('rayogas.blog', compact('blogPost'));
+        $blog = Blog::findOrFail($id);
+        $date = $blog->created_at->locale('es')->isoFormat('DD [de] MMMM [de] YYYY');
+        $body_blog = $blog->body_blog;
+        $next_blogs = Blog::where('id', '!=', $id)->latest('id')->take(3)->get();
+        return view('rayogas.blogs-detail', compact('blog', 'date', 'next_blogs', 'body_blog'));
     }
 }
