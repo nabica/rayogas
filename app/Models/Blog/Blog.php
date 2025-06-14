@@ -15,6 +15,7 @@ class Blog extends Model
     protected $fillable = [
         'title',
         'body_blog',
+        'card_image'
     ];
 
     public function __construct(array $attributes = [])
