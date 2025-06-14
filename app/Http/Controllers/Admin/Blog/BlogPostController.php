@@ -56,7 +56,7 @@ class BlogPostController extends Controller
 
     public function store(BlogPostRequest $request)
     {
-        $data = $request->except($this->inputFiles);
+        $data = $request->only(['title', 'body_blog']);
 
         if (isset($data['body_blog'])) {
             $data['body_blog'] = $this->saveImagesFromContent($data['body_blog']);
