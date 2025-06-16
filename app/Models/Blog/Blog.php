@@ -12,12 +12,8 @@ class Blog extends Model
     use HasFactory;
     protected $uploadsFolder;
     protected $blogpostfolder;
-    protected $fillable = [
-        'title',
-        'body_blog',
-        'card_image'
-    ];
 
+    protected $guarded = [];
     public function __construct(array $attributes = [])
     {
         parent::__construct($attributes);
