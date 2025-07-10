@@ -32,7 +32,7 @@
         <div class="parent-blog">
             @foreach ($blogs as $blog)
             <div class="card-blog">
-                <img src="{{ asset('uploads/blog/' . $blog->id . '/' . $blog->card_image) }}" class="img-blog" alt="Img del blog">
+                <img src="{{ asset('uploads/blog_posts/' . $blog->id . '/' . $blog->card_image) }}" class="img-blog" alt="Img del blog">
                 <div class="card-body">
                     <h4 class="card-title">{{ $blog->title }}</h4>
                     <a href="{{ route('rayogas.blog.show', $blog->id) }}" class="btn-see-more">Ver más</a>
