@@ -9,13 +9,13 @@
     </div>
     <div class="download bg-section">
         <div class="container">
-            @component('rayogas.components.heading-title')
+            @component('rayogas.components.heading')
             @slot('title')Leyes y Decretos @endslot
             @endcomponent
             <div class="row">
                 <div class="col-12 col-md-6 mb-4 mb-md-0">
                     <div class="download-card">
-                        @component('rayogas.components.heading-title')
+                        @component('rayogas.components.heading')
                         @slot('title')Ley 142 @endslot
                         @endcomponent
                         <ul class="download-card__list">
@@ -35,7 +35,7 @@
                 </div>
                 <div class="col-12 col-md-6">
                     <div class="download-card">
-                        @component('rayogas.components.heading-title')
+                        @component('rayogas.components.heading')
                         @slot('title')Subsidios @endslot
                         @endcomponent
                         <ul class="download-card__list">
@@ -120,7 +120,7 @@
     </div>
     <div class="download ">
         <div class="container">
-            @component('rayogas.components.heading-title')
+            @component('rayogas.components.heading')
             @slot('title')Reglamentos técnicos @endslot
             @endcomponent
             <div class="row justify-content-center">
@@ -218,7 +218,7 @@
     </div>
     <div class="download  bg-section">
         <div class="container">
-            @component('rayogas.components.heading-title')
+            @component('rayogas.components.heading')
             @slot('title')Resoluciones CREG @endslot
             @endcomponent
             <div class="row justify-content-center">

@@ -49,7 +49,7 @@ banner-home
 <!-- Team -->
 <div class="container">
     <section class="section">
-        @component('rayogas.components.heading-title')
+        @component('rayogas.components.heading')
         @slot('title')
         {{ $homeFeature->title }}
         @endslot
@@ -83,7 +83,7 @@ banner-home
 <!-- Services -->
 <div class="container">
     <section class="section">
-        @component('rayogas.components.heading-title')
+        @component('rayogas.components.heading')
         @slot('title')
         Nuestros servicios
         @endslot

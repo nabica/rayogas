@@ -25,7 +25,7 @@
 <section class="section rates">
     <div class="container">
 
-        @component('rayogas.components.heading-title')
+        @component('rayogas.components.heading')
         @slot('title')Encuentra la información de las tarifas de los últimos meses.@endslot
         @slot('description')Encuentra nuestro servicio en las principales ciudades del país. @endslot
         @endcomponent

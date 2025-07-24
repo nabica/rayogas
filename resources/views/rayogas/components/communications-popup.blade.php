@@ -4,7 +4,7 @@
             <img src="{{asset('/images/web/common/comunicado-popup.jpeg')}}" alt="" class="img-fluid communications-popup__main-image">
             <div class="modal-body">
 
-                @component('rayogas.components.heading-title')
+                @component('rayogas.components.heading')
                 @slot('title')Comunicado a nuestros clientes @endslot
                 @endcomponent
                 <p>Nuestros <strong>sistemas de información, líneas de atención al cliente y sistemas de facturación electrónica</strong>, estarán temporalmente fuera de servicio. </p>

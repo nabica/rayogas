@@ -10,7 +10,7 @@
             <div class="row">
                 <div class="col-12 col-lg-6 mb-3 mb-lg-0">
                     <h2 class="sideLine mb-4">Informes de gestión, evaluación y auditoría</h2>
-                    <p>RAYOGAS S.A. E.S.P. cuenta con el acompañamiento de la firma JGF CONSULTORES SAS
+                    <p>Rayogas S.A.S. E.S.P. cuenta con el acompañamiento de la firma JGF CONSULTORES SAS
                         quien ejerce como Auditor Externo de Gestión de Resultados desde el año 2015.
                         Periódicamente se remite a la SSPD el informe de gestión elaborado conforme a lo
                         dispuesto en las Resoluciones SSPD No. 20061300012295 de 2006, 20171300058368 de
