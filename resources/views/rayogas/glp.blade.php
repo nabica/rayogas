@@ -34,7 +34,7 @@
     <div class="container">
 
         <div class="glp-properties__header">
-            @component('rayogas.components.heading-title')
+            @component('rayogas.components.heading')
             @slot('title')Propiedades del GLP @endslot
             @endcomponent
             <p> El GLP al ser licuado permite que sea almacenado y transportado como líquido y utilizado como gas
@@ -168,7 +168,7 @@
 </section>
 <section class="glp glp-faq">
     <div class="container">
-        @component('rayogas.components.heading-title')
+        @component('rayogas.components.heading')
         @slot('title')Preguntas frecuentes @endslot
         @endcomponent
 

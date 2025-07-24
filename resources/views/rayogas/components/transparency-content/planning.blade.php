@@ -188,23 +188,23 @@
                     <img src="{{ asset('images/web/transparency/img_transparencia_mecanismos_2.png') }}"
                         alt="privacity">
                     <p>El Sitio Web www.rayogas.com.co y el contenido incluido en el mismo son propiedad de
-                        Rayogas S.A. E.S.P. y están protegidos por las normas jurídicas de derechos de autor
+                        Rayogas S.A.S. E.S.P. y están protegidos por las normas jurídicas de derechos de autor
                         de
                         la República de Colombia y la Comunidad Andina de Naciones, así como por las
                         disposiciones de tratados internacionales. La compilación, organización y
                         publicación
                         del contenido, así como el software y las invenciones utilizadas en el Sitio Web y
                         en
-                        relación con el Sitio Web son propiedad exclusiva de Rayogas S.A. E.S.P. y/o de sus
+                        relación con el Sitio Web son propiedad exclusiva de Rayogas S.A.S. E.S.P. y/o de sus
                         filiales.</p>
                     <p>Por lo tanto todos los contenidos del Sitio Web, tales como textos, fotografías,
                         gráficos, imágenes, iconos, software, entre otros, así como su diseño gráfico y
                         códigos
-                        fuente, constituyen una obra cuya propiedad es de Rayogas S.A. E.S.P.</p>
+                        fuente, constituyen una obra cuya propiedad es de Rayogas S.A.S. E.S.P.</p>
                     <p>El Usuario reconoce y acepta que todos los derechos de propiedad intelectual sobre
                         los
                         contenidos y/o cualesquiera otros elementos insertados en el Sitio Web zertenecen a
-                        Rayogas S.A. E.S.P. y/o a sus filiales. En ningún caso el acceso al Sitio Web
+                        Rayogas S.A.S. E.S.P. y/o a sus filiales. En ningún caso el acceso al Sitio Web
                         implica
                         algún tipo de renuncia, transmisión, licencia o cesión total ni parcial de dichos
                         derechos, salvo que se establezca expresamente lo contrario. Las presentes
@@ -215,9 +215,9 @@
                         del Sitio Web y/o de sus contenidos distintos de los aquí expresamente previstos.
                         Cualquier otro uso o explotación de tales derechos estará sujeto a la previa y
                         expresa
-                        autorización específicamente otorgada a tal efecto por Rayogas S.A. E.S.P. o del
+                        autorización específicamente otorgada a tal efecto por Rayogas S.A.S. E.S.P. o del
                         titular
-                        de los derechos afectados.Rayogas S.A. E.S.P. autoriza a los Usuarios a utilizar,
+                        de los derechos afectados.Rayogas S.A.S. E.S.P. autoriza a los Usuarios a utilizar,
                         visualizar, imprimir, descargar y almacenar los contenidos gratuitos y/o elementos
                         insertados en el Sitio Web; siempre y cuando sea para su propio uso. Autoriza
                         igualmente
@@ -231,23 +231,23 @@
                         a los derechos reconocidos a favor de los autores por las normas aplicables.</p>
                     <p>Así mismo, todas las marcas, nombres comerciales o signos distintivos de cualquier
                         clase
-                        que aparecen en el Sitio Web son propiedad de Rayogas S.A. E.S.P. o de sus filiales,
+                        que aparecen en el Sitio Web son propiedad de Rayogas S.A.S. E.S.P. o de sus filiales,
                         sin
                         que pueda entenderse que el uso o acceso al mismo atribuya al Usuario derecho alguno
-                        sobre aquéllos. El Usuario se obliga a no utilizar las marcas de Rayogas S.A. E.S.P.
+                        sobre aquéllos. El Usuario se obliga a no utilizar las marcas de Rayogas S.A.S. E.S.P.
                         de
                         ningún modo que pueda causar confusión entre los clientes o que pueda menospreciar o
-                        desacreditar a Rayogas S.A. E.S.P. ni en conexión con ningún servicio o producto que
+                        desacreditar a Rayogas S.A.S. E.S.P. ni en conexión con ningún servicio o producto que
                         no
-                        haya sido patrocinado, aprobado o producido por Rayogas S.A. E.S.P.. El resto de
+                        haya sido patrocinado, aprobado o producido por Rayogas S.A.S. E.S.P.. El resto de
                         marcas
-                        comerciales que no sean propiedad de Rayogas S.A. E.S.P. o de sus filiales que
+                        comerciales que no sean propiedad de Rayogas S.A.S. E.S.P. o de sus filiales que
                         aparezcan
                         en este sitio pertenecen a sus respectivos propietarios.</p>
                     <p>El Usuario deberá denunciar cualquier violación a la Politica de Privacidad del sitio
                         web
                         por parte de otros Usuarios, para lo cual debe dirigir un correo electrónico a
-                        comercial@rayogas.com.co con el fin de que Rayogas S.A. E.S.P. tome las medidas
+                        comercial@rayogas.com.co con el fin de que Rayogas S.A.S. E.S.P. tome las medidas
                         respectivas que estén a su alcance en relación con la utilización del Sitio Web.</p>
                 </div>
             </div>

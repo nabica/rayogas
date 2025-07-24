@@ -7,7 +7,7 @@
                      alt="">
             </button>
             <div class="modal-header payment-modal__header">
-                @component('rayogas.components.heading-title')
+                @component('rayogas.components.heading')
                     @slot('title')
                         ¿Cómo quieres pagar tu factura?
                     @endslot

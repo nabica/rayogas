@@ -44,7 +44,7 @@
     <!-- Services -->
     <div class="container">
         <section class="section services">
-            @component('rayogas.components.heading-title')
+            @component('rayogas.components.heading')
                 @slot('title')
                     Nuestros servicios
                 @endslot
@@ -218,7 +218,7 @@
     <!-- Products -->
     <section class="section bg-section products">
         <div class="container">
-            @component('rayogas.components.heading-title')
+            @component('rayogas.components.heading')
                 @slot('title')
                     Un producto a tu medida
                 @endslot

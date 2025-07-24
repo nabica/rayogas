@@ -33,7 +33,7 @@
 <!-- About Team -->
 <section class="section" id="about-team">
     <div class="container">
-        @component('rayogas.components.heading-title')
+        @component('rayogas.components.heading')
         @slot('title'){{ $aboutFeatures[0]->title }} @endslot
         @endcomponent
 
@@ -87,7 +87,7 @@
 <!-- About Our Values -->
 <section class="section bg-section" id="about-our-values">
     <div class="container">
-        @component('rayogas.components.heading-title')
+        @component('rayogas.components.heading')
         @slot('title')Nuestros valores nos definen @endslot
         @slot('description')Aplicamos cada uno de nuestros valores entendiendo su importancia y lo que significan en
         cada una de los clientes y colaboradores. @endslot
@@ -169,7 +169,7 @@
 <!-- About Choosing -->
 <section class="section" id="about-choosing">
     <div class="container">
-        @component('rayogas.components.heading-title')
+        @component('rayogas.components.heading')
         @slot('title')¿Por qué elegir GLP Rayogas? @endslot
         @slot('description')Estamos preparados para atenderte. @endslot
         @endcomponent
@@ -197,5 +197,17 @@
     </div>
 </section>
 <!-- End About Choosing -->
+@component('rayogas.components.heading-title')
+        @slot('title')
+           Comprometidos con la calidad, el entorno y la seguridad 
+        @endslot
+        @slot('description')
+           Conoce nuestra Política del Sistema de Gestión Integral, que guía nuestro compromiso con la excelencia, la sostenibilidad y el bienestar de todos. 
+        @endslot
+        @slot('action_title')Política Integral
+        @endslot
+        @slot('action_url'){{ asset('pdfs/politica-integral.pdf') }}
+        @endslot
+    @endcomponent
 @component('rayogas.components.accreditations') @endcomponent
 @endsection

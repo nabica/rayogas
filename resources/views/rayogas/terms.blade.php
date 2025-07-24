@@ -23,7 +23,7 @@
 
 <section class="terms">
     <div class="container">
-        @component('rayogas.components.heading-title')
+        @component('rayogas.components.heading')
         @slot('title')Términos y condiciones @endslot
         @endcomponent
         <div class="terms__content">

@@ -26,12 +26,12 @@
                     <div>
 
                         <h4>Misión</h4>
-                        <p>Rayogas se dedica a la comercialización y distribución de Gas Licuado de Petróleo (GLP), abasteciendo el mercado a través del suministro continuo del producto en cilindros y a granel a usuarios en los domicilios residenciales, comerciales e industriales, enfocándose en la prestación de un servicio seguro, con calidad, minimizando los impactos ambientales con cumplimiento y compromiso.
+                        <p>Rayogas S.A.S. E.S.P. impulsa el futuro del país abasteciendo el mercado a través de nuestra red de distribución de GLP, ofreciendo alternativas innovadoras y eficientes con un portafolio integrado de energías, entregando soluciones hechas a la medida de nuestros clientes con un servicio confiable y oportuno.
                         </p>
                     </div>
                     <div>
                         <h4>Visión</h4>
-                        <p>Rayogas enfocará su trabajo hacia la optimización de sus servicios para consolidarse como la marca número uno por los consumidores de GLP y ser reconocidos por los clientes industriales como el mejor proveedor, una empresa competitiva, en permanente disposición y actuación para satisfacer las necesidades de los usuarios. Será una empresa enfocada en el mejoramiento continuo de sus procesos, formación del equipo humano e incorporación de tecnología, orientada a lograr un desarrollo empresarial organizado y sostenible.
+                        <p>Al 2030, Rayogas S.A.S. E.S.P. será una empresa innovadora y humana, donde nuestros colaboradores, a través de su desarrollo y formación continua, serán los protagonistas de nuestro crecimiento, rentabilidad y responsabilidad social. Transformaremos la experiencia energética de nuestros clientes incursionando en diferentes proyectos de energías alternativas, ofreciendo servicios personalizados, conectados y sostenibles, basados en el GLP y tecnologías de vanguardia.
                         </p>
                     </div>
                 </div>
