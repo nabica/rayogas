@@ -14,7 +14,6 @@
     gap: 0.5rem;
 }
 
-
 .rate-list {
     display: grid;
     grid-template-columns: 0.5fr 0.85fr 0.65fr;
@@ -29,7 +28,7 @@
     grid-template-columns: 1fr, auto;
     align-items: center;
     border-radius: 8px;
-    background-color: #E7ECEF;
+    background-color: #e7ecef;
     padding-left: 8px;
     padding-right: 8px;
     height: 40px;
@@ -58,11 +57,10 @@
 }
 
 .logo-download {
-    color: #1C274C;
+    color: #1c274c;
     height: clamp(0.8rem, 2vw + 0.8rem, 1.3rem) !important;
     width: clamp(0.8rem, 2vw + 0.8rem, 1.3rem) !important;
 }
-
 
 .container-rates {
     display: grid;
@@ -129,7 +127,7 @@
     .rates-container {
         grid-template-columns: 1fr;
         height: auto;
-        border: 1px solid #C9C9C9;
+        border: 1px solid #c9c9c9;
         padding: 1rem;
         border-radius: 8px;
     }
@@ -154,4 +152,19 @@
     .zone-name {
         font-size: 1rem;
     }
+}
+
+.rates-year-title {
+    font-family: Gotham;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 30px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #003770;
+    margin-bottom: 2rem;
+}
+
+.rates-year-group {
+    margin-bottom: 2rem;
 }
