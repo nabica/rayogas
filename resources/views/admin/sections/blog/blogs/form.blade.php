@@ -17,7 +17,7 @@
             @if($blog->card_image)
             <div class="card-blog">
                 <p>Imagen actual</p>
-                <img src="{{ asset('uploads/blog/' . $blog->id . '/' . $blog->card_image) }}" class="img-blog img-fluid" alt="Img del blog">
+                <img src="{{ asset('uploads/blog_posts/' . $blog->id . '/' . $blog->card_image) }}" class="img-blog img-fluid" alt="Img del blog">
 
             </div>
             @endif
@@ -33,14 +33,14 @@
             const image_upload_handler = (blobInfo, progress) => new Promise((resolve, reject) => {
                 const formData = new FormData();
                 formData.append('file', blobInfo.blob(), blobInfo.filename());
-                fetch('/upload-image.php', {
+                fetch('/admin/blog/upload-image', {
                         method: 'POST',
                         body: formData
                     })
                     .then(async response => {
                         console.info('Image upload response:', response);
                         if (!response.ok) {
-                            console.error('Image upload failed with status:', response.status);
+                            console.error('Image upload failed wi/upload-image.phpth status:', response.status);
                         }
                         if (response.status === 403) {
                             reject({

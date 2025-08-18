@@ -69,6 +69,8 @@ Route::prefix('lotus')->group(function () {
             Route::resource('/blog/banner', 'Blog\BlogBannerController', ['as' => 'admin.blog'])->only(['edit', 'update']);
             // Route::resource('/blog/posts', 'Blog\BlogPostController', ['as' => 'admin.blog']);
             Route::resource('/blog/posts', 'Blog\BlogPostController', ['as' => 'admin.blog']);
+            Route::post('/blog/upload-image', 'Blog\BlogPostController@uploadImage')
+                ->name('admin.blog.upload-image');
         });
     });
 });

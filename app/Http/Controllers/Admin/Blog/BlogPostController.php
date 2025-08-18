@@ -6,14 +6,13 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\Blog\BlogPostRequest;
 use App\Models\Blog\Blog;
 use App\Services\Util\FileService;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Config;
 
 class BlogPostController extends Controller
 {
     private $mainFolder;
     private $inputFiles;
-
-
     public function __construct() 
     {
         $this->mainFolder = Config::get('rayogas.blog.posts');
@@ -30,20 +29,24 @@ class BlogPostController extends Controller
     {
         $api = Config::get('rayogas.api.key');
         $blog = new Blog();
-        return view('admin.sections.blog.blogs.create', compact('blog', 'api'));
+        return view('admin.sections.blog.blogs.create',compact('blog', 'api'));
     }
 
-    private function saveImagesFromContent($content)
+    private function saveImagesFromContent($content, $folderId = null)
     {
-        return preg_replace_callback(
+        $folder = $folderId ? 'uploads/blog_posts/' . $folderId : 'uploads/blog_posts';
+        if (!file_exists(public_path($folder))) {
+            mkdir(public_path($folder), 0777, true);
+        }
+        
+        $content = preg_replace_callback(
             '/<img[^>]+src="data:image\/([^;]+);base64,([^"]+)"[^>]*>/i',
-            function ($matches) {
+            function ($matches) use ($folder) {
                 $ext = $matches[1];
                 $data = base64_decode($matches[2]);
                 $filename = uniqid() . '.' . $ext;
-                $path = 'uploads/blog_posts/' . $filename;
+                $path = $folder . '/' . $filename;
                 file_put_contents(public_path($path), $data);
-                // Reemplaza solo el src, mantiene el resto del tag
                 return preg_replace(
                     '/src="[^"]+"/',
                     'src="/' . $path . '"',
@@ -52,17 +55,29 @@ class BlogPostController extends Controller
             },
             $content
         );
+     
+        $content = preg_replace(
+            '/src="(?:\.\.\/)+uploads\/blog_posts\/([^"]+)"/i',
+            'src="/uploads/blog_posts/$1"',
+            $content
+        );
+        return $content;
     }
 
     public function store(BlogPostRequest $request)
     {
         $data = $request->only(['title', 'body_blog']);
 
+        $blog = Blog::create([
+            'title' => $data['title'],
+            'body_blog' => '', 
+        ]);
+
         if (isset($data['body_blog'])) {
-            $data['body_blog'] = $this->saveImagesFromContent($data['body_blog']);
+            $data['body_blog'] = $this->saveImagesFromContent($data['body_blog'], $blog->getFolderId());
         }
 
-        $blog = Blog::create($data);
+        $blog->update(['body_blog' => $data['body_blog']]);
 
         $fileService = new FileService();
         $fileService->saveFiles($request, $this->inputFiles, $this->mainFolder, $blog);
@@ -82,8 +97,9 @@ class BlogPostController extends Controller
         $blog = Blog::findOrFail($id);
         $data = $request->except($this->inputFiles);
 
+    
         if (isset($data['body_blog'])) {
-            $data['body_blog'] = $this->saveImagesFromContent($data['body_blog']);
+            $data['body_blog'] = $this->saveImagesFromContent($data['body_blog'], $blog->getFolderId());
         }
 
         $blog->update($data);
@@ -104,5 +120,26 @@ class BlogPostController extends Controller
         $blog->delete();
 
         return redirect()->route('admin.blog.posts.index')->withSuccess('El artículo ' . $title . ' ha sido eliminado satisfactoriamente.');
+    }
+
+    public function uploadImage(Request $request)
+    {
+        if (!$request->hasFile('file')) {
+            return response()->json(['error' => 'No file uploaded'], 400);
+        }
+
+        $file = $request->file('file');
+        $allowed = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
+        $ext = strtolower($file->getClientOriginalExtension());
+
+        if (!in_array($ext, $allowed)) {
+            return response()->json(['error' => 'Tipo de archivo no permitido'], 400);
+        }
+
+        $name = uniqid() . '.' . $ext;
+        $path = 'uploads/blog_posts/tmp/' . $name;
+        $file->move(public_path('uploads/blog_posts/tmp'), $name);
+
+        return response()->json(['location' => '/' . $path]);
     }
 }

@@ -6,12 +6,13 @@
     justify-content: center;
     align-items: start;
     background: url("/images/web/blog/img_textura_blogs.png"),
-        linear-gradient(to top, #f0f0f0 90%, #ffffff 10%);
+        linear-gradient(to top, #f0f0f0 75%, #ffffff 25%);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     padding-top: 0px;
 }
+
 .body-blog {
     margin-bottom: 30px;
 }
@@ -36,6 +37,7 @@
     justify-content: stretch;
     border: 1px solid #f0f0f0;
     transition: transform 0.2s ease-in-out;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .img-blog {
@@ -62,11 +64,13 @@
     width: 294px;
     height: 99px;
     display: -webkit-box;
-    -webkit-line-clamp: 3; /* Número máximo de líneas */
+    -webkit-line-clamp: 3;
+    /* Número máximo de líneas */
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-height: 4.5em; /* 3 líneas aprox, si el font-size es 1.5em */
+    max-height: 4.5em;
+    /* 3 líneas aprox, si el font-size es 1.5em */
     line-height: 1.5em;
     height: auto;
 }
@@ -168,11 +172,9 @@
     top: 2325px;
     left: -1px;
 
-    background: linear-gradient(
-            0.26deg,
+    background: linear-gradient(0.26deg,
             #009ee3 34.11%,
-            rgba(0, 158, 227, 0) 90.05%
-        ),
+            rgba(0, 158, 227, 0) 90.05%),
         url("/images/web/blog/img_blogform_back.png");
     background-size: cover;
     background-position: center;
@@ -226,6 +228,7 @@ hr {
     border-radius: 7px;
     border-width: 2px;
 }
+
 #first_name,
 #last_name {
     width: 171px;
@@ -254,13 +257,14 @@ hr {
 .info {
     margin-left: 32px;
 }
+
 .form-container {
     background: url("/images/web/blog/img_textura.png"),
-        linear-gradient(
-            to bottom,
-            /* Azul desde el inicio */ #003770 35%,
-            /* Azul hasta el 40% */ #f1f9fe 35%
-        );
+        linear-gradient(to bottom,
+            /* Azul desde el inicio */
+            #003770 35%,
+            /* Azul hasta el 40% */
+            #f1f9fe 35%);
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1, 1fr);
     width: 1024px;
@@ -276,6 +280,7 @@ hr {
     padding-left: 30px;
     align-items: center;
 }
+
 .form-right {
     margin-top: 80px;
     width: 450px;
@@ -292,6 +297,7 @@ hr {
         max-width: 100%;
     }
 }
+
 .lets-talk {
     color: #ffffff;
     font-family: Gotham;
@@ -315,6 +321,7 @@ hr {
     height: 100px;
     margin-top: 15px;
 }
+
 .phone-number {
     margin-top: 15px;
     padding-left: 8px;
@@ -333,7 +340,8 @@ hr {
 .list-contact {
     width: 400px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    grid-template-columns: repeat(2, 1fr);
+    /* Dos columnas */
 }
 
 .item {
@@ -348,6 +356,7 @@ hr {
     align-content: center;
     padding-left: 5px;
 }
+
 .tittle-3 {
     margin-top: 20px;
     padding-left: 8px;
@@ -368,6 +377,7 @@ hr {
     grid-auto-flow: column;
     align-items: center;
 }
+
 .number-h3 {
     width: 20px;
     height: 28px;
@@ -380,11 +390,13 @@ hr {
     letter-spacing: 0%;
     color: #009ee3;
 }
+
 .stepbystep-descr {
     align-content: center;
     width: 115px;
     height: 38px;
 }
+
 .stepbystep-descrip {
     width: 132px;
     height: 38px;
@@ -400,6 +412,7 @@ hr {
     vertical-align: middle;
     color: #009ee3;
 }
+
 .item-container {
     width: 210px;
     display: grid;
@@ -420,6 +433,7 @@ hr {
     padding-bottom: 8px;
     width: 90px;
 }
+
 .mt-4 {
     margin-top: 0.5rem !important;
 }
@@ -469,6 +483,7 @@ hr {
         width: 100%;
         margin-top: 20px;
     }
+
     .blog-contact-form {
         width: 100%;
         height: auto;
@@ -484,7 +499,9 @@ hr {
 
 
 @media (max-width: 580px) {
-    .tittle-principal, .tittle-footer{
+
+    .tittle-principal,
+    .tittle-footer {
         font-size: 30px;
     }
 }
