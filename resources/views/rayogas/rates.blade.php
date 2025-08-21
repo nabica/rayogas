@@ -37,7 +37,7 @@
         @if(count($groupedRates) > 0)
             @foreach ($groupedRates as $year => $months)
                 <div class="rates-year-group">
-                    <h2 class="rates-year-title">{{ $year }}</h2>
+                    <h2 class="rates-year-title"><span>{{ $year }}</span></h2>
                     <div class="rates-grid-container">
                         @foreach ($months as $month => $rates)
                             <div class="rates-container">
