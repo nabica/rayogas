@@ -62,10 +62,9 @@
     color: #003366;
     margin: 0;
     width: 294px;
-    height: 99px;
+    height: 125px !important;
     display: -webkit-box;
     -webkit-line-clamp: 3;
-    /* Número máximo de líneas */
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -138,7 +137,10 @@
     background-color: #dce0e3;
     color: #6c757d;
 }
-
+.btn-card-blog{
+    text-decoration: none;
+    color: inherit; 
+}
 .tittle-footer {
     text-align: center;
     position: relative;
