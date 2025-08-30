@@ -31,17 +31,14 @@
     <section class="blog-list">
         <div class="parent-blog">
             @foreach ($blogs as $blog)
-            <div class="card-blog">
-                <a href="{{ route('rayogas.blog.show', $blog->id) }}" class="btn-card-blog">
-                <img src="{{ asset('uploads/' . $blogfolder . '/' . $blog->id . '/' . $blog->card_image) }}" class="img-blog" alt="Img del blog">
+            <article class="card-blog" onclick="window.location.href='{{ route('rayogas.blog.show', $blog->id) }}'">
+                <img src="{{ asset('uploads/blog_posts/' . $blog->id . '/' . $blog->card_image) }}" class="img-blog" alt="Img del blog">
                 <div class="card-body">
                     <h4 class="card-title">{{ $blog->title }}</h4>
                     <span class="btn-see-more">Ver más</span>
                 </div>
-                </a>
-            </div>
+            </article>
             @endforeach
-
         </div>
         <div class="load-more-container">
             @if ($blogs->hasMorePages())
