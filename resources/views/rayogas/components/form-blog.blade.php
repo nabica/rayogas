@@ -54,7 +54,7 @@
                 <div class="content-form-tittle">
                     <h3 class="tittle-form">Contáctanos ahora mismo</h3>
                 </div>
-                <hr>
+                <hr class="line-form">
                 <div class="row full-names">
                     <div class="col-md-5 row-names">
                         <label for="first_name" class="form-label">Primer apellido</label>
@@ -83,7 +83,7 @@
                 </div>
                 <div class="col-12 mt-4 mb-3">
                     <label for="message" class="form-label info">Mensaje</label>
-                    <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                    <textarea class="form-control" id="message" name="message" rows="2" required></textarea>
                 </div>
                 <div class="col-12">
                     <button class="form__general-button button_submit" type="submit">Enviar</button>

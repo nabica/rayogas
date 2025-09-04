@@ -150,7 +150,7 @@
 .form-blog {
     margin: auto;
     margin-bottom: 50px;
-    padding: 75px;
+    padding-top: 75px;
     align-items: center;
 
     height: 964px;
@@ -232,7 +232,8 @@ hr {
 
 #message {
     width: 370px;
-    height: 112px;
+    height: 80px;
+    max-height: 95px;
 }
 
 .full-names {
@@ -445,7 +446,7 @@ hr {
         width: 100%;
         padding: 0 1rem;
     }
-     .parent-blog {
+    .parent-blog {
         width: 100%;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto;
@@ -477,4 +478,123 @@ hr {
     .tittle-footer {
         font-size: 32px;
     }
+}
+@media (max-width: 1028px) {
+    .form-left {
+        padding-left: 0;
+    }
+    .form-container {
+        width: auto;
+    }
+    .lets-talk {
+        font-size: 40px;
+        width: auto;
+        height: auto;
+        margin-top: 80px;
+        text-align: center;
+    }
+
+    .tittle-3,
+    .phone-number,
+    .list-contact,
+    .item,
+    .container-phone {
+        display: inline-flex;
+        align-items: baseline;
+        margin-left: 5px;
+        width: auto;
+        min-width: 0;
+        font-size: 20px;
+    }
+    .list-contact {
+        display: inline-flex;
+        flex-wrap: wrap;
+        width: auto;
+        min-width: 0;
+        justify-content: center;
+        align-items: center;
+    }
+    .blog-contact-form {
+        width: auto;
+        height: auto;
+    }
+}
+@media (max-width: 950px) {
+    .form-left {
+        width: auto;
+        max-width: 400px !important;
+    }
+    .form-right {
+        margin-top: 15px;
+        width: 350px;
+    }
+    .form-label {
+        font-size: 14px;
+    }
+    #company,
+    #email,
+    #phone,
+    #message,
+    #subject {
+        width: 250px;
+        padding: 0;
+        max-width: 270px;
+    }
+    .tittle-form {
+        font-size: 22px;
+        width: auto;
+        max-width: 340px;
+        height: auto;
+    }
+    #first_name,
+    #last_name {
+        width: 140px;
+        padding: 0;
+    }
+    .full-names {
+        width: auto !important;
+        gap: 0px;
+    }
+    .row-names {
+        padding: 0 !important;
+        width: 160px !important;
+    }
+    .item-container {
+        width: auto !important;
+        max-width: 175px !important;
+        gap: 0;
+    }
+    .item {
+        line-height: 200% !important;
+        padding: 0 !important;
+    }
+    .tittle-3 {
+        margin-left: 60px !important;
+    }
+    .list-contact {
+        width: auto !important;
+        max-width: 400px !important;
+    }
+    .form-description {
+        width: auto !important;
+        text-align: justify !important;
+        max-width: 380px !important;
+        margin-left: 5px !important;
+    }
+    .form-container {
+        background: url(/images/web/blog/img_textura.png),
+            linear-gradient(to bottom, #003770 23%, #f1f9fe 23%);
+    }
+    .stepbystep-contact{
+        gap: 3px !important;
+    }
+    .container-phone{
+        margin-left: 30px !important;
+        gap: 0 !important;
+        padding-left: 0 !important;
+    }
+    .phone-number{
+        padding-left: 0 !important;
+    }
+    
 }
