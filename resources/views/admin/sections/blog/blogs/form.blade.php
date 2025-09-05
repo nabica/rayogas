@@ -3,7 +3,11 @@
         <div class="form-group">
             <label class="form-label">Titulo</label>
             {!! Form::text('title', $blog->title , ['class' => 'form-control', 'maxlength' => '191']) !!}
+            <br>
+            <label class="form-label">Meta descripcion</label>
+            {!! Form::text('meta_description', $blog->meta_description , ['class' => 'form-control', 'maxlength' => '191']) !!}
         </div>
+        
     </div>
 
 

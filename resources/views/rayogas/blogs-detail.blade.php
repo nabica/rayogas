@@ -11,6 +11,9 @@
 @endsection
 @section('metatags_seo')
 <meta name="title" content="{{ config('app.name') }} | Blog - ¡Artículos que te interesan sobre el GLP!">
+<meta property="og:description" content="{{ $blog->meta_description }}">
+<meta name="description" content="{{ $blog->meta_description }}">
+<meta property="og:image" content="{{ asset('uploads/blog_posts/' . $blog->id . '/' . $blog->card_image) }}">
 <meta name="description"
     content="Descubre datos interesantes sobre el GLP (Gas Licuado de Petróleo), como noticas, casos de éxito, avances, y más temas de este gas y su impacto en el país.">
 <meta name="robots" content="index, follow">

@@ -31,6 +31,7 @@ class BlogPostRequest extends FormRequest
                     'title' => 'required|unique:blogs',
                     'body_blog' => 'required',
                     'card_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp',
+                    'meta_description' => 'required'
                 ];
                 break;
 
