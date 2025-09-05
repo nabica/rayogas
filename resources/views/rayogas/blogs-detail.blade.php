@@ -32,9 +32,11 @@
         </h6>
 
         <img src="{{ asset('uploads/blog_posts/' . $blog->id . '/' . $blog->card_image) }}" class="img_blog" alt="Img del blog">
-
-        <article class="blog_description"> {!! $body_blog !!} </article>
     </div>
+    <article class="blog_description container">
+        <div class="body_articule ">{!! $body_blog !!}</div>
+    </article>
+
 </section>
 <section class="section blog-cards-grid">
     <div class="parent_next_blog">
