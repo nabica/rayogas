@@ -31,7 +31,7 @@
     <section class="blog-list">
         <div class="parent-blog">
             @foreach ($blogs as $blog)
-            <article class="card-blog" onclick="window.location.href='{{ route('rayogas.blog.show', $blog->id) }}'">
+            <article class="card-blog" onclick="window.location.href='{{ route('rayogas.blog.show', parameters: $blog->slug) }}'">
                 <img src="{{ asset('uploads/blog_posts/' . $blog->id . '/' . $blog->card_image) }}" class="img-blog" alt="Img del blog">
                 <div class="card-body">
                     <h4 class="card-title">{{ $blog->title }}</h4>

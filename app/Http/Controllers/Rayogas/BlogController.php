@@ -22,12 +22,12 @@ class BlogController extends Controller
         return view('rayogas.blogs', compact('blogs', 'blogfolder'));
     }
 
-    public function show($id)
+    public function show($slug)
     {
-        $blog = Blog::findOrFail($id);
+        $blog = Blog::where('slug', $slug)->firstOrFail();
         $date = $blog->created_at->locale('es')->isoFormat('DD [de] MMMM [de] YYYY');
         $body_blog = $blog->body_blog;
-        $next_blogs = Blog::where('id', '!=', $id)->latest('id')->take(3)->get();
+        $next_blogs = Blog::where('id', '!=', $blog->id)->latest('id')->take(3)->get();
         $blogfolder = $this->blogfolder;
         return view('rayogas.blogs-detail', compact('blog', 'date', 'next_blogs', 'body_blog', 'blogfolder'));
     }
