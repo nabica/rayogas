@@ -31,13 +31,13 @@
     <section class="blog-list">
         <div class="parent-blog">
             @foreach ($blogs as $blog)
-            <article class="card-blog" onclick="window.location.href='{{ route('rayogas.blog.show', parameters: $blog->slug) }}'">
+            <a href="{{ route('rayogas.blog.show', $blog->slug) }}" class="card-blog" style="text-decoration: none;">
                 <img src="{{ asset('uploads/blog_posts/' . $blog->id . '/' . $blog->card_image) }}" class="img-blog" alt="Img del blog">
                 <div class="card-body">
                     <h4 class="card-title">{{ $blog->title }}</h4>
                     <span class="btn-see-more">Ver más</span>
                 </div>
-            </article>
+            </a>
             @endforeach
         </div>
         <div class="load-more-container">
