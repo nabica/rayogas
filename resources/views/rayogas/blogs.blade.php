@@ -31,7 +31,7 @@
     <section class="blog-list">
         <div class="parent-blog">
             @foreach ($blogs as $blog)
-            <a href="{{ route('rayogas.blog.show', $blog->slug) }}" class="card-blog" style="text-decoration: none;">
+            <a href="{{ route('rayogas.blog.show',['slug' => $blog->slug]) }}" class="card-blog" style="text-decoration: none;">
                 <img src="{{ asset('uploads/blog_posts/' . $blog->id . '/' . $blog->card_image) }}" class="img-blog" alt="Img del blog">
                 <div class="card-body">
                     <h4 class="card-title">{{ $blog->title }}</h4>
