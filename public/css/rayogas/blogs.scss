@@ -69,7 +69,6 @@
     text-overflow: ellipsis;
     max-height: 4.5em;
     line-height: 1.5em;
- 
 }
 
 .btn-see-more {
@@ -262,11 +261,7 @@ hr {
 
 .form-container {
     background: url("/images/web/blog/img_textura.png"),
-        linear-gradient(
-            to bottom,
-            /* Azul desde el inicio */ #003770 35%,
-            /* Azul hasta el 40% */ #f1f9fe 35%
-        );
+        linear-gradient(to bottom, #003770 35%, #f1f9fe 35%);
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1, 1fr);
     width: 1024px;
@@ -343,7 +338,6 @@ hr {
     width: 400px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /* Dos columnas */
 }
 
 .item {
@@ -420,7 +414,7 @@ hr {
     display: grid;
     grid-auto-flow: column;
     align-items: center;
-    gap: 8px; 
+    gap: 8px;
 }
 
 .container-phone {
@@ -428,7 +422,7 @@ hr {
     display: grid;
     grid-auto-flow: column;
     align-items: baseline;
-    gap: 8px; 
+    gap: 8px;
 }
 
 .write-to-us {

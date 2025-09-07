@@ -4,7 +4,7 @@
             <label class="form-label">Titulo</label>
             {!! Form::text('title', $blog->title , ['class' => 'form-control', 'maxlength' => '191']) !!}
             <br>
-            <label class="form-label">Meta descripcion</label>
+            <label class="form-label">Descripcion</label>
             {!! Form::text('meta_description', $blog->meta_description , ['class' => 'form-control', 'maxlength' => '191']) !!}
         </div>
         
