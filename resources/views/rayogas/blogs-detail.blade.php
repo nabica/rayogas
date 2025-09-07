@@ -11,6 +11,9 @@
 @endsection
 @section('metatags_seo')
 <meta name="title" content="{{ config('app.name') }} | Blog - ¡Artículos que te interesan sobre el GLP!">
+<meta property="og:description" content="{{ $blog->meta_description }}">
+<meta name="description" content="{{ $blog->meta_description }}">
+<meta property="og:image" content="{{ asset('uploads/blog_posts/' . $blog->id . '/' . $blog->card_image) }}">
 <meta name="description"
     content="Descubre datos interesantes sobre el GLP (Gas Licuado de Petróleo), como noticas, casos de éxito, avances, y más temas de este gas y su impacto en el país.">
 <meta name="robots" content="index, follow">
@@ -23,7 +26,7 @@
 @section('content')
 
 <section class="section blog-content">
-    <h2 class="tittle-principal">Conexión Rayogas<br></h2>
+    <h2 class="tittle-principal">{{$blog->title}}<br></h2>
 
     <div class="blog_detail">
         <h6 class="blog_date">
@@ -32,9 +35,11 @@
         </h6>
 
         <img src="{{ asset('uploads/blog_posts/' . $blog->id . '/' . $blog->card_image) }}" class="img_blog" alt="Img del blog">
-
-        <article class="blog_description"> {!! $body_blog !!} </article>
     </div>
+    <article class="blog_description container">
+        <div class="body_articule ">{!! $body_blog !!}</div>
+    </article>
+
 </section>
 <section class="section blog-cards-grid">
     <div class="parent_next_blog">
@@ -43,7 +48,7 @@
 
             <img class="img_next" src="{{ asset('uploads/' . $blogfolder . '/' . $next_blog->id . '/' . $next_blog->card_image) }}" alt="Img card blog">
             <h3 class="title_next">{{ $next_blog->title }}</h3>
-            <a href="{{ route('rayogas.blog.show', $next_blog->id) }}" class="btn-see-more">Ver más</a>
+            <a href="{{ route('rayogas.blog.show', $next_blog->slug) }}" class="btn-see-more">Ver más</a>
 
         </div>
         @endforeach

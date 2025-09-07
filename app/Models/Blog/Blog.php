@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Config;
 use App\Services\HtmlSanitizerService;
+use Illuminate\Support\Str;
 
 class Blog extends Model
 {
@@ -40,5 +41,11 @@ class Blog extends Model
     public function getImageUrlAttribute()
     {
         return asset($this->uploadsFolder . '/' . $this->blogpostfolder . $this->getFolderId() . '/' . $this->card_image);
+    }
+    protected static function booted()
+    {
+        static::saving(function ($blog) {
+            $blog->slug = Str::slug($blog->title);
+        });
     }
 }
