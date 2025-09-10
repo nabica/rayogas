@@ -78,12 +78,9 @@
                     <label for="phone" class="form-label info">Teléfono</label>
                     <input type="tel" class="form-control" id="phone" name="phone" required>
                 </div>
+                
                 <div class="col-12 form_field">
-                    <label for="subject" class="form-label info">Cómo podemos ayudarte</label>
-                    <input type="text" class="form-control" id="subject" name="subject" required>
-                </div>
-                <div class="col-12 form_field">
-                    <label for="message" class="form-label info">Mensaje</label>
+                    <label for="message" class="form-label info">Cómo podemos ayudarte</label>
                     <textarea class="form-control" id="message" name="message" rows="2" required></textarea>
                 </div>
                 <div class="col-12">
