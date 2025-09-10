@@ -1,0 +1,422 @@
+.form-blog {
+    margin: auto;
+    margin-bottom: 50px;
+    padding-top: 75px;
+    align-items: center;
+    top: 2325px;
+    left: -1px;
+    background: linear-gradient(
+            0.26deg,
+            #009ee3 34.11%,
+            rgba(0, 158, 227, 0) 90.05%
+        ),
+        url("/images/web/blog/img_blogform_back.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.blog-contact-form {
+    background-color: #ffffff;
+    width: 435px;
+    height: 726px;
+    border-radius: 7px;
+}
+.tittle-form {
+    font-family: Gotham;
+    font-weight: 550;
+    font-size: 25px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #009ee3;
+    width: 370px;
+    height: 28px;
+}
+
+.content-form-tittle {
+    margin-left: 18px;
+    align-items: center;
+    justify-content: center;
+    width: 370px;
+}
+
+.line-form {
+    color: #009ee3;
+    border: 2px solid #009ee3;
+    height: 4px !important;
+}
+
+.form-label {
+    font-family: Gotham;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    color: #8393a8;
+}
+
+.form-control {
+    margin: auto;
+    border-radius: 7px;
+    border-width: 2px;
+}
+#first_name,
+#last_name {
+    width: 171px;
+    max-height: 40px;
+}
+
+#company,
+#email,
+#phone,
+#subject {
+    text-align: center;
+    max-width: 370px;
+}
+
+#message {
+    width: 370px;
+    height: 110px;
+    max-height: 130px;
+}
+
+.full-names {
+    gap: 10px;
+    justify-content: center;
+}
+.form_field {
+    margin: 10px 0px 10px 0px;
+}
+.info {
+    margin-left: 32px;
+}
+.form-container {
+    background: url("/images/web/blog/img_textura.png"),
+        linear-gradient(to bottom, #003770 35%, #f1f9fe 35%);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    width: 1024px;
+    display: grid;
+    align-items: flex-start;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.form-left {
+    margin-top: 50px;
+    padding-left: 20px;
+    padding-right: 30px;
+    align-items: center;
+}
+.form-right {
+    margin-top: 80px;
+ 
+}
+
+.lets-talk {
+    color: #ffffff;
+    font-family: Gotham Black;
+    font-weight: 900;
+    font-style: Regular;
+    font-size: 60px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin-top: 105px;
+}
+
+.form-description {
+    font-family: Gotham;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    color: #003770;
+    width: 498px;
+    margin-top: 28px;
+}
+.phone-number {
+    font-family: Gotham;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #009ee3;
+    height: 41px;
+    justify-content: center;
+}
+
+.list-contact {
+    width: 500px;
+    column-gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.icn-check {
+    width: 23px;
+    height: 23px;
+}
+.item {
+    width: 225px;
+    height: 42px;
+    font-family: Gotham;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    color: #003770;
+    align-content: center;
+    padding-left: 5px;
+}
+.tittle-3 {
+    margin-top: 20px;
+    width: 397px;
+    height: 41px;
+    font-family: Gotham;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #003770;
+}
+
+.stepbystep-contact {
+    margin-top: 25px;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+}
+.number-h3 {
+    width: 20px;
+    height: 28px;
+    font-family: Gotham;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #009ee3;
+}
+.stepbystep-descrip {
+    width: 80px;
+    height: 38px;
+    font-family: Gotham Bold;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #009ee3;
+}
+.item-container {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+}
+
+.container-phone {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: baseline;
+    max-width: 400px;
+}
+
+.write-to-us {
+    padding-bottom: 8px;
+    width: 90px;
+}
+.mt-4 {
+    margin-top: 0.5rem !important;
+}
+
+.button_submit {
+    width: 371px !important;
+    height: 46px !important;
+    border-radius: 6px !important;
+    padding-top: 8px;
+    padding-right: 20px;
+    padding-bottom: 8px;
+    padding-left: 20px;
+    background-color: #009ee3;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-left: 32px;
+    border: none;
+}
+
+@media (max-width: 1030px) {
+    .form-container {
+        width: 90%;
+    }
+
+    .blog-contact-form {
+        width: 350px;
+    }
+
+    #company,
+    #message,
+    #email,
+    #phone,
+    #subject {
+        width: 83%;
+    }
+    #first_name,
+    #last_name {
+        width: 140px;
+        margin: 0% !important;
+    }
+
+    .row-names {
+        margin: 0% !important;
+        padding: 0% !important;
+    }
+    .tittle-form {
+        width: auto !important;
+    }
+
+    .content-form-tittle {
+        width: auto !important;
+        margin: 0% !important;
+        padding: 0% !important;
+        text-align: center !important;
+    }
+
+    .button_submit {
+        width: 80% !important;
+    }
+    .form-left {
+        width: 90%;
+        padding: 0% 0 0 0.5rem !important;
+    }
+    .lets-talk {
+        font-size: 40px;
+        width: auto !important;
+        margin-top: 130px;
+    }
+    .tittle-3 {
+        font-size: 20px;
+    }
+    .item {
+        font-size: 15px;
+        width: 180px !important;
+    }
+    .list-contact {
+        width: auto !important;
+    }
+    .form-description {
+        width: auto !important;
+        font-size: 14px !important;
+    }
+}
+
+@media (max-width: 940px) and (min-width: 820px) {
+    .container-phone,
+    .phone-number {
+        width: auto;
+        height: 25px;
+        font-size: 21px;
+        gap: 0px;
+    }
+    .icn-phone {
+        width: 22px;
+        height: 22px;
+    }
+    .item {
+        padding-left: 2px;
+        font-size: 15px;
+        width: 150px !important;
+    }
+    .tittle-3 {
+        width: 365px;
+        font-size: 16px;
+    }
+    .icn-check {
+        width: 23px !important;
+        height: 23px !important;
+    }
+    .stepbystep-descrip {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 819px) {
+    .form-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 0.5fr;
+        background: url(/images/web/blog/img_textura.png),
+            linear-gradient(to bottom, #003770 12%, #f1f9fe 15%);
+    }
+
+    .form-description {
+        color: #ffffff;
+        margin: auto;
+    }
+    .form-left {
+        width: 85%;
+        margin: auto;
+    }
+    .lets-talk {
+        font-size: 24px;
+        margin-top: 1rem !important;
+    }
+    .tittle-3,
+    .container-phone,
+    .stepbystep-contact,
+    .lets-talk,
+    .form-description {
+        margin: 5px 0px;
+        width: auto;
+    }
+    .list-contact {
+        margin: auto;
+        width: 90% !important;
+    }
+    .form-right {
+        margin: auto;
+        margin-top: 10px;
+    }
+    .blog-contact-form {
+        width: 100%;
+        height: auto;
+    }
+    .row-names {
+        width: 225px !important;
+    }
+    #first_name,
+    #last_name {
+        width: 199px;
+        margin: auto !important;
+    }
+    .form-label {
+        margin-left: 13px;
+        margin-bottom: 0.5rem;
+    }
+    .form-blog {
+        padding-bottom: 10px;
+    }
+}
+
+@media (max-width: 540px) {
+    .form-container {
+        background: url(/images/web/blog/img_textura.png),
+            linear-gradient(to bottom, #003770 12%, #f1f9fe 16%);
+    }
+    .list-contact {
+        display: inline;
+        margin: 0%;
+    }
+    p {
+        font-size: 14px !important;
+    }
+    .form-left,
+    .form-right {
+        width: 95%;
+        margin: 0;
+    }
+}
