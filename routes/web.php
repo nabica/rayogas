@@ -67,7 +67,10 @@ Route::prefix('lotus')->group(function () {
             Route::resource('/news/posts', 'News\NewsPostController', ['as' => 'admin.news']);
             //Blog
             Route::resource('/blog/banner', 'Blog\BlogBannerController', ['as' => 'admin.blog'])->only(['edit', 'update']);
+            // Route::resource('/blog/posts', 'Blog\BlogPostController', ['as' => 'admin.blog']);
             Route::resource('/blog/posts', 'Blog\BlogPostController', ['as' => 'admin.blog']);
+            Route::post('/blog/upload-image', 'Blog\BlogPostController@uploadImage')
+                ->name('admin.blog.upload-image');
         });
     });
 });
@@ -87,7 +90,7 @@ Route::namespace("App\Http\Controllers\Rayogas")->group(function () {
     Route::get("/glp", "GlpController@index")->name('rayogas.glp');
     Route::get("/blog", "BlogController@index")->name('rayogas.blog');
     Route::get("/noticias", "NewsController@index")->name('rayogas.news-list');
-    /* Route::get("/blog/{slug}", "BlogController@show")->name('rayogas.blog.show'); */
+    Route::get("/blog/{slug}", "BlogController@show")->name('rayogas.blog.show');
     Route::get("/pqrs", "PqrsController@index")->name('rayogas.pqrs');
     Route::post("/pqrs", "PqrsController@store");
     Route::get("pqrs/gracias", "PqrsController@tanks")->name('rayogas.thanks');

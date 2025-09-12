@@ -3,7 +3,7 @@
         <div class="modal-content">
             <img src="{{asset('/images/web/common/icn_succed.png')}}" alt="">
             <div class="modal-body">
-                @component('rayogas.components.heading-title')
+                @component('rayogas.components.heading')
                 @slot('title')Gracias, tu solicitud ha sido enviada @endslot
                 @endcomponent
                 <p>Pronto nos comunicaremos contigo</p>

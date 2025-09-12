@@ -5,7 +5,7 @@
             <div class="col-md-6 accreditations__item">
                 <div>
                     <img src="{{asset('images/web/accreditations/bureau.png')}}" alt="" class="img-fluid">
-                    <p>No. CO21.09717</p>
+                    <p>No. CO24.08263</p>
                 </div>
             </div>
             <div class="col-md-6 accreditations__item">

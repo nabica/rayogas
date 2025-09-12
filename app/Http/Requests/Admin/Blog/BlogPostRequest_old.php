@@ -28,27 +28,22 @@ class BlogPostRequest extends FormRequest
         switch ($this->method()) {
             case 'POST':
                 return [
-                    'title' => 'required|unique:blogs',
-                    'body_blog' => 'required',
-                    'card_image' => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp',
-                    'meta_description' => 'required'
+                    'title' => 'required|unique:blog_posts',
+                    'excerpt_description' => 'required',
+                    'link' => 'required',
+                    /* 'description' => 'required' */
                 ];
                 break;
 
             case 'PUT':
             case 'PATCH':
                 return [
-                    'title' => 'required' . $this->blog,
-                    'body_blog' => 'required',
+                    'title' => 'required|unique:blog_posts,title,' . $this->post,
+                    'excerpt_description' => 'required',
+                    'link' => 'required',
+                    /* 'description' => 'required' */
                 ];
                 break;
         }
-    }
-    public function attributes()
-    {
-        return [
-            'body_blog' => 'contenido del blog',
-            'card_image' => 'imagen de la tarjeta del blog',
-        ];
     }
 }

@@ -1,0 +1,59 @@
+@extends('rayogas.layouts.master')
+<link rel="stylesheet" href="{{ asset('css/rayogas/blogs-detail.scss') }}">
+<link rel="stylesheet" href="{{ asset('css/editor-content.css') }}">
+@section('metatags_facebook')
+<meta property="og:title" content="{{ config('app.name') }} | Blog - ¡Artículos que te interesan sobre el GLP!">
+<meta property="og:site_name" content="{{ config('app.name') }}">
+<meta property="og:url" content="{{ Request::url() }}">
+<meta property="og:description"
+    content="Descubre datos interesantes sobre el GLP (Gas Licuado de Petróleo), como noticas, casos de éxito, avances, y más temas de este gas y su impacto en el país.">
+<meta property="og:type" content="website">
+@endsection
+@section('metatags_seo')
+<meta name="title" content="{{ config('app.name') }} | Blog - ¡Artículos que te interesan sobre el GLP!">
+<meta property="og:description" content="{{ $blog->meta_description }}">
+<meta name="description" content="{{ $blog->meta_description }}">
+<meta property="og:image" content="{{ asset('uploads/blog_posts/' . $blog->id . '/' . $blog->card_image) }}">
+<meta name="description"
+    content="Descubre datos interesantes sobre el GLP (Gas Licuado de Petróleo), como noticas, casos de éxito, avances, y más temas de este gas y su impacto en el país.">
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="Spanish">
+<meta name="revisit-after" content="30 days">
+<meta name="author" content="{{ config('app.name') }}">
+@endsection
+@section('title', config('app.name') . ' | Blog - ¡Artículos que te interesan sobre el GLP!')
+@section('content')
+
+<section class="section blog-content">
+    <h2 class="tittle-principal">{{$blog->title}}<br></h2>
+
+    <div class="blog_detail">
+        <h6 class="blog_date">
+            <img src="{{ asset('images/web/blog/icn_calendar.png') }}" class="icn-calendar" alt="logo calendar">
+            {{ $date }}
+        </h6>
+
+        <img src="{{ asset('uploads/blog_posts/' . $blog->id . '/' . $blog->card_image) }}" class="img_blog" alt="Img del blog">
+    </div>
+    <article class="blog_description container">
+        <div class="body_articule ">{!! $body_blog !!}</div>
+    </article>
+
+</section>
+<section class="section blog-cards-grid">
+    <div class="parent_next_blog">
+        @foreach ($next_blogs as $next_blog)
+        <div class="next_blog">
+
+            <img class="img_next" src="{{ asset('uploads/' . $blogfolder . '/' . $next_blog->id . '/' . $next_blog->card_image) }}" alt="Img card blog">
+            <h3 class="title_next">{{ $next_blog->title }}</h3>
+            <a href="{{ route('rayogas.blog.show', $next_blog->slug) }}" class="btn-see-more">Ver más</a>
+
+        </div>
+        @endforeach
+    </div>
+</section>
+
+
+@endsection

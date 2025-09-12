@@ -4,33 +4,31 @@ namespace App\Http\Controllers\Rayogas;
 
 use App\Http\Controllers\Controller;
 use App\Models\Blog\Blog;
-use Illuminate\Http\Request;
-use App\Models\Blog\BlogBanner;
-use App\Models\Blog\BlogPost;
+
 
 class BlogController extends Controller
 {
+    protected $blogfolder;
+
+    public function __construct()
+    {
+        $this->blogfolder = config('rayogas.blog.posts');
+    }
+
     public function index()
     {
-        $blogs =  Blog::latest('id')->paginate(9);
-        return view('rayogas.blogs', compact('blogs'));
+        $blogs = Blog::latest('id')->paginate(9);
+        $blogfolder = $this->blogfolder;
+        return view('rayogas.blogs', compact('blogs', 'blogfolder'));
     }
+
     public function show($slug)
     {
-        $blogPost = BlogPost::where('slug', $slug)->first();
-        return view('rayogas.blog', compact('blogPost'));
+        $blog = Blog::where('slug', $slug)->firstOrFail();
+        $date = $blog->created_at->locale('es')->isoFormat('DD [de] MMMM [de] YYYY');
+        $body_blog = $blog->body_blog;
+        $next_blogs = Blog::where('id', '!=', $blog->id)->latest('id')->take(3)->get();
+        $blogfolder = $this->blogfolder;
+        return view('rayogas.blogs-detail', compact('blog', 'date', 'next_blogs', 'body_blog', 'blogfolder'));
     }
-    // public function index()
-    // {
-
-    //     $blogBanner = BlogBanner::first();
-    //     $blogPosts = BlogPost::latest('id')->paginate(6);
-    //     return view('rayogas.blog-list', compact('blogBanner', 'blogPosts'));
-    // }
-
-    // public function show($slug)
-    // {
-    //     $blogPost = BlogPost::where('slug', $slug)->first();
-    //     return view('rayogas.blog', compact('blogPost'));
-    // }
 }

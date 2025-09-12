@@ -45,7 +45,7 @@
                 </div>
                 <div class="col-12 ">
                     <h2 class="sideLine mb-4">Informes PQR</h2>
-                    <p>RAYOGAS S.A. E.S.P. tiene la obligación legal de remitir mensualmente al Sistema
+                    <p>Rayogas S.A.S. E.S.P. tiene la obligación legal de remitir mensualmente al Sistema
                         único de información administrado por la Superintendencia de Servicios Públicos
                         Domicliarios informes mensuales relacionado con las PQR presentadas por los
                         usuarios.<br><br>

@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 use App\View\Composers\FloatingBarComposer;
 use App\View\Composers\RandomBlogPostComposer;
+use App\Services\HtmlSanitizerService;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -17,7 +18,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->singleton(HtmlSanitizerService::class, function ($app) {
+            return new HtmlSanitizerService();
+        });
     }
 
     /**

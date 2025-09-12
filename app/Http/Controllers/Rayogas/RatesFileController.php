@@ -3,45 +3,61 @@
 namespace App\Http\Controllers\Rayogas;
 
 use App\Models\Home\RatesFile;
+use App\Models\Home\Zone;
 use App\Http\Controllers\Controller;
 
 class RatesFileController extends Controller
 {
-
     public function index()
     {
         $ratesFiles = RatesFile::with('zone')->get();
-        $allZones = \App\Models\Home\Zone::orderBy('id')->get();
-        $monthsWithFiles = $ratesFiles->pluck('month')->unique()->values()->all();
-        $groupedRates = collect($monthsWithFiles)->mapWithKeys(function ($month) use ($allZones) {
-            return [$month => $allZones->map(function ($zone) {
-                return [
-                    'id' => null,
-                    'file_name' => null,
-                    'zone_name' => $zone->name,
-                    'description' => null,
-                    'zone_id' => $zone->id,
-                    'has_file' => false
-                ];
-            })->all()];
-        })->all();
+        $allZones = Zone::orderBy('id')->get();
+        $groupedByYear = [];
 
         foreach ($ratesFiles as $file) {
-            $groupedRates[$file->month] = collect($groupedRates[$file->month])->map(function ($zone) use ($file) {
-                if ($zone['zone_id'] === $file->zone->id) {
+            $year = $file->created_at->format('Y');
+            $month = $file->month;
+
+            if (!isset($groupedByYear[$year][$month])) {
+                $groupedByYear[$year][$month] = $allZones->map(function ($zone) {
                     return [
-                        'id' => $file->id < 10 && $file->id > 0 ? '0' . $file->id : $file->id,
-                        'file_name' => $file->file_name,
-                        'zone_name' => $file->zone->name,
-                        'description' => $file->description,
-                        'zone_id' => $file->zone->id,
-                        'has_file' => true
+                        'id' => null,
+                        'file_name' => null,
+                        'zone_name' => $zone->name,
+                        'description' => null,
+                        'zone_id' => $zone->id,
+                        'has_file' => false,
+                        'created_at' => null,
                     ];
-                }
-                return $zone;
-            })->all();
+                })->keyBy('zone_id')->all();
+            }
+
+            $groupedByYear[$year][$month][$file->zone->id] = [
+                'id' => $file->id < 10 && $file->id > 0 ? '0' . $file->id : $file->id,
+                'file_name' => $file->file_name,
+                'zone_name' => $file->zone->name,
+                'description' => $file->description,
+                'zone_id' => $file->zone->id,
+                'has_file' => true,
+                'created_at' => $file->created_at ? $file->created_at->format('Y-m-d H:i:s') : null,
+            ];
         }
 
-        return view('rayogas.rates', compact('groupedRates'));
+        $monthsOrder = [
+            'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
+            'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'
+        ];
+        krsort($groupedByYear);
+        foreach ($groupedByYear as &$months) {
+            uksort($months, function ($a, $b) use ($monthsOrder) {
+                return array_search($a, $monthsOrder) <=> array_search($b, $monthsOrder);
+            });
+            // Reindexa zonas para cada mes
+            foreach ($months as &$zones) {
+                $zones = array_values($zones);
+            }
+        }
+
+        return view('rayogas.rates', ['groupedRates' => $groupedByYear]);
     }
 }

@@ -36,3 +36,26 @@
     font-weight: 800;
     font-size: clamp(2rem, 2vw + 1rem, 3.2rem);
 }
+
+
+.action-header-rates{
+    background-color: #FFFFFF;
+    color: #003770;
+}
+
+.button-action-header-rates a {
+    margin-top: 8px;
+    display: inline-block;
+    background: #fff;
+    color: #009ee3;
+    border-radius: 12px;
+    padding: 10px 28px;
+    font-weight: 700;
+    text-decoration: none;
+    border: 2px solid #009ee3;
+    transition: background 0.2s, color 0.2s;
+}
+.button-action-header-rates a:hover {
+    background: #009ee3;
+    color: #fff;
+}

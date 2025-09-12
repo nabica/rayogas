@@ -35,40 +35,45 @@
 
     <section class="section container-rates">
         @if(count($groupedRates) > 0)
-            <div class="rates-grid-container">
-                @foreach ($groupedRates as $month => $rates)
-                    <div class="rates-container">
-                        <h3 class="rates-title">Tarifas {{ $month }}</h3>
-                        <div class="rate-list">
-                            @foreach ($rates as $rate)
-                                @if($rate['has_file'])
-                                    <a href="{{ asset('uploads/home/rates/' . $rate['id'] . '/' . $rate['file_name']) }}"
-                                       class="rate-item {{ str_replace(' ', '_', strtolower($rate['zone_name'])) }}"
-                                       target="_blank">
-                                        <p class="zone-name">
-                                            {{ $rate['zone_name'] }}
-                                        </p>
-                                        <div class="download-link">
-                                            <img src="{{ asset('images/web/common/icn_download.png') }}"
-                                                class="img-fluid logo-download" alt="logo download">
-                                        </div>
-                                    </a>
-                                @else
-                                    <div class="rate-item {{ str_replace(' ', '_', strtolower($rate['zone_name'])) }} disabled">
-                                        <p class="zone-name">
-                                            {{ $rate['zone_name'] }}
-                                        </p>
-                                        <div class="download-link">
-                                            <img src="{{ asset('images/web/common/icn_download.png') }}"
-                                                class="img-fluid logo-download" alt="logo download">
-                                        </div>
-                                    </div>
-                                @endif
-                            @endforeach
-                        </div>
+            @foreach ($groupedRates as $year => $months)
+                <div class="rates-year-group">
+                    <h2 class="rates-year-title"><span>{{ $year }}</span></h2>
+                    <div class="rates-grid-container">
+                        @foreach ($months as $month => $rates)
+                            <div class="rates-container">
+                                <h3 class="rates-title">Tarifas {{ $month }}</h3>
+                                <div class="rate-list">
+                                    @foreach ($rates as $rate)
+                                        @if($rate['has_file'])
+                                            <a href="{{ asset('uploads/home/rates/' . $rate['id'] . '/' . $rate['file_name']) }}"
+                                               class="rate-item {{ str_replace(' ', '_', strtolower($rate['zone_name'])) }}"
+                                               target="_blank">
+                                                <p class="zone-name">
+                                                    {{ $rate['zone_name'] }}
+                                                </p>
+                                                <div class="download-link">
+                                                    <img src="{{ asset('images/web/common/icn_download.png') }}"
+                                                        class="img-fluid logo-download" alt="logo download">
+                                                </div>
+                                            </a>
+                                        @else
+                                            <div class="rate-item {{ str_replace(' ', '_', strtolower($rate['zone_name'])) }} disabled">
+                                                <p class="zone-name">
+                                                    {{ $rate['zone_name'] }}
+                                                </p>
+                                                <div class="download-link">
+                                                    <img src="{{ asset('images/web/common/icn_download.png') }}"
+                                                        class="img-fluid logo-download" alt="logo download">
+                                                </div>
+                                            </div>
+                                        @endif
+                                    @endforeach
+                                </div>
+                            </div>
+                        @endforeach
                     </div>
-                @endforeach
-            </div>
+                </div>
+            @endforeach
         @else
             <div class="no-rates-message">
                 <p>No hay tarifas disponibles en este momento. Por favor, vuelve a consultar más tarde.</p>
