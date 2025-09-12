@@ -1,7 +1,7 @@
 .form-blog {
     margin: auto;
-    margin-bottom: 50px;
     padding-top: 75px;
+    padding-bottom: 25px;
     align-items: center;
     top: 2325px;
     left: -1px;
@@ -17,8 +17,8 @@
 }
 
 .blog-contact-form {
+    max-width: 435px;
     background-color: #ffffff;
-    width: 435px;
     height: 726px;
     border-radius: 7px;
 }
@@ -71,7 +71,6 @@
 #email,
 #phone,
 #subject {
-    text-align: center;
     max-width: 370px;
 }
 
@@ -82,7 +81,8 @@
 }
 
 .full-names {
-    gap: 10px;
+    column-gap: 25px;
+    display: flex;
     justify-content: center;
 }
 .form_field {
@@ -101,6 +101,7 @@
     align-items: flex-start;
     margin: auto;
     border-radius: 10px;
+    margin-bottom: 1;
 }
 
 .form-left {
@@ -111,7 +112,6 @@
 }
 .form-right {
     margin-top: 80px;
- 
 }
 
 .lets-talk {
@@ -168,7 +168,7 @@
     align-content: center;
     padding-left: 5px;
 }
-.tittle-3 {
+.form-blog__title {
     margin-top: 20px;
     width: 397px;
     height: 41px;
@@ -227,11 +227,12 @@
 .mt-4 {
     margin-top: 0.5rem !important;
 }
-
+.form_btn_send {
+    display: flex;
+    justify-content: center;
+}
 .button_submit {
-    width: 371px !important;
-    height: 46px !important;
-    border-radius: 6px !important;
+    border-radius: 6px;
     padding-top: 8px;
     padding-right: 20px;
     padding-bottom: 8px;
@@ -242,75 +243,77 @@
     font-size: 16px;
     line-height: 30px;
     letter-spacing: 0%;
-    vertical-align: middle;
     color: #ffffff;
-    margin-top: 10px;
-    margin-left: 32px;
     border: none;
+    width: 85%;
 }
 
 @media (max-width: 1030px) {
-    .form-container {
-        width: 90%;
-    }
+    .form-blog {
+        .form-container {
+            width: 90%;
+        }
 
-    .blog-contact-form {
-        width: 350px;
-    }
+        .form-left {
+            width: 90%;
+            padding: 0 0 0 0.5rem;
+        }
 
-    #company,
-    #message,
-    #email,
-    #phone,
-    #subject {
-        width: 83%;
-    }
-    #first_name,
-    #last_name {
-        width: 140px;
-        margin: 0% !important;
-    }
+        .lets-talk {
+            font-size: 40px;
+            width: auto;
+            margin-top: 130px;
+        }
 
-    .row-names {
-        margin: 0% !important;
-        padding: 0% !important;
-    }
-    .tittle-form {
-        width: auto !important;
-    }
+        .form-blog__title {
+            font-size: 20px;
+        }
 
-    .content-form-tittle {
-        width: auto !important;
-        margin: 0% !important;
-        padding: 0% !important;
-        text-align: center !important;
-    }
+        .list-contact {
+            width: auto;
+        }
 
-    .button_submit {
-        width: 80% !important;
-    }
-    .form-left {
-        width: 90%;
-        padding: 0% 0 0 0.5rem !important;
-    }
-    .lets-talk {
-        font-size: 40px;
-        width: auto !important;
-        margin-top: 130px;
-    }
-    .tittle-3 {
-        font-size: 20px;
-    }
-    .item {
-        font-size: 15px;
-        width: 180px !important;
-    }
-    .list-contact {
-        width: auto !important;
-    }
-    .form-description {
-        width: auto !important;
-        font-size: 14px !important;
+        .item {
+            font-size: 15px;
+            width: 180px;
+        }
+
+        .form-description {
+            width: auto;
+            font-size: 14px;
+        }
+
+      
+        .row-names {
+            margin: 0;
+            padding: 0;
+        }
+
+        #first_name,
+        #last_name {
+            width: 140px;
+            margin: 0;
+        }
+
+        #company,
+        #message,
+        #email,
+        #phone,
+        #subject {
+            width: 83%;
+        }
+
+        .tittle-form,
+        .content-form-tittle {
+            width: auto;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .button_submit {
+            width: 80%;
+        }
     }
 }
 
@@ -331,7 +334,7 @@
         font-size: 15px;
         width: 150px !important;
     }
-    .tittle-3 {
+    .form-blog__title {
         width: 365px;
         font-size: 16px;
     }
@@ -365,11 +368,12 @@
         font-size: 24px;
         margin-top: 1rem !important;
     }
-    .tittle-3,
+    .form-blog__title,
     .container-phone,
     .stepbystep-contact,
     .lets-talk,
     .form-description {
+        text-align: center;
         margin: 5px 0px;
         width: auto;
     }
@@ -378,16 +382,11 @@
         width: 90% !important;
     }
     .form-right {
+        width: 435px;
         margin: auto;
         margin-top: 10px;
     }
-    .blog-contact-form {
-        width: 100%;
-        height: auto;
-    }
-    .row-names {
-        width: 225px !important;
-    }
+
     #first_name,
     #last_name {
         width: 199px;
@@ -399,6 +398,21 @@
     }
     .form-blog {
         padding-bottom: 10px;
+    }
+    .full-names {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-width: 100%;
+        width: 100%;
+    }
+    .row-names {
+        width: 100%;
+    }
+    #first_name,
+    #last_name {
+        width: 83% !important;
+        min-width: 0;
     }
 }
 

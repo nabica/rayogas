@@ -10,7 +10,7 @@
                 <img src="{{ asset('images/web/common/icn-phone.png') }}" class="icn-phone" alt="Icon phone">
                 <p class="phone-number">Llámanos: +57 313 370 37 71</p>
             </div>
-            <h3 class="tittle-3">Beneficios con <span>Rayogas</span></h3>
+            <h3 class="form-blog__title">Beneficios con <span>Rayogas</span></h3>
             <div class="list-contact">
                 <div class="item-container">
                     <img src="{{ asset('images/web/common/icn_check.png') }}" class="icn-check" alt="logo flama rayogas">
@@ -37,7 +37,7 @@
                     <p class="item">Alternativas Solares</p>
                 </div>
             </div>
-            <h3 class="tittle-3">Empieza tu ahorro ahora:</h3>
+            <h3 class="form-blog__title form-blog__title--secondary">Empieza tu ahorro ahora:</h3>
             <div class="stepbystep-contact">
                 <h3 class="number-h3">1</h3>
                 <p class="stepbystep-descrip">Llena el formulario</p>
@@ -56,12 +56,12 @@
                     <h3 class="tittle-form">Solicita tu asesoria</h3>
                 </div>
                 <hr class="line-form">
-                <div class="row full-names">
-                    <div class="col-md-5 row-names">
+                <div class="full-names">
+                    <div class="row-names">
                         <label for="first_name" class="form-label">Nombre</label>
                         <input type="text" class="form-control" id="first_name" name="first_name" required>
                     </div>
-                    <div class="col-md-5 row-names">
+                    <div class="row-names">
                         <label for="last_name" class="form-label">Apellidos</label>
                         <input type="text" class="form-control" id="last_name" name="last_name" required>
                     </div>
@@ -83,7 +83,7 @@
                     <label for="message" class="form-label info">Cómo podemos ayudarte</label>
                     <textarea class="form-control" id="message" name="message" rows="2" required></textarea>
                 </div>
-                <div class="col-12">
+                <div class="col-12 form_btn_send">
                     <button class="button_submit" type="submit">QUIERO MI ASESORIA</button>
                 </div>
             </form>
