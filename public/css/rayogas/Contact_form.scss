@@ -231,7 +231,7 @@
     display: flex;
     justify-content: center;
 }
-.button_submit {
+#button_submit {
     border-radius: 6px;
     padding-top: 8px;
     padding-right: 20px;
@@ -311,7 +311,7 @@
             text-align: center;
         }
 
-        .button_submit {
+        #button_submit {
             width: 80%;
         }
     }

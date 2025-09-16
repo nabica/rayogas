@@ -50,7 +50,8 @@
             </div>
         </div>
         <div class="form-right">
-            <form action="#" class="blog-contact-form">
+            <form action={{$linkForm}} method="post" data-id={{$dataid}} class="blog-contact-form" id="contactForm">
+                @csrf
                 <div class="content-form-tittle">
                     <br>
                     <h3 class="tittle-form">Solicita tu asesoria</h3>
@@ -78,15 +79,33 @@
                     <label for="phone" class="form-label info">Teléfono</label>
                     <input type="tel" class="form-control" id="phone" name="phone" required>
                 </div>
-                
+
                 <div class="col-12 form_field">
                     <label for="message" class="form-label info">Cómo podemos ayudarte</label>
                     <textarea class="form-control" id="message" name="message" rows="2" required></textarea>
                 </div>
                 <div class="col-12 form_btn_send">
-                    <button class="button_submit" type="submit">QUIERO MI ASESORIA</button>
+                    <button id="button_submit" type="submit">QUIERO MI ASESORIA</button>
                 </div>
             </form>
         </div>
     </div>
 </section>
+
+
+<script type="text/javascript" src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        new RayogasFormComponent({
+            Form_id: 'contactForm',
+            name: 'first_name',
+            lastname: 'last_name',
+            company: 'company',
+            email: 'email',
+            phonenumber: 'phone',
+            message: 'message',
+            submitid: 'button_submit',
+            loadingText: 'Enviando datos...'
+        });
+    });
+</script>

@@ -57,7 +57,8 @@
         <h2 class="tittle-footer">Conexión Rayogas<br></h2>
     </div>
 
-    <!-- @component('rayogas.components.form-blog')
-    @endcomponent -->
+    @component('rayogas.components.form-blog', ['linkForm' => $linkForm, 'dataid' => $dataid])
+    @endcomponent
+
 </body>
 @endsection
