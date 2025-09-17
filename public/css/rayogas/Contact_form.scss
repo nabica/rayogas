@@ -61,23 +61,30 @@
     border-radius: 7px;
     border-width: 2px;
 }
-#first_name,
-#last_name {
+#fieldName,
+#fielddklyjddu {
     width: 171px;
     max-height: 40px;
 }
 
 #company,
-#email,
-#phone,
+#fieldEmail,
+#fielddklyjdhr,
+#fielddklyidhy,
 #subject {
     max-width: 370px;
 }
 
-#message {
-    width: 370px;
-    height: 200px;
+#fielddklyjdhy {
+    width: 100%;
+    min-width: 0;
+    height: 120px;
     max-height: 350px;
+    text-align: left;
+    resize: none;
+    display: block;
+    margin: 0 auto;
+    max-width: 370px;
 }
 
 .full-names {
@@ -85,7 +92,7 @@
     display: flex;
     justify-content: center;
 }
-.form_field {
+.newsletter-row {
     margin: 10px 0px 10px 0px;
 }
 .info {
@@ -227,11 +234,11 @@
 .mt-4 {
     margin-top: 0.5rem !important;
 }
-.form_btn_send {
+.newsletter-btn {
     display: flex;
     justify-content: center;
 }
-#button_submit {
+.btn-newsletter {
     border-radius: 6px;
     padding-top: 8px;
     padding-right: 20px;
@@ -289,16 +296,17 @@
             padding: 0;
         }
 
-        #first_name,
-        #last_name {
+        #fieldName,
+        #fielddklyjddu {
             width: 140px;
             margin: 0;
         }
 
         #company,
-        #message,
-        #email,
-        #phone,
+        #fielddklyjdhy,
+        #fielddklyidhy,
+        #fieldEmail,
+        #fielddklyjdhr,
         #subject {
             width: 83%;
         }
@@ -311,7 +319,7 @@
             text-align: center;
         }
 
-        #button_submit {
+        .btn-newsletter {
             width: 80%;
         }
     }
@@ -387,8 +395,8 @@
         margin-top: 10px;
     }
 
-    #first_name,
-    #last_name {
+    #fieldName,
+    #fielddklyjddu {
         width: 199px;
         margin: auto !important;
     }
@@ -409,8 +417,8 @@
     .row-names {
         width: 100%;
     }
-    #first_name,
-    #last_name {
+    #fieldName,
+    #fielddklyjddu {
         width: 83% !important;
         min-width: 0;
     }
