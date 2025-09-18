@@ -70,7 +70,7 @@
                         <input type="text" class="form-control" id="company" name="company" required>
                     </div>
                     <div class="col-12 newsletter-field">
-                        <label for="fieldEmail" class="form-label info">email</label>
+                        <label for="fieldEmail" class="form-label info">E-mail</label>
                         <input autocomplete="Email" class="js-cm-email-input qa-input-email form-control"
                             id="fieldEmail" maxlength="200" name="cm-njtkyll-njtkyll" placeholder="Dirección de email"
                             required="" type="email">
