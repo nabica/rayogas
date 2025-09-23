@@ -19,7 +19,6 @@ mix.js('resources/js/admin/app.js', 'public/js/admin')
  |
  */
 
-mix.js('resources/js/rayogas/app.js', 'public/js/rayogas')
-    .sass('resources/scss/rayogas/app.scss', 'public/css/rayogas').options({
-        processCssUrls: false
-    }).version();
+mix.js('resources/js/rayogas/app.js', 'public/js/rayogas', 'resources/js/rayogas/form-blog.js').sass('resources/scss/rayogas/app.scss', 'public/css/rayogas').options({
+    processCssUrls: false
+}).version();

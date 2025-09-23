@@ -4,22 +4,29 @@ namespace App\Http\Controllers\Rayogas;
 
 use App\Http\Controllers\Controller;
 use App\Models\Blog\Blog;
+use Illuminate\Support\Facades\Config;
 
 
 class BlogController extends Controller
 {
     protected $blogfolder;
+    public $linkForm;
+    public $dataid;
 
     public function __construct()
     {
         $this->blogfolder = config('rayogas.blog.posts');
+        $this->linkForm = Config::get('rayogas.form.form_link');
+        $this->dataid = Config::get('rayogas.form.data_id');
     }
 
     public function index()
     {
         $blogs = Blog::latest('id')->paginate(9);
         $blogfolder = $this->blogfolder;
-        return view('rayogas.blogs', compact('blogs', 'blogfolder'));
+        $linkForm = $this->linkForm;
+        $dataid = $this->dataid;
+        return view('rayogas.blogs', compact('blogs', 'blogfolder','dataid','linkForm'));
     }
 
     public function show($slug)
