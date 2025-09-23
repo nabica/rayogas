@@ -26,5 +26,9 @@ return [
     ],
     'api' => [
         'key' => env('API_TINYMCE_URL', null),
-    ]
+    ],
+    'form' => [
+        'form_link' => env('CREATE_SEND_ACTION', null),
+        'data_id' => env('DATA_ID', null),
+    ],
 ];
