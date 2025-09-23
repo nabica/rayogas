@@ -1,5 +1,4 @@
 @extends('rayogas.layouts.master')
-<link rel="stylesheet" href="{{ asset('css/rayogas/blogs.scss') }}">
 @section('metatags_facebook')
 <meta property="og:title" content="{{ config('app.name') }} | Blog - ¡Artículos que te interesan sobre el GLP!">
 <meta property="og:site_name" content="{{ config('app.name') }}">
@@ -20,7 +19,6 @@
 @endsection
 @section('title', config('app.name') . ' | Blog - ¡Artículos que te interesan sobre el GLP!')
 @section('content')
-<link rel="stylesheet" href="{{ asset('css/rayogas/blogs.scss') }}">
 
 <body class="body-blog">
     <div class="tittle-content">
@@ -56,7 +54,8 @@
         <h2 class="tittle-footer">Conexión Rayogas<br></h2>
     </div>
 
-    <!-- @component('rayogas.components.form-blog')
-    @endcomponent -->
+    @component('rayogas.components.form-blog', ['linkForm' => $linkForm, 'dataid' => $dataid])
+    @endcomponent
+
 </body>
 @endsection
