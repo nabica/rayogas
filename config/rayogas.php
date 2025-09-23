@@ -24,8 +24,12 @@ return [
         'banner' => env('BLOG_BANNER_FOLDER', null),
         'posts' => env('BLOG_POSTS_FOLDER', null),
     ],
+
     'form' => [
         'form_link' => env('CREATE_SEND_ACTION', null),
         'data_id' => env('DATA_ID', null),
     ],
+    'api' => [
+        'key' => env('API_TINYMCE_URL', null),
+    ]
 ];
