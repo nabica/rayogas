@@ -20,7 +20,6 @@
 @endsection
 @section('title', config('app.name') . ' | Blog - ¡Artículos que te interesan sobre el GLP!')
 @section('content')
-<link rel="stylesheet" href="{{ asset('css/rayogas/blogs.scss') }}">
 
 <body class="body-blog">
     <div class="tittle-content">
